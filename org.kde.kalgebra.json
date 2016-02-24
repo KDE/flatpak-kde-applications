@@ -1,0 +1,26 @@
+{
+    "id": "org.kde.kalgebra",
+    "branch": "master",
+    "runtime": "org.kde.Platform",
+    "runtime-version": "master",
+    "sdk": "org.kde.Sdk",
+    "command": "kalgebra",
+    "tags": ["nightly"],
+    "desktop-file-name-prefix": "(Nightly) ",
+    "finish-args": ["--share=ipc", "--socket=x11", "--filesystem=host" ],
+    
+    "modules": [
+        {
+            "name": "analitza",
+            "cmake": true,
+            "post-install": [],
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/analitza.git" } ]
+        },
+        {
+            "name": "kalgebra",
+            "cmake": true,
+            "post-install": [],
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kalgebra.git" } ]
+        }
+    ]
+}
