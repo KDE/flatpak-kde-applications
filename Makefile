@@ -4,5 +4,5 @@ all: org.kde.kate.app org.kde.kalgebra.app org.kde.konversation.app # org.kde.gc
 
 %.app: %.json
 	rm -rf app
-	xdg-app-builder --ccache --require-changes --repo=$(REPO) --subject="Build of $<, `date`" ${EXPORT_ARGS} app $<
+	flatpak-builder --ccache --require-changes --repo=$(REPO) --subject="Build of $<, `date`" ${EXPORT_ARGS} app $<
 
