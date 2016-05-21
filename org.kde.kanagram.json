@@ -1,25 +1,24 @@
 {
-    "id": "org.kde.kalgebra",
+    "id": "org.kde.kanagram",
     "branch": "master",
     "runtime": "org.kde.Platform",
     "runtime-version": "master",
     "sdk": "org.kde.Sdk",
-    "command": "kalgebra",
+    "command": "kanagram",
     "tags": ["nightly"],
     "desktop-file-name-prefix": "(Nightly) ",
     "finish-args": ["--share=ipc", "--socket=x11", "--filesystem=host" ],
-    "separate-locales": false,
     
     "modules": [
         {
-            "name": "analitza",
+            "name": "libkeduvocdocument",
             "cmake": true,
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/analitza.git" } ]
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/libkeduvocdocument.git" } ]
         },
         {
-            "name": "kalgebra",
+            "name": "kanagram",
             "cmake": true,
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kalgebra.git" } ]
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kanagram.git" } ]
         }
     ]
 }

@@ -1,20 +1,19 @@
 {
-    "id": "org.kde.kate",
+    "id": "org.kde.kturtle",
     "branch": "master",
     "runtime": "org.kde.Platform",
     "runtime-version": "master",
     "sdk": "org.kde.Sdk",
-    "command": "kate",
+    "command": "kturtle",
     "tags": ["nightly"],
     "desktop-file-name-prefix": "(Nightly) ",
     "finish-args": ["--share=ipc", "--socket=x11", "--filesystem=host" ],
-    "separate-locales": false,
-
+    
     "modules": [
         {
-            "name": "kate",
+            "name": "kturtle",
             "cmake": true,
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kate.git" } ]
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kturtle.git" } ]
         }
     ]
 }
