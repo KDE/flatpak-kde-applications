@@ -1,6 +1,6 @@
 REPO=repo
 
-all: org.kde.kate.app org.kde.kalgebra.app org.kde.konversation.app org.kde.kturtle.app org.kde.kanagram.app org.kde.kompare.app
+all: org.kde.kate.app org.kde.kalgebra.app org.kde.konversation.app org.kde.kturtle.app org.kde.kanagram.app org.kde.kompare.app org.kde.artikulate.app
 
 %.app: %.json
 	rm -rf app

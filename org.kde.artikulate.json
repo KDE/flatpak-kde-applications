@@ -1,0 +1,42 @@
+{
+    "id": "org.kde.artikulate",
+    "branch": "master",
+    "runtime": "org.kde.Platform",
+    "runtime-version": "master",
+    "sdk": "org.kde.Sdk",
+    "command": "artikulate",
+    "tags": ["nightly"],
+    "desktop-file-name-prefix": "(Nightly) ",
+    "finish-args": ["--share=ipc", "--socket=x11", "--filesystem=host" ],
+
+    "modules": [
+        {
+            "name": "boost",
+            "config-opts": [],
+            "cleanup": [ "/lib/libboost_*.a" ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://downloads.sourceforge.net/project/boost/boost/1.60.0/boost_1_60_0.tar.bz2",
+                    "sha256": "686affff989ac2488f79a97b9479efb9f2abae035b5ed4d8226de6857933fd3b"
+                },
+                {
+                    "type": "file",
+                    "path": "boost-configure",
+                    "dest-filename": "configure"
+                }
+            ]
+        },
+        {
+            "name": "qt5-gstreamer",
+            "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib", "-DQT_VERSION=5", "-DUSE_QT_PLUGIN_DIR=OFF", "-DUSE_GST_PLUGIN_DIR=OFF"],
+            "cmake": true,
+            "sources": [ { "type": "git", "url": "git://anongit.freedesktop.org/gstreamer/qt-gstreamer" } ]
+        },
+        {
+            "name": "artikulate",
+            "cmake": true,
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/artikulate.git" } ]
+        }
+    ]
+}
