@@ -1,0 +1,62 @@
+{
+    "id": "org.kde.okular",
+    "branch": "master",
+    "runtime": "org.kde.Platform",
+    "runtime-version": "master",
+    "sdk": "org.kde.Sdk",
+    "command": "okular",
+    "tags": ["nightly"],
+    "desktop-file-name-prefix": "(Nightly) ",
+    "finish-args": ["--share=ipc", "--socket=x11", "--filesystem=host" ],
+    
+    "modules": [
+        {
+            "name": "kjs",
+            "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"],
+            "cmake": true,
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kjs.git", "branch": "v5.22.0" } ]
+        },
+        {
+            "name": "khtml",
+            "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"],
+            "cmake": true,
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/khtml.git", "branch": "v5.22.0" } ]
+        },
+        {
+            "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"],
+            "name": "kdelibs4support",
+            "cmake": true,
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kdelibs4support.git", "branch": "v5.22.0" } ]
+        },
+        {
+            "name": "boost",
+            "config-opts": [],
+            "cleanup": [ "/lib/libboost_*.a" ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://downloads.sourceforge.net/project/boost/boost/1.60.0/boost_1_60_0.tar.bz2",
+                    "sha256": "686affff989ac2488f79a97b9479efb9f2abae035b5ed4d8226de6857933fd3b"
+                },
+                {
+                    "type": "file",
+                    "path": "boost-configure",
+                    "dest-filename": "configure"
+                }
+            ]
+        },
+        {
+            "name": "kactivities",
+            "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"],
+            "cmake": true,
+            "builddir": true,
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kactivities.git", "branch": "v5.22.0" } ]
+        },
+        {
+            "name": "okular",
+            "cmake": true,
+            "builddir": true,
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/okular.git", "branch": "frameworks" } ]
+        }
+    ]
+}
