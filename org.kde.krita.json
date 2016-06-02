@@ -1,0 +1,64 @@
+{
+    "id": "org.kde.krita",
+    "branch": "master",
+    "runtime": "org.kde.Platform",
+    "runtime-version": "master",
+    "sdk": "org.kde.Sdk",
+    "command": "krita",
+    "tags": ["nightly"],
+    "desktop-file-name-prefix": "(Nightly) ",
+    "finish-args": ["--share=ipc", "--socket=x11", "--filesystem=host" ],
+    
+    "modules": [
+        {
+            "name": "eigen",
+            "cmake": true,
+            "builddir": true,
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "http://bitbucket.org/eigen/eigen/get/3.2.8.tar.bz2",
+                    "sha256": "722a63d672b70f39c271c5e2a4a43ba14d12015674331790414fcb167c357e55"
+                }
+            ]
+        },
+        {
+            "name": "boost",
+            "config-opts": [],
+            "cleanup": [ "/lib/libboost_*.a" ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://downloads.sourceforge.net/project/boost/boost/1.60.0/boost_1_60_0.tar.bz2",
+                    "sha256": "686affff989ac2488f79a97b9479efb9f2abae035b5ed4d8226de6857933fd3b"
+                },
+                {
+                    "type": "file",
+                    "path": "boost-configure",
+                    "dest-filename": "configure"
+                }
+            ]
+        },
+        {
+            "name": "exiv2",
+            "cmake": true,
+            "builddir": true,
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "http://www.exiv2.org/exiv2-0.25.tar.gz",
+                    "sha256": "c80bfc778a15fdb06f71265db2c3d49d8493c382e516cb99b8c9f9cbde36efa4"
+                }
+            ]
+        },
+        {
+            "name": "krita",
+            "cmake": true,
+            "builddir": true,
+            "sources": [
+                { "type": "git", "url": "git://anongit.kde.org/krita.git" },
+                { "type": "patch", "path": "kritaappdata.patch" }
+            ]
+        }
+    ]
+}

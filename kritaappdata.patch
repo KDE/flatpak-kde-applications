@@ -1,0 +1,36 @@
+diff --git a/krita/CMakeLists.txt b/krita/CMakeLists.txt
+index a546a8d..fccf3c3 100644
+--- a/krita/CMakeLists.txt
++++ b/krita/CMakeLists.txt
+@@ -98,9 +98,9 @@ if (APPLE)
+ endif ()
+ 
+ install(TARGETS krita ${INSTALL_TARGETS_DEFAULT_ARGS})
+-install(PROGRAMS krita.desktop  DESTINATION ${XDG_APPS_INSTALL_DIR})
++install(PROGRAMS org.kde.krita.desktop  DESTINATION ${XDG_APPS_INSTALL_DIR})
+ install(FILES  krita.action kritamenu.action DESTINATION ${DATA_INSTALL_DIR}/krita/actions)
+-install(FILES  krita.appdata.xml DESTINATION ${SHARE_INSTALL_PREFIX}/appdata/ )
++install(FILES  org.kde.krita.appdata.xml DESTINATION ${KDE_INSTALL_METAINFODIR} )
+ 
+ install(DIRECTORY DESTINATION ${DATA_INSTALL_DIR}/krita/shortcuts)
+ 
+diff --git a/krita/krita.appdata.xml b/krita/org.kde.krita.appdata.xml
+similarity index 99%
+rename from krita/krita.appdata.xml
+rename to krita/org.kde.krita.appdata.xml
+index cee1660..be244d8 100644
+--- a/krita/krita.appdata.xml
++++ b/krita/org.kde.krita.appdata.xml
+@@ -1,6 +1,6 @@
+ <?xml version="1.0" encoding="utf-8"?>
+ <component type="desktop">
+-  <id>krita.desktop</id>
++  <id>org.kde.krita.desktop</id>
+   <metadata_license>CC0-1.0</metadata_license>
+   <summary>Digital Painting, Creative Freedom</summary>
+   <summary xml:lang="ast">Pintura dixital, llibertá creativa</summary>
+diff --git a/krita/krita.desktop b/krita/org.kde.krita.desktop
+similarity index 100%
+rename from krita/krita.desktop
+rename to krita/org.kde.krita.desktop
+
