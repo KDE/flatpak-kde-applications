@@ -1,0 +1,47 @@
+{
+    "id": "org.kde.dolphin",
+    "branch": "master",
+    "runtime": "org.kde.Platform",
+    "runtime-version": "master",
+    "sdk": "org.kde.Sdk",
+    "command": "dolphin",
+    "tags": ["nightly"],
+    "desktop-file-name-prefix": "(Nightly) ",
+    "finish-args": ["--share=ipc", "--socket=x11", "--filesystem=host" ],
+    
+    "modules": [
+        {
+            "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"],
+            "name": "kfilemetadata",
+            "cmake": true,
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kfilemetadata.git", "branch": "v5.22.0" } ]
+        },
+        {
+            "name": "lmdb",
+            "sources": [ { "type": "git", "url": "git://github.com/LMDB/lmdb.git", "branch": "LMDB_0.9.18"}],
+            "no-autogen": true,
+            "make-install-args": ["prefix=/app"],
+            "subdir" : "libraries/liblmdb"
+        },
+        {
+            "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib", "-DLMDB_DIR=/app"],
+            "name": "baloo",
+            "cmake": true,
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/baloo.git", "branch": "v5.22.0" },
+            {"type": "patch", "path": "baloo.patch"} ]
+        },
+        {
+            "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib", "-DLMDB_DIR=/app"],
+            "name": "baloo-widgets",
+            "cmake": true,
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/baloo-widgets.git" } ]
+        }
+        {
+            "name": "dolphin",
+            "cmake": true,
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/dolphin.git" },
+                         {"type": "patch", "path": "dolphinpatch.patch"}
+                       ]
+        }
+    ]
+}

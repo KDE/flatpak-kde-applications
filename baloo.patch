@@ -1,0 +1,23 @@
+diff --git a/cmake/FindLMDB.cmake b/cmake/FindLMDB.cmake
+index 3dc8b77..340a01f 100644
+--- a/cmake/FindLMDB.cmake
++++ b/cmake/FindLMDB.cmake
+@@ -16,13 +16,14 @@ if (LMDB_INCLUDE_DIR AND LMDB_LIBRARIES)
+   # Already in cache, be silent
+   set(LMDB_FIND_QUIETLY TRUE)
+ endif (LMDB_INCLUDE_DIR AND LMDB_LIBRARIES)
++set(LMDB_DIR $ENV{LMDB_DIR} CACHE STRING "LMDB Directory")
+ 
+-find_path(LMDB_INCLUDE_DIR NAMES "lmdb.h" HINTS "$ENV{LMDB_DIR}/include")
+-find_library(LMDB_LIBRARIES NAMES lmdb HINTS $ENV{LMDB_DIR}/lib )
++find_path(LMDB_INCLUDE_DIR NAMES "lmdb.h" HINTS "${LMDB_DIR}/include")
++find_library(LMDB_LIBRARIES NAMES lmdb HINTS ${LMDB_DIR}/lib )
+ MESSAGE(STATUS "LMDB lib: " ${LMDB_LIBRARIES} )
+ MESSAGE(STATUS "LMDB include: " ${LMDB_INCLUDE} )
+ 
+ include(FindPackageHandleStandardArgs)
+ FIND_PACKAGE_HANDLE_STANDARD_ARGS(LMDB DEFAULT_MSG LMDB_INCLUDE_DIR LMDB_LIBRARIES)
+ 
+-mark_as_advanced(LMDB_INCLUDE_DIR LMDB_LIBRARIES)
+\ No newline at end of file
++mark_as_advanced(LMDB_INCLUDE_DIR LMDB_LIBRARIES)
