@@ -35,7 +35,7 @@
             "name": "baloo-widgets",
             "cmake": true,
             "sources": [ { "type": "git", "url": "git://anongit.kde.org/baloo-widgets.git" } ]
-        }
+        },
         {
             "name": "dolphin",
             "cmake": true,
