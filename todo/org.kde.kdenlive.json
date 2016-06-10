@@ -1,0 +1,46 @@
+{
+    "id": "org.kde.kdenlive",
+    "branch": "master",
+    "runtime": "org.kde.Platform",
+    "runtime-version": "master",
+    "sdk": "org.kde.Sdk",
+    "command": "kdenlive",
+    "tags": ["nightly"],
+    "desktop-file-name-prefix": "(Nightly) ",
+    "finish-args": ["--share=ipc", "--socket=x11", "--filesystem=host" ],
+    
+    "modules": [
+        {
+            "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"],
+            "name": "kfilemetadata",
+            "cmake": true,
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kfilemetadata.git", "branch": "v5.22.0" } ]
+        },
+        {
+            "name": "glib",
+            "config-opts": [ "--with-pcre=system" ],
+            "cleanup-platform": [ "/share/glib-2.0/codegen",
+                                  "/bin/gdbus-codegen",
+                                  "/bin/glib-*",
+                                  "/bin/gobject-query",
+                                  "/bin/gresource",
+                                  "/bin/gtester*"
+                               ],
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "git://git.gnome.org/glib"
+                }
+            ]
+        },
+        {
+            "name": "mlt",
+            "sources": [ { "type": "git", "url": "https://github.com/mltframework/mlt.git", "branch": "v6.2.0" } ]
+        },
+        {
+            "name": "kdenlive",
+            "cmake": true,
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kdenlive.git" } ]
+        }
+    ]
+}

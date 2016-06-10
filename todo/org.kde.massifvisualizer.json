@@ -1,0 +1,25 @@
+{
+    "id": "org.kde.massif-visualizer",
+    "branch": "master",
+    "runtime": "org.kde.Platform",
+    "runtime-version": "master",
+    "sdk": "org.kde.Sdk",
+    "command": "massif-visualizer",
+    "tags": ["nightly"],
+    "desktop-file-name-prefix": "(Nightly) ",
+    "finish-args": ["--share=ipc", "--socket=x11", "--filesystem=host" ],
+    
+    "modules": [
+        {
+            "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"],
+            "name": "kdiagram",
+            "cmake": true,
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kdiagram.git" } ]
+        },
+        {
+            "name": "massif-visualizer",
+            "cmake": true,
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/massif-visualizer.git" } ]
+        }
+    ]
+}

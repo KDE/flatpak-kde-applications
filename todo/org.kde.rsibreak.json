@@ -1,0 +1,20 @@
+{
+    "id": "org.kde.rsibreak",
+    "branch": "master",
+    "runtime": "org.kde.Platform",
+    "runtime-version": "master",
+    "sdk": "org.kde.Sdk",
+    "command": "rsibreak",
+    "tags": ["nightly"],
+    "desktop-file-name-prefix": "(Nightly) ",
+    "finish-args": ["--share=ipc", "--socket=x11", "--filesystem=host" ],
+    
+    "modules": [
+        {
+            "name": "rsibreak",
+            "cmake": true,
+            "builddir": true,
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/rsibreak.git" } ]
+        }
+    ]
+}

@@ -1,0 +1,35 @@
+{
+    "id": "org.kde.kdeconnect",
+    "branch": "master",
+    "runtime": "org.kde.Platform",
+    "runtime-version": "master",
+    "sdk": "org.kde.Sdk",
+    "tags": ["nightly"],
+    "desktop-file-name-prefix": "(Nightly) ",
+    "finish-args": ["--share=ipc", "--socket=x11", "--filesystem=host" ],
+    
+    "modules": [
+        {
+            "name": "libfakekey",
+            "config-opts": [ "--disable-static", "--prefix=/usr", "--sysconfdir=/etc", "--localstatedir=/var" ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "http://downloads.yoctoproject.org/releases/matchbox/libfakekey/0.1/libfakekey-0.1.tar.bz2",
+                    "sha256": "c41042a70524895b0edf8077ae3ae1206f1a313bea5811dcc23033ea16a00194"
+                }
+            ]
+        },
+        {
+            "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"],
+            "name": "qca",
+            "cmake": true,
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/qca.git" } ]
+        },
+        {
+            "name": "kdeconnect",
+            "cmake": true,
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kdeconnect-kde.git" } ]
+        }
+    ]
+}
