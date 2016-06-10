@@ -14,10 +14,7 @@
             "name": "gcompris",
             "cmake": true,
             "builddir": true,
-            "sources": [
-                { "type": "git", "url": "git://anongit.kde.org/gcompris.git" },
-                { "type": "patch", "path": "gcompris-appdata.patch" }
-            ]
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/gcompris.git" } ]
         }
     ]
 }
