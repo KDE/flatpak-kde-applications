@@ -1,0 +1,23 @@
+{
+    "id": "org.kde.gcompris",
+    "branch": "master",
+    "runtime": "org.kde.Platform",
+    "runtime-version": "master",
+    "sdk": "org.kde.Sdk",
+    "command": "gcompris",
+    "tags": ["nightly"],
+    "desktop-file-name-prefix": "(Nightly) ",
+    "finish-args": ["--share=ipc", "--socket=x11", "--filesystem=host" ],
+    
+    "modules": [
+        {
+            "name": "gcompris",
+            "cmake": true,
+            "builddir": true,
+            "sources": [
+                { "type": "git", "url": "git://anongit.kde.org/gcompris.git" },
+                { "type": "patch", "path": "gcompris-appdata.patch" }
+            ]
+        }
+    ]
+}

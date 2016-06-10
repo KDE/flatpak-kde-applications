@@ -1,0 +1,66 @@
+{
+    "id": "org.kde.kdevelop",
+    "branch": "master",
+    "runtime": "org.kde.Platform",
+    "runtime-version": "master",
+    "sdk": "org.kde.Sdk",
+    "command": "kdevelop",
+    "tags": ["nightly"],
+    "desktop-file-name-prefix": "(Nightly) ",
+    "finish-args": ["--share=ipc", "--socket=x11", "--filesystem=host" ],
+    
+    "modules": [
+        {
+            "name": "boost",
+            "config-opts": [],
+            "cleanup": [ "/lib/libboost_*.a" ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://downloads.sourceforge.net/project/boost/boost/1.60.0/boost_1_60_0.tar.bz2",
+                    "sha256": "686affff989ac2488f79a97b9479efb9f2abae035b5ed4d8226de6857933fd3b"
+                },
+                {
+                    "type": "file",
+                    "path": "boost-configure",
+                    "dest-filename": "configure"
+                }
+            ]
+        },
+        {
+            "name": "grantlee",
+            "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"],
+            "cmake": true,
+            "sources": [ { "type": "git", "url": "https://github.com/steveire/grantlee.git" } ]
+        },
+        {
+            "name": "libkomparediff2",
+            "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"],
+            "cmake": true,
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/libkomparediff2.git" } ]
+        },
+        {
+            "name": "llvmclang",
+            "cmake": true,
+            "builddir": true,
+            "config-opts": ["-DENABLE_TESTING=OFF", "-DBUILD_SHARED_LIBS=ON" ],
+            "sources": [
+                { "type": "git", "url": "http://llvm.org/git/llvm.git", "branch": "release_38" },
+                {
+                    "type": "git", "url": "http://llvm.org/git/clang.git",
+                    "dest": "llvm/tools"
+                }
+            ]
+        },
+        {
+            "name": "kdevplatform",
+            "cmake": true,
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kdevplatform.git", "branch": "5.0" } ]
+        },
+        {
+            "name": "kdevelop",
+            "cmake": true,
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kdevelop.git", "branch": "5.0" } ]
+        }
+    ]
+}
