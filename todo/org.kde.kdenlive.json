@@ -14,7 +14,7 @@
             "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"],
             "name": "kfilemetadata",
             "cmake": true,
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kfilemetadata.git", "branch": "v5.22.0" } ]
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kfilemetadata.git", "branch": "v5.23.0" } ]
         },
         {
             "name": "glib",

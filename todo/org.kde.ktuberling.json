@@ -14,7 +14,7 @@
             "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"],
             "name": "kdelibs4support",
             "cmake": true,
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kdelibs4support.git", "branch": "v5.22.0" } ]
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kdelibs4support.git", "branch": "v5.23.0" } ]
         },
         {
             "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"],
