@@ -1,0 +1,143 @@
+{
+    "id": "org.kde.kube",
+    "branch": "master",
+    "runtime": "org.kde.Platform",
+    "runtime-version": "master",
+    "sdk": "org.kde.Sdk",
+    "command": "kube-mail",
+    "tags": ["nightly"],
+    "desktop-file-name-prefix": "(Nightly) ",
+    "finish-args": ["--share=ipc", "--socket=x11", "--filesystem=host" ],
+    "separate-locales": false,
+
+    "modules": [
+        {
+            "name": "boost",
+            "config-opts": [],
+            "cleanup": [ "/lib/libboost_*.a" ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://downloads.sourceforge.net/project/boost/boost/1.60.0/boost_1_60_0.tar.bz2",
+                    "sha256": "686affff989ac2488f79a97b9479efb9f2abae035b5ed4d8226de6857933fd3b"
+                },
+                {
+                    "type": "file",
+                    "path": "boost-configure",
+                    "dest-filename": "configure"
+                }
+            ]
+        },
+        {
+            "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"],
+            "name": "flatbuffers",
+            "cmake": true,
+            "sources": [ { "type": "git", "url": "https://github.com/google/flatbuffers.git" } ]
+        },
+        {
+            "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib", "-DNO_PLASMA=ON"],
+            "name": "kirigami",
+            "cmake": true,
+            "builddir": true,
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kirigami.git" } ]
+        },
+        {
+            "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib",
+                            "-DCMAKE_C_COMPILER=/usr/bin/clang", "-DCMAKE_CXX_COMPILER=/usr/bin/clang++", "-DWITH_KJOB=OFF"],
+            "name": "kasync",
+            "cmake": true,
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kasync.git" } ]
+        },
+        {
+            "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"],
+            "name": "kmime",
+            "cmake": true,
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kmime.git" } ]
+        },
+        {
+            "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"],
+            "name": "kimap",
+            "cmake": true,
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kimap.git" } ]
+        },
+        {
+            "name": "libgpg-error",
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://www.gnupg.org/ftp/gcrypt/libgpg-error/libgpg-error-1.22.tar.bz2",
+                    "sha256": "f2a04ee6317bdb41a625bea23fdc7f0b5a63fb677f02447c647ed61fb9e69d7b"
+                }
+            ]
+        },
+        {
+            "name": "libassuan",
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://www.gnupg.org/ftp/gcrypt/libassuan/libassuan-2.4.2.tar.bz2",
+                    "sha256": "bb06dc81380b74bf1b64d5849be5c0409a336f3b4c45f20ac688e86d1b5bcb20"
+                }
+            ]
+        },
+        {
+            "name": "gpgme",
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://www.gnupg.org/ftp/gcrypt/gpgme/gpgme-1.6.0.tar.bz2",
+                    "sha256": "b09de4197ac280b102080e09eaec6211d081efff1963bf7821cf8f4f9916099d"
+                }
+            ]
+        },
+        {
+            "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"],
+            "name": "gpgmepp",
+            "cmake": true,
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/gpgmepp.git" } ]
+        },
+        {
+            "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"],
+            "name": "libkleo",
+            "cmake": true,
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/clones/libkleo/cmollekopf/libkleo.git" } ]
+        },
+        {
+            "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib", "-DUSE_AKONADI=OFF"],
+            "name": "libotp",
+            "cmake": true,
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/clones/messagelib/knauss/libotp.git", "branch": "dev/libotp" } ]
+        },
+        {
+            "name": "libgit2",
+            "cmake": true,
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://github.com/libgit2/libgit2/archive/v0.24.1.tar.gz",
+                    "sha256": "60198cbb34066b9b5c1613d15c0479f6cd25f4aef42f7ec515cd1cc13a77fede"
+                }
+            ]
+        },
+        {
+            "name": "lmdb",
+            "sources": [ { "type": "git", "url": "git://github.com/LMDB/lmdb.git", "branch": "LMDB_0.9.18"}],
+            "no-autogen": true,
+            "make-install-args": ["prefix=/app"],
+            "subdir" : "libraries/liblmdb"
+        },
+        {
+            "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib",
+                            "-DCMAKE_C_COMPILER=/usr/bin/clang", "-DCMAKE_CXX_COMPILER=/usr/bin/clang++"],
+            "name": "sink",
+            "cmake": true,
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/sink.git", "branch": "develop" } ]
+        },
+        {
+            "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib" ],
+            "name": "kube",
+            "cmake": true,
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kube.git", "branch": "develop" } ]
+        }
+    ]
+}
