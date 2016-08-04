@@ -13,10 +13,7 @@
         {
             "name": "kronometer",
             "cmake": true,
-            "sources": [
-                { "type": "git", "url": "git://anongit.kde.org/kronometer.git" },
-                { "type": "patch", "path": "org.kde.appicon.patch" }
-            ]
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kronometer.git" } ]
         }
     ]
 }
