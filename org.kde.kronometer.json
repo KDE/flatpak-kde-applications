@@ -1,6 +1,7 @@
 {
     "id": "org.kde.kronometer",
     "branch": "master",
+    "rename-icon": "kronometer",
     "runtime": "org.kde.Platform",
     "runtime-version": "master",
     "sdk": "org.kde.Sdk",

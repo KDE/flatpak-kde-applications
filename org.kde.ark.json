@@ -1,6 +1,7 @@
 {
     "id": "org.kde.ark",
     "branch": "master",
+    "rename-icon": "ark",
     "runtime": "org.kde.Platform",
     "runtime-version": "master",
     "sdk": "org.kde.Sdk",
