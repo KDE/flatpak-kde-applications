@@ -55,10 +55,7 @@
             "name": "krita",
             "cmake": true,
             "builddir": true,
-            "sources": [
-                { "type": "git", "url": "git://anongit.kde.org/krita.git" },
-                { "type": "patch", "path": "kritaappdata.patch" }
-            ]
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/krita.git" } ]
         }
     ]
 }
