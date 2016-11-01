@@ -46,19 +46,19 @@
                             "-DCMAKE_C_COMPILER=/usr/bin/clang", "-DCMAKE_CXX_COMPILER=/usr/bin/clang++", "-DWITH_KJOB=OFF"],
             "name": "kasync",
             "cmake": true,
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kasync.git" } ]
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kasync.git", "branch": "dev/kasync2" } ]
         },
         {
             "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"],
             "name": "kmime",
             "cmake": true,
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kmime.git" } ]
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kmime.git", "branch": "cd6220e" } ]
         },
         {
             "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"],
             "name": "kimap",
             "cmake": true,
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kimap.git" } ]
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kimap.git", "branch": "dev/kimap2" } ]
         },
         {
             "name": "libgpg-error",
@@ -94,13 +94,13 @@
             "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"],
             "name": "gpgmepp",
             "cmake": true,
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/gpgmepp.git" } ]
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/gpgmepp.git", "branch": "dfffdc5"  } ]
         },
         {
             "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"],
             "name": "libkleo",
             "cmake": true,
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/clones/libkleo/cmollekopf/libkleo.git" } ]
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/clones/libkleo/cmollekopf/libkleo.git", "branch": "dev/minimalbuild" } ]
         },
         {
             "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib", "-DUSE_AKONADI=OFF"],
