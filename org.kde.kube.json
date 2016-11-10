@@ -32,7 +32,7 @@
             "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"],
             "name": "flatbuffers",
             "cmake": true,
-            "sources": [ { "type": "git", "url": "https://github.com/google/flatbuffers.git" } ]
+            "sources": [ { "type": "git", "url": "https://github.com/google/flatbuffers.git", "branch": "v1.4.0" } ]
         },
         {
             "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib", "-DNO_PLASMA=ON"],
@@ -82,28 +82,10 @@
         },
         {
             "name": "gpgme",
-            "sources": [
-                {
-                    "type": "archive",
-                    "url": "https://www.gnupg.org/ftp/gcrypt/gpgme/gpgme-1.6.0.tar.bz2",
-                    "sha256": "b09de4197ac280b102080e09eaec6211d081efff1963bf7821cf8f4f9916099d"
-                }
-            ]
+            "sources": [ { "type": "git", "url": "git://git.gnupg.org/gpgme.git", "branch": "f1f3410"} ]
         },
         {
-            "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"],
-            "name": "gpgmepp",
-            "cmake": true,
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/gpgmepp.git", "branch": "dfffdc5"  } ]
-        },
-        {
-            "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"],
-            "name": "libkleo",
-            "cmake": true,
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/clones/libkleo/cmollekopf/libkleo.git", "branch": "dev/minimalbuild" } ]
-        },
-        {
-            "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib", "-DUSE_AKONADI=OFF"],
+            "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib", "-DMIMETREEPARSER_ONLY_BUILD=TRUE"],
             "name": "libotp",
             "cmake": true,
             "sources": [ { "type": "git", "url": "git://anongit.kde.org/clones/messagelib/knauss/libotp.git", "branch": "dev/libotp" } ]
@@ -134,7 +116,8 @@
             "sources": [ { "type": "git", "url": "git://anongit.kde.org/sink.git", "branch": "develop" } ]
         },
         {
-            "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib" ],
+            "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib",
+                            "-DCMAKE_C_COMPILER=/usr/bin/clang", "-DCMAKE_CXX_COMPILER=/usr/bin/clang++"],
             "name": "kube",
             "cmake": true,
             "sources": [ { "type": "git", "url": "git://anongit.kde.org/kube.git", "branch": "develop" } ]
