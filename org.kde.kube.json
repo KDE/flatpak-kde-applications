@@ -5,6 +5,7 @@
     "runtime-version": "master",
     "sdk": "org.kde.Sdk",
     "command": "kube-mail",
+    "rename-icon": "kube_icon",
     "tags": ["nightly"],
     "desktop-file-name-prefix": "(Nightly) ",
     "finish-args": ["--share=ipc", "--socket=x11", "--filesystem=host" ],
@@ -114,6 +115,12 @@
             "name": "sink",
             "cmake": true,
             "sources": [ { "type": "git", "url": "git://anongit.kde.org/sink.git", "branch": "develop" } ]
+        },
+        {
+            "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"],
+            "name": "breeze-icons",
+            "cmake": true,
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/breeze-icons.git", "branch": "v5.27.0" } ]
         },
         {
             "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib",
