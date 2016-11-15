@@ -117,12 +117,6 @@
             "sources": [ { "type": "git", "url": "git://anongit.kde.org/sink.git", "branch": "develop" } ]
         },
         {
-            "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"],
-            "name": "breeze-icons",
-            "cmake": true,
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/breeze-icons.git", "branch": "v5.27.0" } ]
-        },
-        {
             "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib",
                             "-DCMAKE_C_COMPILER=/usr/bin/clang", "-DCMAKE_CXX_COMPILER=/usr/bin/clang++"],
             "name": "kube",
