@@ -56,7 +56,7 @@
             "name": "okular",
             "cmake": true,
             "builddir": true,
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/okular.git", "branch": "frameworks" } ]
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/okular.git", "branch": "master" } ]
         }
     ]
 }
