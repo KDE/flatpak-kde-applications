@@ -47,7 +47,7 @@
                             "-DCMAKE_C_COMPILER=/usr/bin/clang", "-DCMAKE_CXX_COMPILER=/usr/bin/clang++", "-DWITH_KJOB=OFF"],
             "name": "kasync",
             "cmake": true,
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kasync.git", "branch": "dev/kasync2" } ]
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kasync.git", "branch": "master" } ]
         },
         {
             "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"],
@@ -57,9 +57,9 @@
         },
         {
             "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"],
-            "name": "kimap",
+            "name": "kimap2",
             "cmake": true,
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kimap.git", "branch": "dev/kimap2" } ]
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kimap2.git", "branch": "master" } ]
         },
         {
             "name": "libgpg-error",
@@ -83,7 +83,7 @@
         },
         {
             "name": "gpgme",
-            "sources": [ { "type": "git", "url": "git://git.gnupg.org/gpgme.git", "branch": "f1f3410"} ]
+            "sources": [ { "type": "git", "url": "git://git.gnupg.org/gpgme.git", "branch": "572c1aa"} ]
         },
         {
             "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib", "-DMIMETREEPARSER_ONLY_BUILD=TRUE"],
