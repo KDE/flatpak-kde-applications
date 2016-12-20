@@ -87,9 +87,9 @@
         },
         {
             "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib", "-DMIMETREEPARSER_ONLY_BUILD=TRUE"],
-            "name": "libotp",
+            "name": "messagelib",
             "cmake": true,
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/clones/messagelib/knauss/libotp.git", "branch": "dev/libotp" } ]
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/messagelib.git", "branch": "Applications/16.12" } ]
         },
         {
             "name": "libgit2",
