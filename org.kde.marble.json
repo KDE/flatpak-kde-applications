@@ -1,5 +1,5 @@
 {
-    "id": "org.kde.marble.maps",
+    "id": "org.kde.marble",
     "branch": "master",
     "runtime": "org.kde.Platform",
     "runtime-version": "master",
