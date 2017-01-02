@@ -11,10 +11,16 @@
     
     "modules": [
         {
+            "name": "kirigami",
+            "cmake": true,
+            "builddir": true,
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kirigami.git", "branch": "master" } ]
+        },
+        {
             "name": "discover",
             "cmake": true,
             "builddir": true,
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/discover.git" } ]
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/discover.git", "branch": "master" } ]
         }
     ]
 }
