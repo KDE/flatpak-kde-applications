@@ -1,0 +1,194 @@
+{
+    "id": "org.kde.plasmashell",
+    "branch": "master",
+    "runtime": "org.kde.Platform",
+    "runtime-version": "master",
+    "sdk": "org.kde.Sdk",
+    "command": "plasmashell",
+    "rename-desktop-file": "org.kde.kfontview.desktop",
+    "tags": ["nightly"],
+    "desktop-file-name-prefix": "(Nightly) ",
+    "finish-args": ["--share=ipc", "--socket=x11", "--filesystem=host" ],
+    
+    "modules": [
+        {
+            "name": "boost",
+            "config-opts": [],
+            "cleanup": [ "/lib/libboost_*.a" ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://downloads.sourceforge.net/project/boost/boost/1.60.0/boost_1_60_0.tar.bz2",
+                    "sha256": "686affff989ac2488f79a97b9479efb9f2abae035b5ed4d8226de6857933fd3b"
+                },
+                {
+                    "type": "file",
+                    "path": "boost-configure",
+                    "dest-filename": "configure"
+                }
+            ]
+        },
+        {
+            "name": "kactivities",
+            "cmake": true,
+            "builddir": true,
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kactivities.git", "branch": "master" } ]
+        },
+        {
+            "name": "plasma-framework",
+            "cmake": true,
+            "builddir": true,
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/plasma-framework.git", "branch": "master" } ]
+        },
+        {
+            "name": "krunner",
+            "cmake": true,
+            "builddir": true,
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/krunner.git", "branch": "master" } ]
+        },
+        {
+            "name": "kjs",
+            "cmake": true,
+            "builddir": true,
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kjs.git", "branch": "master" } ]
+        },
+        {
+            "name": "kjsembed",
+            "cmake": true,
+            "builddir": true,
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kjsembed.git", "branch": "master" } ]
+        },
+        {
+            "name": "kdesu",
+            "cmake": true,
+            "builddir": true,
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kdesu.git", "branch": "master" } ]
+        },
+        {
+            "name": "libksysguard",
+            "cmake": true,
+            "builddir": true,
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/libksysguard.git", "branch": "master" } ]
+        },
+        {
+            "name": "ksysguard",
+            "cmake": true,
+            "builddir": true,
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/ksysguard.git", "branch": "master" } ]
+        },
+        {
+            "name": "kdelibs4support",
+            "cmake": true,
+            "builddir": true,
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kdelibs4support.git", "branch": "master" } ]
+        },
+        {
+            "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"],
+            "name": "kfilemetadata",
+            "cmake": true,
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kfilemetadata.git", "branch": "v5.28.0" } ]
+        },
+        {
+            "name": "lmdb",
+            "sources": [ { "type": "git", "url": "git://github.com/LMDB/lmdb.git", "branch": "LMDB_0.9.18"}],
+            "no-autogen": true,
+            "make-install-args": ["prefix=/app"],
+            "subdir" : "libraries/liblmdb"
+        },
+        {
+            "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib", "-DLMDB_DIR=/app"],
+            "name": "baloo",
+            "cmake": true,
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/baloo.git", "branch": "v5.28.0" },
+            {"type": "patch", "path": "baloo.patch"} ]
+        },
+        {
+            "name": "kdecoration",
+            "cmake": true,
+            "builddir": true,
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kdecoration.git", "branch": "master" } ]
+        },
+        {
+            "name": "breeze",
+            "cmake": true,
+            "builddir": true,
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/breeze.git", "branch": "master" } ]
+        },
+        {
+            "name": "kscreenlocker",
+            "cmake": true,
+            "builddir": true,
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kscreenlocker.git", "branch": "master" } ]
+        },
+        {
+            "name": "libxkbcommon",
+            "config-opts": [ "--disable-static", "--enable-x11" ],
+            "sources": [
+                 {
+                     "type": "archive",
+                     "url": "https://xkbcommon.org/download/libxkbcommon-0.7.0.tar.xz",
+                     "sha256": "09351592312d67b438655f54da5b67853026662c4a57e6be4d225f04a9989798"
+                 }
+            ]
+        },
+        {
+            "name": "kwin",
+            "cmake": true,
+            "builddir": true,
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kwin.git", "branch": "master" } ]
+        },
+        {
+            "name": "plasma-workspace",
+            "cmake": true,
+            "builddir": true,
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/plasma-workspace.git", "branch": "master" } ]
+        },
+        {
+            "name": "kpeople",
+            "cmake": true,
+            "builddir": true,
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kpeople.git", "branch": "master" } ]
+        },
+        {
+            "name": "kactivities-stats",
+            "cmake": true,
+            "builddir": true,
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kactivities-stats.git", "branch": "master" } ]
+        },
+        {
+            "name": "libxkbfile",
+            "config-opts": [ "--disable-static", "--enable-x11" ],
+            "sources": [
+                 {
+                     "type": "archive",
+                     "url": "https://www.x.org/releases/individual/lib/libxkbfile-1.0.9.tar.gz",
+                     "sha256": "95df50570f38e720fb79976f603761ae6eff761613eb56f258c3cb6bab4fd5e3"
+                 }
+            ]
+        },
+        {
+            "name": "plasma-desktop",
+            "cmake": true,
+            "builddir": true,
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/plasma-desktop.git", "branch": "master" } ]
+        },
+        {
+            "name": "purpose",
+            "cmake": true,
+            "builddir": true,
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/purpose.git", "branch": "master" } ]
+        },
+        {
+            "name": "kross",
+            "cmake": true,
+            "builddir": true,
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kross.git", "branch": "master" } ]
+        },
+        {
+            "name": "kdeplasma-addons",
+            "cmake": true,
+            "builddir": true,
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kdeplasma-addons.git", "branch": "master" } ]
+        }
+    ]
+}
