@@ -1,0 +1,66 @@
+{
+    "id": "org.kde.discover",
+    "branch": "master",
+    "runtime": "org.kde.Platform",
+    "runtime-version": "master",
+    "sdk": "org.kde.Sdk",
+    "command": "plasma-discover",
+    "tags": ["nightly"],
+    "desktop-file-name-prefix": "(Nightly) ",
+    "finish-args": ["--share=ipc", "--socket=x11", "--filesystem=host" ],
+    
+    "modules": [
+        {
+            "name": "libxkbfile",
+            "config-opts": [ "--disable-static", "--enable-x11" ],
+            "sources": [
+                 {
+                     "type": "archive",
+                     "url": "http://pyyaml.org/download/libyaml/yaml-0.1.7.zip",
+                     "sha256": "bd16d734a82ccc806eab7784b3a97ee4773daf359496b298968fc2eedc3d1b19"
+                 }
+            ]
+        },
+        {
+            "name": "libstemmer",
+            "sources": [
+                { "type": "git", "url": "https://github.com/snowballstem/snowball.git", "branch": "master" },
+                {
+                    "type": "patch", "path": "libstemmer-dynamiclib.patch",
+                    "from": "https://git.archlinux.org/svntogit/packages.git/plain/trunk/dynamiclib.patch?h=packages/snowball"
+                },
+                {
+                    "type": "file",
+                    "path": "noop.sh",
+                    "dest-filename": "configure"
+                }
+            ]  
+        },
+        {
+            "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib", "-DQT=ON"],
+            "name": "appstream",
+            "cmake": true,
+            "builddir": true,
+            "sources": [ { "type": "git", "url": "https://github.com/ximion/appstream.git", "branch": "master" } ]
+        },
+        {
+            "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"],
+            "name": "packagekit-qt",
+            "cmake": true,
+            "builddir": true,
+            "sources": [ { "type": "git", "url": "https://github.com/hughsie/PackageKit-Qt.git", "branch": "master" } ]
+        },
+        {
+            "name": "kirigami",
+            "cmake": true,
+            "builddir": true,
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kirigami.git", "branch": "master" } ]
+        },
+        {
+            "name": "discover",
+            "cmake": true,
+            "builddir": true,
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/discover.git", "branch": "master" } ]
+        }
+    ]
+}
