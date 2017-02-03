@@ -62,6 +62,18 @@
             "sources": [ { "type": "git", "url": "git://anongit.kde.org/kimap2.git", "branch": "master" } ]
         },
         {
+            "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"],
+            "name": "kcontacts",
+            "cmake": true,
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kcontacts.git", "branch": "master" } ]
+        },
+        {
+            "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"],
+            "name": "kdav",
+            "cmake": true,
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kdav.git", "branch": "master" } ]
+        },
+        {
             "name": "libgpg-error",
             "sources": [
                 {
