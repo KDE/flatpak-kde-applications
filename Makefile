@@ -9,7 +9,7 @@ all: $(REPO)/config $(foreach file, $(wildcard *.json), $(subst .json,.app,$(fil
 	flatpak-builder --ccache --repo=$(REPO) --subject="Build of $<, `date`" ${EXPORT_ARGS} app $<
 
 export:
-	flatpak build-update-repo $(REPO) ${EXPORT_ARGS}
+	flatpak build-update-repo --prune --prune-depth=20 $(REPO) ${EXPORT_ARGS}
 
 $(REPO)/config:
 	ostree init --mode=archive-z2 --repo=$(REPO)
