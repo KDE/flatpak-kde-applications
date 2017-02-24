@@ -2,7 +2,7 @@ REPO=repo
 
 
 
-all: $(REPO)/config $(foreach file, $(wildcard *.json), $(subst .json,.app,$(file)))
+all: $(REPO)/config $(foreach file, $(wildcard org.kde.*.json), $(subst .json,.app,$(file)))
 
 %.app: %.json
 	rm -rf app
