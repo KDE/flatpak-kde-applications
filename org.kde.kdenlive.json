@@ -34,6 +34,36 @@
             ]
         },
         {
+            "name": "pango",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "git://git.gnome.org/pango"
+                }
+            ]
+        },
+        {
+            "name": "atk",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "git://git.gnome.org/atk"
+                }
+            ]
+        },
+        {
+            "name": "gtk2",
+            "config-opts": ["--disable-man",
+                            "--with-xinput=xfree"],
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "git://git.gnome.org/gtk+",
+                    "branch": "gtk-2-24"
+                }
+            ]
+        },
+        {
             "name": "mlt",
             "sources": [ { "type": "git", "url": "https://github.com/mltframework/mlt.git", "branch": "v6.2.0" } ]
         },
