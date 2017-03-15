@@ -7,7 +7,7 @@
     "command": "kalgebra",
     "tags": ["nightly"],
     "desktop-file-name-prefix": "(Nightly) ",
-    "finish-args": ["--share=ipc", "--socket=x11", "--filesystem=host" ],
+    "finish-args": ["--share=ipc", "--socket=x11", "--filesystem=host", "--device=dri" ],
     "separate-locales": false,
     
     "modules": [
