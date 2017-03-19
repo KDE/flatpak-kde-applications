@@ -1,0 +1,31 @@
+{
+    "id": "org.kde.kstars",
+    "branch": "master",
+    "runtime": "org.kde.Platform",
+    "runtime-version": "master",
+    "sdk": "org.kde.Sdk",
+    "command": "kstars",
+    "tags": ["nightly"],
+    "desktop-file-name-prefix": "(Nightly) ",
+    "finish-args": ["--share=ipc", "--socket=x11", "--filesystem=host" ],
+
+    "modules": [
+        {
+            "name": "eigen",
+            "cmake": true,
+            "builddir": true,
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "http://bitbucket.org/eigen/eigen/get/3.2.8.tar.bz2",
+                    "sha256": "722a63d672b70f39c271c5e2a4a43ba14d12015674331790414fcb167c357e55"
+                }
+            ]
+        },
+        {
+            "name": "kstars",
+            "cmake": true,
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kstars.git" } ]
+        }
+    ]
+}

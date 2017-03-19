@@ -1,0 +1,31 @@
+{
+    "id": "org.kde.kiten",
+    "branch": "master",
+    "runtime": "org.kde.Platform",
+    "runtime-version": "master",
+    "sdk": "org.kde.Sdk",
+    "command": "kiten",
+    "tags": ["nightly"],
+    "desktop-file-name-prefix": "(Nightly) ",
+    "finish-args": ["--share=ipc", "--socket=x11", "--filesystem=host" ],
+
+    "modules": [
+        {
+            "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"],
+            "name": "kjs",
+            "cmake": true,
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kjs.git", "branch": "v5.30.0" } ]
+        },
+        {
+            "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"],
+            "name": "khtml",
+            "cmake": true,
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/khtml.git", "branch": "v5.30.0" } ]
+        },
+        {
+            "name": "kiten",
+            "cmake": true,
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kiten.git" } ]
+        }
+    ]
+}

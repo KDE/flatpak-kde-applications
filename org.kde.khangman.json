@@ -1,0 +1,24 @@
+{
+    "id": "org.kde.khangman",
+    "branch": "master",
+    "runtime": "org.kde.Platform",
+    "runtime-version": "master",
+    "sdk": "org.kde.Sdk",
+    "command": "khangman",
+    "tags": ["nightly"],
+    "desktop-file-name-prefix": "(Nightly) ",
+    "finish-args": ["--share=ipc", "--socket=x11", "--filesystem=host" ],
+
+    "modules": [
+        {
+            "name": "libkeduvocdocument",
+            "cmake": true,
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/libkeduvocdocument.git" } ]
+        },
+        {
+            "name": "khangman",
+            "cmake": true,
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/khangman.git" } ]
+        }
+    ]
+}
