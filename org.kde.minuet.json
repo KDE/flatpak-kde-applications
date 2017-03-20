@@ -1,0 +1,29 @@
+{
+    "id": "org.kde.minuet",
+    "branch": "master",
+    "runtime": "org.kde.Platform",
+    "runtime-version": "master",
+    "sdk": "org.kde.Sdk",
+    "command": "minuet",
+    "tags": ["nightly"],
+    "desktop-file-name-prefix": "(Nightly) ",
+    "finish-args": ["--share=ipc", "--socket=x11", "--filesystem=host" ],
+
+    "modules": [
+        {
+            "name": "fluidsynth",
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "http://downloads.sourceforge.net/fluidsynth/fluidsynth-1.1.6.tar.gz",
+                    "sha256": "50853391d9ebeda9b4db787efb23f98b1e26b7296dd2bb5d0d96b5bccee2171c"
+                }
+            ]
+        },
+        {
+            "name": "minuet",
+            "cmake": true,
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/minuet.git" } ]
+        }
+    ]
+}

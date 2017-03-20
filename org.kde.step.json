@@ -1,0 +1,49 @@
+{
+    "id": "org.kde.step",
+    "branch": "master",
+    "runtime": "org.kde.Platform",
+    "runtime-version": "master",
+    "sdk": "org.kde.Sdk",
+    "command": "step",
+    "tags": ["nightly"],
+    "desktop-file-name-prefix": "(Nightly) ",
+    "finish-args": ["--share=ipc", "--socket=x11", "--filesystem=host" ],
+
+    "modules": [
+        {
+            "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"],
+            "name": "kjs",
+            "cmake": true,
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kjs.git", "branch": "v5.30.0" } ]
+        },
+        {
+            "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"],
+            "name": "khtml",
+            "cmake": true,
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/khtml.git", "branch": "v5.30.0" } ]
+        },
+        {
+            "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"],
+            "name": "kdelibs4support",
+            "cmake": true,
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kdelibs4support.git", "branch": "v5.30.0" } ]
+        },
+        {
+            "name": "eigen",
+            "cmake": true,
+            "builddir": true,
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "http://bitbucket.org/eigen/eigen/get/3.2.8.tar.bz2",
+                    "sha256": "722a63d672b70f39c271c5e2a4a43ba14d12015674331790414fcb167c357e55"
+                }
+            ]
+        },
+        {
+            "name": "step",
+            "cmake": true,
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/step.git" } ]
+        }
+    ]
+}

@@ -1,0 +1,30 @@
+{
+    "id": "org.kde.ktouch",
+    "branch": "master",
+    "runtime": "org.kde.Platform",
+    "runtime-version": "master",
+    "sdk": "org.kde.Sdk",
+    "command": "ktouch",
+    "tags": ["nightly"],
+    "desktop-file-name-prefix": "(Nightly) ",
+    "finish-args": ["--share=ipc", "--socket=x11", "--filesystem=host" ],
+
+    "modules": [
+        {
+            "name": "libxkbfile",
+            "config-opts": [ "--disable-static", "--enable-x11" ],
+            "sources": [
+                 {
+                     "type": "archive",
+                     "url": "https://xorg.freedesktop.org/releases/individual/lib/libxkbfile-1.0.9.tar.gz",
+                     "sha256": "95df50570f38e720fb79976f603761ae6eff761613eb56f258c3cb6bab4fd5e3"
+                 }
+            ]
+        },
+        {
+            "name": "ktouch",
+            "cmake": true,
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/ktouch.git" } ]
+        }
+    ]
+}
