@@ -1,0 +1,36 @@
+{
+    "id": "org.kde.labplot2",
+    "branch": "master",
+    "runtime": "org.kde.Platform",
+    "runtime-version": "master",
+    "sdk": "org.kde.Sdk",
+    "command": "labplot2",
+    "tags": ["nightly"],
+    "desktop-file-name-prefix": "(Nightly) ",
+    "rename-desktop-file": "org.kde.labplot2.desktop",
+    "finish-args": ["--share=ipc", "--socket=x11", "--filesystem=host" ],
+
+    "modules": [
+        {
+            "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"],
+            "name": "kdelibs4support",
+            "cmake": true,
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kdelibs4support.git", "branch": "v5.30.0" } ]
+        },
+        {
+            "name": "gsl",
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "http://ftp.gnu.org/gnu/gsl/gsl-2.3.tar.gz",
+                    "sha256": "562500b789cd599b3a4f88547a7a3280538ab2ff4939504c8b4ac4ca25feadfb"
+                }
+            ]
+        },
+        {
+            "name": "labplot",
+            "cmake": true,
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/labplot.git", "branch": "frameworks" } ]
+        }
+    ]
+}
