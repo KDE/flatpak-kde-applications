@@ -22,6 +22,11 @@
             ]
         },
         {
+            "name": "kqtquickcharts",
+            "cmake": true,
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kqtquickcharts.git" } ]
+        },
+        {
             "name": "ktouch",
             "cmake": true,
             "sources": [ { "type": "git", "url": "git://anongit.kde.org/ktouch.git" } ]
