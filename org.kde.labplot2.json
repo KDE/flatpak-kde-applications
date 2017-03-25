@@ -7,7 +7,6 @@
     "command": "labplot2",
     "tags": ["nightly"],
     "desktop-file-name-prefix": "(Nightly) ",
-    "rename-desktop-file": "org.kde.labplot2.desktop",
     "finish-args": ["--share=ipc", "--socket=x11", "--filesystem=host" ],
 
     "modules": [
