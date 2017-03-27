@@ -29,7 +29,7 @@
             "builddir": true,
             "config-opts": ["-DENABLE_TESTING=OFF", "-DBUILD_SHARED_LIBS=ON" ],
             "sources": [
-                { "type": "git", "url": "http://llvm.org/git/llvm.git", "branch": "release_38" },
+                { "type": "git", "url": "http://llvm.org/git/llvm.git", "branch": "stable" },
                 {
                     "type": "git", "url": "http://llvm.org/git/clang.git",
                     "dest": "llvm/tools"
