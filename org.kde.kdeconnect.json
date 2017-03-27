@@ -6,12 +6,18 @@
     "sdk": "org.kde.Sdk",
     "tags": ["nightly"],
     "desktop-file-name-prefix": "(Nightly) ",
+    "rename-desktop-file": "org.kde.kdeconnect.kcm.desktop",
     "finish-args": ["--share=ipc", "--socket=x11", "--filesystem=host" ],
     
     "modules": [
         {
             "name": "libfakekey",
-            "config-opts": [ "--disable-static", "--prefix=/usr", "--sysconfdir=/etc", "--localstatedir=/var" ],
+            "buildsystem": "simple",
+            "build-commands": [
+                "./configure --prefix=/app --sysconfdir=/etc --localstatedir=/var --disable-static",
+                "make AM_LDFLAGS=-lX11",
+                "make install"
+            ],
             "sources": [
                 {
                     "type": "archive",
