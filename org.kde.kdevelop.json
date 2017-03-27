@@ -39,12 +39,12 @@
         {
             "name": "kdevplatform",
             "cmake": true,
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kdevplatform.git", "branch": "5.0" } ]
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kdevplatform.git", "branch": "master" } ]
         },
         {
             "name": "kdevelop",
             "cmake": true,
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kdevelop.git", "branch": "5.0" } ]
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kdevelop.git", "branch": "master" } ]
         }
     ]
 }
