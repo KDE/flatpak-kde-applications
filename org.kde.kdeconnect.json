@@ -7,7 +7,8 @@
     "tags": ["nightly"],
     "desktop-file-name-prefix": "(Nightly) ",
     "rename-desktop-file": "org.kde.kdeconnect.kcm.desktop",
-    "finish-args": ["--share=ipc", "--socket=x11", "--filesystem=host" ],
+    "finish-args": ["--share=ipc", "--socket=x11", "--filesystem=host", "--share=network", "--own-name=org.kde.kdeconnectd",
+                    "--talk-name=org.mpris.MediaPlayer2", "--talk-name=org.mpris.MediaPlayer2.Player" ],
     
     "modules": [
         {
@@ -31,6 +32,11 @@
             "name": "qca",
             "cmake": true,
             "sources": [ { "type": "git", "url": "git://anongit.kde.org/qca.git" } ]
+        },
+        {
+            "name": "kde-cli-tools",
+            "cmake": true,
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kde-cli-tools.git" } ]
         },
         {
             "name": "kdeconnect",
