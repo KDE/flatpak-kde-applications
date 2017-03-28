@@ -22,11 +22,15 @@
             ]
         },
         {
+            "name": "xmlto",
+            "sources": [ { "type": "git", "url": "https://pagure.io/xmlto.git", "branch": "master" } ]
+        },
+        {
             "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib", "-DQT=ON", "-DSTEMMING=OFF"],
             "name": "appstream",
             "cmake": true,
             "builddir": true,
-            "sources": [ { "type": "git", "url": "https://github.com/aleixpol/appstream.git", "branch": "master" } ]
+            "sources": [ { "type": "git", "url": "https://github.com/ximion/appstream.git", "branch": "master" } ]
         },
         {
             "name": "kirigami",
