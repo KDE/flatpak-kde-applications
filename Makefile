@@ -1,12 +1,11 @@
 REPO=repo
-
-
+ARCH?=$(shell flatpak --default-arch)
 
 all: $(REPO)/config $(foreach file, $(wildcard org.kde.*.json), $(subst .json,.app,$(file)))
 
 %.app: %.json
 	rm -rf app
-	flatpak-builder --ccache --repo=$(REPO) --subject="Build of $<, `date`" ${EXPORT_ARGS} app $<
+	flatpak-builder --arch=$(ARCH) --ccache --repo=$(REPO) --subject="Build of $<, `date`" ${EXPORT_ARGS} app $<
 
 export:
 	flatpak build-update-repo --prune --prune-depth=20 $(REPO) ${EXPORT_ARGS}
