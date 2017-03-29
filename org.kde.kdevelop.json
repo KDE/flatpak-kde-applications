@@ -27,11 +27,12 @@
             "name": "llvmclang",
             "cmake": true,
             "builddir": true,
-            "config-opts": ["-DENABLE_TESTING=OFF", "-DBUILD_SHARED_LIBS=ON" ],
+            "config-opts": ["-DLLVM_BUILD_LLVM_DYLIB=ON", "-DLLVM_LINK_LLVM_DYLIB=ON"],
+            "cleanup": [ "/lib/*.a" ],
             "sources": [
-                { "type": "git", "url": "http://llvm.org/git/llvm.git", "branch": "stable" },
+                { "type": "git", "url": "http://llvm.org/git/llvm.git", "branch": "release_40" },
                 {
-                    "type": "git", "url": "http://llvm.org/git/clang.git",
+                    "type": "git", "url": "http://llvm.org/git/clang.git", "branch": "release_40",
                     "dest": "llvm/tools"
                 }
             ]
