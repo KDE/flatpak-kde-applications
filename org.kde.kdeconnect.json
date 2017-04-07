@@ -7,7 +7,7 @@
     "tags": ["nightly"],
     "desktop-file-name-prefix": "(Nightly) ",
     "rename-desktop-file": "org.kde.kdeconnect.kcm.desktop",
-    "finish-args": ["--share=ipc", "--socket=x11", "--filesystem=host", "--share=network", "--own-name=org.kde.kdeconnectd",
+    "finish-args": ["--share=ipc", "--socket=x11", "--socket=wayland", "--filesystem=host", "--share=network", "--own-name=org.kde.kdeconnectd",
                     "--talk-name=org.mpris.MediaPlayer2", "--talk-name=org.mpris.MediaPlayer2.Player" ],
     
     "modules": [
