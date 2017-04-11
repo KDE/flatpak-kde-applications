@@ -1,0 +1,199 @@
+{
+    "id": "org.kde.kontact",
+    "branch": "master",
+    "rename-icon": "kontact",
+    "runtime": "org.kde.Platform",
+    "runtime-version": "master",
+    "sdk": "org.kde.Sdk",
+    "command": "kontact",
+    "tags": ["nightly"],
+    "desktop-file-name-prefix": "(Nightly) ",
+    "finish-args": ["--share=network", "--share=ipc", "--socket=x11", "--socket=wayland", "--filesystem=host" ],
+
+    "modules": [
+        {
+            "name": "libgpg-error",
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://www.gnupg.org/ftp/gcrypt/libgpg-error/libgpg-error-1.22.tar.bz2",
+                    "sha256": "f2a04ee6317bdb41a625bea23fdc7f0b5a63fb677f02447c647ed61fb9e69d7b"
+                }
+            ]
+        },
+        {
+            "name": "libassuan",
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://www.gnupg.org/ftp/gcrypt/libassuan/libassuan-2.4.2.tar.bz2",
+                    "sha256": "bb06dc81380b74bf1b64d5849be5c0409a336f3b4c45f20ac688e86d1b5bcb20"
+                }
+            ]
+        },
+        {
+            "name": "gpgme",
+            "sources": [ { "type": "git", "url": "git://git.gnupg.org/gpgme.git", "branch": "572c1aa"} ]
+        },
+        { "name": "kdiagram", "cmake": true, "sources": [ { "type": "git", "url": "git://anongit.kde.org/kdiagram.git" } ] },
+        {
+            "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"],
+            "name": "kdelibs4support",
+            "cmake": true,
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kdelibs4support.git", "branch": "v5.33.0" } ]
+        },
+        {
+            "name": "libical",
+            "cmake": true,
+            "sources": [ { "type": "git", "url": "https://github.com/libical/libical.git", "branch": "v2.0.0" } ]
+        },
+        { "name": "kcalcore", "cmake": true, "sources": [ { "type": "git", "url": "git://anongit.kde.org/kcalcore.git" } ] },
+        {
+            "name": "libdmtx",
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "http://downloads.sourceforge.net/libdmtx/libdmtx-0.7.4.tar.bz2",
+                    "sha256": "b62c586ac4fad393024dadcc48da8081b4f7d317aa392f9245c5335f0ee8dd76"
+                }
+            ]
+        },
+        {
+            "name": "qrencode",
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "http://megaui.net/fukuchi/works/qrencode/qrencode-3.4.4.tar.bz2",
+                    "sha256": "efe5188b1ddbcbf98763b819b146be6a90481aac30cfc8d858ab78a19cde1fa5"
+                }
+            ]
+        },
+        { "name": "prison", "cmake": true, "sources": [ { "type": "git", "url": "git://anongit.kde.org/prison.git" } ] },
+        "org.boost.libs.json",
+        { "name": "akonadi", "cmake": true, "sources": [ { "type": "git", "url": "git://anongit.kde.org/akonadi" } ] },
+        { "name": "kmime", "cmake": true, "sources": [ { "type": "git", "url": "git://anongit.kde.org/kmime" } ] },
+        { "name": "akonadi-mime", "cmake": true, "sources": [ { "type": "git", "url": "git://anongit.kde.org/akonadi-mime" } ] },
+        { "name": "kcontacts", "cmake": true, "sources": [ { "type": "git", "url": "git://anongit.kde.org/kcontacts" } ] },
+        {
+            "name": "grantlee",
+            "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"],
+            "cmake": true,
+            "sources": [ { "type": "git", "url": "https://github.com/steveire/grantlee.git" } ]
+        },
+        { "name": "akonadi-contacts", "cmake": true, "sources": [ { "type": "git", "url": "git://anongit.kde.org/akonadi-contacts" } ] },
+        { "name": "kmailtransport", "cmake": true, "sources": [ { "type": "git", "url": "git://anongit.kde.org/kmailtransport" } ] },
+        { "name": "kpimtextedit", "cmake": true, "sources": [ { "type": "git", "url": "git://anongit.kde.org/kpimtextedit" } ] },
+        { "name": "kidentitymanagement", "cmake": true, "sources": [ { "type": "git", "url": "git://anongit.kde.org/kidentitymanagement" } ] },
+        { "name": "kcalutils", "cmake": true, "sources": [ { "type": "git", "url": "git://anongit.kde.org/kcalutils" } ] },
+        {
+            "name": "kactivities",
+            "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"],
+            "cmake": true,
+            "builddir": true,
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kactivities.git", "branch": "v5.33.0" } ]
+        },
+        {
+            "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"],
+            "name": "plasma-framework",
+            "cmake": true,
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/plasma-framework.git", "branch": "v5.33.0" } ]
+        },
+        {
+            "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"],
+            "name": "krunner",
+            "cmake": true,
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/krunner.git", "branch": "v5.33.0" } ]
+        },
+        {
+            "name": "xapian",
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://oligarchy.co.uk/xapian/1.4.2/xapian-core-1.4.2.tar.xz",
+                    "sha256": "aec2c4352998127a2f2316218bf70f48cef0a466a87af3939f5f547c5246e1ce"
+                }
+            ]
+        },
+        {
+            "name": "groff",
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "http://ftp.gnu.org/gnu/groff/groff-1.22.3.tar.gz",
+                    "sha256": "3a48a9d6c97750bfbd535feeb5be0111db6406ddb7bb79fc680809cda6d828a5"
+                }
+            ],
+            "buildsystem": "simple",
+            "build-commands": [
+                "./configure --prefix=/app",
+                "make",
+                "make install"
+            ]
+        },
+        {
+            "name": "BDB",
+            "config-opts": ["--enable-compat185", "--enable-shared", "--enable-static", "--enable-cxx", "--enable-dbm", "--enable-stl"],
+            "make-install-args": ["LIBSO_LIBS=-lpthread"],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "http://download.oracle.com/berkeley-db/db-5.3.28.tar.gz",
+                    "sha256": "e0a992d740709892e81f9d93f06daf305cf73fb81b545afe72478043172c3628"
+                },
+                {
+                    "type": "script",
+                    "commands": [ "./dist/configure $@" ],
+                    "dest-filename": "configure"
+                }
+            ]
+        },
+        {
+            "name": "openldap",
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "http://mirror.eu.oneandone.net/software/openldap/openldap-release/openldap-2.4.44.tgz",
+                    "sha256": "d7de6bf3c67009c95525dde3a0212cc110d0a70b92af2af8e3ee800e81b88400"
+                }
+            ]
+        },
+        { "name": "kldap", "cmake": true, "sources": [ { "type": "git", "url": "git://anongit.kde.org/kldap" } ] },
+        { "name": "akonadi-search", "cmake": true, "sources": [ { "type": "git", "url": "git://anongit.kde.org/akonadi-search" } ] },
+        { "name": "kmbox", "cmake": true, "sources": [ { "type": "git", "url": "git://anongit.kde.org/kmbox" } ] },
+        { "name": "libkdepim", "cmake": true, "sources": [ { "type": "git", "url": "git://anongit.kde.org/libkdepim" } ] },
+        { "name": "kimap", "cmake": true, "sources": [ { "type": "git", "url": "git://anongit.kde.org/kimap" } ] },
+        { "name": "pimcommon", "cmake": true, "sources": [ { "type": "git", "url": "git://anongit.kde.org/pimcommon" } ] },
+        { "name": "kholidays", "cmake": true, "sources": [ { "type": "git", "url": "git://anongit.kde.org/kholidays" } ] },
+        { "name": "kalarmcal", "cmake": true, "sources": [ { "type": "git", "url": "git://anongit.kde.org/kalarmcal" } ] },
+        { "name": "akonadi-calendar", "cmake": true, "sources": [ { "type": "git", "url": "git://anongit.kde.org/akonadi-calendar" } ] },
+        { "name": "akonadi-notes", "cmake": true, "sources": [ { "type": "git", "url": "git://anongit.kde.org/akonadi-notes" } ] },
+        { "name": "syndication", "cmake": true, "sources": [ { "type": "git", "url": "git://anongit.kde.org/syndication" } ] },
+        { "name": "kdav", "cmake": true, "sources": [ { "type": "git", "url": "git://anongit.kde.org/kdav" } ] },
+        { "name": "kdepim-runtime", "cmake": true, "sources": [ { "type": "git", "url": "git://anongit.kde.org/kdepim-runtime" } ] },
+        { "name": "libkleo", "cmake": true, "sources": [ { "type": "git", "url": "git://anongit.kde.org/libkleo" } ] },
+        { "name": "grantleetheme", "cmake": true, "sources": [ { "type": "git", "url": "git://anongit.kde.org/grantleetheme" } ] },
+        { "name": "kdepim-apps-libs", "cmake": true, "sources": [ { "type": "git", "url": "git://anongit.kde.org/kdepim-apps-libs" } ] },
+        { "name": "libgravatar", "cmake": true, "sources": [ { "type": "git", "url": "git://anongit.kde.org/libgravatar" } ] },
+        { "name": "calendarsupport", "cmake": true, "sources": [ { "type": "git", "url": "git://anongit.kde.org/calendarsupport" } ] },
+        { "name": "eventviews", "cmake": true, "sources": [ { "type": "git", "url": "git://anongit.kde.org/eventviews" } ] },
+        { "name": "incidenceeditor", "cmake": true, "sources": [ { "type": "git", "url": "git://anongit.kde.org/incidenceeditor" } ] },
+        { "name": "messagelib", "cmake": true, "sources": [ { "type": "git", "url": "git://anongit.kde.org/messagelib" } ] },
+        { "name": "mailimporter", "cmake": true, "sources": [ { "type": "git", "url": "git://anongit.kde.org/mailimporter" } ] },
+        { "name": "mailcommon", "cmake": true, "sources": [ { "type": "git", "url": "git://anongit.kde.org/mailcommon" } ] },
+        { "name": "kontactinterface", "cmake": true, "sources": [ { "type": "git", "url": "git://anongit.kde.org/kontactinterface" } ] },
+        
+        { "name": "libksieve", "cmake": true, "sources": [ { "type": "git", "url": "git://anongit.kde.org/libksieve" } ] },
+        { "name": "ktnef", "cmake": true, "sources": [ { "type": "git", "url": "git://anongit.kde.org/ktnef" } ] },
+        { "name": "kmail", "cmake": true, "sources": [ { "type": "git", "url": "git://anongit.kde.org/kmail" } ] },
+        
+        { "name": "akregator", "cmake": true, "sources": [ { "type": "git", "url": "git://anongit.kde.org/akregator" } ] },
+        { "name": "korganizer", "cmake": true, "sources": [ { "type": "git", "url": "git://anongit.kde.org/korganizer" } ] },
+        {
+            "name": "kontact",
+            "cmake": true,
+            "sources": [
+                { "type": "git", "url": "git://anongit.kde.org/kontact.git" }
+            ]
+        }
+    ]
+}
