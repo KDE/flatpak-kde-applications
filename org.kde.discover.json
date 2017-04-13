@@ -23,7 +23,12 @@
         },
         {
             "name": "xmlto",
-            "sources": [ { "type": "git", "url": "https://pagure.io/xmlto.git", "branch": "master" } ]
+            "sources": [
+                {
+                    "type": "archive", "url": "https://releases.pagure.org/xmlto/xmlto-0.0.28.tar.bz2",
+                    "sha256": "1130df3a7957eb9f6f0d29e4aa1c75732a7dfb6d639be013859b5c7ec5421276"
+                }
+            ]
         },
         {
             "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib", "-DQT=ON", "-DSTEMMING=OFF"],
@@ -40,7 +45,8 @@
         },
         {
             "name": "discover",
-            "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib", "-DBUILD_FlatpakBackend=ON", "-DBUILD_SnapBackend=ON"],
+            "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib",
+                            "-DBUILD_FlatpakBackend=ON", "-DBUILD_SnapBackend=ON", "-DBUILD_SnapBackend=ON", "-DBUILD_DummyBackend=ON"],
             "cmake": true,
             "builddir": true,
             "sources": [ { "type": "git", "url": "git://anongit.kde.org/discover.git", "branch": "master" } ]
