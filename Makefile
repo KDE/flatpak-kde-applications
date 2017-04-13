@@ -7,6 +7,9 @@ all: $(REPO)/config $(foreach file, $(wildcard org.kde.*.json), $(subst .json,.a
 	rm -rf app
 	flatpak-builder --arch=$(ARCH) --ccache --repo=$(REPO) --subject="Build of $<, `date`" ${EXPORT_ARGS} app $<
 
+%.flatpak: %.app
+	flatpak build-bundle ${REPO} $@ $*
+
 export:
 	flatpak build-update-repo --prune --prune-depth=20 $(REPO) ${EXPORT_ARGS}
 
