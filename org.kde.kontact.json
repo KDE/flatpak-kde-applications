@@ -8,7 +8,7 @@
     "command": "kontact",
     "tags": ["nightly"],
     "desktop-file-name-prefix": "(Nightly) ",
-    "finish-args": ["--share=network", "--share=ipc", "--socket=x11", "--socket=wayland", "--filesystem=host" ],
+    "finish-args": ["--share=network", "--share=ipc", "--socket=x11", "--socket=wayland", "--env=QT_QPA_PLATFORM=flatpak" ],
 
     "modules": [
         {
@@ -181,11 +181,11 @@
         { "name": "mailimporter", "cmake": true, "sources": [ { "type": "git", "url": "git://anongit.kde.org/mailimporter" } ] },
         { "name": "mailcommon", "cmake": true, "sources": [ { "type": "git", "url": "git://anongit.kde.org/mailcommon" } ] },
         { "name": "kontactinterface", "cmake": true, "sources": [ { "type": "git", "url": "git://anongit.kde.org/kontactinterface" } ] },
-        
+
         { "name": "libksieve", "cmake": true, "sources": [ { "type": "git", "url": "git://anongit.kde.org/libksieve" } ] },
         { "name": "ktnef", "cmake": true, "sources": [ { "type": "git", "url": "git://anongit.kde.org/ktnef" } ] },
         { "name": "kmail", "cmake": true, "sources": [ { "type": "git", "url": "git://anongit.kde.org/kmail" } ] },
-        
+
         { "name": "akregator", "cmake": true, "sources": [ { "type": "git", "url": "git://anongit.kde.org/akregator" } ] },
         { "name": "korganizer", "cmake": true, "sources": [ { "type": "git", "url": "git://anongit.kde.org/korganizer" } ] },
         {

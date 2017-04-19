@@ -7,9 +7,9 @@
     "command": "konversation",
     "tags": ["nightly"],
     "desktop-file-name-prefix": "(Nightly) ",
-    "finish-args": ["--share=ipc", "--share=network", "--socket=x11", "--socket=wayland", "--filesystem=host" ],
+    "finish-args": ["--share=ipc", "--share=network", "--socket=x11", "--socket=wayland", "--env=QT_QPA_PLATFORM=flatpak" ],
     "separate-locales": false,
-    
+
     "modules": [
         {
             "name": "konversation",
