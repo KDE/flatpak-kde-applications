@@ -10,7 +10,7 @@
     "finish-args": ["--share=ipc", "--socket=x11", "--socket=wayland", "--env=QT_QPA_PLATFORM=flatpak" ],
 
     "modules": [
-        "org.boost.libs.json",
+        "boost.json",
         {
             "name": "qt5-gstreamer",
             "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib", "-DQT_VERSION=5", "-DUSE_QT_PLUGIN_DIR=OFF", "-DUSE_GST_PLUGIN_DIR=OFF"],

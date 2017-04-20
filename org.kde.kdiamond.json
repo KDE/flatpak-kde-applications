@@ -1,0 +1,23 @@
+{
+    "id": "org.kde.kdiamond",
+    "branch": "master",
+    "runtime": "org.kde.Platform",
+    "runtime-version": "master",
+    "sdk": "org.kde.Sdk",
+    "command": "kdiamond",
+    "tags": ["nightly"],
+    "desktop-file-name-prefix": "(Nightly) ",
+    "finish-args": ["--share=ipc", "--socket=x11", "--socket=wayland", "--filesystem=host", "--env=QT_QPA_PLATFORM=flatpak" ],
+
+    "modules": [
+        "openal.json",
+        "libkdegames.json",
+        {
+            "name": "kdiamond",
+            "cmake": true,
+            "sources": [
+                { "type": "git", "url": "git://anongit.kde.org/kdiamond.git" }
+            ]
+        }
+    ]
+}

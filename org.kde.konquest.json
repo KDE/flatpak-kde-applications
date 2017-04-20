@@ -1,0 +1,23 @@
+{
+    "id": "org.kde.bovo",
+    "branch": "master",
+    "runtime": "org.kde.Platform",
+    "runtime-version": "master",
+    "sdk": "org.kde.Sdk",
+    "command": "bovo",
+    "tags": ["nightly"],
+    "desktop-file-name-prefix": "(Nightly) ",
+    "finish-args": ["--share=ipc", "--socket=x11", "--socket=wayland", "--env=QT_QPA_PLATFORM=flatpak" ],
+
+    "modules": [
+        "openal.json",
+        "libkdegames.json",
+        {
+            "name": "bovo",
+            "cmake": true,
+            "sources": [
+                { "type": "git", "url": "git://anongit.kde.org/bovo.git" }
+            ]
+        }
+    ]
+}

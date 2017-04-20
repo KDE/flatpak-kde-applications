@@ -1,0 +1,35 @@
+{
+    "id": "org.kde.ksirk",
+    "branch": "master",
+    "runtime": "org.kde.Platform",
+    "runtime-version": "master",
+    "sdk": "org.kde.Sdk",
+    "command": "ksirk",
+    "tags": ["nightly"],
+    "desktop-file-name-prefix": "(Nightly) ",
+    "finish-args": ["--share=ipc", "--socket=x11", "--socket=wayland", "--env=QT_QPA_PLATFORM=flatpak" ],
+
+    "modules": [
+        "openal.json",
+        "libkdegames.json",
+        {
+            "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"],
+            "name": "kdelibs4support",
+            "cmake": true,
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kdelibs4support.git", "branch": "v5.33.0" } ]
+        },
+        {
+            "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"],
+            "name": "qca",
+            "cmake": true,
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/qca.git" } ]
+        },
+        {
+            "name": "ksirk",
+            "cmake": true,
+            "sources": [
+                { "type": "git", "url": "git://anongit.kde.org/ksirk.git", "branch": "frameworks" }
+            ]
+        }
+    ]
+}

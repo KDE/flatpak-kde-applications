@@ -1,0 +1,30 @@
+{
+    "id": "org.kde.kmahjongg",
+    "branch": "master",
+    "runtime": "org.kde.Platform",
+    "runtime-version": "master",
+    "sdk": "org.kde.Sdk",
+    "command": "kmahjongg",
+    "tags": ["nightly"],
+    "desktop-file-name-prefix": "(Nightly) ",
+    "finish-args": ["--share=ipc", "--socket=x11", "--socket=wayland", "--filesystem=host", "--env=QT_QPA_PLATFORM=flatpak" ],
+
+    "modules": [
+        "openal.json",
+        "libkdegames.json",
+        {
+            "name": "libkmahjongg",
+            "cmake": true,
+            "sources": [
+                { "type": "git", "url": "git://anongit.kde.org/libkmahjongg.git" }
+            ]
+        },
+        {
+            "name": "kmahjongg",
+            "cmake": true,
+            "sources": [
+                { "type": "git", "url": "git://anongit.kde.org/kmahjongg.git" }
+            ]
+        }
+    ]
+}

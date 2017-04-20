@@ -69,7 +69,7 @@
             ]
         },
         { "name": "prison", "cmake": true, "sources": [ { "type": "git", "url": "git://anongit.kde.org/prison.git" } ] },
-        "org.boost.libs.json",
+        "boost.json",
         { "name": "akonadi", "cmake": true, "sources": [ { "type": "git", "url": "git://anongit.kde.org/akonadi" } ] },
         { "name": "kmime", "cmake": true, "sources": [ { "type": "git", "url": "git://anongit.kde.org/kmime" } ] },
         { "name": "akonadi-mime", "cmake": true, "sources": [ { "type": "git", "url": "git://anongit.kde.org/akonadi-mime" } ] },

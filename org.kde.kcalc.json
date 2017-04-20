@@ -1,0 +1,19 @@
+{
+    "id": "org.kde.kcalc",
+    "branch": "master",
+    "runtime": "org.kde.Platform",
+    "runtime-version": "master",
+    "sdk": "org.kde.Sdk",
+    "command": "kcalc",
+    "tags": ["nightly"],
+    "desktop-file-name-prefix": "(Nightly) ",
+    "finish-args": ["--share=ipc", "--socket=x11", "--socket=wayland", "--filesystem=host" ],
+
+    "modules": [
+        {
+            "name": "kcalc",
+            "cmake": true,
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kcalc.git" } ]
+        }
+    ]
+}

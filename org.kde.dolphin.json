@@ -42,6 +42,17 @@
             "sources": [ { "type": "git", "url": "git://anongit.kde.org/dolphin.git" },
                          {"type": "patch", "path": "dolphinpatch.patch"}
                        ]
+        },
+        {
+            "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"],
+            "name": "kdelibs4support",
+            "cmake": true,
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kdelibs4support.git", "branch": "v5.33.0" } ]
+        },
+        {
+            "name": "dolphin-plugins",
+            "cmake": true,
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/dolphin-plugins.git" } ]
         }
     ]
 }

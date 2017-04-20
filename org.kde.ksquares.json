@@ -1,0 +1,23 @@
+{
+    "id": "org.kde.ksquares",
+    "branch": "master",
+    "runtime": "org.kde.Platform",
+    "runtime-version": "master",
+    "sdk": "org.kde.Sdk",
+    "command": "ksquares",
+    "tags": ["nightly"],
+    "desktop-file-name-prefix": "(Nightly) ",
+    "finish-args": ["--share=ipc", "--socket=x11", "--socket=wayland", "--env=QT_QPA_PLATFORM=flatpak" ],
+
+    "modules": [
+        "openal.json",
+        "libkdegames.json",
+        {
+            "name": "ksquares",
+            "cmake": true,
+            "sources": [
+                { "type": "git", "url": "git://anongit.kde.org/ksquares.git" }
+            ]
+        }
+    ]
+}

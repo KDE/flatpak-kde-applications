@@ -12,7 +12,7 @@
     "separate-locales": false,
 
     "modules": [
-        "org.boost.libs.json",
+        "boost.json",
         {
             "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"],
             "name": "flatbuffers",

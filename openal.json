@@ -1,0 +1,6 @@
+{
+    "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"],
+    "name": "openal",
+    "cmake": true,
+    "sources": [ { "type": "git", "url": "https://github.com/kcat/openal-soft.git", "branch": "openal-soft-1.17.2" } ]
+}
