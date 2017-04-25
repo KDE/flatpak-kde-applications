@@ -1,0 +1,24 @@
+{
+    "id": "org.kde.picmi",
+    "branch": "master",
+    "runtime": "org.kde.Platform",
+    "runtime-version": "master",
+    "sdk": "org.kde.Sdk",
+    "command": "picmi",
+    "tags": ["nightly"],
+    "desktop-file-name-prefix": "(Nightly) ",
+    "finish-args": ["--share=ipc", "--socket=x11", "--socket=wayland", "--env=QT_QPA_PLATFORM=flatpak" ],
+
+    "modules": [
+        "openal.json",
+        "libkdegames.json",
+        {
+            "name": "picmi",
+            "cmake": true,
+            "builddir": true,
+            "sources": [
+                { "type": "git", "url": "git://anongit.kde.org/picmi.git" }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,32 @@
+{
+    "id": "org.kde.kgpg",
+    "branch": "master",
+    "runtime": "org.kde.Platform",
+    "runtime-version": "master",
+    "sdk": "org.kde.Sdk",
+    "command": "kgpg",
+    "tags": ["nightly"],
+    "desktop-file-name-prefix": "(Nightly) ",
+    "finish-args": ["--share=ipc", "--socket=x11", "--socket=wayland", "--filesystem=host", "--env=QT_QPA_PLATFORM=flatpak" ],
+
+    "modules": [
+        {
+            "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"],
+            "name": "kdelibs4support",
+            "cmake": true,
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kdelibs4support.git", "branch": "v5.33.0" } ]
+        },
+        { "name": "grantlee", "cmake": true, "sources": [ { "type": "git", "url": "https://github.com/steveire/grantlee.git" } ] },
+        { "name": "kcontacts", "cmake": true, "sources": [ { "type": "git", "url": "git://anongit.kde.org/kcontacts" } ] },
+        { "name": "kmime", "cmake": true, "sources": [ { "type": "git", "url": "git://anongit.kde.org/kmime" } ] },
+        { "name": "akonadi-mime", "cmake": true, "sources": [ { "type": "git", "url": "git://anongit.kde.org/akonadi-mime" } ] },
+        { "name": "akonadi-contacts", "cmake": true, "sources": [ { "type": "git", "url": "git://anongit.kde.org/akonadi-contacts" } ] },
+        {
+            "name": "kgpg",
+            "cmake": true,
+            "sources": [
+                { "type": "git", "url": "git://anongit.kde.org/kgpg.git" }
+            ]
+        }
+    ]
+}

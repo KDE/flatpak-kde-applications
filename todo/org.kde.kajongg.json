@@ -1,0 +1,50 @@
+{
+    "id": "org.kde.kajongg",
+    "branch": "master",
+    "runtime": "org.kde.Platform",
+    "runtime-version": "master",
+    "sdk": "org.kde.Sdk",
+    "command": "kajongg",
+    "tags": ["nightly"],
+    "desktop-file-name-prefix": "(Nightly) ",
+    "finish-args": ["--share=ipc", "--socket=x11", "--socket=wayland", "--filesystem=host", "--env=QT_QPA_PLATFORM=flatpak" ],
+
+    "modules": [
+        {
+            "name": "libkmahjongg",
+            "cmake": true,
+            "sources": [
+                { "type": "git", "url": "git://anongit.kde.org/libkmahjongg.git" }
+            ]
+        },
+        {
+            "name": "incremental",
+            "buildsystem": "simple",
+            "build-commands": [
+                "python setup.py build",
+                "python setup.py install --prefix=/app --optimize=1"
+            ],
+            "sources": [
+                { "type": "git", "url": "https://github.com/glyph/automat.git", "branch": "v0.5.0" }
+            ]
+        },
+        {
+            "name": "twisted",
+            "buildsystem": "simple",
+            "build-commands": [
+                "python setup.py build",
+                "python setup.py install --prefix=/app --optimize=1"
+            ],
+            "sources": [
+                { "type": "git", "url": "https://github.com/twisted/twisted.git", "branch": "twisted-17.1.0" }
+            ]
+        },
+        {
+            "name": "kajongg",
+            "cmake": true,
+            "sources": [
+                { "type": "git", "url": "git://anongit.kde.org/kajongg.git" }
+            ]
+        }
+    ]
+}

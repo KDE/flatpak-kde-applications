@@ -1,0 +1,42 @@
+{
+    "id": "org.kde.kmix",
+    "branch": "master",
+    "runtime": "org.kde.Platform",
+    "runtime-version": "master",
+    "sdk": "org.kde.Sdk",
+    "command": "kmix",
+    "tags": ["nightly"],
+    "rename-desktop-file": "kmix.desktop",
+    "desktop-file-name-prefix": "(Nightly) ",
+    "finish-args": ["--share=ipc", "--socket=x11", "--socket=wayland", "--env=QT_QPA_PLATFORM=flatpak" ],
+
+    "modules": [
+        "boost.json",
+        {
+            "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"],
+            "name": "kdelibs4support",
+            "cmake": true,
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kdelibs4support.git", "branch": "v5.33.0" } ]
+        },
+        {
+            "name": "kactivities",
+            "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"],
+            "cmake": true,
+            "builddir": true,
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kactivities.git", "branch": "v5.33.0" } ]
+        },
+        {
+            "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"],
+            "name": "plasma-framework",
+            "cmake": true,
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/plasma-framework.git", "branch": "v5.33.0" } ]
+        },
+        {
+            "name": "kmix",
+            "cmake": true,
+            "sources": [
+                { "type": "git", "url": "git://anongit.kde.org/kmix.git", "branch": "frameworks" }
+            ]
+        }
+    ]
+}

@@ -74,12 +74,7 @@
         { "name": "kmime", "cmake": true, "sources": [ { "type": "git", "url": "git://anongit.kde.org/kmime" } ] },
         { "name": "akonadi-mime", "cmake": true, "sources": [ { "type": "git", "url": "git://anongit.kde.org/akonadi-mime" } ] },
         { "name": "kcontacts", "cmake": true, "sources": [ { "type": "git", "url": "git://anongit.kde.org/kcontacts" } ] },
-        {
-            "name": "grantlee",
-            "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"],
-            "cmake": true,
-            "sources": [ { "type": "git", "url": "https://github.com/steveire/grantlee.git" } ]
-        },
+        { "name": "grantlee", "cmake": true, "sources": [ { "type": "git", "url": "https://github.com/steveire/grantlee.git" } ] },
         { "name": "akonadi-contacts", "cmake": true, "sources": [ { "type": "git", "url": "git://anongit.kde.org/akonadi-contacts" } ] },
         { "name": "kmailtransport", "cmake": true, "sources": [ { "type": "git", "url": "git://anongit.kde.org/kmailtransport" } ] },
         { "name": "kpimtextedit", "cmake": true, "sources": [ { "type": "git", "url": "git://anongit.kde.org/kpimtextedit" } ] },
@@ -188,6 +183,11 @@
 
         { "name": "akregator", "cmake": true, "sources": [ { "type": "git", "url": "git://anongit.kde.org/akregator" } ] },
         { "name": "korganizer", "cmake": true, "sources": [ { "type": "git", "url": "git://anongit.kde.org/korganizer" } ] },
+        { "name": "kalarm", "cmake": true, "sources": [ { "type": "git", "url": "git://anongit.kde.org/kalarm" } ] },
+
+        { "name": "kblog", "cmake": true, "sources": [ { "type": "git", "url": "git://anongit.kde.org/kblog" } ] },
+        { "name": "blogilo", "cmake": true, "sources": [ { "type": "git", "url": "git://anongit.kde.org/blogilo" } ] },
+        { "name": "knotes", "cmake": true, "sources": [ { "type": "git", "url": "git://anongit.kde.org/knotes" } ] },
         {
             "name": "kontact",
             "cmake": true,

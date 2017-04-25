@@ -1,0 +1,26 @@
+{
+    "id": "org.kde.spectacle",
+    "branch": "master",
+    "runtime": "org.kde.Platform",
+    "runtime-version": "master",
+    "sdk": "org.kde.Sdk",
+    "command": "spectacle",
+    "tags": ["nightly"],
+    "desktop-file-name-prefix": "(Nightly) ",
+    "finish-args": ["--share=ipc", "--socket=x11", "--socket=wayland", "--env=QT_QPA_PLATFORM=flatpak" ],
+
+    "modules": [
+        {
+            "name": "purpose",
+            "cmake": true,
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/purpose.git" } ]
+        },
+        {
+            "name": "spectacle",
+            "cmake": true,
+            "sources": [
+                { "type": "git", "url": "git://anongit.kde.org/spectacle.git" }
+            ]
+        }
+    ]
+}

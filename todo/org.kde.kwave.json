@@ -1,0 +1,40 @@
+{
+    "id": "org.kde.kwave",
+    "branch": "master",
+    "runtime": "org.kde.Platform",
+    "runtime-version": "master",
+    "sdk": "org.kde.Sdk",
+    "command": "kwave",
+    "tags": ["nightly"],
+    "desktop-file-name-prefix": "(Nightly) ",
+    "finish-args": ["--share=ipc", "--socket=x11", "--socket=wayland", "--env=QT_QPA_PLATFORM=flatpak" ],
+
+    "modules": [
+        {
+            "name": "fftw",
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "http://www.fftw.org/fftw-3.3.6-pl2.tar.gz",
+                    "sha256": "a5de35c5c824a78a058ca54278c706cdf3d4abba1c56b63531c2cb05f5d57da2"
+                }
+            ]
+        },
+        {
+            "name": "audiofile",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://github.com/mpruett/audiofile.git"
+                }
+            ]
+        },
+        {
+            "name": "kwave",
+            "cmake": true,
+            "sources": [
+                { "type": "git", "url": "git://anongit.kde.org/kwave.git" }
+            ]
+        }
+    ]
+}
