@@ -16,7 +16,7 @@
             "name": "ksnakeduel",
             "cmake": true,
             "sources": [
-                { "type": "git", "url": "git://anongit.kde.org/ksnakeduel.git", "branch": "frameworks" }
+                { "type": "git", "url": "git://anongit.kde.org/ksnakeduel.git" }
             ]
         }
     ]
