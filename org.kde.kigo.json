@@ -22,7 +22,7 @@
             "name": "kigo",
             "cmake": true,
             "sources": [
-                { "type": "git", "url": "git://anongit.kde.org/kigo.git", "branch": "frameworks" }
+                { "type": "git", "url": "git://anongit.kde.org/kigo.git" }
             ]
         }
     ]

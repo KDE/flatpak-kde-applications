@@ -29,7 +29,7 @@
         {
             "name": "labplot",
             "cmake": true,
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/labplot.git", "branch": "frameworks" } ]
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/labplot.git" } ]
         }
     ]
 }
