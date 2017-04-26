@@ -1,0 +1,69 @@
+{
+    "id": "org.kde.kopete",
+    "branch": "master",
+    "runtime": "org.kde.Platform",
+    "runtime-version": "master",
+    "sdk": "org.kde.Sdk",
+    "command": "kopete",
+    "tags": ["nightly"],
+    "desktop-file-name-prefix": "(Nightly) ",
+    "finish-args": ["--share=ipc", "--socket=x11", "--socket=wayland", "--env=QT_QPA_PLATFORM=flatpak" ],
+
+    "modules": [
+        "boost.json",
+        {
+            "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"],
+            "name": "kdelibs4support",
+            "cmake": true,
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kdelibs4support.git", "branch": "v5.33.0" } ]
+        },
+        {
+            "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"],
+            "name": "kjs",
+            "cmake": true,
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kjs.git", "branch": "v5.33.0" } ]
+        },
+        {
+            "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"],
+            "name": "khtml",
+            "cmake": true,
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/khtml.git", "branch": "v5.33.0" } ]
+        },
+        { "name": "kcontacts", "cmake": true, "sources": [ { "type": "git", "url": "git://anongit.kde.org/kcontacts" } ] },
+        { "name": "grantlee", "cmake": true, "sources": [ { "type": "git", "url": "https://github.com/steveire/grantlee.git" } ] },
+        { "name": "kpimtextedit", "cmake": true, "sources": [ { "type": "git", "url": "git://anongit.kde.org/kpimtextedit" } ] },
+        { "name": "kidentitymanagement", "cmake": true, "sources": [ { "type": "git", "url": "git://anongit.kde.org/kidentitymanagement" } ] },
+        {
+            "name": "libgpg-error",
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://www.gnupg.org/ftp/gcrypt/libgpg-error/libgpg-error-1.22.tar.bz2",
+                    "sha256": "f2a04ee6317bdb41a625bea23fdc7f0b5a63fb677f02447c647ed61fb9e69d7b"
+                }
+            ]
+        },
+        {
+            "name": "libassuan",
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://www.gnupg.org/ftp/gcrypt/libassuan/libassuan-2.4.2.tar.bz2",
+                    "sha256": "bb06dc81380b74bf1b64d5849be5c0409a336f3b4c45f20ac688e86d1b5bcb20"
+                }
+            ]
+        },
+        {
+            "name": "gpgme",
+            "sources": [ { "type": "git", "url": "git://git.gnupg.org/gpgme.git", "branch": "572c1aa"} ]
+        },
+        { "name": "libkleo", "cmake": true, "sources": [ { "type": "git", "url": "git://anongit.kde.org/libkleo" } ] },
+        {
+            "name": "kopete",
+            "cmake": true,
+            "sources": [
+                { "type": "git", "url": "git://anongit.kde.org/kopete.git", "branch": "kf5" }
+            ]
+        }
+    ]
+}

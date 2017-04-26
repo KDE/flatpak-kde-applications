@@ -10,7 +10,7 @@
     "finish-args": ["--share=ipc", "--socket=x11", "--socket=wayland", "--filesystem=host" ],
     
     "modules": [
-        "boost.json",
+        "../boost.json",
         {
             "name": "exiv2",
             "cmake": true,

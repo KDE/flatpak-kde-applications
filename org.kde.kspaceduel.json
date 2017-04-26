@@ -22,7 +22,7 @@
             "name": "kspaceduel",
             "cmake": true,
             "sources": [
-                { "type": "git", "url": "git://anongit.kde.org/kspaceduel.git", "branch": "frameworks" }
+                { "type": "git", "url": "git://anongit.kde.org/kspaceduel.git" }
             ]
         }
     ]
