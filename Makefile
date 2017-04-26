@@ -22,8 +22,11 @@ deps:
 	flatpak install $(ARGS) kde org.kde.Platform
 	flatpak install $(ARGS) kde org.kde.Sdk
 
-check:
-	json-glib-validate *.json
+check: $(REPO)/config $(foreach file, $(wildcard org.kde.*.json), $(subst .json,.clean,$(file)))
+
+%.clean: %.json
+	json-glib-validate $<
+	flatpak-builder --force-clean --arch=$(ARCH) --download-only ${EXPORT_ARGS} app $<
 
 clean:
 	rm -rf $(TMP) .flatpak-builder
