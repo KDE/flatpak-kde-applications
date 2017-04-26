@@ -4,8 +4,7 @@ ARCH?=$(shell flatpak --default-arch)
 all: $(REPO)/config $(foreach file, $(wildcard org.kde.*.json), $(subst .json,.app,$(file)))
 
 %.app: %.json
-	rm -rf app
-	flatpak-builder --arch=$(ARCH) --ccache --repo=$(REPO) --subject="Build of $<, `date`" ${EXPORT_ARGS} app $<
+	flatpak-builder --force-clean --arch=$(ARCH) --ccache --repo=$(REPO) --subject="Build of $<, `date`" ${EXPORT_ARGS} app $<
 
 %.flatpak: %.app
 	flatpak build-bundle ${REPO} $@ $*
@@ -17,9 +16,7 @@ $(REPO)/config:
 	ostree init --mode=archive-z2 --repo=$(REPO)
 
 remotes:
-	wget http://distribute.kde.org/kdeflatpak.asc
-	flatpak remote-add kde http://distribute.kde.org/flatpak-testing/ --gpg-import=kdeflatpak.asc --if-not-exists
-	rm kdeflatpak.asc*
+	flatpak remote-add kde --from https://distribute.kde.org/kderuntime.flatpakrepo --if-not-exists
 
 deps:
 	flatpak install $(ARGS) kde org.kde.Platform
