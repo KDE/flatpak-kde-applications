@@ -17,6 +17,12 @@
             "sources": [ { "type": "git", "url": "git://anongit.kde.org/analitza.git" } ]
         },
         {
+            "name": "kirigami",
+            "cmake": true,
+            "builddir": true,
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kirigami.git", "branch": "master" } ]
+        },
+        {
             "name": "kalgebra",
             "cmake": true,
             "sources": [ { "type": "git", "url": "git://anongit.kde.org/kalgebra.git" } ]
