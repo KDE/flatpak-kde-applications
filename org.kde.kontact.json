@@ -40,7 +40,7 @@
             "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"],
             "name": "kdelibs4support",
             "cmake": true,
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kdelibs4support.git", "branch": "v5.33.0" } ]
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kdelibs4support.git", "branch": "v5.34.0" } ]
         },
         {
             "name": "libical",
@@ -68,7 +68,7 @@
                 }
             ]
         },
-        { "name": "prison", "cmake": true, "sources": [ { "type": "git", "url": "git://anongit.kde.org/prison.git", "branch": "v5.33.0"  } ] },
+        { "name": "prison", "cmake": true, "sources": [ { "type": "git", "url": "git://anongit.kde.org/prison.git", "branch": "v5.34.0"  } ] },
         "boost.json",
         { "name": "akonadi", "cmake": true, "sources": [ { "type": "git", "url": "git://anongit.kde.org/akonadi" } ] },
         { "name": "kmime", "cmake": true, "sources": [ { "type": "git", "url": "git://anongit.kde.org/kmime" } ] },
@@ -85,19 +85,19 @@
             "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"],
             "cmake": true,
             "builddir": true,
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kactivities.git", "branch": "v5.33.0" } ]
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kactivities.git", "branch": "v5.34.0" } ]
         },
         {
             "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"],
             "name": "plasma-framework",
             "cmake": true,
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/plasma-framework.git", "branch": "v5.33.0" } ]
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/plasma-framework.git", "branch": "v5.34.0" } ]
         },
         {
             "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"],
             "name": "krunner",
             "cmake": true,
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/krunner.git", "branch": "v5.33.0" } ]
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/krunner.git", "branch": "v5.34.0" } ]
         },
         {
             "name": "xapian",
