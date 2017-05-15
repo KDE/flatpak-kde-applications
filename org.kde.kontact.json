@@ -33,7 +33,7 @@
         },
         {
             "name": "gpgme",
-            "sources": [ { "type": "git", "url": "git://git.gnupg.org/gpgme.git", "branch": "572c1aa"} ]
+            "sources": [ { "type": "git", "url": "git://git.gnupg.org/gpgme.git", "branch": "gpgme-1.9.0"} ]
         },
         { "name": "kdiagram", "cmake": true, "sources": [ { "type": "git", "url": "git://anongit.kde.org/kdiagram.git" } ] },
         {
