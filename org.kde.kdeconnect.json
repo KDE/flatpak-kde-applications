@@ -4,11 +4,13 @@
     "runtime": "org.kde.Platform",
     "runtime-version": "master",
     "sdk": "org.kde.Sdk",
+    "command": "kdeconnect-indicator",
     "tags": ["nightly"],
     "desktop-file-name-prefix": "(Nightly) ",
-    "rename-desktop-file": "org.kde.kdeconnect.kcm.desktop",
-    "finish-args": ["--share=ipc", "--socket=x11", "--socket=wayland", "--share=network", "--own-name=org.kde.kdeconnectd",
-                    "--talk-name=org.mpris.MediaPlayer2", "--talk-name=org.mpris.MediaPlayer2.Player", "--env=QT_QPA_PLATFORM=flatpak" ],
+    "finish-args": ["--share=ipc", "--socket=x11", "--socket=wayland", "--share=network", "--own-name=org.kde.kdeconnectd", "--own-name=org.kde.kdeconnect-indicator",
+                    "--talk-name=org.mpris.MediaPlayer2", "--talk-name=org.mpris.MediaPlayer2.Player",
+                    "--env=QT_QPA_PLATFORM=flatpak" ],
+    "rename-desktop-file": "org.kde.kdeconnect.nonplasma.desktop",
 
     "modules": [
         {
@@ -34,13 +36,8 @@
             "sources": [ { "type": "git", "url": "git://anongit.kde.org/qca.git" } ]
         },
         {
-            "name": "kde-cli-tools",
-            "cmake": true,
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kde-cli-tools.git" } ]
-        },
-        {
             "name": "kdeconnect",
-            "cmake": true,
+            "buildsystem": "cmake-ninja",
             "sources": [ { "type": "git", "url": "git://anongit.kde.org/kdeconnect-kde.git" } ]
         }
     ]
