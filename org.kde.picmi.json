@@ -14,7 +14,7 @@
         "libkdegames.json",
         {
             "name": "picmi",
-            "cmake": true,
+            "buildsystem": "cmake-ninja",
             "builddir": true,
             "sources": [
                 { "type": "git", "url": "git://anongit.kde.org/picmi.git" }

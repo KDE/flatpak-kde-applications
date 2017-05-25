@@ -13,7 +13,7 @@
         "../boost.json",
         {
             "name": "exiv2",
-            "cmake": true,
+            "buildsystem": "cmake-ninja",
             "builddir": true,
             "sources": [
                 {
@@ -25,14 +25,14 @@
         },
         {
             "name": "opencv",
-            "cmake": true,
+            "buildsystem": "cmake-ninja",
             "builddir": true,
             "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib", "-DWITH_OPENCL=ON", "-DWITH_OPENGL=ON", "-DWITH_TBB=ON", "-DWITH_XINE=ON"],
             "sources": [ { "type": "git", "url": "http://github.com/Itseez/opencv.git" } ]
         },
         {
             "name": "digikam",
-            "cmake": true,
+            "buildsystem": "cmake-ninja",
             "builddir": true,
             "sources": [ { "type": "git", "url": "git://anongit.kde.org/digikam.git" } ]
         }

@@ -12,7 +12,7 @@
     "modules": [
         {
             "name": "eigen",
-            "cmake": true,
+            "buildsystem": "cmake-ninja",
             "builddir": true,
             "sources": [
                 {
@@ -24,7 +24,7 @@
         },
         {
             "name": "kstars",
-            "cmake": true,
+            "buildsystem": "cmake-ninja",
             "sources": [ { "type": "git", "url": "git://anongit.kde.org/kstars.git" } ]
         }
     ]

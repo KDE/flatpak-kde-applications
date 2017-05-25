@@ -13,7 +13,7 @@
         {
             "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"],
             "name": "kfilemetadata",
-            "cmake": true,
+            "buildsystem": "cmake-ninja",
             "sources": [ { "type": "git", "url": "git://anongit.kde.org/kfilemetadata.git", "branch": "v5.28.0" } ]
         },
         {
@@ -69,7 +69,7 @@
         },
         {
             "name": "kdenlive",
-            "cmake": true,
+            "buildsystem": "cmake-ninja",
             "sources": [ { "type": "git", "url": "git://anongit.kde.org/kdenlive.git" } ]
         }
     ]

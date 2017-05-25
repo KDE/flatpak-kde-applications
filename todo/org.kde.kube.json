@@ -16,13 +16,13 @@
         {
             "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"],
             "name": "flatbuffers",
-            "cmake": true,
+            "buildsystem": "cmake-ninja",
             "sources": [ { "type": "git", "url": "https://github.com/google/flatbuffers.git", "branch": "v1.4.0" } ]
         },
         {
             "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib", "-DNO_PLASMA=ON"],
             "name": "kirigami",
-            "cmake": true,
+            "buildsystem": "cmake-ninja",
             "builddir": true,
             "sources": [ { "type": "git", "url": "git://anongit.kde.org/kirigami.git" } ]
         },
@@ -30,31 +30,31 @@
             "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib",
                             "-DCMAKE_C_COMPILER=/usr/bin/clang", "-DCMAKE_CXX_COMPILER=/usr/bin/clang++", "-DWITH_KJOB=OFF"],
             "name": "kasync",
-            "cmake": true,
+            "buildsystem": "cmake-ninja",
             "sources": [ { "type": "git", "url": "git://anongit.kde.org/kasync.git", "branch": "master" } ]
         },
         {
             "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"],
             "name": "kmime",
-            "cmake": true,
+            "buildsystem": "cmake-ninja",
             "sources": [ { "type": "git", "url": "git://anongit.kde.org/kmime.git", "branch": "cd6220e" } ]
         },
         {
             "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"],
             "name": "kimap2",
-            "cmake": true,
+            "buildsystem": "cmake-ninja",
             "sources": [ { "type": "git", "url": "git://anongit.kde.org/kimap2.git", "branch": "master" } ]
         },
         {
             "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"],
             "name": "kcontacts",
-            "cmake": true,
+            "buildsystem": "cmake-ninja",
             "sources": [ { "type": "git", "url": "git://anongit.kde.org/kcontacts.git", "branch": "master" } ]
         },
         {
             "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"],
             "name": "kdav",
-            "cmake": true,
+            "buildsystem": "cmake-ninja",
             "sources": [ { "type": "git", "url": "git://anongit.kde.org/kdav.git", "branch": "master" } ]
         },
         {
@@ -84,12 +84,12 @@
         {
             "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib", "-DMIMETREEPARSER_ONLY_BUILD=TRUE"],
             "name": "messagelib",
-            "cmake": true,
+            "buildsystem": "cmake-ninja",
             "sources": [ { "type": "git", "url": "git://anongit.kde.org/messagelib.git", "branch": "Applications/16.12" } ]
         },
         {
             "name": "libgit2",
-            "cmake": true,
+            "buildsystem": "cmake-ninja",
             "sources": [
                 {
                     "type": "archive",
@@ -109,14 +109,14 @@
             "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib",
                             "-DCMAKE_C_COMPILER=/usr/bin/clang", "-DCMAKE_CXX_COMPILER=/usr/bin/clang++"],
             "name": "sink",
-            "cmake": true,
+            "buildsystem": "cmake-ninja",
             "sources": [ { "type": "git", "url": "git://anongit.kde.org/sink.git", "branch": "develop" } ]
         },
         {
             "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib",
                             "-DCMAKE_C_COMPILER=/usr/bin/clang", "-DCMAKE_CXX_COMPILER=/usr/bin/clang++"],
             "name": "kube",
-            "cmake": true,
+            "buildsystem": "cmake-ninja",
             "sources": [ { "type": "git", "url": "git://anongit.kde.org/kube.git", "branch": "develop" } ]
         }
     ]

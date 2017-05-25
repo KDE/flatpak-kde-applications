@@ -12,12 +12,12 @@
     "modules": [
         {
             "name": "analitza",
-            "cmake": true,
+            "buildsystem": "cmake-ninja",
             "sources": [ { "type": "git", "url": "git://anongit.kde.org/analitza.git" } ]
         },
         {
             "name": "cantor",
-            "cmake": true,
+            "buildsystem": "cmake-ninja",
             "sources": [ { "type": "git", "url": "git://anongit.kde.org/cantor.git" } ]
         }
     ]

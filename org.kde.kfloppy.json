@@ -12,7 +12,7 @@
     "modules": [
         {
             "name": "kfloppy",
-            "cmake": true,
+            "buildsystem": "cmake-ninja",
             "sources": [
                 { "type": "git", "url": "git://anongit.kde.org/kfloppy.git" }
             ]

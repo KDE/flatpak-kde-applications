@@ -14,32 +14,32 @@
         {
             "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"],
             "name": "kjs",
-            "cmake": true,
+            "buildsystem": "cmake-ninja",
             "sources": [ { "type": "git", "url": "git://anongit.kde.org/kjs.git", "branch": "v5.33.0" } ]
         },
         {
             "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"],
             "name": "khtml",
-            "cmake": true,
+            "buildsystem": "cmake-ninja",
             "sources": [ { "type": "git", "url": "git://anongit.kde.org/khtml.git", "branch": "v5.33.0" } ]
         },
         {
             "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"],
             "name": "kdelibs4support",
-            "cmake": true,
+            "buildsystem": "cmake-ninja",
             "sources": [ { "type": "git", "url": "git://anongit.kde.org/kdelibs4support.git", "branch": "v5.33.0" } ]
         },
-        { "name": "ksu", "cmake": true, "sources": [ { "type": "git", "url": "git://anongit.kde.org/kdesu.git", "branch": "v5.33.0" } ] },
+        { "name": "ksu", "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "git://anongit.kde.org/kdesu.git", "branch": "v5.33.0" } ] },
         {
             "name": "kactivities",
             "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"],
-            "cmake": true,
+            "buildsystem": "cmake-ninja",
             "builddir": true,
             "sources": [ { "type": "git", "url": "git://anongit.kde.org/kactivities.git", "branch": "v5.30.0" } ]
         },
         {
             "name": "konqueror",
-            "cmake": true,
+            "buildsystem": "cmake-ninja",
             "sources": [
                 { "type": "git", "url": "git://anongit.kde.org/konqueror.git" }
             ]

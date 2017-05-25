@@ -12,13 +12,13 @@
     "modules": [
         {
             "name": "kirigami",
-            "cmake": true,
+            "buildsystem": "cmake-ninja",
             "builddir": true,
             "sources": [ { "type": "git", "url": "git://anongit.kde.org/kirigami.git", "branch": "master" } ]
         },
         {
             "name": "klimbgrades",
-            "cmake": true,
+            "buildsystem": "cmake-ninja",
             "builddir": true,
             "sources": [ { "type": "git", "url": "git://anongit.kde.org/klimbgrades.git" } ]
         }

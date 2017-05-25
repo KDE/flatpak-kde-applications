@@ -14,18 +14,18 @@
         {
             "name": "grantlee",
             "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"],
-            "cmake": true,
+            "buildsystem": "cmake-ninja",
             "sources": [ { "type": "git", "url": "https://github.com/steveire/grantlee.git" } ]
         },
         {
             "name": "libkomparediff2",
             "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"],
-            "cmake": true,
+            "buildsystem": "cmake-ninja",
             "sources": [ { "type": "git", "url": "git://anongit.kde.org/libkomparediff2.git" } ]
         },
         {
             "name": "llvmclang",
-            "cmake": true,
+            "buildsystem": "cmake-ninja",
             "builddir": true,
             "config-opts": ["-DLLVM_BUILD_LLVM_DYLIB=ON", "-DLLVM_LINK_LLVM_DYLIB=ON"],
             "cleanup": [ "/lib/*.a" ],
@@ -39,12 +39,12 @@
         },
         {
             "name": "kdevplatform",
-            "cmake": true,
+            "buildsystem": "cmake-ninja",
             "sources": [ { "type": "git", "url": "git://anongit.kde.org/kdevplatform.git", "branch": "master" } ]
         },
         {
             "name": "kdevelop",
-            "cmake": true,
+            "buildsystem": "cmake-ninja",
             "sources": [ { "type": "git", "url": "git://anongit.kde.org/kdevelop.git", "branch": "master" } ]
         }
     ]

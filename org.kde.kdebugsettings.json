@@ -12,7 +12,7 @@
     "modules": [
         {
             "name": "kdebugsettings",
-            "cmake": true,
+            "buildsystem": "cmake-ninja",
             "sources": [ { "type": "git", "url": "git://anongit.kde.org/kdebugsettings.git" } ]
         }
     ]

@@ -13,18 +13,18 @@
     "modules": [
         {
             "name": "analitza",
-            "cmake": true,
+            "buildsystem": "cmake-ninja",
             "sources": [ { "type": "git", "url": "git://anongit.kde.org/analitza.git" } ]
         },
         {
             "name": "kirigami",
-            "cmake": true,
+            "buildsystem": "cmake-ninja",
             "builddir": true,
             "sources": [ { "type": "git", "url": "git://anongit.kde.org/kirigami.git", "branch": "master" } ]
         },
         {
             "name": "kalgebra",
-            "cmake": true,
+            "buildsystem": "cmake-ninja",
             "sources": [ { "type": "git", "url": "git://anongit.kde.org/kalgebra.git" } ]
         }
     ]

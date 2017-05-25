@@ -12,12 +12,12 @@
     "modules": [
         {
             "name": "purpose",
-            "cmake": true,
+            "buildsystem": "cmake-ninja",
             "sources": [ { "type": "git", "url": "git://anongit.kde.org/purpose.git" } ]
         },
         {
             "name": "spectacle",
-            "cmake": true,
+            "buildsystem": "cmake-ninja",
             "sources": [
                 { "type": "git", "url": "git://anongit.kde.org/spectacle.git" }
             ]

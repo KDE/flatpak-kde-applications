@@ -14,17 +14,17 @@
         {
             "name": "qt5-gstreamer",
             "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib", "-DQT_VERSION=5", "-DUSE_QT_PLUGIN_DIR=OFF", "-DUSE_GST_PLUGIN_DIR=OFF"],
-            "cmake": true,
+            "buildsystem": "cmake-ninja",
             "sources": [ { "type": "git", "url": "git://anongit.freedesktop.org/gstreamer/qt-gstreamer" } ]
         },
         {
             "name": "purpose",
-            "cmake": true,
+            "buildsystem": "cmake-ninja",
             "sources": [ { "type": "git", "url": "git://anongit.kde.org/purpose.git" } ]
         },
         {
             "name": "kamoso",
-            "cmake": true,
+            "buildsystem": "cmake-ninja",
             "sources": [ { "type": "git", "url": "git://anongit.kde.org/kamoso.git" } ]
         }
     ]

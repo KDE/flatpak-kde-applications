@@ -12,12 +12,12 @@
     "modules": [
         {
             "name": "libkeduvocdocument",
-            "cmake": true,
+            "buildsystem": "cmake-ninja",
             "sources": [ { "type": "git", "url": "git://anongit.kde.org/libkeduvocdocument.git" } ]
         },
         {
             "name": "khangman",
-            "cmake": true,
+            "buildsystem": "cmake-ninja",
             "sources": [ { "type": "git", "url": "git://anongit.kde.org/khangman.git" } ]
         }
     ]

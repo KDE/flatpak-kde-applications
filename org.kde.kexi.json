@@ -13,22 +13,22 @@
     "modules": [
         {
             "name": "kdb",
-            "cmake": true,
+            "buildsystem": "cmake-ninja",
             "sources": [ { "type": "git", "url": "git://anongit.kde.org/kdb.git" } ]
         },
         {
             "name": "kproperty",
-            "cmake": true,
+            "buildsystem": "cmake-ninja",
             "sources": [ { "type": "git", "url": "git://anongit.kde.org/kproperty.git" } ]
         },
         {
             "name": "kreport",
-            "cmake": true,
+            "buildsystem": "cmake-ninja",
             "sources": [ { "type": "git", "url": "git://anongit.kde.org/kreport.git" } ]
         },
         {
             "name": "kexi",
-            "cmake": true,
+            "buildsystem": "cmake-ninja",
             "sources": [ { "type": "git", "url": "git://anongit.kde.org/kexi.git" } ]
         }
     ]

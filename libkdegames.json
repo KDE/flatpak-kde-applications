@@ -1,6 +1,6 @@
 {
     "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"],
     "name": "libkdegames",
-    "cmake": true,
+    "buildsystem": "cmake-ninja",
     "sources": [ { "type": "git", "url": "git://anongit.kde.org/libkdegames.git" } ]
 }

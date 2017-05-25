@@ -14,7 +14,7 @@
         "libkdegames.json",
         {
             "name": "kiriki",
-            "cmake": true,
+            "buildsystem": "cmake-ninja",
             "sources": [
                 { "type": "git", "url": "git://anongit.kde.org/kiriki.git" }
             ]

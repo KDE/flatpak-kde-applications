@@ -14,14 +14,14 @@
         "libkdegames.json",
         {
             "name": "libkmahjongg",
-            "cmake": true,
+            "buildsystem": "cmake-ninja",
             "sources": [
                 { "type": "git", "url": "git://anongit.kde.org/libkmahjongg.git" }
             ]
         },
         {
             "name": "kshisen",
-            "cmake": true,
+            "buildsystem": "cmake-ninja",
             "sources": [
                 { "type": "git", "url": "git://anongit.kde.org/kshisen.git" }
             ]

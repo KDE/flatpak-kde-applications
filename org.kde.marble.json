@@ -12,7 +12,7 @@
     "modules": [
         {
             "name": "marble",
-            "cmake": true,
+            "buildsystem": "cmake-ninja",
             "builddir": true,
             "sources": [ { "type": "git", "url": "git://anongit.kde.org/marble.git" } ]
         }

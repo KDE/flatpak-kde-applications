@@ -35,8 +35,8 @@
             "name": "gpgme",
             "sources": [ { "type": "git", "url": "git://git.gnupg.org/gpgme.git", "branch": "572c1aa"} ]
         },
-        { "name": "kmime", "cmake": true, "sources": [ { "type": "git", "url": "git://anongit.kde.org/kmime" } ] },
-        { "name": "libkleo", "cmake": true, "sources": [ { "type": "git", "url": "git://anongit.kde.org/libkleo.git" } ] },
-        { "name": "kleopatra", "cmake": true, "sources": [ { "type": "git", "url": "git://anongit.kde.org/kleopatra.git" } ] }
+        { "name": "kmime", "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "git://anongit.kde.org/kmime" } ] },
+        { "name": "libkleo", "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "git://anongit.kde.org/libkleo.git" } ] },
+        { "name": "kleopatra", "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "git://anongit.kde.org/kleopatra.git" } ] }
     ]
 }

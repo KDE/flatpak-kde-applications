@@ -12,7 +12,7 @@
     "modules": [
         {
             "name": "ksystemlog",
-            "cmake": true,
+            "buildsystem": "cmake-ninja",
             "sources": [
                 { "type": "git", "url": "git://anongit.kde.org/ksystemlog.git" }
             ]

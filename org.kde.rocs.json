@@ -1,25 +1,26 @@
 {
-    "id": "org.kde.massif-visualizer",
+    "id": "org.kde.rocs",
     "branch": "master",
     "runtime": "org.kde.Platform",
     "runtime-version": "master",
     "sdk": "org.kde.Sdk",
-    "command": "massif-visualizer",
+    "command": "rocs",
     "tags": ["nightly"],
     "desktop-file-name-prefix": "(Nightly) ",
     "finish-args": ["--share=ipc", "--socket=x11", "--socket=wayland", "--filesystem=host" ],
-    
+
     "modules": [
+        "org.boost.libs.json",
         {
+            "name": "grantlee",
             "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"],
-            "name": "kdiagram",
             "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kdiagram.git" } ]
+            "sources": [ { "type": "git", "url": "https://github.com/steveire/grantlee.git" } ]
         },
         {
-            "name": "massif-visualizer",
+            "name": "rocs",
             "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/massif-visualizer.git" } ]
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/rocs.git" } ]
         }
     ]
 }

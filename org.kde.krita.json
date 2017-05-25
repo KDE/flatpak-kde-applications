@@ -13,7 +13,7 @@
         "boost.json",
         {
             "name": "eigen",
-            "cmake": true,
+            "buildsystem": "cmake-ninja",
             "builddir": true,
             "sources": [
                 {
@@ -25,7 +25,7 @@
         },
         {
             "name": "exiv2",
-            "cmake": true,
+            "buildsystem": "cmake-ninja",
             "builddir": true,
             "sources": [
                 {
@@ -37,7 +37,7 @@
         },
         {
             "name": "krita",
-            "cmake": true,
+            "buildsystem": "cmake-ninja",
             "builddir": true,
             "sources": [ { "type": "git", "url": "git://anongit.kde.org/krita.git", "branch": "krita/3.1" } ]
         }

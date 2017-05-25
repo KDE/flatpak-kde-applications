@@ -33,13 +33,13 @@
         {
             "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib", "-DQT=ON", "-DSTEMMING=OFF"],
             "name": "appstream",
-            "cmake": true,
+            "buildsystem": "cmake-ninja",
             "builddir": true,
             "sources": [ { "type": "git", "url": "https://github.com/ximion/appstream.git", "branch": "master" } ]
         },
         {
             "name": "kirigami",
-            "cmake": true,
+            "buildsystem": "cmake-ninja",
             "builddir": true,
             "sources": [ { "type": "git", "url": "git://anongit.kde.org/kirigami.git", "branch": "master" } ]
         },
@@ -47,7 +47,7 @@
             "name": "discover",
             "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib",
                             "-DBUILD_FlatpakBackend=ON", "-DBUILD_SnapBackend=ON", "-DBUILD_SnapBackend=ON", "-DBUILD_DummyBackend=ON"],
-            "cmake": true,
+            "buildsystem": "cmake-ninja",
             "builddir": true,
             "sources": [ { "type": "git", "url": "git://anongit.kde.org/discover.git", "branch": "master" } ]
         }
