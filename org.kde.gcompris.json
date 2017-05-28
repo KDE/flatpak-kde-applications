@@ -12,7 +12,7 @@
     "modules": [
         {
             "name": "gcompris",
-            "buildsystem": "cmake-ninja",
+            "buildsystem": "cmake",
             "builddir": true,
             "sources": [ { "type": "git", "url": "git://anongit.kde.org/gcompris.git" } ]
         }
