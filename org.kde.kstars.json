@@ -12,7 +12,7 @@
     "modules": [
         {
             "name": "eigen",
-            "buildsystem": "cmake-ninja",
+            "buildsystem": "cmake",
             "builddir": true,
             "sources": [
                 {
