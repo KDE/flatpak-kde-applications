@@ -10,7 +10,7 @@
     "finish-args": ["--share=ipc", "--socket=x11", "--socket=wayland", "--filesystem=host" ],
 
     "modules": [
-        "org.boost.libs.json",
+        "boost.json",
         {
             "name": "grantlee",
             "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"],
