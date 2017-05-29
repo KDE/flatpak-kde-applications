@@ -83,8 +83,7 @@
             "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib", "-DLMDB_DIR=/app"],
             "name": "baloo",
             "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/baloo.git", "branch": "v5.34.0" },
-            {"type": "patch", "path": "baloo.patch"} ]
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/baloo.git", "branch": "v5.34.0" } ]
         },
         {
             "name": "kdecoration",
