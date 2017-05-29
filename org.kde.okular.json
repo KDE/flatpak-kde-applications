@@ -37,6 +37,12 @@
             "sources": [ { "type": "git", "url": "git://anongit.kde.org/kactivities.git", "branch": "v5.34.0" } ]
         },
         {
+            "name": "openjpeg2",
+            "buildsystem": "cmake-ninja",
+            "builddir": true,
+            "sources": [ { "type": "git", "url": "https://github.com/szukw000/openjpeg.git", "branch": "v2.1.2" } ]
+        },
+        {
             "name": "poppler",
             "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"],
             "buildsystem": "cmake-ninja",
