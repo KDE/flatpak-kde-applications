@@ -8,7 +8,33 @@
     "command": "kontact",
     "tags": ["nightly"],
     "desktop-file-name-prefix": "(Nightly) ",
-    "finish-args": ["--share=network", "--share=ipc", "--socket=x11", "--socket=wayland", "--env=QT_QPA_PLATFORM=flatpak" ],
+    "finish-args": [
+        "--share=network",
+        "--share=ipc",
+        "--socket=x11",
+        "--socket=wayland",
+        "--env=QT_QPA_PLATFORM=flatpak",
+        "--own-name=org.freedesktop.Akonadi.*",
+        "--own-name=org.kde.akregator",
+        "--own-name=org.kde.kaddressbook",
+        "--own-name=org.kde.kmail",
+        "--own-name=org.kde.kmail2",
+        "--own-name=org.kde.knotes",
+        "--own-name=org.kde.kontact",
+        "--own-name=org.kde.korgac",
+        "--own-name=org.kde.korganizer",
+        "--own-name=org.kde.pim.*",
+        "--talk-name=org.kde.Solid.PowerManagement",
+        "--talk-name=org.kde.kded5",
+        "--talk-name=org.kde.kglobalaccel",
+        "--talk-name=org.kde.JobViewServer",
+        "--talk-name=org.kde.klauncher5",
+        "--talk-name=org.kde.knotify",
+        "--system-talk-name=org.freedesktop.NetworkManager"
+    ],
+
+    "rename-icon": "kontact",
+    "copy-icon": true,
 
     "modules": [
         {
