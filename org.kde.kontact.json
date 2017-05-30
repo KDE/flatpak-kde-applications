@@ -15,8 +15,11 @@
         "--socket=wayland",
         "--device=dri",
         "--env=QT_QPA_PLATFORM=flatpak",
+        "--own-name=org.freedesktop.Akonadi",
         "--own-name=org.freedesktop.Akonadi.*",
-        "--own-name=org.freedesktop.Akonadi.Control.lock",
+        "--own-name=org.freedesktop.Akonadi.Control.*",
+        "--own-name=org.freedesktop.Akonadi.Agent.*",
+        "--own-name=org.freedesktop.Akonadi.Resource.*",
         "--own-name=org.kde.akregator",
         "--own-name=org.kde.kaddressbook",
         "--own-name=org.kde.kmail",
@@ -32,6 +35,7 @@
         "--talk-name=org.kde.JobViewServer",
         "--talk-name=org.kde.klauncher5",
         "--talk-name=org.kde.knotify",
+        "--talk-name=org.kde.kwalletd5",
         "--system-talk-name=org.freedesktop.NetworkManager"
     ],
 
