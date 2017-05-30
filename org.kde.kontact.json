@@ -15,6 +15,7 @@
         "--socket=wayland",
         "--env=QT_QPA_PLATFORM=flatpak",
         "--own-name=org.freedesktop.Akonadi.*",
+        "--own-name=org.freedesktop.Akonadi.Control.lock",
         "--own-name=org.kde.akregator",
         "--own-name=org.kde.kaddressbook",
         "--own-name=org.kde.kmail",
@@ -46,7 +47,6 @@
         "/bin/preconv", "/bin/soelim", "/bin/tbl", "/bin/troff", "/bin/zsoelim",
         "/share/groff", "/etc/groff", "/lib/groff",
         "/lib/libKF5*.so",
-        "/lib/libKF5*.so.5",
         "/lib/libboost_*.so"
     ],
 
@@ -108,12 +108,14 @@
         {
             "name": "libical",
             "buildsystem": "cmake-ninja",
+            "config-opts": [ "-DCMAKE_INSTALL_LIBDIR=lib" ],
             "sources": [ { "type": "git", "url": "https://github.com/libical/libical.git", "branch": "v2.0.0" } ]
         },
         { "name": "kcalcore", "config-opts": ["-DBUILD_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"], "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "git://anongit.kde.org/kcalcore.git" } ] },
         {
             "name": "prison",
             "buildsystem": "cmake-ninja",
+            "config-opts": [ "-DCMAKE_INSTALL_LIBDIR=lib" ],
             "sources": [ { "type": "git", "url": "git://anongit.kde.org/prison.git", "branch": "v5.34.0"  } ],
             "modules": [
                 {
@@ -143,7 +145,11 @@
         "boost.json",
         {
             "name": "akonadi",
-            "config-opts": [ "-DBUILD_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib" ],
+            "config-opts": [
+                "-DBUILD_TESTING=OFF",
+                "-DCMAKE_INSTALL_LIBDIR=lib",
+                "-DDATABASE_BACKEND=SQLITE"
+            ],
             "buildsystem": "cmake-ninja",
             "sources": [ { "type": "git", "url": "git://anongit.kde.org/akonadi" } ],
             "cleanup": [
@@ -154,9 +160,9 @@
                     "name": "sqlite3",
                     "config-opts": [ "--enable-threadsafe", "--enable-threads-override-locks" ],
                     "cmake": false,
-                    "clfags": [
-                        "-DSQLITE_ENABLE_UNLOCK_NOTIFY=1"
-                    ],
+                    "build-options": {
+                        "cflags": "-DSQLITE_ENABLE_UNLOCK_NOTIFY=1"
+                    },
                     "sources": [
                         {
                             "type": "archive",
