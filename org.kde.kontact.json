@@ -148,6 +148,27 @@
             "sources": [ { "type": "git", "url": "git://anongit.kde.org/akonadi" } ],
             "cleanup": [
                 "/lib/plugins/designer/*.so"
+            ],
+            "modules": [
+                {
+                    "name": "sqlite3",
+                    "config-opts": [ "--enable-threadsafe", "--enable-threads-override-locks" ],
+                    "cmake": false,
+                    "clfags": [
+                        "-DSQLITE_ENABLE_UNLOCK_NOTIFY=1"
+                    ],
+                    "sources": [
+                        {
+                            "type": "archive",
+                            "url": "http://sqlite.org/2016/sqlite-autoconf-3150200.tar.gz",
+                            "sha256": "07b35063b9386865b78226cdaca9a299d938a87aaa8fdc4d73edb0cef30f3149"
+                        }
+                    ],
+                    "cleanup": [
+                        "/lib/libsqlite3.la",
+                        "/bin/sqlite3"
+                    ]
+                }
             ]
         },
         { "name": "kmime", "config-opts": ["-DBUILD_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"], "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "git://anongit.kde.org/kmime" } ] },
