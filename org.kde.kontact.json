@@ -13,6 +13,7 @@
         "--share=ipc",
         "--socket=x11",
         "--socket=wayland",
+        "--device=dri",
         "--env=QT_QPA_PLATFORM=flatpak",
         "--own-name=org.freedesktop.Akonadi.*",
         "--own-name=org.freedesktop.Akonadi.Control.lock",
