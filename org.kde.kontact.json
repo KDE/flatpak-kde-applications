@@ -424,6 +424,93 @@
             "sources": [
                 { "type": "git", "url": "git://anongit.kde.org/kontact.git" }
             ]
+        },
+
+       {
+            "name": "grantlee-editor",
+            "config-opts": [ "-DBUILD_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib" ],
+            "buildsystem": "cmake-ninja",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "git://anongit.kde.org/grantlee-editor.git",
+                    "branch": "master"
+                }
+            ]
+        },
+        {
+            "name": "akonadi-import-wizard",
+            "config-opts": [ "-DBUILD_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib" ],
+            "buildsystem": "cmake-ninja",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "git://anongit.kde.org/akonadi-import-wizard.git",
+                    "branch": "master"
+                }
+            ]
+        },
+        {
+            "name": "kmail-account-wizard",
+            "config-opts": [ "-DBUILD_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib" ],
+            "buildsystem": "cmake-ninja",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "git://anongit.kde.org/kmail-account-wizard.git",
+                    "branch": "master"
+                }
+            ],
+            "modules": [
+                {
+                    "name": "kross",
+                    "config-opts": [ "-DBUILD_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib" ],
+                    "buildsystem": "cmake-ninja",
+                    "sources": [
+                        {
+                            "type": "git",
+                            "url": "git://anongit.kde.org/kross.git",
+                            "branch": "master"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "pim-data-exporter",
+            "config-opts": [ "-DBUILD_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib" ],
+            "buildsystem": "cmake-ninja",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "git://anongit.kde.org/pim-data-exporter.git",
+                    "branch": "master"
+                }
+            ]
+        },
+        {
+            "name": "pim-sieve-editor",
+            "config-opts": [ "-DBUILD_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib" ],
+            "buildsystem": "cmake-ninja",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "git://anongit.kde.org/pim-sieve-editor.git",
+                    "branch": "master"
+                }
+            ]
+        },
+        {
+            "name": "mbox-importer",
+            "config-opts": [ "-DBUILD_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib" ],
+            "buildsystem": "cmake-ninja",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "git://anongit.kde.org/mbox-importer.git",
+                    "branch": "master"
+                }
+            ]
         }
     ]
 }
