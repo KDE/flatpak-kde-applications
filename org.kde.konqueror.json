@@ -3,6 +3,7 @@
     "branch": "master",
     "runtime": "org.kde.Platform",
     "runtime-version": "master",
+    "rename-desktop-file": "konqbrowser.desktop",
     "sdk": "org.kde.Sdk",
     "command": "konqueror",
     "tags": ["nightly"],
