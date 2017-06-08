@@ -4,7 +4,7 @@
     "runtime": "org.kde.Platform",
     "runtime-version": "master",
     "sdk": "org.kde.Sdk",
-    "command": "kube-mail",
+    "command": "kube",
     "rename-icon": "kube_icon",
     "tags": ["nightly"],
     "desktop-file-name-prefix": "(Nightly) ",
@@ -17,7 +17,7 @@
             "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"],
             "name": "flatbuffers",
             "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "https://github.com/google/flatbuffers.git", "branch": "v1.4.0" } ]
+            "sources": [ { "type": "git", "url": "https://github.com/google/flatbuffers.git", "branch": "v1.6.0" } ]
         },
         {
             "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib", "-DNO_PLASMA=ON"],
@@ -113,8 +113,7 @@
             "sources": [ { "type": "git", "url": "git://anongit.kde.org/sink.git", "branch": "develop" } ]
         },
         {
-            "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib",
-                            "-DCMAKE_C_COMPILER=/usr/bin/clang", "-DCMAKE_CXX_COMPILER=/usr/bin/clang++"],
+            "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"],
             "name": "kube",
             "buildsystem": "cmake-ninja",
             "sources": [ { "type": "git", "url": "git://anongit.kde.org/kube.git", "branch": "develop" } ]
