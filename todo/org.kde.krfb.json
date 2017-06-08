@@ -11,6 +11,39 @@
 
     "modules": [
         {
+            "name": "libgpg-error",
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://www.gnupg.org/ftp/gcrypt/libgpg-error/libgpg-error-1.22.tar.bz2",
+                    "sha256": "f2a04ee6317bdb41a625bea23fdc7f0b5a63fb677f02447c647ed61fb9e69d7b"
+                }
+            ],
+            "cleanup": [
+                "/lib/libgpg-error.la"
+            ]
+        },
+        {
+            "name": "libgcrypt",
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://www.gnupg.org/ftp/gcrypt/libgcrypt/libgcrypt-1.7.7.tar.bz2",
+                    "sha256": "b9b85eba0793ea3e6e66b896eb031fa05e1a4517277cc9ab10816b359254cd9a"
+                }
+            ]
+        },
+        {
+            "name": "LibVNCServer",
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://github.com/LibVNC/libvncserver/archive/LibVNCServer-0.9.11.tar.gz",
+                    "sha256": "193d630372722a532136fd25c5326b2ca1a636cbb8bf9bb115ef869c804d2894"
+                }
+            ]
+        },
+        {
             "name": "krfb",
             "buildsystem": "cmake-ninja",
             "sources": [
@@ -19,4 +52,3 @@
         }
     ]
 }
-------
