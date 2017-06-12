@@ -13,8 +13,9 @@
         {
             "name": "umbrello",
             "buildsystem": "cmake-ninja",
+            "config-opts": ["-DBUILD_KF5=ON" ],
             "sources": [
-                { "type": "git", "url": "git://anongit.kde.org/umbrello.git", "branch": "frameworks" }
+                { "type": "git", "url": "git://anongit.kde.org/umbrello.git" }
             ]
         }
     ]
