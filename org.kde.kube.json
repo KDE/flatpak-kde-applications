@@ -82,12 +82,6 @@
             "sources": [ { "type": "git", "url": "git://git.gnupg.org/gpgme.git", "branch": "572c1aa"} ]
         },
         {
-            "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib", "-DMIMETREEPARSER_ONLY_BUILD=TRUE"],
-            "name": "messagelib",
-            "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/messagelib.git", "branch": "Applications/16.12" } ]
-        },
-        {
             "name": "libgit2",
             "buildsystem": "cmake-ninja",
             "sources": [
