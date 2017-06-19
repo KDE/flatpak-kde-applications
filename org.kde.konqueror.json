@@ -2,7 +2,7 @@
     "id": "org.kde.konqueror",
     "branch": "master",
     "runtime": "org.kde.Platform",
-    "runtime-version": "master",
+    "runtime-version": "5.9",
     "rename-desktop-file": "konqbrowser.desktop",
     "sdk": "org.kde.Sdk",
     "command": "konqueror",

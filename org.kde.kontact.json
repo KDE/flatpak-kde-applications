@@ -3,7 +3,7 @@
     "branch": "master",
     "rename-icon": "kontact",
     "runtime": "org.kde.Platform",
-    "runtime-version": "master",
+    "runtime-version": "5.9",
     "sdk": "org.kde.Sdk",
     "command": "kontact",
     "tags": ["nightly"],

@@ -2,7 +2,7 @@
     "id": "org.kde.konversation",
     "branch": "master",
     "runtime": "org.kde.Platform",
-    "runtime-version": "master",
+    "runtime-version": "5.9",
     "sdk": "org.kde.Sdk",
     "command": "konversation",
     "tags": ["nightly"],
