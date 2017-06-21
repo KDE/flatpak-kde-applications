@@ -1,0 +1,42 @@
+{
+    "id": "org.kde.elisa",
+    "branch": "master",
+    "rename-icon": "elisa",
+    "runtime": "org.kde.Platform",
+    "runtime-version": "5.9",
+    "sdk": "org.kde.Sdk",
+    "command": "elisa",
+    "tags": ["nightly"],
+    "desktop-file-name-prefix": "(Nightly) ",
+    "finish-args": ["--share=ipc", "--socket=x11", "--socket=wayland", "--filesystem=host" ],
+
+    "modules": [
+        {
+            "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"],
+            "name": "kfilemetadata",
+            "buildsystem": "cmake-ninja",
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kfilemetadata.git", "branch": "v5.35.0" } ]
+        },
+        {
+            "name": "lmdb",
+            "sources": [ { "type": "git", "url": "git://github.com/LMDB/lmdb.git", "branch": "LMDB_0.9.18"}],
+            "no-autogen": true,
+            "make-install-args": ["prefix=/app"],
+            "subdir" : "libraries/liblmdb"
+        },
+        {
+            "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib", "-DLMDB_DIR=/app"],
+            "name": "baloo",
+            "buildsystem": "cmake-ninja",
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/baloo.git", "branch": "v5.35.0" } ]
+        },
+        {
+            "name": "elisa",
+            "buildsystem": "cmake-ninja",
+            "config-opts": [],
+            "sources": [
+                { "type": "git", "url": "git://anongit.kde.org/elisa.git" }
+            ]
+        }
+    ]
+}
