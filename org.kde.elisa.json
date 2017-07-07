@@ -1,7 +1,6 @@
 {
     "id": "org.kde.elisa",
     "branch": "master",
-    "rename-icon": "elisa",
     "runtime": "org.kde.Platform",
     "runtime-version": "5.9",
     "sdk": "org.kde.Sdk",
