@@ -10,7 +10,7 @@
     "finish-args": ["--share=ipc", "--socket=x11", "--socket=wayland", "--filesystem=host", "--env=QT_QPA_PLATFORM=flatpak" ],
 
     "modules": [
-        { "name": "ksu", "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "git://anongit.kde.org/kdesu.git", "branch": "v5.35.0" } ] },
+        { "name": "ksu", "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "git://anongit.kde.org/kdesu.git", "branch": "v5.36.0" } ] },
         {
             "name": "cervisia",
             "buildsystem": "cmake-ninja",
