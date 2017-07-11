@@ -22,7 +22,7 @@
             "name": "kreversi",
             "buildsystem": "cmake-ninja",
             "sources": [
-                { "type": "git", "url": "git://anongit.kde.org/kreversi.git", "branch": "frameworks" }
+                { "type": "git", "url": "git://anongit.kde.org/kreversi.git" }
             ]
         }
     ]
