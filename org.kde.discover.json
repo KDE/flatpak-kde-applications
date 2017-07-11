@@ -46,10 +46,22 @@
         {
             "name": "discover",
             "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib",
-                            "-DBUILD_FlatpakBackend=ON", "-DBUILD_SnapBackend=ON", "-DBUILD_SnapBackend=ON", "-DBUILD_DummyBackend=ON"],
+                            "-DBUILD_FlatpakBackend=ON", "-DBUILD_SnapBackend=OFF", "-DBUILD_DummyBackend=ON"],
             "buildsystem": "cmake-ninja",
             "builddir": true,
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/discover.git", "branch": "master" } ]
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/discover.git" } ],
+            "modules-not-building": [
+                {
+                    "name": "snapd-glib",
+                    "sources": [ { "type": "git", "url": "https://github.com/snapcore/snapd-glib.git", "branch": "master" } ],
+                    "modules": [
+                        {
+                            "name": "gobject-introspection",
+                            "sources": [ { "type": "git", "url": "git://git.gnome.org/gobject-introspection", "branch": "1.52.1" } ]
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }
