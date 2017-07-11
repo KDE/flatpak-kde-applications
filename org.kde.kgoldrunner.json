@@ -22,7 +22,7 @@
             "name": "kgoldrunner",
             "buildsystem": "cmake-ninja",
             "sources": [
-                { "type": "git", "url": "git://anongit.kde.org/kgoldrunner.git", "branch": "frameworks" }
+                { "type": "git", "url": "git://anongit.kde.org/kgoldrunner.git" }
             ]
         }
     ]
