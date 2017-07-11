@@ -17,41 +17,6 @@
             "sources": [ { "type": "git", "url": "git://anongit.kde.org/kfilemetadata.git", "branch": "v5.36.0" } ]
         },
         {
-            "name": "glib",
-            "config-opts": [ "--with-pcre=system" ],
-            "cleanup-platform": [ "/share/glib-2.0/codegen",
-                                  "/bin/gdbus-codegen",
-                                  "/bin/glib-*",
-                                  "/bin/gobject-query",
-                                  "/bin/gresource",
-                                  "/bin/gtester*"
-                               ],
-            "sources": [
-                {
-                    "type": "git",
-                    "url": "git://git.gnome.org/glib"
-                }
-            ]
-        },
-        {
-            "name": "pango",
-            "sources": [
-                {
-                    "type": "git",
-                    "url": "git://git.gnome.org/pango"
-                }
-            ]
-        },
-        {
-            "name": "atk",
-            "sources": [
-                {
-                    "type": "git",
-                    "url": "git://git.gnome.org/atk"
-                }
-            ]
-        },
-        {
             "name": "gtk2",
             "config-opts": ["--disable-man",
                             "--with-xinput=xfree"],
