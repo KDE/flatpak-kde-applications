@@ -28,7 +28,7 @@
             "name": "krita",
             "buildsystem": "cmake-ninja",
             "builddir": true,
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/krita.git", "branch": "krita/3.1" } ]
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/krita.git" } ]
         }
     ]
 }
