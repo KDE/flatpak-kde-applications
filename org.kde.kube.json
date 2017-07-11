@@ -53,9 +53,9 @@
         },
         {
             "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"],
-            "name": "kdav",
+            "name": "kdav2",
             "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kdav.git", "branch": "master" } ]
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kdav2.git", "branch": "master" } ]
         },
         {
             "name": "libgpg-error",
