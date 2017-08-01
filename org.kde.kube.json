@@ -8,7 +8,14 @@
     "rename-icon": "kube_icon",
     "tags": ["nightly"],
     "desktop-file-name-prefix": "(Nightly) ",
-    "finish-args": ["--share=ipc", "--socket=x11", "--socket=wayland", "--filesystem=host", "--share=network" ],
+    "finish-args": [
+        "--share=ipc",
+        "--socket=x11",
+        "--socket=wayland",
+        "--filesystem=host",
+        "--share=network",
+        "--env=SASL_PATH=/app/usr/lib/sasl2;/usr/lib/sasl2"
+    ],
     "separate-locales": false,
 
     "modules": [
