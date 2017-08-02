@@ -50,7 +50,7 @@
             "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"],
             "name": "kcontacts",
             "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kcontacts.git", "branch": "master" } ]
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kcontacts.git", "branch": "Applications/17.04" } ]
         },
         {
             "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"],
