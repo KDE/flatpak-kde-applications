@@ -28,13 +28,6 @@
             "sources": [ { "type": "git", "url": "https://github.com/google/flatbuffers.git", "branch": "v1.6.0" } ]
         },
         {
-            "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib", "-DNO_PLASMA=ON"],
-            "name": "kirigami",
-            "buildsystem": "cmake-ninja",
-            "builddir": true,
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kirigami.git" } ]
-        },
-        {
             "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib",
                             "-DCMAKE_C_COMPILER=/usr/bin/clang", "-DCMAKE_CXX_COMPILER=/usr/bin/clang++", "-DWITH_KJOB=OFF"],
             "name": "kasync",
