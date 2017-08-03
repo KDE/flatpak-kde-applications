@@ -15,7 +15,8 @@
         "--device=dri",
         "--filesystem=host",
         "--share=network",
-        "--env=SASL_PATH=/usr/lib/sasl2/"
+        "--env=SASL_PATH=/usr/lib/sasl2/",
+        "--env=QT_QPA_PLATFORM=flatpak"
     ],
     "separate-locales": false,
 
