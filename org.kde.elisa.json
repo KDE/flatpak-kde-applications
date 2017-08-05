@@ -7,7 +7,7 @@
     "command": "elisa",
     "tags": ["nightly"],
     "desktop-file-name-prefix": "(Nightly) ",
-    "finish-args": ["--share=ipc", "--socket=x11", "--socket=wayland", "--filesystem=host", "--socket=pulseaudio", "--device=dri" ],
+    "finish-args": ["--share=ipc", "--socket=x11", "--socket=wayland", "--filesystem=host", "--socket=pulseaudio", "--device=dri", "--env=QT_QPA_PLATFORM=flatpak" ],
 
     "modules": [
         {
@@ -28,6 +28,12 @@
             "name": "baloo",
             "buildsystem": "cmake-ninja",
             "sources": [ { "type": "git", "url": "git://anongit.kde.org/baloo.git", "branch": "v5.36.0" } ]
+        },
+        {
+            "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"],
+            "name": "kdeclarative",
+            "buildsystem": "cmake-ninja",
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kdeclarative.git", "branch": "v5.36.0" } ]
         },
         {
             "name": "elisa",
