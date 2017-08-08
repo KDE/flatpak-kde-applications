@@ -38,11 +38,6 @@
             ]
         },
         {
-            "name": "kdevplatform",
-            "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kdevplatform.git", "branch": "master" } ]
-        },
-        {
             "name": "kdevelop",
             "buildsystem": "cmake-ninja",
             "sources": [ { "type": "git", "url": "git://anongit.kde.org/kdevelop.git", "branch": "master" } ]
