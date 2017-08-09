@@ -1,10 +1,13 @@
 REPO=repo
 ARCH?=$(shell flatpak --default-arch)
 
-all: $(REPO)/config $(foreach file, $(wildcard org.kde.*.json), $(subst .json,.app,$(file)))
+all: $(REPO)/config $(foreach file, $(wildcard org.kde.*.json), $(subst .json,.app,$(file))) $(foreach file, $(wildcard org.kde.*.remoteapp), $(subst .remoteapp,.app,$(file)))
 
 %.app: %.json
 	flatpak-builder --force-clean --arch=$(ARCH) --ccache --repo=$(REPO) --subject="Build of $<, `date`" ${EXPORT_ARGS} app $<
+
+%.app: %.remoteapp
+	./build.sh $<
 
 %.flatpak: %.app
 	flatpak build-bundle ${REPO} $@ $*

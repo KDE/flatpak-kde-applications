@@ -1,10 +1,24 @@
 #!/bin/sh
-# added for compatibility with flatpak-build-scripts
 
 FILE=$1
 
-APPID=`basename $FILE .json`
+shift
 
-echo ========== Building $APPID ================
-rm -rf app
-flatpak-builder --ccache --require-changes --repo=repo --subject="Nightly build of ${APPID}, `date`" ${EXPORT_ARGS-} app $FILE
+ID=
+JSON=
+GITURL=
+GITBRANCH=master
+
+. ./$FILE
+
+if [ x$ID == x ]; then
+    echo invalid app
+    exit 1
+fi
+
+GIT_ARGS=""
+if [ x$GITURL != x ]; then
+    GIT_ARGS="--from-git=$GITURL --from-git-branch=$GITBRANCH"
+fi
+
+flatpak-builder --force-clean --ccache --require-changes --repo=repo --subject="Build of ${ID}, `date`" ${EXPORT_ARGS-} ${GIT_ARGS-} "$@" app $JSON
