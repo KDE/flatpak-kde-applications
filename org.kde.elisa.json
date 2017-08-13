@@ -7,11 +7,29 @@
     "command": "elisa",
     "tags": ["nightly"],
     "desktop-file-name-prefix": "(Nightly) ",
-    "finish-args": ["--share=ipc", "--socket=x11", "--socket=wayland", "--filesystem=host", "--socket=pulseaudio", "--device=dri", "--env=QT_QPA_PLATFORM=flatpak" ],
+    "finish-args": ["--share=ipc", "--socket=x11", "--socket=wayland", "--filesystem=home", "--socket=pulseaudio", "--device=dri", "--env=QT_QPA_PLATFORM=flatpak", "--socket=session-bus", "--env=BALOO_DB_PATH=.local/share/baloo" ],
 
     "modules": [
         {
             "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"],
+            "name": "kdeclarative",
+            "buildsystem": "cmake-ninja",
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kdeclarative.git", "branch": "v5.36.0" } ]
+        },
+        {
+            "config-opts": [ "-DBUILD_SHARED_LIBS=ON" ],
+            "name": "taglib",
+            "buildsystem": "cmake-ninja",
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "http://taglib.github.io/releases/taglib-1.11.1.tar.gz",
+                    "sha256": "b6d1a5a610aae6ff39d93de5efd0fdc787aa9e9dc1e7026fa4c961b26563526b"
+                }
+            ]
+        },
+        {
+            "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib" ],
             "name": "kfilemetadata",
             "buildsystem": "cmake-ninja",
             "sources": [ { "type": "git", "url": "git://anongit.kde.org/kfilemetadata.git", "branch": "v5.36.0" } ]
@@ -28,12 +46,6 @@
             "name": "baloo",
             "buildsystem": "cmake-ninja",
             "sources": [ { "type": "git", "url": "git://anongit.kde.org/baloo.git", "branch": "v5.36.0" } ]
-        },
-        {
-            "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"],
-            "name": "kdeclarative",
-            "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kdeclarative.git", "branch": "v5.36.0" } ]
         },
         {
             "name": "elisa",
