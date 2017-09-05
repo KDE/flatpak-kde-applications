@@ -1,12 +1,12 @@
 {
-    "id": "org.kde.konversation-qtquick",
+    "id": "org.kde.konversation-konvi2x",
     "branch": "wip/qtquick",
     "runtime": "org.kde.Platform",
     "runtime-version": "5.9",
     "sdk": "org.kde.Sdk",
     "command": "konversation --nui --qtquick",
     "tags": ["nightly"],
-    "desktop-file-name-prefix": "(Nightly) (Qt Quick) ",
+    "desktop-file-name-prefix": "(Nightly) (Konvi2x) ",
     "finish-args": ["--share=ipc", "--share=network", "--socket=x11", "--socket=wayland", "--env=QT_QPA_PLATFORM=flatpak" ],
     "separate-locales": false,
 
@@ -20,7 +20,7 @@
                        ]
         },
         {
-            "name": "konversation-qtquick",
+            "name": "konversation-konvi2x",
             "buildsystem": "cmake-ninja",
             "config-opts": ["-DCMAKE_BUILD_TYPE=debugfull"],
             "sources": [ { "type": "git", "url": "git://anongit.kde.org/konversation.git", "branch": "wip/qtquick" } ]
