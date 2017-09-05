@@ -16,7 +16,7 @@
             "buildsystem": "cmake-ninja",
             "builddir": true,
             "sources": [ { "type": "git", "url": "git://anongit.kde.org/kirigami.git", "branch": "master" },
-                         {"type": "patch", "path": "kirigami_lower_kf5_dependency.patch"}
+                         { "type": "patch", "path": "kirigami_lower_kf5_dependency.patch"}
                        ]
         },
         {
