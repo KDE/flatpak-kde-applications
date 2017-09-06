@@ -1,12 +1,14 @@
 {
     "id": "org.kde.konversation-konvi2x",
-    "branch": "wip/qtquick",
+    "rename-desktop-file": "org.kde.konversation.desktop",
+    "branch": "master",
     "runtime": "org.kde.Platform",
     "runtime-version": "5.9",
     "sdk": "org.kde.Sdk",
-    "command": "konversation --nui --qtquick",
+    "command": "konvi2x",
     "tags": ["nightly"],
-    "desktop-file-name-prefix": "(Nightly) (Konvi2x) ",
+    "desktop-file-name-prefix": "(Nightly) ",
+    "desktop-file-name-suffix": " (Konvi2x)",
     "finish-args": ["--share=ipc", "--share=network", "--socket=x11", "--socket=wayland", "--env=QT_QPA_PLATFORM=flatpak" ],
     "separate-locales": false,
 
