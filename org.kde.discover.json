@@ -38,12 +38,6 @@
             "sources": [ { "type": "git", "url": "https://github.com/ximion/appstream.git", "branch": "master" } ]
         },
         {
-            "name": "kirigami",
-            "buildsystem": "cmake-ninja",
-            "builddir": true,
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kirigami.git", "branch": "master" } ]
-        },
-        {
             "name": "discover",
             "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib",
                             "-DBUILD_FlatpakBackend=ON", "-DBUILD_SnapBackend=OFF", "-DBUILD_DummyBackend=ON"],

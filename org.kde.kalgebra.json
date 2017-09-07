@@ -17,12 +17,6 @@
             "sources": [ { "type": "git", "url": "git://anongit.kde.org/analitza.git" } ]
         },
         {
-            "name": "kirigami",
-            "buildsystem": "cmake-ninja",
-            "builddir": true,
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kirigami.git", "branch": "master" } ]
-        },
-        {
             "name": "kalgebra",
             "buildsystem": "cmake-ninja",
             "sources": [ { "type": "git", "url": "git://anongit.kde.org/kalgebra.git" } ]
