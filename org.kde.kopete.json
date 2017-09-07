@@ -11,6 +11,7 @@
 
     "modules": [
         "boost.json",
+        "gpgme.json",
         {
             "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"],
             "name": "kdelibs4support",
@@ -33,30 +34,6 @@
         { "name": "grantlee", "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "https://github.com/steveire/grantlee.git" } ] },
         { "name": "kpimtextedit", "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "git://anongit.kde.org/kpimtextedit" } ] },
         { "name": "kidentitymanagement", "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "git://anongit.kde.org/kidentitymanagement" } ] },
-        {
-            "name": "libgpg-error",
-            "sources": [
-                {
-                    "type": "archive",
-                    "url": "https://www.gnupg.org/ftp/gcrypt/libgpg-error/libgpg-error-1.22.tar.bz2",
-                    "sha256": "f2a04ee6317bdb41a625bea23fdc7f0b5a63fb677f02447c647ed61fb9e69d7b"
-                }
-            ]
-        },
-        {
-            "name": "libassuan",
-            "sources": [
-                {
-                    "type": "archive",
-                    "url": "https://www.gnupg.org/ftp/gcrypt/libassuan/libassuan-2.4.2.tar.bz2",
-                    "sha256": "bb06dc81380b74bf1b64d5849be5c0409a336f3b4c45f20ac688e86d1b5bcb20"
-                }
-            ]
-        },
-        {
-            "name": "gpgme",
-            "sources": [ { "type": "git", "url": "git://git.gnupg.org/gpgme.git", "branch": "572c1aa"} ]
-        },
         { "name": "libkleo", "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "git://anongit.kde.org/libkleo" } ] },
         {
             "name": "kopete",
