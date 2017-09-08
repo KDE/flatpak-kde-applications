@@ -9,7 +9,7 @@
     "tags": ["nightly"],
     "desktop-file-name-prefix": "(Nightly) ",
     "desktop-file-name-suffix": " (Konvi2x)",
-    "finish-args": ["--share=ipc", "--share=network", "--socket=x11", "--socket=wayland", "--env=QT_QPA_PLATFORM=flatpak" ],
+    "finish-args": ["--share=ipc", "--share=network", "--socket=x11", "--socket=wayland", "--device=dri", "--env=QT_QPA_PLATFORM=flatpak" ],
     "separate-locales": false,
 
     "modules": [
