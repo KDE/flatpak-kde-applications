@@ -41,7 +41,7 @@
             ]
         },
         {
-            "config-opts": ["--libdir=lib", "-Denable-qt=true", "-Denable-stemming=false"],
+            "config-opts": ["--libdir=lib", "-Denable-qt=true", "-Dstemming=false"],
             "name": "appstream",
             "buildsystem": "meson",
             "builddir": true,
