@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="runtime">
+  <id>org.freedesktop.Platform.Icontheme.Adwaita</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <name>Adwaita icon theme</name>
+  <summary>Adwaita icon theme</summary>
+  <description>
+    <p>Adwaita icon theme is used by the GNOME desktop.</p>
+  </description>
+  <url type="homepage">https://github.com/GNOME/adwaita-icon-theme</url>
+</component>
