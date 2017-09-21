@@ -1,0 +1,26 @@
+{
+    "id": "org.kde.kirigami2.gallery",
+    "branch": "master",
+    "runtime": "org.kde.Platform",
+    "runtime-version": "5.9",
+    "sdk": "org.kde.Sdk",
+    "tags": ["nightly"],
+    "desktop-file-name-prefix": "(Nightly) ",
+    "finish-args": ["--share=ipc", "--share=network", "--socket=x11", "--socket=wayland", "--device=dri", "--env=QT_QPA_PLATFORM=flatpak" ],
+
+    "modules": [
+        {
+            "name": "qqc2-desktop-style",
+            "buildsystem": "cmake-ninja",
+            "builddir": true,
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/qqc2-desktop-style.git", "branch": "master" } ]
+        },
+        {
+            "name": "kirigami",
+            "config-opts": ["-DCMAKE_BUILD_TYPE=debug", "-DPLASMA_ENABLED=OFF", "-DBUILD_EXAMPLES=ON"],
+            "buildsystem": "cmake-ninja",
+            "builddir": true,
+            "sources": [ { "type": "git", "url": "/home/apol/devel/frameworks/kirigami" } ]
+        }
+    ]
+}
