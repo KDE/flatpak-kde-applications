@@ -7,13 +7,18 @@
     "command": "kanagram",
     "tags": ["nightly"],
     "desktop-file-name-prefix": "(Nightly) ",
-    "finish-args": ["--share=ipc", "--socket=x11", "--socket=wayland", "--env=QT_QPA_PLATFORM=flatpak" ],
+    "finish-args": ["--share=network", "--share=ipc", "--socket=x11", "--socket=wayland", "--env=QT_QPA_PLATFORM=flatpak" ],
 
     "modules": [
         {
             "name": "libkeduvocdocument",
             "buildsystem": "cmake-ninja",
             "sources": [ { "type": "git", "url": "git://anongit.kde.org/libkeduvocdocument.git" } ]
+        },
+        {
+            "name": "kdeedu-data",
+            "buildsystem": "cmake-ninja",
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kdeedu-data.git" } ]
         },
         {
             "name": "kanagram",
