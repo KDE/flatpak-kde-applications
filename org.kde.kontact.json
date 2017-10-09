@@ -134,7 +134,6 @@
                         "cflags": "-DSQLITE_ENABLE_UNLOCK_NOTIFY=1"
                     },
                     "sources": [
-                        { "name": "nm-qt", "config-opts": ["-DBUILD_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"], "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url":     "git://anongit.kde.org/networkmanager-qt" } ] },
                         {
                             "type": "archive",
                             "url": "http://sqlite.org/2016/sqlite-autoconf-3150200.tar.gz",
