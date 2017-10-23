@@ -100,8 +100,21 @@
         },
 
         {
+            "name": "PackageKit",
+            "config-opts": ["--enable-vala=no", "--enable-introspection=no", "--disable-gtk-doc"],
+            "sources": [
+                { "type": "git", "url": "https://github.com/hughsie/PackageKit.git", "branch": "master" },
+                {"type": "patch", "path": "pk-vapigen.patch"}
+            ]
+        },
+        {
+            "name": "PackageKitQt",
+            "sources": [ { "type": "git", "url": "https://github.com/hughsie/PackageKit-Qt.git", "branch": "master" } ]
+        },
+
+        {
             "name": "discover",
-            "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib",
+            "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib", "-DCMAKE_BUILD_TYPE=debug",
                             "-DBUILD_SnapBackend=OFF", "-DBUILD_DummyBackend=ON"],
             "buildsystem": "cmake-ninja",
             "builddir": true,
