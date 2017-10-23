@@ -38,16 +38,13 @@
         },
         {
             "name": "dconf",
-            "config-opts": ["--disable-static", "--disable-man"],
+            "buildsystem": "meson",
             "cleanup": [ "/libexec/dconf-service", "/share/dbus-1/services/*" ],
             "sources": [
                 {
                     "type": "git",
-                    "url": "git://git.gnome.org/dconf"
-                },
-                {
-                    "type": "patch",
-                    "path": "dconf-override.patch"
+                    "url": "git://git.gnome.org/dconf",
+                    "branch": "0.27.1"
                 }
             ]
         },
