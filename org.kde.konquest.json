@@ -1,10 +1,10 @@
 {
-    "id": "org.kde.bovo",
+    "id": "org.kde.konquest",
     "branch": "master",
     "runtime": "org.kde.Platform",
     "runtime-version": "5.9",
     "sdk": "org.kde.Sdk",
-    "command": "bovo",
+    "command": "konquest",
     "tags": ["nightly"],
     "desktop-file-name-prefix": "(Nightly) ",
     "finish-args": ["--share=ipc", "--socket=x11", "--socket=wayland", "--env=QT_QPA_PLATFORM=flatpak" ],
@@ -12,10 +12,10 @@
     "modules": [
         "libkdegames.json",
         {
-            "name": "bovo",
+            "name": "konquest",
             "buildsystem": "cmake-ninja",
             "sources": [
-                { "type": "git", "url": "git://anongit.kde.org/bovo.git" }
+                { "type": "git", "url": "git://anongit.kde.org/konquest.git" }
             ]
         }
     ]
