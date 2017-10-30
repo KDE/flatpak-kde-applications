@@ -24,9 +24,7 @@
             "config-opts": ["-DCMAKE_BUILD_TYPE=debug", "-DPLASMA_ENABLED=OFF"],
             "buildsystem": "cmake-ninja",
             "builddir": true,
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kirigami.git", "branch": "master" },
-                         { "type": "patch", "path": "kirigami_lower_kf5_dependency.patch"}
-                       ]
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kirigami.git", "branch": "master" } ]
         },
         {
             "name": "konversation-konvi2x",
