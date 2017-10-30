@@ -6,7 +6,6 @@
     "sdk": "org.kde.Sdk",
     "command": "kmix",
     "tags": ["nightly"],
-    "rename-desktop-file": "kmix.desktop",
     "desktop-file-name-prefix": "(Nightly) ",
     "finish-args": ["--share=ipc", "--socket=x11", "--socket=wayland", "--env=QT_QPA_PLATFORM=flatpak" ],
 
@@ -35,7 +34,7 @@
             "name": "kmix",
             "buildsystem": "cmake-ninja",
             "sources": [
-                { "type": "git", "url": "git://anongit.kde.org/kmix.git", "branch": "frameworks" }
+                { "type": "git", "url": "git://anongit.kde.org/kmix.git" }
             ]
         }
     ]
