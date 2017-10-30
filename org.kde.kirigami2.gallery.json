@@ -20,7 +20,7 @@
             "config-opts": ["-DCMAKE_BUILD_TYPE=debug", "-DPLASMA_ENABLED=OFF", "-DBUILD_EXAMPLES=ON"],
             "buildsystem": "cmake-ninja",
             "builddir": true,
-            "sources": [ { "type": "git", "url": "/home/apol/devel/frameworks/kirigami" } ]
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kirigami.git", "branch": "master" } ]
         }
     ]
 }
