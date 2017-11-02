@@ -11,6 +11,7 @@
 
     "modules": [
         "boost.json",
+        "qtwebkit.json",
         {
             "name": "grantlee",
             "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"],
@@ -20,6 +21,7 @@
         {
             "name": "rocs",
             "buildsystem": "cmake-ninja",
+            "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib", "-DQt5WebKit_DIR=/app/lib/cmake/Qt5WebKit/", "-DQt5WebKitWidgets_DIR=/app/lib/cmake/Qt5WebKitWidgets/"],
             "sources": [ { "type": "git", "url": "git://anongit.kde.org/rocs.git" } ]
         }
     ]
