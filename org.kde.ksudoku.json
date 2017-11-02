@@ -12,6 +12,10 @@
     "modules": [
         "libkdegames.json",
         {
+            "name": "glu",
+            "sources": [ { "type": "git", "url": "https://anongit.freedesktop.org/git/mesa/glu.git", "branch": "glu-9.0.0" } ]
+        },
+        {
             "name": "ksudoku",
             "buildsystem": "cmake-ninja",
             "sources": [
