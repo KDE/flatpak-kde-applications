@@ -10,10 +10,17 @@
     "finish-args": ["--share=ipc", "--socket=x11", "--socket=wayland", "--env=QT_QPA_PLATFORM=flatpak" ],
 
     "modules": [
+        "qtwebkit.json",
+        {
+            "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"],
+            "name": "kdelibs4support",
+            "buildsystem": "cmake-ninja",
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kdelibs4support.git", "branch": "v5.39.0" } ]
+        },
         {
             "name": "umbrello",
             "buildsystem": "cmake-ninja",
-            "config-opts": ["-DBUILD_KF5=ON" ],
+            "config-opts": ["-DBUILD_KF5=ON", "-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib", "-DQt5WebKitWidgets_DIR=/app/lib/cmake/Qt5WebKitWidgets/"],
             "sources": [
                 { "type": "git", "url": "git://anongit.kde.org/umbrello.git" }
             ]
