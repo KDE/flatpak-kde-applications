@@ -46,6 +46,7 @@
         {
             "name": "krfb",
             "buildsystem": "cmake-ninja",
+            "config-opts": ["-DCMAKE_BUILD_TYPE=debug", "-DPLASMA_ENABLED=OFF"],
             "sources": [
                 { "type": "git", "url": "git://anongit.kde.org/krfb.git" }
             ]
