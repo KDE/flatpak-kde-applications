@@ -11,8 +11,15 @@
 
     "modules": [
         {
+            "name": "taglib",
+            "buildsystem": "cmake-ninja",
+            "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib", "-DBUILD_SHARED_LIBS=ON"],
+            "sources": [ { "type": "git", "url": "https://github.com/taglib/taglib.git", "branch": "v1.11.1" } ]
+        },
+        {
             "name": "juk",
             "buildsystem": "cmake-ninja",
+            "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"],
             "sources": [
                 { "type": "git", "url": "git://anongit.kde.org/juk.git" }
             ]
