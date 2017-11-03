@@ -30,7 +30,7 @@
             "buildsystem": "cmake-ninja",
             "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib", "-DQt5WebKitWidgets_DIR=/app/lib/cmake/Qt5WebKitWidgets/"],
             "builddir": true,
-            "sources": [ { "type": "git", "url": "file:///home/apol/projects/digikam" } ]
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/digikam.git" } ]
         }
     ]
 }
