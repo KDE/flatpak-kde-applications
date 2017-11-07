@@ -5,10 +5,17 @@
     "runtime-version": "5.9",
     "sdk": "org.kde.Sdk",
     "command": "ktuberling",
+    "rename-icon": "ktuberling",
     "tags": ["nightly"],
     "desktop-file-name-prefix": "(Nightly) ",
-    "finish-args": ["--share=ipc", "--socket=x11", "--socket=wayland", "--env=QT_QPA_PLATFORM=flatpak" ],
-    
+    "finish-args": [
+        "--share=ipc",
+        "--socket=x11",
+        "--socket=wayland",
+        "--socket=pulseaudio",
+        "--device=dri",
+        "--env=QT_QPA_PLATFORM=flatpak"
+    ],
     "modules": [
         "libkdegames.json",
         {

@@ -7,7 +7,15 @@
     "command": "kigo",
     "tags": ["nightly"],
     "desktop-file-name-prefix": "(Nightly) ",
-    "finish-args": ["--share=ipc", "--socket=x11", "--socket=wayland", "--filesystem=host", "--env=QT_QPA_PLATFORM=flatpak" ],
+    "finish-args": [
+        "--share=ipc",
+        "--socket=x11",
+        "--socket=wayland",
+        "--socket=pulseaudio",
+        "--device=dri",
+        "--filesystem=host",
+        "--env=QT_QPA_PLATFORM=flatpak"
+    ],
 
     "modules": [
         "libkdegames.json",
@@ -16,6 +24,16 @@
             "name": "kdelibs4support",
             "buildsystem": "cmake-ninja",
             "sources": [ { "type": "git", "url": "git://anongit.kde.org/kdelibs4support.git", "branch": "v5.39.0" } ]
+        },
+        {
+            "name": "gnugo",
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://ftp.gnu.org/gnu/gnugo/gnugo-3.8.tar.gz",
+                    "sha256": "da68d7a65f44dcf6ce6e4e630b6f6dd9897249d34425920bfdd4e07ff1866a72"
+                }
+            ]
         },
         {
             "name": "kigo",

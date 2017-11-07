@@ -5,10 +5,16 @@
     "runtime-version": "5.9",
     "sdk": "org.kde.Sdk",
     "command": "kalzium",
+    "rename-icon": "kalzium",
     "tags": ["nightly"],
     "desktop-file-name-prefix": "(Nightly) ",
-    "finish-args": ["--device=dri", "--share=ipc", "--socket=x11", "--socket=wayland", "--env=QT_QPA_PLATFORM=flatpak" ],
-
+    "finish-args": [
+        "--device=dri",
+        "--share=ipc",
+        "--socket=x11",
+        "--socket=wayland",
+        "--env=QT_QPA_PLATFORM=flatpak"
+    ],
     "modules": [
         {
             "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"],

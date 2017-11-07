@@ -5,10 +5,16 @@
     "runtime-version": "5.9",
     "sdk": "org.kde.Sdk",
     "command": "kgeography",
+    "rename-icon": "kgeography",
     "tags": ["nightly"],
     "desktop-file-name-prefix": "(Nightly) ",
-    "finish-args": ["--share=ipc", "--socket=x11", "--socket=wayland", "--env=QT_QPA_PLATFORM=flatpak" ],
-
+    "finish-args": [
+        "--share=ipc",
+        "--socket=x11",
+        "--socket=wayland",
+        "--device=dri",
+        "--env=QT_QPA_PLATFORM=flatpak"
+    ],
     "modules": [
         {
             "name": "kgeography",

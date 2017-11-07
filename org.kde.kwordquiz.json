@@ -5,10 +5,17 @@
     "runtime-version": "5.9",
     "sdk": "org.kde.Sdk",
     "command": "kwordquiz",
+    "rename-icon": "kwordquiz",
     "tags": ["nightly"],
     "desktop-file-name-prefix": "(Nightly) ",
-    "finish-args": ["--share=network", "--share=ipc", "--socket=x11", "--socket=wayland", "--env=QT_QPA_PLATFORM=flatpak" ],
-
+    "finish-args": [
+        "--share=network",
+        "--share=ipc",
+        "--socket=x11",
+        "--socket=pulseaudio",
+        "--device=dri",
+        "--env=QT_QPA_PLATFORM=flatpak"
+    ],
     "modules": [
         {
             "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"],
