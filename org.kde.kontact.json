@@ -71,7 +71,7 @@
             "config-opts": ["-DBUILD_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"],
             "name": "kdelibs4support",
             "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kdelibs4support.git", "branch": "v5.39.0" } ],
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kdelibs4support.git", "branch": "v5.40.0" } ],
             "cleanup": [
                 "/lib/plugins/designer/*.so"
             ]
@@ -87,7 +87,7 @@
             "name": "prison",
             "buildsystem": "cmake-ninja",
             "config-opts": [ "-DCMAKE_INSTALL_LIBDIR=lib" ],
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/prison.git", "branch": "v5.39.0"  } ],
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/prison.git", "branch": "v5.40.0"  } ],
             "modules": [
                 {
                     "name": "qrencode",
@@ -170,19 +170,19 @@
             "config-opts": ["-DBUILD_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"],
             "buildsystem": "cmake-ninja",
             "builddir": true,
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kactivities.git", "branch": "v5.39.0" } ]
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kactivities.git", "branch": "v5.40.0" } ]
         },
         {
             "config-opts": ["-DBUILD_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"],
             "name": "plasma-framework",
             "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/plasma-framework.git", "branch": "v5.39.0" } ]
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/plasma-framework.git", "branch": "v5.40.0" } ]
         },
         {
             "config-opts": ["-DBUILD_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"],
             "name": "krunner",
             "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/krunner.git", "branch": "v5.39.0" } ]
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/krunner.git", "branch": "v5.40.0" } ]
         },
         {
             "name": "xapian",
@@ -373,7 +373,7 @@
                     "name": "kross",
                     "config-opts": [ "-DBUILD_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib" ],
                     "buildsystem": "cmake-ninja",
-                    "sources": [ { "type": "git", "url": "git://anongit.kde.org/kross.git", "branch": "v5.39.0" } ]
+                    "sources": [ { "type": "git", "url": "git://anongit.kde.org/kross.git", "branch": "v5.40.0" } ]
                 }
             ]
         },
