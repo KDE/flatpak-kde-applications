@@ -7,7 +7,7 @@
     "command": "elisa",
     "tags": ["nightly"],
     "desktop-file-name-prefix": "(Nightly) ",
-    "finish-args": ["--share=ipc", "--socket=x11", "--socket=wayland", "--filesystem=home", "--socket=pulseaudio", "--device=dri", "--env=QT_QPA_PLATFORM=flatpak", "--socket=session-bus", "--env=BALOO_DB_PATH=.local/share/baloo" ],
+    "finish-args": ["--share=ipc", "--socket=x11", "--socket=wayland", "--filesystem=home", "--socket=pulseaudio", "--device=dri", "--socket=session-bus", "--env=BALOO_DB_PATH=.local/share/baloo" ],
 
     "modules": [
         {

@@ -12,8 +12,7 @@
         "--device=dri",
         "--share=ipc",
         "--socket=x11",
-        "--socket=wayland",
-        "--env=QT_QPA_PLATFORM=flatpak"
+        "--socket=wayland"
     ],
     "modules": [
         {

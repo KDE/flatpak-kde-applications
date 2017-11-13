@@ -13,10 +13,8 @@
         "--socket=wayland",
         "--socket=pulseaudio",
         "--device=dri",
-        "--filesystem=host",
-        "--env=QT_QPA_PLATFORM=flatpak"
+        "--filesystem=host"
     ],
-
     "modules": [
         "libkdegames.json",
         {
