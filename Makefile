@@ -1,7 +1,7 @@
 REPO=repo
 ARCH?=$(shell flatpak --default-arch)
 
-all: $(REPO)/config $(foreach file, $(wildcard org.kde.*.json), $(subst .json,.app,$(file))) $(foreach file, $(wildcard org.kde.*.remoteapp), $(subst .remoteapp,.app,$(file)))
+all: $(REPO)/config $(foreach file, $(wildcard org.*.*.json), $(subst .json,.app,$(file))) $(foreach file, $(wildcard org.*.*.remoteapp), $(subst .remoteapp,.app,$(file)))
 
 %.app: %.json
 	flatpak-builder --force-clean --arch=$(ARCH) --ccache --repo=$(REPO) --subject="Build of $<, `date`" ${EXPORT_ARGS} app $<
@@ -25,7 +25,7 @@ deps:
 	flatpak install $(ARGS) kde org.kde.Platform
 	flatpak install $(ARGS) kde org.kde.Sdk
 
-check: $(REPO)/config $(foreach file, $(wildcard org.kde.*.json), $(subst .json,.clean,$(file)))
+check: $(REPO)/config $(foreach file, $(wildcard org.*.*.json), $(subst .json,.clean,$(file)))
 
 %.clean: %.json
 	json-glib-validate $<
