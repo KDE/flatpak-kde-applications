@@ -1,6 +1,6 @@
 {
   "id": "org.kde.KStyle.Adwaita",
-  "branch": "master",
+  "branch": "5.9",
   "runtime": "org.kde.Platform",
   "build-extension": true,
   "sdk": "org.kde.Sdk",
