@@ -21,7 +21,7 @@
             "name": "kget",
             "buildsystem": "cmake-ninja",
             "sources": [
-                { "type": "git", "url": "git://anongit.kde.org/kget.git", "branch": "frameworks" }
+                { "type": "git", "url": "git://anongit.kde.org/kget.git" }
             ]
         }
     ]
