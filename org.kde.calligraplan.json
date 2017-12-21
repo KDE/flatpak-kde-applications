@@ -1,0 +1,53 @@
+{
+    "id": "org.kde.calligraplan",
+    "branch": "master",
+    "runtime": "org.kde.Platform",
+    "runtime-version": "5.9",
+    "sdk": "org.kde.Sdk",
+    "command": "calligraplan",
+    "tags": ["nightly"],
+    "desktop-file-name-prefix": "(Nightly) ",
+    "finish-args": ["--share=network", "--share=ipc", "--socket=x11", "--socket=wayland" ],
+
+    "modules": [
+        "boost.json",
+        {
+            "name": "kjs",
+            "buildsystem": "cmake-ninja",
+            "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"],
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kjs.git", "branch": "v5.41.0" } ]
+        },
+        {
+            "name": "khtml",
+            "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"],
+            "buildsystem": "cmake-ninja",
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/khtml.git", "branch": "v5.41.0" } ]
+        },
+        {
+            "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"],
+            "name": "kross",
+            "buildsystem": "cmake-ninja",
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kross.git", "branch": "v5.41.0" } ]
+        },
+        {
+            "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"],
+            "name": "kdelibs4support",
+            "buildsystem": "cmake-ninja",
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kdelibs4support.git", "branch": "v5.41.0" } ]
+        },
+        {
+            "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"],
+            "name": "kdiagram",
+            "buildsystem": "cmake-ninja",
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kdiagram.git" } ]
+        },
+        "eigen.json",
+        {
+            "name": "calligraplan",
+            "buildsystem": "cmake-ninja",
+            "builddir": true,
+            "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib", "-DPRODUCTSET=PLAN"],
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/calligra.git" } ]
+        }
+    ]
+}
