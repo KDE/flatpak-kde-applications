@@ -14,7 +14,7 @@
             "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"],
             "name": "kdeclarative",
             "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kdeclarative.git", "branch": "v5.41.0" } ]
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kdeclarative.git", "branch": "v5.42.0" } ]
         },
         {
             "config-opts": [ "-DBUILD_SHARED_LIBS=ON" ],
@@ -32,7 +32,7 @@
             "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib" ],
             "name": "kfilemetadata",
             "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kfilemetadata.git", "branch": "v5.41.0" } ]
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kfilemetadata.git", "branch": "v5.42.0" } ]
         },
         {
             "name": "lmdb",
@@ -45,7 +45,7 @@
             "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib", "-DLMDB_DIR=/app"],
             "name": "baloo",
             "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/baloo.git", "branch": "v5.41.0" } ]
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/baloo.git", "branch": "v5.42.0" } ]
         },
         {
             "name": "elisa",

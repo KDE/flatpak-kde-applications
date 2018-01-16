@@ -15,25 +15,25 @@
             "name": "kjs",
             "buildsystem": "cmake-ninja",
             "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"],
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kjs.git", "branch": "v5.41.0" } ]
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kjs.git", "branch": "v5.42.0" } ]
         },
         {
             "name": "khtml",
             "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"],
             "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/khtml.git", "branch": "v5.41.0" } ]
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/khtml.git", "branch": "v5.42.0" } ]
         },
         {
             "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"],
             "name": "kross",
             "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kross.git", "branch": "v5.41.0" } ]
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kross.git", "branch": "v5.42.0" } ]
         },
         {
             "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"],
             "name": "kdelibs4support",
             "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kdelibs4support.git", "branch": "v5.41.0" } ]
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kdelibs4support.git", "branch": "v5.42.0" } ]
         },
         {
             "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"],
