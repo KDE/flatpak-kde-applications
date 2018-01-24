@@ -1,0 +1,33 @@
+{
+    "id": "org.kde.falkon",
+    "branch": "master",
+    "runtime": "org.kde.Platform",
+    "runtime-version": "5.9",
+    "sdk": "org.kde.Sdk",
+    "command": "falkon",
+    "tags": ["nightly"],
+    "desktop-file-name-prefix": "(Nightly) ",
+    "finish-args": [
+        "--share=ipc",
+        "--share=network",
+        "--socket=x11",
+        "--socket=wayland",
+        "--socket=pulseaudio",
+        "--device=dri",
+        "--filesystem=host",
+        "--system-talk-name=org.freedesktop.GeoClue2"
+    ],
+
+    "modules": [
+        {
+            "buildsystem": "cmake",
+            "name": "falkon",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "git://anongit.kde.org/falkon.git"
+                }
+            ]
+        }
+    ]
+}
