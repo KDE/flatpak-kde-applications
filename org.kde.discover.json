@@ -21,6 +21,50 @@
     },
     "modules": [
         {
+            "name": "libfuse",
+            "cleanup": [ "/bin", "/etc" ],
+            "config-opts": ["--sysconfdir=/app/etc"],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://github.com/libfuse/libfuse/releases/download/fuse_2_9_5/fuse-2.9.5.tar.gz",
+                    "sha256": "579f371cc5ffc1afca7057512bf7d52988a9ede57859a7c55e5b9f72435cdbb5"
+                }
+            ]
+        },
+        {
+            "name": "ostree",
+            "config-opts": ["--disable-man"],
+            "cleanup": [ "/bin", "/etc/grub.d", "/libexec" ],
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://github.com/ostreedev/ostree.git"
+                }
+            ]
+        },
+        {
+            "name": "flatpak",
+            "config-opts": ["--disable-documentation",
+                            "--disable-seccomp",
+                            "--disable-sandboxed-triggers",
+                            "--disable-system-helper"],
+            "make-args": [ "XDG_APP_BINDIR=/usr/bin" ],
+            "cleanup": [ "/etc/profile.d",
+                         "/libexec",
+                         "/lib/systemd",
+                         "/share/dbus-1/interfaces/org.freedesktop.*",
+                         "/share/dbus-1/services/org.freedesktop.*",
+                         "/share/gdm" ],
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "git://github.com/flatpak/flatpak",
+                    "branch": "0.9.2"
+                }
+            ]
+        },
+        {
             "name": "yaml",
             "config-opts": [ "--disable-static", "--enable-x11" ],
             "sources": [
