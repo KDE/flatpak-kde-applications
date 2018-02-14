@@ -7,7 +7,8 @@
     "command": "konversation",
     "tags": ["nightly"],
     "desktop-file-name-prefix": "(Nightly) ",
-    "finish-args": ["--share=ipc", "--share=network", "--socket=x11", "--socket=wayland" ],
+    "finish-args": ["--share=ipc", "--share=network", "--socket=x11", "--socket=wayland",
+                    "--talk-name=org.kde.StatusNotifierWatcher", "--talk-name=org.freedesktop.Notifications" ],
     "separate-locales": false,
 
     "modules": [
