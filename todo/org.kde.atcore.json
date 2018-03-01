@@ -1,0 +1,29 @@
+{
+    "id": "org.kde.atcore",
+    "branch": "master",
+    "runtime": "org.kde.Platform",
+    "runtime-version": "5.10",
+    "sdk": "org.kde.Sdk",
+    "command": "atcore-gui",
+    "tags": ["nightly"],
+    "desktop-file-name-prefix": "(Nightly) ",
+    "finish-args": ["--share=ipc", "--socket=x11", "--socket=wayland", "--filesystem=host", "--device=all" ],
+    
+    "modules": [
+        {
+            "name": "qtcharts",
+            "buildsystem": "qmake",
+            "sources": [ 
+                { "type": "git", "url": "git://code.qt.io/qt/qtcharts.git", "branch": "5.10" } 
+            ]
+        },
+        {
+            "name": "atcore",
+            "config-opts": ["-DBUILD_GUI=ON"],
+            "buildsystem": "cmake-ninja",
+            "sources": [ 
+                { "type": "git", "url": "git://anongit.kde.org/atcore.git" } 
+            ]
+        }
+    ]
+}
