@@ -14,13 +14,13 @@
             "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"],
             "name": "kjs",
             "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kjs.git", "branch": "v5.43.0" } ]
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kjs.git", "branch": "v5.44.0" } ]
         },
         {
             "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"],
             "name": "khtml",
             "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/khtml.git", "branch": "v5.43.0" } ]
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/khtml.git", "branch": "v5.44.0" } ]
         },
         {
             "name": "kiten",

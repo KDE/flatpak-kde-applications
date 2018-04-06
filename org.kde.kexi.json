@@ -7,7 +7,6 @@
     "command": "kexi-3.1",
     "tags": ["nightly"],
     "desktop-file-name-prefix": "(Nightly) ",
-    "rename-desktop-file": "org.kde.kexi-3.1.desktop",
     "finish-args": ["--share=ipc", "--socket=x11", "--socket=wayland" ],
 
     "modules": [
