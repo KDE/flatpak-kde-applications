@@ -1,0 +1,26 @@
+{
+    "id": "org.kde.lokalize",
+    "branch": "master",
+    "runtime": "org.kde.Platform",
+    "runtime-version": "5.9",
+    "sdk": "org.kde.Sdk",
+    "command": "lokalize",
+    "tags": ["nightly"],
+    "desktop-file-name-prefix": "(Nightly) ",
+    "finish-args": ["--share=ipc", "--socket=x11", "--socket=wayland", "--device=dri" ],
+    "separate-locales": false,
+
+    "modules": [
+        {
+            "name": "kross",
+            "buildsystem": "cmake-ninja",
+            "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"],
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kross.git", "branch": "v5.44.0" } ]
+        },
+        {
+            "name": "lokalize",
+            "buildsystem": "cmake-ninja",
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/lokalize.git" } ]
+        }
+    ]
+}
