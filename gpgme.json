@@ -11,7 +11,7 @@
         },
         {
             "name": "libassuan",
-            "sources": [ { "type": "git", "url": "git://git.gnupg.org/libassuan.git", "sha256": "libassuan-2.5.1" } ],
+            "sources": [ { "type": "git", "url": "git://git.gnupg.org/libassuan.git", "branch": "libassuan-2.5.1" } ],
             "cleanup": [
                 "/lib/libassuan.la"
             ]
