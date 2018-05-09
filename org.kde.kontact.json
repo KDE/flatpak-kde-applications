@@ -79,7 +79,7 @@
             "name": "libical",
             "buildsystem": "cmake-ninja",
             "config-opts": [ "-DCMAKE_INSTALL_LIBDIR=lib" ],
-            "sources": [ { "type": "git", "url": "https://github.com/libical/libical.git", "branch": "v2.0.0" } ]
+            "sources": [ { "type": "git", "url": "https://github.com/libical/libical.git", "branch": "v3.0.3" } ]
         },
         { "name": "kcalcore", "config-opts": ["-DBUILD_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"], "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "git://anongit.kde.org/kcalcore.git" } ] },
         {
