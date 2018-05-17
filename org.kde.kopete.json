@@ -39,7 +39,7 @@
             "name": "kopete",
             "buildsystem": "cmake-ninja",
             "sources": [
-                { "type": "git", "url": "git://anongit.kde.org/kopete.git", "branch": "kf5" }
+                { "type": "git", "url": "git://anongit.kde.org/kopete.git" }
             ]
         }
     ]
