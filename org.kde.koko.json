@@ -1,0 +1,73 @@
+{
+    "id": "org.kde.koko",
+    "rename-icon": "koko",
+    "runtime": "org.kde.Platform",
+    "runtime-version": "5.10",
+    "sdk": "org.kde.Sdk",
+    "command": "koko",
+    "tags": ["nightly"],
+    "desktop-file-name-prefix": "(Nightly) ",
+    "finish-args": [
+        "--share=ipc",
+        "--share=network",
+        "--socket=x11",
+        "--socket=wayland",
+        "--device=dri",
+        "--filesystem=home"
+    ],
+    "separate-locales": false,
+
+    "modules": [
+        {
+            "name": "exiv2",
+            "buildsystem": "cmake-ninja",
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "http://www.exiv2.org/builds/exiv2-0.26-trunk.tar.gz",
+                    "sha256": "c75e3c4a0811bf700d92c82319373b7a825a2331c12b8b37d41eb58e4f18eafb"
+                }
+            ]
+        },
+        {
+            "name": "purpose",
+            "buildsystem": "cmake-ninja",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://github.com/KDE/purpose",
+                    "branch": "master"
+                }
+            ]
+        },
+        {
+            "name": "koko",
+            "buildsystem": "cmake-ninja",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://github.com/KDE/koko",
+                    "branch": "master"
+                },
+                {
+                    "type": "file",
+                    "path": "koko/cities1000.zip",
+                    "dest-filename": "src/cities1000.zip",
+                    "sha256": "3c4cce61c4afb8954db15ea1f32aa5036b4a66bf3057b19a27b85c1a20ab5613"
+                },
+                {
+                    "type": "file",
+                    "path": "koko/admin2Codes.txt",
+                    "dest-filename": "src/admin2Codes.txt",
+                    "sha256": "2f12b595df32f4fc57f85345600229e0097e52ad9bf7eeafb34b7da6fe9f1246"
+                },
+                {
+                    "type": "file",
+                    "path": "koko/admin1CodesASCII.txt",
+                    "dest-filename": "src/admin1CodesASCII.txt",
+                    "sha256": "0f93bba814d3af0f05032e68655b1b84d2ef6ef05aab330091bcbf819976cc75"
+                }
+            ]
+        }
+    ]
+}
