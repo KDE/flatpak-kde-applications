@@ -1,0 +1,47 @@
+{
+    "id": "im.kaidan.kaidan",
+    "rename-desktop-file": "kaidan.desktop",
+    "rename-icon": "kaidan",
+    "runtime": "org.kde.Platform",
+    "runtime-version": "5.10",
+    "sdk": "org.kde.Sdk",
+    "command": "kaidan",
+    "tags": ["nightly"],
+    "desktop-file-name-prefix": "(Nightly) ",
+    "finish-args": [
+        "--share=ipc",
+        "--share=network",
+        "--socket=x11",
+        "--socket=wayland",
+        "--device=dri",
+        "--filesystem=home",
+        "--talk-name=org.freedesktop.Notifications"
+    ],
+    "separate-locales": false,
+
+    "modules": [
+        {
+            "name": "gloox",
+            "buildsystem": "autotools",
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "http://camaya.net/download/gloox-1.0.20.tar.bz2",
+                    "sha256": "0243086c0f4f0440d6d8e55705f83249a4463a1d75a034be42b5312e8886dea8"
+                }
+            ]
+        },
+        {
+            "name": "kaidan",
+            "buildsystem": "cmake-ninja",
+            "config-opts": ["-DI18N=1"],
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://github.com/kaidanim/kaidan",
+                    "branch": "master"
+                }
+            ]
+        }
+    ]
+}
