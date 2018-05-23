@@ -3,7 +3,7 @@
     "rename-desktop-file": "org.kde.konversation.desktop",
     "branch": "master",
     "runtime": "org.kde.Platform",
-    "runtime-version": "5.9",
+    "runtime-version": "5.11",
     "sdk": "org.kde.Sdk",
     "command": "konvi2x",
     "tags": ["nightly"],

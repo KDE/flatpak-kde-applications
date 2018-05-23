@@ -2,7 +2,7 @@
     "id": "org.kde.atcore",
     "branch": "master",
     "runtime": "org.kde.Platform",
-    "runtime-version": "5.10",
+    "runtime-version": "5.11",
     "sdk": "org.kde.Sdk",
     "command": "atcore-gui",
     "tags": ["nightly"],
