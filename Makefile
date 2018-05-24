@@ -14,17 +14,13 @@ all: $(REPO)/config $(foreach file, $(wildcard org.*.*.json), $(subst .json,.app
 	flatpak build-bundle ${REPO} $@ $*
 
 export:
-	flatpak build-update-repo --prune --prune-depth=20 $(REPO) ${EXPORT_ARGS}
+	flatpak build-update-repo --prune --prune-depth=20 --generate-static-deltas $(REPO) ${EXPORT_ARGS}
 
 $(REPO)/config:
 	ostree init --mode=archive-z2 --repo=$(REPO)
 
 remotes:
-	flatpak remote-add kde --from https://distribute.kde.org/kderuntime.flatpakrepo --if-not-exists
-
-deps:
-	flatpak install $(ARGS) kde org.kde.Platform
-	flatpak install $(ARGS) kde org.kde.Sdk
+	flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo $(EXPORT_ARGS)
 
 check: $(REPO)/config $(foreach file, $(wildcard org.*.*.json), $(subst .json,.clean,$(file)))
 
