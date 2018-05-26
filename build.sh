@@ -21,4 +21,4 @@ if [ x$GITURL != x ]; then
     GIT_ARGS="--from-git=$GITURL --from-git-branch=$GITBRANCH"
 fi
 
-flatpak-builder --force-clean --ccache --require-changes --repo=repo --subject="Build of ${ID}, `date`" ${EXPORT_ARGS-} ${GIT_ARGS-} "$@" app $JSON
+flatpak-builder --force-clean --ccache --require-changes --repo=repo --subject="Build of ${ID}, `date`" ${EXPORT_ARGS-} ${GIT_ARGS-} ${ARGS} "$@" app $JSON
