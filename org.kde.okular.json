@@ -88,7 +88,7 @@
             "name": "qmobipocket",
             "config-opts": ["-DCMAKE_BUILD_TYPE=Release", "-DCMAKE_INSTALL_LIBDIR=lib"],
             "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/" } ]
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/qmobipocket" } ]
         },
         {
             "name": "libzip",
