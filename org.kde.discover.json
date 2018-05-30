@@ -2,7 +2,7 @@
     "id": "org.kde.discover",
     "branch": "master",
     "runtime": "org.kde.Platform",
-    "runtime-version": "5.9",
+    "runtime-version": "5.11",
     "sdk": "org.kde.Sdk",
     "command": "plasma-discover",
     "tags": ["nightly"],
@@ -45,7 +45,31 @@
             "name": "appstream",
             "buildsystem": "meson",
             "builddir": true,
-            "sources": [ { "type": "git", "url": "https://github.com/ximion/appstream.git", "branch": "master" } ]
+            "sources": [ { "type": "git", "url": "https://github.com/ximion/appstream.git", "branch": "master" } ],
+            "modules": [
+                {
+                    "name": "glib",
+                    "config-opts": [ "--with-pcre=system", "--with-python=python3" ],
+                    "ensure-writable": [ "/share/glib-2.0/codegen/*.pyc" ],
+                    "cleanup-platform": [ "/share/glib-2.0/codegen",
+                                        "/bin/gdbus-codegen",
+                                        "/bin/glib-*",
+                                        "/bin/gobject-query",
+                                        "/bin/gresource",
+                                        "/bin/gtester*"
+                                    ],
+                    "sources": [
+                        {
+                            "type": "git",
+                            "url": "https://gitlab.gnome.org/GNOME/glib.git"
+                        }
+                    ]
+                },
+                {
+                    "name": "gobject-introspection",
+                    "sources": [ { "type": "git", "url": "git://git.gnome.org/gobject-introspection", "branch": "1.56.1" } ]
+                }
+            ]
         },
 
         {
@@ -109,13 +133,7 @@
             "modules-not-building": [
                 {
                     "name": "snapd-glib",
-                    "sources": [ { "type": "git", "url": "https://github.com/snapcore/snapd-glib.git", "branch": "master" } ],
-                    "modules": [
-                        {
-                            "name": "gobject-introspection",
-                            "sources": [ { "type": "git", "url": "git://git.gnome.org/gobject-introspection", "branch": "1.52.1" } ]
-                        }
-                    ]
+                    "sources": [ { "type": "git", "url": "https://github.com/snapcore/snapd-glib.git", "branch": "master" } ]
                 }
             ]
         }
