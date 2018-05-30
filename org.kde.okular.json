@@ -63,10 +63,13 @@
         },
         {
             "name": "libspectre",
-            "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"],
-            "buildsystem": "cmake-ninja",
-            "builddir": true,
-            "sources": [ { "type": "git", "url": "git://anongit.freedesktop.org/git/libspectre", "branch": "master" } ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "http://libspectre.freedesktop.org/releases/libspectre-0.2.8.tar.gz",
+                    "sha256": "65256af389823bbc4ee4d25bfd1cc19023ffc29ae9f9677f2d200fa6e98bc7a8"
+                }
+            ],
             "modules": [
                 {
                     "name": "ghostscript",
@@ -74,11 +77,19 @@
                     "make-args": [ "so" ],
                     "make-install-args": [ "soinstall" ],
                     "cleanup": [ "/bin", "/share/man", "/share/ghostscript/9.20/doc/", "/share/ghostscript/9.20/examples" ],
+                    "rm-configure": true,
                     "sources": [
                         {
                             "type": "archive",
                             "url": "https://github.com/ArtifexSoftware/ghostpdl-downloads/releases/download/gs920/ghostscript-9.20.tar.xz",
                             "sha256": "3c0f3dc5df6f784850fa4ce7dcc3d6c56ef543af1fbaedd1d9f8d9f8b66de0ab"
+                        },
+                        {
+                            "type": "script",
+                            "dest-filename": "autogen.sh",
+                            "commands": [
+                                "AUTOMAKE=\"automake --foreign\" autoreconf -vfi"
+                            ]
                         }
                     ]
                 }
