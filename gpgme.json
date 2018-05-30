@@ -4,9 +4,17 @@
     "modules": [
         {
             "name": "libgpg-error",
-            "sources": [ { "type": "git", "url": "git://git.gnupg.org/libgpg-error.git", "branch": "libgpg-error-1.28" } ],
-            "cleanup": [
-                "/lib/libgpg-error.la"
+            "sources": [ { "type": "git", "url": "git://git.gnupg.org/libgpg-error.git", "branch": "libgpg-error-1.31" } ],
+            "cleanup": [ "/lib/libgpg-error.la" ],
+            "modules": [
+                {
+                    "name": "gettext",
+                    "sources": [{
+                        "type": "archive",
+                        "url": "https://ftp.gnu.org/pub/gnu/gettext/gettext-0.19.8.tar.gz",
+                        "sha256": "3da4f6bd79685648ecf46dab51d66fcdddc156f41ed07e580a696a38ac61d48f"
+                    }]
+                }
             ]
         },
         {
