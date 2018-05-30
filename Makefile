@@ -1,6 +1,6 @@
-REPO=repo
 ARCH?=$(shell flatpak --default-arch)
 INSTALL_SOURCE?=--install-deps-from=flathub
+REPO=repo
 
 all: $(REPO)/config $(foreach file, $(wildcard org.*.*.json), $(subst .json,.app,$(file))) $(foreach file, $(wildcard org.*.*.remoteapp), $(subst .remoteapp,.app,$(file)))
 
