@@ -5,7 +5,7 @@
     "runtime": "org.kde.Platform",
     "runtime-version": "5.11",
     "sdk": "org.kde.Sdk",
-    "command": "konvi2x",
+    "command": "konversation",
     "tags": ["nightly"],
     "desktop-file-name-prefix": "(Nightly) ",
     "desktop-file-name-suffix": " (Konvi2x)",
