@@ -14,19 +14,19 @@
             "name": "kjs",
             "buildsystem": "cmake-ninja",
             "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"],
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kjs.git", "branch": "v5.46.0" } ]
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kjs.git", "branch": "v5.47.0" } ]
         },
         {
             "name": "khtml",
             "buildsystem": "cmake-ninja",
             "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"],
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/khtml.git", "branch": "v5.46.0" } ]
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/khtml.git", "branch": "v5.47.0" } ]
         },
         {
             "name": "kross",
             "buildsystem": "cmake-ninja",
             "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"],
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kross.git", "branch": "v5.46.0" } ]
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kross.git", "branch": "v5.47.0" } ]
         },
         {
             "name": "libkeduvocdocument",
