@@ -2,7 +2,7 @@ ARCH?=$(shell flatpak --default-arch)
 INSTALL_SOURCE?=--install-deps-from=flathub
 REPO=repo
 
-all: $(REPO)/config $(foreach file, $(wildcard org.*.*.json), $(subst .json,.app,$(file))) $(foreach file, $(wildcard org.*.*.remoteapp), $(subst .remoteapp,.app,$(file)))
+all: $(REPO)/config $(foreach file, $(wildcard *.*.*.json), $(subst .json,.app,$(file))) $(foreach file, $(wildcard *.*.*.remoteapp), $(subst .remoteapp,.app,$(file)))
 
 %.app: %.json
 	flatpak-builder $(INSTALL_SOURCE) --force-clean --arch=$(ARCH) --ccache --repo=$(REPO) --subject="Build of $<, `date`" ${ARGS} ${EXPORT_ARGS} app $<
