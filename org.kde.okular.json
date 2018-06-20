@@ -96,10 +96,10 @@
             ]
         },
         {
-            "name": "qmobipocket",
+            "name": "kdegraphics-mobipocket",
             "config-opts": ["-DCMAKE_BUILD_TYPE=Release", "-DCMAKE_INSTALL_LIBDIR=lib"],
             "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/qmobipocket" } ]
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kdegraphics-mobipocket" } ]
         },
         {
             "name": "libzip",
