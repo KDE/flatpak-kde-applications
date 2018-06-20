@@ -2,7 +2,7 @@
     "id": "org.kde.kblocks",
     "branch": "master",
     "runtime": "org.kde.Platform",
-    "runtime-version": "5.9",
+    "runtime-version": "5.11",
     "sdk": "org.kde.Sdk",
     "command": "kblocks",
     "rename-icons": "kblocks",
