@@ -22,9 +22,9 @@ $(REPO)/config:
 remotes:
 	flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo $(ARGS)
 
-check: $(REPO)/config $(foreach file, $(wildcard *.*.*.json), $(subst .json,.clean,$(file)))
+check: $(REPO)/config $(foreach file, $(wildcard *.*.*.json), $(subst .json,.check,$(file)))
 
-%.clean: %.json
+%.check: %.json
 	json-glib-validate $<
 	flatpak-builder --force-clean --arch=$(ARCH) --download-only ${ARGS} app $<
 
