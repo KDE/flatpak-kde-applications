@@ -152,6 +152,15 @@
         { "name": "grantlee", "config-opts": ["-DBUILD_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"], "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "https://github.com/steveire/grantlee.git" } ] },
         { "name": "akonadi-contacts", "config-opts": ["-DBUILD_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"], "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "git://anongit.kde.org/akonadi-contacts" } ] },
         { "name": "ksmtp", "config-opts": ["-DBUILD_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"], "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "git://anongit.kde.org/ksmtp" } ] },
+
+        {
+            "name": "libkgapi",
+            "config-opts": ["-DBUILD_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"],
+            "buildsystem": "cmake-ninja",
+            "sources": [
+                { "type": "git", "url": "git://anongit.kde.org/libkgapi.git" }
+            ]
+        },
         { "name": "kmailtransport", "config-opts": ["-DBUILD_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"], "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "git://anongit.kde.org/kmailtransport" } ] },
         {
             "name": "kpimtextedit",
@@ -297,14 +306,6 @@
         { "name": "kontactinterface", "config-opts": ["-DBUILD_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"], "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "git://anongit.kde.org/kontactinterface" } ] },
 
         { "name": "libksieve", "config-opts": ["-DBUILD_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"], "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "git://anongit.kde.org/libksieve" } ] },
-        {
-            "name": "libkgapi",
-            "config-opts": ["-DBUILD_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"],
-            "buildsystem": "cmake-ninja",
-            "sources": [
-                { "type": "git", "url": "git://anongit.kde.org/libkgapi.git" }
-            ]
-        },
 
         {
             "name": "kdepim-runtime",
