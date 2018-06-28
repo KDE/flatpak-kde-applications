@@ -7,7 +7,7 @@
     "command": "atelier",
     "tags": ["nightly"],
     "desktop-file-name-prefix": "(Nightly) ",
-    "finish-args": ["--share=ipc", "--socket=x11", "--socket=wayland", "--filesystem=host", "--device=all" ],
+    "finish-args": ["--share=ipc", "--socket=x11", "--share=network", "--socket=wayland", "--filesystem=host", "--device=all" ],
     "modules": [
                 {
             "name": "cmake",
