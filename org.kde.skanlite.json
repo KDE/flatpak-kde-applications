@@ -1,0 +1,31 @@
+{
+    "id": "org.kde.skanlite",
+    "branch": "master",
+    "runtime": "org.kde.Platform",
+    "runtime-version": "5.11",
+    "sdk": "org.kde.Sdk",
+    "command": "skanlite",
+    "tags": ["nightly"],
+    "desktop-file-name-prefix": "(Nightly) ",
+    "finish-args": ["--share=ipc", "--socket=x11", "--socket=wayland", "--filesystem=home", "--device=all" ],
+    "separate-locales": false,
+
+    "modules": [
+        {
+            "name": "sane",
+            "buildsystem": "autotools",
+            "sources": [ { "type": "git", "url": "https://gitlab.com/sane-project/backends", "tag": "RELEASE_1_0_27"} ]
+        },
+        {
+            "name": "libksane",
+            "buildsystem": "cmake-ninja",
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/libksane.git" } ]
+        },
+        {
+            "name": "skanlite",
+            "buildsystem": "cmake-ninja",
+            "builddir": true,
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/skanlite.git" } ]
+        }
+    ]
+}
