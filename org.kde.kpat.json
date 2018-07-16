@@ -12,6 +12,33 @@
     "modules": [
         "libkdegames.json",
         {
+            "name": "freecell-solver",
+            "buildsystem": "cmake-ninja",
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "http://fc-solve.shlomifish.org/downloads/fc-solve/freecell-solver-4.18.0.tar.xz",
+                    "sha256": "d6369779837eef203e5a0051031245da772291cf2d6ff9f66555c69bcc8aaab2"
+                }
+            ],
+            "modules": [
+                {
+                    "name": "random2",
+                    "buildsystem": "simple",
+                    "build-commands": [
+                        "pip3 install --prefix=/app --no-deps ."
+                    ],
+                    "sources": [
+                        {
+                            "type": "archive",
+                            "url": "https://files.pythonhosted.org/packages/ee/b5/5aca5217501fbd06b1e5aed6d5986baa0da5380880e6bb6f421ed18e3a32/random2-1.0.1.zip",
+                            "sha256": "34ad30aac341039872401595df9ab2c9dc36d0b7c077db1cea9ade430ed1c007"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
             "name": "kpat",
             "buildsystem": "cmake-ninja",
             "sources": [
