@@ -1,11 +1,11 @@
 {
-    "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"],
+    "config-opts": [ "-DENABLE_TESTING=OFF" ],
     "name": "libkdegames",
     "buildsystem": "cmake-ninja",
     "sources": [ { "type": "git", "url": "git://anongit.kde.org/libkdegames.git" } ],
     "modules": [
         {
-            "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"],
+            "config-opts": [ "-DENABLE_TESTING=OFF" ],
             "name": "openal",
             "buildsystem": "cmake-ninja",
             "sources": [ { "type": "git", "url": "https://github.com/kcat/openal-soft.git", "branch": "openal-soft-1.18.2" } ]

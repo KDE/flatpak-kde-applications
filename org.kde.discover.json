@@ -125,7 +125,7 @@
 
         {
             "name": "discover",
-            "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib",
+            "config-opts": ["-DENABLE_TESTING=OFF" ,
                             "-DBUILD_SnapBackend=OFF", "-DBUILD_DummyBackend=ON"],
             "buildsystem": "cmake-ninja",
             "builddir": true,

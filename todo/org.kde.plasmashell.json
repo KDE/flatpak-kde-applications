@@ -67,7 +67,7 @@
             "sources": [ { "type": "git", "url": "git://anongit.kde.org/kdelibs4support.git", "branch": "master" } ]
         },
         {
-            "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"],
+            "config-opts": [ "-DENABLE_TESTING=OFF" ],
             "name": "kfilemetadata",
             "buildsystem": "cmake-ninja",
             "sources": [ { "type": "git", "url": "git://anongit.kde.org/kfilemetadata.git", "branch": "v5.48.0" } ]
@@ -80,7 +80,7 @@
             "subdir" : "libraries/liblmdb"
         },
         {
-            "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib", "-DLMDB_DIR=/app"],
+            "config-opts": ["-DENABLE_TESTING=OFF" , "-DLMDB_DIR=/app"],
             "name": "baloo",
             "buildsystem": "cmake-ninja",
             "sources": [ { "type": "git", "url": "git://anongit.kde.org/baloo.git", "branch": "v5.48.0" } ]
@@ -181,13 +181,13 @@
             "name": "purpose",
             "buildsystem": "cmake-ninja",
             "builddir": true,
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/purpose.git", "branch": "master" } ]
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/purpose.git", "branch": "v5.48.0" } ]
         },
         {
             "name": "kross",
             "buildsystem": "cmake-ninja",
             "builddir": true,
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kross.git", "branch": "master" } ]
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kross.git", "branch": "v5.48.0" } ]
         },
         {
             "name": "kdeplasma-addons",

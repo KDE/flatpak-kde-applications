@@ -13,7 +13,7 @@
         "boost.json",
         {
             "name": "qt5-gstreamer",
-            "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib", "-DQT_VERSION=5", "-DUSE_QT_PLUGIN_DIR=OFF", "-DUSE_GST_PLUGIN_DIR=OFF"],
+            "config-opts": ["-DENABLE_TESTING=OFF" , "-DQT_VERSION=5", "-DUSE_QT_PLUGIN_DIR=OFF", "-DUSE_GST_PLUGIN_DIR=OFF"],
             "buildsystem": "cmake",
             "sources": [ { "type": "git", "url": "git://anongit.freedesktop.org/gstreamer/qt-gstreamer" } ]
         },

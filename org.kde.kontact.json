@@ -62,12 +62,12 @@
         "gpgme.json",
         {
             "name": "kdiagram",
-            "config-opts": ["-DBUILD_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"],
+            "config-opts": ["-DBUILD_TESTING=OFF" ],
             "buildsystem": "cmake-ninja",
             "sources": [ { "type": "git", "url": "git://anongit.kde.org/kdiagram.git" } ]
         },
         {
-            "config-opts": ["-DBUILD_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"],
+            "config-opts": ["-DBUILD_TESTING=OFF" ],
             "name": "kdelibs4support",
             "buildsystem": "cmake-ninja",
             "sources": [ { "type": "git", "url": "git://anongit.kde.org/kdelibs4support.git", "branch": "v5.48.0" } ],
@@ -81,7 +81,7 @@
             "config-opts": [ "-DCMAKE_INSTALL_LIBDIR=lib" ],
             "sources": [ { "type": "git", "url": "https://github.com/libical/libical.git", "branch": "v3.0.3" } ]
         },
-        { "name": "kcalcore", "config-opts": ["-DBUILD_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"], "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "git://anongit.kde.org/kcalcore.git" } ] },
+        { "name": "kcalcore", "config-opts": ["-DBUILD_TESTING=OFF" ], "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "git://anongit.kde.org/kcalcore.git" } ] },
         {
             "name": "prison",
             "buildsystem": "cmake-ninja",
@@ -146,48 +146,48 @@
                 }
             ]
         },
-        { "name": "kmime", "config-opts": ["-DBUILD_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"], "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "git://anongit.kde.org/kmime" } ] },
-        { "name": "akonadi-mime", "config-opts": ["-DBUILD_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"], "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "git://anongit.kde.org/akonadi-mime" } ] },
-        { "name": "kcontacts", "config-opts": ["-DBUILD_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"], "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "git://anongit.kde.org/kcontacts" } ] },
-        { "name": "grantlee", "config-opts": ["-DBUILD_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"], "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "https://github.com/steveire/grantlee.git" } ] },
-        { "name": "akonadi-contacts", "config-opts": ["-DBUILD_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"], "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "git://anongit.kde.org/akonadi-contacts" } ] },
-        { "name": "ksmtp", "config-opts": ["-DBUILD_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"], "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "git://anongit.kde.org/ksmtp" } ] },
+        { "name": "kmime", "config-opts": ["-DBUILD_TESTING=OFF" ], "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "git://anongit.kde.org/kmime" } ] },
+        { "name": "akonadi-mime", "config-opts": ["-DBUILD_TESTING=OFF" ], "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "git://anongit.kde.org/akonadi-mime" } ] },
+        { "name": "kcontacts", "config-opts": ["-DBUILD_TESTING=OFF" ], "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "git://anongit.kde.org/kcontacts" } ] },
+        { "name": "grantlee", "config-opts": ["-DBUILD_TESTING=OFF" ], "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "https://github.com/steveire/grantlee.git" } ] },
+        { "name": "akonadi-contacts", "config-opts": ["-DBUILD_TESTING=OFF" ], "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "git://anongit.kde.org/akonadi-contacts" } ] },
+        { "name": "ksmtp", "config-opts": ["-DBUILD_TESTING=OFF" ], "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "git://anongit.kde.org/ksmtp" } ] },
 
         {
             "name": "libkgapi",
-            "config-opts": ["-DBUILD_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"],
+            "config-opts": ["-DBUILD_TESTING=OFF" ],
             "buildsystem": "cmake-ninja",
             "sources": [
                 { "type": "git", "url": "git://anongit.kde.org/libkgapi.git" }
             ]
         },
-        { "name": "kmailtransport", "config-opts": ["-DBUILD_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"], "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "git://anongit.kde.org/kmailtransport" } ] },
+        { "name": "kmailtransport", "config-opts": ["-DBUILD_TESTING=OFF" ], "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "git://anongit.kde.org/kmailtransport" } ] },
         {
             "name": "kpimtextedit",
-            "config-opts": ["-DBUILD_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"],
+            "config-opts": ["-DBUILD_TESTING=OFF" ],
             "buildsystem": "cmake-ninja",
             "sources": [ { "type": "git", "url": "git://anongit.kde.org/kpimtextedit" } ],
             "cleanup": [
                 "/lib/plugins/designer/*.so"
             ]
         },
-        { "name": "kidentitymanagement", "config-opts": ["-DBUILD_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"], "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "git://anongit.kde.org/kidentitymanagement" } ] },
-        { "name": "kcalutils", "config-opts": ["-DBUILD_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"], "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "git://anongit.kde.org/kcalutils" } ] },
+        { "name": "kidentitymanagement", "config-opts": ["-DBUILD_TESTING=OFF" ], "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "git://anongit.kde.org/kidentitymanagement" } ] },
+        { "name": "kcalutils", "config-opts": ["-DBUILD_TESTING=OFF" ], "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "git://anongit.kde.org/kcalutils" } ] },
         {
             "name": "kactivities",
-            "config-opts": ["-DBUILD_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"],
+            "config-opts": ["-DBUILD_TESTING=OFF" ],
             "buildsystem": "cmake-ninja",
             "builddir": true,
             "sources": [ { "type": "git", "url": "git://anongit.kde.org/kactivities.git", "branch": "v5.48.0" } ]
         },
         {
-            "config-opts": ["-DBUILD_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"],
+            "config-opts": ["-DBUILD_TESTING=OFF" ],
             "name": "plasma-framework",
             "buildsystem": "cmake-ninja",
             "sources": [ { "type": "git", "url": "git://anongit.kde.org/plasma-framework.git", "branch": "v5.48.0" } ]
         },
         {
-            "config-opts": ["-DBUILD_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"],
+            "config-opts": ["-DBUILD_TESTING=OFF" ],
             "name": "krunner",
             "buildsystem": "cmake-ninja",
             "sources": [ { "type": "git", "url": "git://anongit.kde.org/krunner.git", "branch": "v5.48.0" } ]
@@ -257,75 +257,75 @@
                 "/bin/ldap*"
             ]
         },
-        { "name": "kldap", "config-opts": ["-DBUILD_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"], "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "git://anongit.kde.org/kldap" } ] },
-        { "name": "akonadi-search", "config-opts": ["-DBUILD_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"], "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "git://anongit.kde.org/akonadi-search" } ] },
-        { "name": "kmbox", "config-opts": ["-DBUILD_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"], "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "git://anongit.kde.org/kmbox" } ] },
+        { "name": "kldap", "config-opts": ["-DBUILD_TESTING=OFF" ], "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "git://anongit.kde.org/kldap" } ] },
+        { "name": "akonadi-search", "config-opts": ["-DBUILD_TESTING=OFF" ], "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "git://anongit.kde.org/akonadi-search" } ] },
+        { "name": "kmbox", "config-opts": ["-DBUILD_TESTING=OFF" ], "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "git://anongit.kde.org/kmbox" } ] },
         {
             "name": "libkdepim",
-            "config-opts": ["-DBUILD_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"],
+            "config-opts": ["-DBUILD_TESTING=OFF" ],
             "buildsystem": "cmake-ninja",
             "sources": [ { "type": "git", "url": "git://anongit.kde.org/libkdepim" } ],
             "cleanup": [
                 "/lib/plugins/designer/*.so"
             ]
         },
-        { "name": "kimap", "config-opts": ["-DBUILD_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"], "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "git://anongit.kde.org/kimap" } ] },
+        { "name": "kimap", "config-opts": ["-DBUILD_TESTING=OFF" ], "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "git://anongit.kde.org/kimap" } ] },
         {
             "name": "pimcommon",
-            "config-opts": ["-DBUILD_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"],
+            "config-opts": ["-DBUILD_TESTING=OFF" ],
             "buildsystem": "cmake-ninja",
             "sources": [ { "type": "git", "url": "git://anongit.kde.org/pimcommon" } ],
             "cleanup": [
                 "/lib/plugins/designer/*.so"
             ]
         },
-        { "name": "kholidays", "config-opts": ["-DBUILD_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"], "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "git://anongit.kde.org/kholidays" } ] },
-        { "name": "kalarmcal", "config-opts": ["-DBUILD_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"], "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "git://anongit.kde.org/kalarmcal" } ] },
-        { "name": "akonadi-calendar", "config-opts": ["-DBUILD_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"], "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "git://anongit.kde.org/akonadi-calendar" } ] },
-        { "name": "akonadi-notes", "config-opts": ["-DBUILD_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"], "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "git://anongit.kde.org/akonadi-notes" } ] },
-        { "name": "syndication", "config-opts": ["-DBUILD_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"], "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "git://anongit.kde.org/syndication" } ] },
-        { "name": "kdav", "config-opts": ["-DBUILD_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"], "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "git://anongit.kde.org/kdav" } ] },
-        { "name": "libkleo", "config-opts": ["-DBUILD_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"], "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "git://anongit.kde.org/libkleo" } ] },
-        { "name": "grantleetheme", "config-opts": ["-DBUILD_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"], "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "git://anongit.kde.org/grantleetheme" } ] },
-        { "name": "kdepim-apps-libs", "config-opts": ["-DBUILD_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"], "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "git://anongit.kde.org/kdepim-apps-libs" } ] },
-        { "name": "libgravatar", "config-opts": ["-DBUILD_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"], "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "git://anongit.kde.org/libgravatar" } ] },
-        { "name": "calendarsupport", "config-opts": ["-DBUILD_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"], "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "git://anongit.kde.org/calendarsupport" } ] },
-        { "name": "eventviews", "config-opts": ["-DBUILD_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"], "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "git://anongit.kde.org/eventviews" } ] },
-        { "name": "incidenceeditor", "config-opts": ["-DBUILD_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"], "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "git://anongit.kde.org/incidenceeditor" } ] },
-        { "name": "messagelib", "config-opts": ["-DBUILD_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"], "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "git://anongit.kde.org/messagelib" } ] },
-        { "name": "mailimporter", "config-opts": ["-DBUILD_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"], "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "git://anongit.kde.org/mailimporter" } ] },
+        { "name": "kholidays", "config-opts": ["-DBUILD_TESTING=OFF" ], "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "git://anongit.kde.org/kholidays" } ] },
+        { "name": "kalarmcal", "config-opts": ["-DBUILD_TESTING=OFF" ], "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "git://anongit.kde.org/kalarmcal" } ] },
+        { "name": "akonadi-calendar", "config-opts": ["-DBUILD_TESTING=OFF" ], "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "git://anongit.kde.org/akonadi-calendar" } ] },
+        { "name": "akonadi-notes", "config-opts": ["-DBUILD_TESTING=OFF" ], "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "git://anongit.kde.org/akonadi-notes" } ] },
+        { "name": "syndication", "config-opts": ["-DBUILD_TESTING=OFF" ], "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "git://anongit.kde.org/syndication" } ] },
+        { "name": "kdav", "config-opts": ["-DBUILD_TESTING=OFF" ], "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "git://anongit.kde.org/kdav" } ] },
+        { "name": "libkleo", "config-opts": ["-DBUILD_TESTING=OFF" ], "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "git://anongit.kde.org/libkleo" } ] },
+        { "name": "grantleetheme", "config-opts": ["-DBUILD_TESTING=OFF" ], "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "git://anongit.kde.org/grantleetheme" } ] },
+        { "name": "kdepim-apps-libs", "config-opts": ["-DBUILD_TESTING=OFF" ], "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "git://anongit.kde.org/kdepim-apps-libs" } ] },
+        { "name": "libgravatar", "config-opts": ["-DBUILD_TESTING=OFF" ], "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "git://anongit.kde.org/libgravatar" } ] },
+        { "name": "calendarsupport", "config-opts": ["-DBUILD_TESTING=OFF" ], "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "git://anongit.kde.org/calendarsupport" } ] },
+        { "name": "eventviews", "config-opts": ["-DBUILD_TESTING=OFF" ], "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "git://anongit.kde.org/eventviews" } ] },
+        { "name": "incidenceeditor", "config-opts": ["-DBUILD_TESTING=OFF" ], "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "git://anongit.kde.org/incidenceeditor" } ] },
+        { "name": "messagelib", "config-opts": ["-DBUILD_TESTING=OFF" ], "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "git://anongit.kde.org/messagelib" } ] },
+        { "name": "mailimporter", "config-opts": ["-DBUILD_TESTING=OFF" ], "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "git://anongit.kde.org/mailimporter" } ] },
         {
             "name": "mailcommon",
-            "config-opts": ["-DBUILD_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"],
+            "config-opts": ["-DBUILD_TESTING=OFF" ],
             "buildsystem": "cmake-ninja",
             "sources": [ { "type": "git", "url": "git://anongit.kde.org/mailcommon" } ],
             "cleanup": [
                 "/lib/plugins/designer/*.so"
             ]
         },
-        { "name": "kontactinterface", "config-opts": ["-DBUILD_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"], "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "git://anongit.kde.org/kontactinterface" } ] },
+        { "name": "kontactinterface", "config-opts": ["-DBUILD_TESTING=OFF" ], "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "git://anongit.kde.org/kontactinterface" } ] },
 
-        { "name": "libksieve", "config-opts": ["-DBUILD_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"], "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "git://anongit.kde.org/libksieve" } ] },
+        { "name": "libksieve", "config-opts": ["-DBUILD_TESTING=OFF" ], "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "git://anongit.kde.org/libksieve" } ] },
 
         {
             "name": "kdepim-runtime",
-            "config-opts": ["-DBUILD_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"],
+            "config-opts": ["-DBUILD_TESTING=OFF" ],
             "buildsystem": "cmake-ninja",
             "sources": [
                 { "type": "git", "url": "git://anongit.kde.org/kdepim-runtime" }
             ]
         },
 
-        { "name": "ktnef", "config-opts": ["-DBUILD_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"], "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "git://anongit.kde.org/ktnef" } ] },
-        { "name": "kmail", "config-opts": ["-DBUILD_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"], "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "git://anongit.kde.org/kmail" } ] },
-        { "name": "akregator", "config-opts": ["-DBUILD_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"], "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "git://anongit.kde.org/akregator" } ] },
-        { "name": "korganizer", "config-opts": ["-DBUILD_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"], "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "git://anongit.kde.org/korganizer" } ] },
-        { "name": "kalarm", "config-opts": ["-DBUILD_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"], "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "git://anongit.kde.org/kalarm" } ] },
-        { "name": "kblog", "config-opts": ["-DBUILD_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"], "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "git://anongit.kde.org/kblog" } ] },
-        { "name": "knotes", "config-opts": ["-DBUILD_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"], "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "git://anongit.kde.org/knotes" } ] },
+        { "name": "ktnef", "config-opts": ["-DBUILD_TESTING=OFF" ], "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "git://anongit.kde.org/ktnef" } ] },
+        { "name": "kmail", "config-opts": ["-DBUILD_TESTING=OFF" ], "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "git://anongit.kde.org/kmail" } ] },
+        { "name": "akregator", "config-opts": ["-DBUILD_TESTING=OFF" ], "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "git://anongit.kde.org/akregator" } ] },
+        { "name": "korganizer", "config-opts": ["-DBUILD_TESTING=OFF" ], "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "git://anongit.kde.org/korganizer" } ] },
+        { "name": "kalarm", "config-opts": ["-DBUILD_TESTING=OFF" ], "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "git://anongit.kde.org/kalarm" } ] },
+        { "name": "kblog", "config-opts": ["-DBUILD_TESTING=OFF" ], "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "git://anongit.kde.org/kblog" } ] },
+        { "name": "knotes", "config-opts": ["-DBUILD_TESTING=OFF" ], "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "git://anongit.kde.org/knotes" } ] },
         {
             "name": "kontact",
-            "config-opts": ["-DBUILD_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"],
+            "config-opts": ["-DBUILD_TESTING=OFF" ],
             "buildsystem": "cmake-ninja",
             "sources": [
                 { "type": "git", "url": "git://anongit.kde.org/kontact.git" }
@@ -334,7 +334,7 @@
 
        {
             "name": "grantlee-editor",
-            "config-opts": [ "-DBUILD_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib" ],
+            "config-opts": [ "-DBUILD_TESTING=OFF"  ],
             "buildsystem": "cmake-ninja",
             "sources": [
                 {
@@ -346,7 +346,7 @@
         },
         {
             "name": "akonadi-import-wizard",
-            "config-opts": [ "-DBUILD_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib" ],
+            "config-opts": [ "-DBUILD_TESTING=OFF"  ],
             "buildsystem": "cmake-ninja",
             "sources": [
                 {
@@ -358,7 +358,7 @@
         },
         {
             "name": "kmail-account-wizard",
-            "config-opts": [ "-DBUILD_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib" ],
+            "config-opts": [ "-DBUILD_TESTING=OFF"  ],
             "buildsystem": "cmake-ninja",
             "sources": [
                 {
@@ -370,7 +370,7 @@
             "modules": [
                 {
                     "name": "kross",
-                    "config-opts": [ "-DBUILD_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib" ],
+                    "config-opts": [ "-DBUILD_TESTING=OFF"  ],
                     "buildsystem": "cmake-ninja",
                     "sources": [ { "type": "git", "url": "git://anongit.kde.org/kross.git", "branch": "v5.48.0" } ]
                 }
@@ -378,7 +378,7 @@
         },
         {
             "name": "pim-data-exporter",
-            "config-opts": [ "-DBUILD_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib" ],
+            "config-opts": [ "-DBUILD_TESTING=OFF"  ],
             "buildsystem": "cmake-ninja",
             "sources": [
                 {
@@ -390,7 +390,7 @@
         },
         {
             "name": "pim-sieve-editor",
-            "config-opts": [ "-DBUILD_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib" ],
+            "config-opts": [ "-DBUILD_TESTING=OFF"  ],
             "buildsystem": "cmake-ninja",
             "sources": [
                 {
@@ -402,7 +402,7 @@
         },
         {
             "name": "mbox-importer",
-            "config-opts": [ "-DBUILD_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib" ],
+            "config-opts": [ "-DBUILD_TESTING=OFF"  ],
             "buildsystem": "cmake-ninja",
             "sources": [
                 {

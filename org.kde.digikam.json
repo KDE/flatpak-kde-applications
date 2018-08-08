@@ -16,7 +16,7 @@
             "name": "opencv",
             "buildsystem": "cmake-ninja",
             "builddir": true,
-            "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib", "-DWITH_OPENCL=ON", "-DWITH_OPENGL=ON", "-DWITH_TBB=ON", "-DWITH_XINE=ON"],
+            "config-opts": ["-DENABLE_TESTING=OFF" , "-DWITH_OPENCL=ON", "-DWITH_OPENGL=ON", "-DWITH_TBB=ON", "-DWITH_XINE=ON"],
             "sources": [ { "type": "git", "url": "http://github.com/Itseez/opencv.git", "branch": "3.3.1" } ]
         },
         {
@@ -28,7 +28,7 @@
         {
             "name": "digikam",
             "buildsystem": "cmake-ninja",
-            "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib", "-DQt5WebKitWidgets_DIR=/app/lib/cmake/Qt5WebKitWidgets/"],
+            "config-opts": ["-DENABLE_TESTING=OFF" , "-DQt5WebKitWidgets_DIR=/app/lib/cmake/Qt5WebKitWidgets/"],
             "builddir": true,
             "sources": [ { "type": "git", "url": "git://anongit.kde.org/digikam.git" } ]
         }

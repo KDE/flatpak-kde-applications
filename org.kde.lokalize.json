@@ -14,7 +14,7 @@
         {
             "name": "kross",
             "buildsystem": "cmake-ninja",
-            "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib"],
+            "config-opts": [ "-DENABLE_TESTING=OFF" ],
             "sources": [ { "type": "git", "url": "git://anongit.kde.org/kross.git", "branch": "v5.48.0" } ]
         },
         {

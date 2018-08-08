@@ -1,7 +1,7 @@
 {
     "name": "qt5-qtwebkit",
     "buildsystem": "cmake-ninja",
-    "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib", "-DPORT=Qt"],
+    "config-opts": ["-DENABLE_TESTING=OFF" , "-DPORT=Qt"],
     "cleanup-platform": [ "/bin", "/mkspecs" ],
     "sources": [
         {
