@@ -43,12 +43,6 @@
                        ]
         },
         {
-            "config-opts": [ "-DENABLE_TESTING=OFF" ],
-            "name": "kdelibs4support",
-            "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kdelibs4support.git", "branch": "v5.49.0" } ]
-        },
-        {
             "name": "dolphin-plugins",
             "buildsystem": "cmake-ninja",
             "sources": [ { "type": "git", "url": "git://anongit.kde.org/dolphin-plugins.git" } ]
