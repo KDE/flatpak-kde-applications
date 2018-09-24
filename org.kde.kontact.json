@@ -5,9 +5,9 @@
     "runtime": "org.kde.Platform",
     "runtime-version": "5.11",
     "sdk": "org.kde.Sdk",
-    "command": "kontact",
-    "tags": ["nightly"],
+    "tags": [ "nightly" ],
     "desktop-file-name-prefix": "(Nightly) ",
+    "command": "run_kontact.sh",
     "finish-args": [
         "--share=network",
         "--share=ipc",
@@ -27,6 +27,10 @@
         "--own-name=org.kde.kontact",
         "--own-name=org.kde.korgac",
         "--own-name=org.kde.korganizer",
+        "--own-name=org.kde.kalarm",
+        "--own-name=org.kde.accountwizard",
+        "--own-name=org.kde.pimsettingsexporter",
+        "--own-name=org.kde.sieveeditor",
         "--own-name=org.kde.pim.*",
         "--talk-name=org.kde.Solid.PowerManagement",
         "--talk-name=org.kde.kded5",
@@ -35,80 +39,120 @@
         "--talk-name=org.kde.klauncher5",
         "--talk-name=org.kde.knotify",
         "--talk-name=org.kde.kwalletd5",
+        "--talk-name=org.kde.kcookiejar5",
         "--system-talk-name=org.freedesktop.NetworkManager"
     ],
-
     "cleanup": [
         "/lib/cmake",
         "/lib/pkgconfig",
+        "/lib/plugins/designer",
         "/include",
         "/docs",
         "/mkspecs",
         "/share/man",
-        "/bin/eqn", "/bin/geqn", "/bin/gneqn", "/bin/gnroff", "/bin/gpic", "/bin/groff",
-        "/bin/grops", "/bin/grotty", "/bin/gsoelim", "/bin/gtbl", "/bin/gtroff",
-        "/bin/neqn", "/bin/nroff", "/bin/pic", "/bin/post-grohtml", "/bin/pre-grohtml",
-        "/bin/preconv", "/bin/soelim", "/bin/tbl", "/bin/troff", "/bin/zsoelim",
-        "/share/groff", "/etc/groff", "/lib/groff",
+        "/bin/afmtodit",
+        "/usr/bin/xsd",
         "/lib/libKF5*.so",
-        "/lib/libboost_*.so"
+        "/lib/libboost_*.so",
+        "*.a",
+        "*.la"
     ],
-
     "rename-icon": "kontact",
     "copy-icon": true,
-
     "modules": [
-        "boost.json",
-        "gpgme.json",
         {
-            "name": "kdiagram",
-            "config-opts": ["-DBUILD_TESTING=OFF" ],
-            "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kdiagram.git" } ]
-        },
-        {
-            "config-opts": ["-DBUILD_TESTING=OFF" ],
-            "name": "kdelibs4support",
-            "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kdelibs4support.git", "branch": "v5.49.0" } ],
-            "cleanup": [
-                "/lib/plugins/designer/*.so"
-            ]
-        },
-        {
-            "name": "libical",
-            "buildsystem": "cmake-ninja",
-            "config-opts": [ "-DCMAKE_INSTALL_LIBDIR=lib" ],
-            "sources": [ { "type": "git", "url": "https://github.com/libical/libical.git", "branch": "v3.0.3" } ]
-        },
-        { "name": "kcalcore", "config-opts": ["-DBUILD_TESTING=OFF" ], "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "git://anongit.kde.org/kcalcore.git" } ] },
-        {
-            "name": "prison",
-            "buildsystem": "cmake-ninja",
-            "config-opts": [ "-DCMAKE_INSTALL_LIBDIR=lib" ],
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/prison.git", "branch": "v5.49.0"  } ],
+            "name": "gpgme",
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://gnupg.org/ftp/gcrypt/gpgme/gpgme-1.11.1.tar.bz2",
+                    "sha256": "2d1b111774d2e3dd26dcd7c251819ce4ef774ec5e566251eb9308fa7542fbd6f"
+                }
+            ],
             "modules": [
                 {
-                    "name": "qrencode",
+                    "name": "libgpg-error",
                     "sources": [
                         {
                             "type": "archive",
-                            "url": "http://megaui.net/fukuchi/works/qrencode/qrencode-3.4.4.tar.bz2",
-                            "sha256": "efe5188b1ddbcbf98763b819b146be6a90481aac30cfc8d858ab78a19cde1fa5"
-                        }
-                    ],
-                    "modules": [
-                        {
-                            "name": "libdmtx",
-                            "sources": [
-                                {
-                                    "type": "archive",
-                                    "url": "http://downloads.sourceforge.net/libdmtx/libdmtx-0.7.4.tar.bz2",
-                                    "sha256": "b62c586ac4fad393024dadcc48da8081b4f7d317aa392f9245c5335f0ee8dd76"
-                                }
-                            ]
+                            "url": "https://www.gnupg.org/ftp/gcrypt/libgpg-error/libgpg-error-1.32.tar.bz2",
+                            "sha256": "c345c5e73cc2332f8d50db84a2280abfb1d8f6d4f1858b9daa30404db44540ca"
                         }
                     ]
+                },
+                {
+                    "name": "libassuan",
+                    "sources": [
+                        {
+                            "type": "archive",
+                            "url": "https://www.gnupg.org/ftp/gcrypt/libassuan/libassuan-2.5.1.tar.bz2",
+                            "sha256": "47f96c37b4f2aac289f0bc1bacfa8bd8b4b209a488d3d15e2229cb6cc9b26449"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "kdiagram",
+            "config-opts": [
+                "-DBUILD_TESTING=OFF",
+                "-DCMAKE_BUILD_TYPE=RelWithDebInfo"
+            ],
+            "buildsystem": "cmake-ninja",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://anongit.kde.org/kdiagram.git",
+                    "branch": "master"
+                }
+            ]
+        },
+        {
+            "name": "kcalcore",
+            "config-opts": [
+                "-DBUILD_TESTING=OFF",
+                "-DCMAKE_BUILD_TYPE=RelWithDebInfo"
+            ],
+            "buildsystem": "cmake-ninja",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://anongit.kde.org/kcalcore.git",
+                    "branch": "master"
+                }
+            ],
+            "modules": [
+                {
+                    "name": "libical",
+                    "buildsystem": "cmake-ninja",
+                    "config-opts": [
+                        "-DCMAKE_BUILD_TYPE=RelWithDebInfo"
+                    ],
+                    "sources": [
+                        {
+                            "type": "archive",
+                            "url": "https://github.com/libical/libical/releases/download/v3.0.4/libical-3.0.4.tar.gz",
+                            "sha256": "72b216e10233c3f60cb06062facf41f3b0f70615e5a60b47f9853341a0d5d145"
+                        }
+                    ],
+                    "cleanup": [
+                        "/share/gtk-doc"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "boost",
+            "buildsystem": "simple",
+            "build-commands": [
+                "./bootstrap.sh --prefix=/app --with-libraries=graph,program_options,system,thread",
+                "./b2 -j $FLATPAK_BUILDER_N_JOBS install"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://dl.bintray.com/boostorg/release/1.68.0/source/boost_1_68_0.tar.bz2",
+                    "sha256": "7f6130bc3cf65f56a618888ce9d5ea704fa10b462be126ad053e80e553d6d8b7"
                 }
             ]
         },
@@ -116,19 +160,25 @@
             "name": "akonadi",
             "config-opts": [
                 "-DBUILD_TESTING=OFF",
-                "-DCMAKE_INSTALL_LIBDIR=lib",
+                "-DBUILD_TOOLS=OFF",
+                "-DCMAKE_BUILD_TYPE=RelWithDebInfo",
                 "-DDATABASE_BACKEND=SQLITE"
             ],
             "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/akonadi" } ],
-            "cleanup": [
-                "/lib/plugins/designer/*.so"
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://anongit.kde.org/akonadi.git",
+                    "branch": "master"
+                }
             ],
             "modules": [
                 {
                     "name": "sqlite3",
-                    "config-opts": [ "--enable-threadsafe", "--enable-threads-override-locks" ],
-                    "cmake": false,
+                    "config-opts": [
+                        "--enable-threadsafe",
+                        "--enable-threads-override-locks"
+                    ],
                     "build-options": {
                         "cflags": "-DSQLITE_ENABLE_UNLOCK_NOTIFY=1"
                     },
@@ -140,274 +190,1047 @@
                         }
                     ],
                     "cleanup": [
-                        "/lib/libsqlite3.la",
                         "/bin/sqlite3"
                     ]
                 }
             ]
         },
-        { "name": "kmime", "config-opts": ["-DBUILD_TESTING=OFF" ], "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "git://anongit.kde.org/kmime" } ] },
-        { "name": "akonadi-mime", "config-opts": ["-DBUILD_TESTING=OFF" ], "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "git://anongit.kde.org/akonadi-mime" } ] },
-        { "name": "kcontacts", "config-opts": ["-DBUILD_TESTING=OFF" ], "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "git://anongit.kde.org/kcontacts" } ] },
-        { "name": "grantlee", "config-opts": ["-DBUILD_TESTING=OFF" ], "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "https://github.com/steveire/grantlee.git" } ] },
-        { "name": "akonadi-contacts", "config-opts": ["-DBUILD_TESTING=OFF" ], "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "git://anongit.kde.org/akonadi-contacts" } ] },
-        { "name": "ksmtp", "config-opts": ["-DBUILD_TESTING=OFF" ], "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "git://anongit.kde.org/ksmtp" } ] },
-
         {
-            "name": "libkgapi",
-            "config-opts": ["-DBUILD_TESTING=OFF" ],
+            "name": "kmime",
+            "config-opts": [
+                "-DBUILD_TESTING=OFF",
+                "-DCMAKE_BUILD_TYPE=RelWithDebInfo"
+            ],
             "buildsystem": "cmake-ninja",
             "sources": [
-                { "type": "git", "url": "git://anongit.kde.org/libkgapi.git" }
+                {
+                    "type": "git",
+                    "url": "https://anongit.kde.org/kmime.git",
+                    "branch": "master"
+                }
             ]
         },
-        { "name": "kmailtransport", "config-opts": ["-DBUILD_TESTING=OFF" ], "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "git://anongit.kde.org/kmailtransport" } ] },
+        {
+            "name": "akonadi-mime",
+            "config-opts": [
+                "-DBUILD_TESTING=OFF",
+                "-DCMAKE_BUILD_TYPE=RelWithDebInfo"
+            ],
+            "buildsystem": "cmake-ninja",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://anongit.kde.org/akonadi-mime.git",
+                    "branch": "master"
+                }
+            ]
+        },
+        {
+            "name": "kcontacts",
+            "config-opts": [
+                "-DBUILD_TESTING=OFF",
+                "-DCMAKE_BUILD_TYPE=RelWithDebInfo"
+            ],
+            "buildsystem": "cmake-ninja",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://anongit.kde.org/kcontacts.git",
+                    "branch": "master"
+                }
+            ]
+        },
+        {
+            "name": "grantlee",
+            "config-opts": [
+                "-DBUILD_TESTING=OFF",
+                "-DCMAKE_BUILD_TYPE=RelWithDebInfo"
+            ],
+            "buildsystem": "cmake-ninja",
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://github.com/steveire/grantlee/archive/v5.1.0.tar.gz",
+                    "sha256": "3836572fe5e49d28a1d99186c6d96f88ff839644b4bc77b73b6d8208f6ccc9d1"
+                }
+            ]
+        },
+        {
+            "name": "prison",
+            "config-opts": [
+                "-DBUILD_TESTING=OFF",
+                "-DCMAKE_BUILD_TYPE=RelWithDebInfo"
+            ],
+            "buildsystem": "cmake-ninja",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://anongit.kde.org/prison.git",
+                    "branch": "master"
+                }
+            ],
+            "modules": [
+                {
+                    "name": "qrencode",
+                    "rm-configure": true,
+                    "sources": [
+                        {
+                            "type": "archive",
+                            "url": "https://fukuchi.org/works/qrencode/qrencode-4.0.2.tar.gz",
+                            "sha256": "dbabe79c07614625d1f74d8c0ae2ee5358c4e27eab8fd8fe31f9365f821a3b1d"
+                        },
+                        {
+                            "type": "script",
+                            "dest-filename": "autogen.sh",
+                            "commands": [
+                                "cp -p /usr/share/automake-*/config.{sub,guess} .",
+                                "autoconf -f -B build/autoconf_prepend-include"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "libdmtx",
+                    "sources": [
+                        {
+                            "type": "archive",
+                            "url": "https://github.com/dmtx/libdmtx/archive/v0.7.5.tar.gz",
+                            "sha256": "be0c5275695a732a5f434ded1fcc232aa63b1a6015c00044fe87f3a689b75f2e"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "akonadi-contacts",
+            "config-opts": [
+                "-DBUILD_TESTING=OFF",
+                "-DCMAKE_BUILD_TYPE=RelWithDebInfo"
+            ],
+            "buildsystem": "cmake-ninja",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://anongit.kde.org/akonadi-contacts.git",
+                    "branch": "master"
+                }
+            ]
+        },
+        {
+            "name": "libkgapi",
+            "config-opts": [
+                "-DBUILD_TESTING=OFF",
+                "-DCMAKE_BUILD_TYPE=RelWithDebInfo"
+            ],
+            "buildsystem": "cmake-ninja",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://anongit.kde.org/libkgapi.git",
+                    "branch": "master"
+                }
+            ]
+        },
+        {
+            "name": "ksmtp",
+            "config-opts": [
+                "-DBUILD_TESTING=OFF",
+                "-DCMAKE_BUILD_TYPE=RelWithDebInfo"
+            ],
+            "buildsystem": "cmake-ninja",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://anongit.kde.org/ksmtp.git",
+                    "branch": "master"
+                }
+            ]
+        },
+        {
+            "name": "kmailtransport",
+            "config-opts": [
+                "-DBUILD_TESTING=OFF",
+                "-DCMAKE_BUILD_TYPE=RelWithDebInfo"
+            ],
+            "buildsystem": "cmake-ninja",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://anongit.kde.org/kmailtransport.git",
+                    "branch": "master"
+                }
+            ]
+        },
         {
             "name": "kpimtextedit",
-            "config-opts": ["-DBUILD_TESTING=OFF" ],
+            "config-opts": [
+                "-DBUILD_TESTING=OFF",
+                "-DCMAKE_BUILD_TYPE=RelWithDebInfo"
+            ],
             "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kpimtextedit" } ],
-            "cleanup": [
-                "/lib/plugins/designer/*.so"
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://anongit.kde.org/kpimtextedit.git",
+                    "branch": "master"
+                },
+                {
+                    "type": "patch",
+                    "path": "kontact-kpimtextedit-revert-qttextspeech-dep.patch"
+                }
             ]
         },
-        { "name": "kidentitymanagement", "config-opts": ["-DBUILD_TESTING=OFF" ], "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "git://anongit.kde.org/kidentitymanagement" } ] },
-        { "name": "kcalutils", "config-opts": ["-DBUILD_TESTING=OFF" ], "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "git://anongit.kde.org/kcalutils" } ] },
         {
-            "name": "kactivities",
-            "config-opts": ["-DBUILD_TESTING=OFF" ],
+            "name": "kidentitymanagement",
+            "config-opts": [
+                "-DBUILD_TESTING=OFF",
+                "-DCMAKE_BUILD_TYPE=RelWithDebInfo"
+            ],
             "buildsystem": "cmake-ninja",
-            "builddir": true,
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kactivities.git", "branch": "v5.49.0" } ]
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://anongit.kde.org/kidentitymanagement.git",
+                    "branch": "master"
+                }
+            ]
         },
         {
-            "config-opts": ["-DBUILD_TESTING=OFF" ],
-            "name": "plasma-framework",
+            "name": "kcalutils",
+            "config-opts": [
+                "-DBUILD_TESTING=OFF",
+                "-DCMAKE_BUILD_TYPE=RelWithDebInfo"
+            ],
             "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/plasma-framework.git", "branch": "v5.49.0" } ]
-        },
-        {
-            "config-opts": ["-DBUILD_TESTING=OFF" ],
-            "name": "krunner",
-            "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/krunner.git", "branch": "v5.49.0" } ]
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://anongit.kde.org/kcalutils.git",
+                    "branch": "master"
+                }
+            ]
         },
         {
             "name": "xapian",
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://oligarchy.co.uk/xapian/1.4.2/xapian-core-1.4.2.tar.xz",
-                    "sha256": "aec2c4352998127a2f2316218bf70f48cef0a466a87af3939f5f547c5246e1ce"
+                    "url": "https://oligarchy.co.uk/xapian/1.4.7/xapian-core-1.4.7.tar.xz",
+                    "sha256": "13f08a0b649c7afa804fa0e85678d693fd6069dd394c9b9e7d41973d74a3b5d3"
                 }
             ],
             "cleanup": [
-                "/lib/libxapian.la",
                 "/share/doc/xapian-core",
-                "/bin/xapian-*"
+                "/bin/xapian-*",
+                "/bin/copydatabase",
+                "/bin/quest",
+                "/bin/simpleexpand",
+                "/bin/simpleindex",
+                "/bin/simplesearch"
             ]
         },
         {
-            "name": "groff",
-            "sources": [
-                {
-                    "type": "archive",
-                    "url": "http://ftp.gnu.org/gnu/groff/groff-1.22.3.tar.gz",
-                    "sha256": "3a48a9d6c97750bfbd535feeb5be0111db6406ddb7bb79fc680809cda6d828a5"
-                }
+            "name": "kldap",
+            "config-opts": [
+                "-DBUILD_TESTING=OFF",
+                "-DCMAKE_BUILD_TYPE=RelWithDebInfo"
             ],
-            "buildsystem": "simple",
-            "build-commands": [
-                "./configure --prefix=/app",
-                "make",
-                "make install"
-            ]
-        },
-        {
-            "name": "BDB",
-            "config-opts": ["--enable-compat185", "--enable-shared", "--enable-static", "--enable-cxx", "--enable-dbm", "--enable-stl"],
-            "make-install-args": ["LIBSO_LIBS=-lpthread"],
-            "sources": [
-                {
-                    "type": "archive",
-                    "url": "http://download.oracle.com/berkeley-db/db-5.3.28.tar.gz",
-                    "sha256": "e0a992d740709892e81f9d93f06daf305cf73fb81b545afe72478043172c3628"
-                },
-                {
-                    "type": "script",
-                    "commands": [ "./dist/configure $@" ],
-                    "dest-filename": "configure"
-                }
-            ]
-        },
-        {
-            "name": "openldap",
-            "config-opts": [ "--disable-sttatic" ],
-            "sources": [
-                {
-                    "type": "archive",
-                    "url": "http://mirror.eu.oneandone.net/software/openldap/openldap-release/openldap-2.4.44.tgz",
-                    "sha256": "d7de6bf3c67009c95525dde3a0212cc110d0a70b92af2af8e3ee800e81b88400"
-                }
-            ],
-            "cleanup": [
-                "/lib/libldap*.la",
-                "/lib/slapi.la",
-                "/lib/libblber.la",
-                "/bin/ldap*"
-            ]
-        },
-        { "name": "kldap", "config-opts": ["-DBUILD_TESTING=OFF" ], "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "git://anongit.kde.org/kldap" } ] },
-        { "name": "akonadi-search", "config-opts": ["-DBUILD_TESTING=OFF" ], "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "git://anongit.kde.org/akonadi-search" } ] },
-        { "name": "kmbox", "config-opts": ["-DBUILD_TESTING=OFF" ], "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "git://anongit.kde.org/kmbox" } ] },
-        {
-            "name": "libkdepim",
-            "config-opts": ["-DBUILD_TESTING=OFF" ],
-            "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/libkdepim" } ],
-            "cleanup": [
-                "/lib/plugins/designer/*.so"
-            ]
-        },
-        { "name": "kimap", "config-opts": ["-DBUILD_TESTING=OFF" ], "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "git://anongit.kde.org/kimap" } ] },
-        {
-            "name": "pimcommon",
-            "config-opts": ["-DBUILD_TESTING=OFF" ],
-            "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/pimcommon" } ],
-            "cleanup": [
-                "/lib/plugins/designer/*.so"
-            ]
-        },
-        { "name": "kholidays", "config-opts": ["-DBUILD_TESTING=OFF" ], "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "git://anongit.kde.org/kholidays" } ] },
-        { "name": "kalarmcal", "config-opts": ["-DBUILD_TESTING=OFF" ], "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "git://anongit.kde.org/kalarmcal" } ] },
-        { "name": "akonadi-calendar", "config-opts": ["-DBUILD_TESTING=OFF" ], "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "git://anongit.kde.org/akonadi-calendar" } ] },
-        { "name": "akonadi-notes", "config-opts": ["-DBUILD_TESTING=OFF" ], "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "git://anongit.kde.org/akonadi-notes" } ] },
-        { "name": "syndication", "config-opts": ["-DBUILD_TESTING=OFF" ], "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "git://anongit.kde.org/syndication" } ] },
-        { "name": "kdav", "config-opts": ["-DBUILD_TESTING=OFF" ], "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "git://anongit.kde.org/kdav" } ] },
-        { "name": "libkleo", "config-opts": ["-DBUILD_TESTING=OFF" ], "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "git://anongit.kde.org/libkleo" } ] },
-        { "name": "grantleetheme", "config-opts": ["-DBUILD_TESTING=OFF" ], "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "git://anongit.kde.org/grantleetheme" } ] },
-        { "name": "kdepim-apps-libs", "config-opts": ["-DBUILD_TESTING=OFF" ], "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "git://anongit.kde.org/kdepim-apps-libs" } ] },
-        { "name": "libgravatar", "config-opts": ["-DBUILD_TESTING=OFF" ], "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "git://anongit.kde.org/libgravatar" } ] },
-        { "name": "calendarsupport", "config-opts": ["-DBUILD_TESTING=OFF" ], "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "git://anongit.kde.org/calendarsupport" } ] },
-        { "name": "eventviews", "config-opts": ["-DBUILD_TESTING=OFF" ], "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "git://anongit.kde.org/eventviews" } ] },
-        { "name": "incidenceeditor", "config-opts": ["-DBUILD_TESTING=OFF" ], "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "git://anongit.kde.org/incidenceeditor" } ] },
-        { "name": "messagelib", "config-opts": ["-DBUILD_TESTING=OFF" ], "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "git://anongit.kde.org/messagelib" } ] },
-        { "name": "mailimporter", "config-opts": ["-DBUILD_TESTING=OFF" ], "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "git://anongit.kde.org/mailimporter" } ] },
-        {
-            "name": "mailcommon",
-            "config-opts": ["-DBUILD_TESTING=OFF" ],
-            "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/mailcommon" } ],
-            "cleanup": [
-                "/lib/plugins/designer/*.so"
-            ]
-        },
-        { "name": "kontactinterface", "config-opts": ["-DBUILD_TESTING=OFF" ], "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "git://anongit.kde.org/kontactinterface" } ] },
-
-        { "name": "libksieve", "config-opts": ["-DBUILD_TESTING=OFF" ], "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "git://anongit.kde.org/libksieve" } ] },
-
-        {
-            "name": "kdepim-runtime",
-            "config-opts": ["-DBUILD_TESTING=OFF" ],
-            "buildsystem": "cmake-ninja",
-            "sources": [
-                { "type": "git", "url": "git://anongit.kde.org/kdepim-runtime" }
-            ]
-        },
-
-        { "name": "ktnef", "config-opts": ["-DBUILD_TESTING=OFF" ], "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "git://anongit.kde.org/ktnef" } ] },
-        { "name": "kmail", "config-opts": ["-DBUILD_TESTING=OFF" ], "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "git://anongit.kde.org/kmail" } ] },
-        { "name": "akregator", "config-opts": ["-DBUILD_TESTING=OFF" ], "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "git://anongit.kde.org/akregator" } ] },
-        { "name": "korganizer", "config-opts": ["-DBUILD_TESTING=OFF" ], "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "git://anongit.kde.org/korganizer" } ] },
-        { "name": "kalarm", "config-opts": ["-DBUILD_TESTING=OFF" ], "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "git://anongit.kde.org/kalarm" } ] },
-        { "name": "kblog", "config-opts": ["-DBUILD_TESTING=OFF" ], "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "git://anongit.kde.org/kblog" } ] },
-        { "name": "knotes", "config-opts": ["-DBUILD_TESTING=OFF" ], "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "git://anongit.kde.org/knotes" } ] },
-        {
-            "name": "kontact",
-            "config-opts": ["-DBUILD_TESTING=OFF" ],
-            "buildsystem": "cmake-ninja",
-            "sources": [
-                { "type": "git", "url": "git://anongit.kde.org/kontact.git" }
-            ]
-        },
-
-       {
-            "name": "grantlee-editor",
-            "config-opts": [ "-DBUILD_TESTING=OFF"  ],
             "buildsystem": "cmake-ninja",
             "sources": [
                 {
                     "type": "git",
-                    "url": "git://anongit.kde.org/grantlee-editor.git",
+                    "url": "https://anongit.kde.org/kldap.git",
+                    "branch": "master"
+                }
+            ],
+            "modules": [
+                {
+                    "name": "openldap",
+                    "config-opts": [
+                        "--disable-static",
+                        "--disable-slapd"
+                    ],
+                    "sources": [
+                        {
+                            "type": "archive",
+                            "url": "http://mirror.eu.oneandone.net/software/openldap/openldap-release/openldap-2.4.44.tgz",
+                            "sha256": "d7de6bf3c67009c95525dde3a0212cc110d0a70b92af2af8e3ee800e81b88400"
+                        }
+                    ],
+                    "cleanup": [
+                        "/bin/ldap*",
+                        "/sbin"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "akonadi-search",
+            "config-opts": [
+                "-DBUILD_TESTING=OFF",
+                "-DCMAKE_BUILD_TYPE=RelWithDebInfo"
+            ],
+            "buildsystem": "cmake-ninja",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://anongit.kde.org/akonadi-search.git",
+                    "branch": "master"
+                }
+            ],
+            "modules": [
+                {
+                    "name": "krunner",
+                    "config-opts": [
+                        "-DBUILD_TESTING=OFF",
+                        "-DCMAKE_BUILD_TYPE=RelWithDebInfo"
+                    ],
+                    "buildsystem": "cmake-ninja",
+                    "sources": [
+                        {
+                            "type": "git",
+                            "url": "https://anongit.kde.org/krunner.git",
+                            "branch": "master"
+                        }
+                    ],
+                    "modules": [
+                        {
+                            "name": "plasma-framework",
+                            "config-opts": [
+                                "-DBUILD_TESTING=OFF",
+                                "-DCMAKE_BUILD_TYPE=RelWithDebInfo"
+                            ],
+                            "buildsystem": "cmake-ninja",
+                            "sources": [
+                                {
+                                    "type": "git",
+                                    "url": "https://anongit.kde.org/plasma-framework.git",
+                                    "branch": "master"
+                                }
+                            ],
+                            "cleanup": [
+                                "/bin/plasmapkg2"
+                            ],
+                            "modules": [
+                                {
+                                    "name": "kactivities",
+                                    "config-opts": [
+                                        "-DBUILD_TESTING=OFF",
+                                        "-DCMAKE_BUILD_TYPE=RelWithDebInfo"
+                                    ],
+                                    "buildsystem": "cmake-ninja",
+                                    "builddir": true,
+                                    "sources": [
+                                        {
+                                            "type": "git",
+                                            "url": "https://anongit.kde.org/kactivities.git",
+                                            "branch": "master"
+                                        }
+                                    ],
+                                    "cleanup": [
+                                        "/bin/kactivities-cli"
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "kmbox",
+            "config-opts": [
+                "-DBUILD_TESTING=OFF",
+                "-DCMAKE_BUILD_TYPE=RelWithDebInfo"
+            ],
+            "buildsystem": "cmake-ninja",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://anongit.kde.org/kmbox.git",
                     "branch": "master"
                 }
             ]
         },
         {
-            "name": "akonadi-import-wizard",
-            "config-opts": [ "-DBUILD_TESTING=OFF"  ],
+            "name": "libkdepim",
+            "config-opts": [
+                "-DBUILD_TESTING=OFF",
+                "-DCMAKE_BUILD_TYPE=RelWithDebInfo"
+            ],
             "buildsystem": "cmake-ninja",
             "sources": [
                 {
                     "type": "git",
-                    "url": "git://anongit.kde.org/akonadi-import-wizard.git",
+                    "url": "https://anongit.kde.org/libkdepim.git",
+                    "branch": "master"
+                }
+            ]
+        },
+        {
+            "name": "kimap",
+            "config-opts": [
+                "-DBUILD_TESTING=OFF",
+                "-DCMAKE_BUILD_TYPE=RelWithDebInfo"
+            ],
+            "buildsystem": "cmake-ninja",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://anongit.kde.org/kimap.git",
+                    "branch": "master"
+                }
+            ]
+        },
+        {
+            "name": "pimcommon",
+            "config-opts": [
+                "-DBUILD_TESTING=OFF",
+                "-DCMAKE_BUILD_TYPE=RelWithDebInfo"
+            ],
+            "buildsystem": "cmake-ninja",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://anongit.kde.org/pimcommon.git",
+                    "branch": "master"
+                }
+            ]
+        },
+        {
+            "name": "kholidays",
+            "config-opts": [
+                "-DBUILD_TESTING=OFF",
+                "-DCMAKE_BUILD_TYPE=RelWithDebInfo"
+            ],
+            "buildsystem": "cmake-ninja",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://anongit.kde.org/kholidays.git",
+                    "branch": "master"
+                }
+            ]
+        },
+        {
+            "name": "kalarmcal",
+            "config-opts": [
+                "-DBUILD_TESTING=OFF",
+                "-DCMAKE_BUILD_TYPE=RelWithDebInfo"
+            ],
+            "buildsystem": "cmake-ninja",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://anongit.kde.org/kalarmcal.git",
+                    "branch": "master"
+                }
+            ]
+        },
+        {
+            "name": "akonadi-calendar",
+            "config-opts": [
+                "-DBUILD_TESTING=OFF",
+                "-DCMAKE_BUILD_TYPE=RelWithDebInfo"
+            ],
+            "buildsystem": "cmake-ninja",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://anongit.kde.org/akonadi-calendar.git",
+                    "branch": "master"
+                }
+            ]
+        },
+        {
+            "name": "akonadi-notes",
+            "config-opts": [
+                "-DBUILD_TESTING=OFF",
+                "-DCMAKE_BUILD_TYPE=RelWithDebInfo"
+            ],
+            "buildsystem": "cmake-ninja",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://anongit.kde.org/akonadi-notes.git",
+                    "branch": "master"
+                }
+            ]
+        },
+        {
+            "name": "syndication",
+            "config-opts": [
+                "-DBUILD_TESTING=OFF",
+                "-DCMAKE_BUILD_TYPE=RelWithDebInfo"
+            ],
+            "buildsystem": "cmake-ninja",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://anongit.kde.org/syndication.git",
+                    "branch": "master"
+                }
+            ]
+        },
+        {
+            "name": "kdav",
+            "config-opts": [
+                "-DBUILD_TESTING=OFF",
+                "-DCMAKE_BUILD_TYPE=RelWithDebInfo"
+            ],
+            "buildsystem": "cmake-ninja",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://anongit.kde.org/kdav.git",
+                    "branch": "master"
+                }
+            ]
+        },
+        {
+            "name": "libkleo",
+            "config-opts": [
+                "-DBUILD_TESTING=OFF",
+                "-DCMAKE_BUILD_TYPE=RelWithDebInfo"
+            ],
+            "buildsystem": "cmake-ninja",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://anongit.kde.org/libkleo.git",
+                    "branch": "master"
+                }
+            ]
+        },
+        {
+            "name": "grantleetheme",
+            "config-opts": [
+                "-DBUILD_TESTING=OFF",
+                "-DCMAKE_BUILD_TYPE=RelWithDebInfo"
+            ],
+            "buildsystem": "cmake-ninja",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://anongit.kde.org/grantleetheme.git",
+                    "branch": "master"
+                }
+            ]
+        },
+        {
+            "name": "kdepim-apps-libs",
+            "config-opts": [
+                "-DBUILD_TESTING=OFF",
+                "-DCMAKE_BUILD_TYPE=RelWithDebInfo"
+            ],
+            "buildsystem": "cmake-ninja",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://anongit.kde.org/kdepim-apps-libs.git",
+                    "branch": "master"
+                }
+            ]
+        },
+        {
+            "name": "libgravatar",
+            "config-opts": [
+                "-DBUILD_TESTING=OFF",
+                "-DCMAKE_BUILD_TYPE=RelWithDebInfo"
+            ],
+            "buildsystem": "cmake-ninja",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://anongit.kde.org/libgravatar.git",
+                    "branch": "master"
+                }
+            ]
+        },
+        {
+            "name": "calendarsupport",
+            "config-opts": [
+                "-DBUILD_TESTING=OFF",
+                "-DCMAKE_BUILD_TYPE=RelWithDebInfo"
+            ],
+            "buildsystem": "cmake-ninja",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://anongit.kde.org/calendarsupport.git",
+                    "branch": "master"
+                }
+            ]
+        },
+        {
+            "name": "eventviews",
+            "config-opts": [
+                "-DBUILD_TESTING=OFF",
+                "-DCMAKE_BUILD_TYPE=RelWithDebInfo"
+            ],
+            "buildsystem": "cmake-ninja",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://anongit.kde.org/eventviews.git",
+                    "branch": "master"
+                }
+            ]
+        },
+        {
+            "name": "incidenceeditor",
+            "config-opts": [
+                "-DBUILD_TESTING=OFF",
+                "-DCMAKE_BUILD_TYPE=RelWithDebInfo"
+            ],
+            "buildsystem": "cmake-ninja",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://anongit.kde.org/incidenceeditor.git",
+                    "branch": "master"
+                }
+            ]
+        },
+        {
+            "name": "messagelib",
+            "config-opts": [
+                "-DBUILD_TESTING=OFF",
+                "-DCMAKE_BUILD_TYPE=RelWithDebInfo"
+            ],
+            "buildsystem": "cmake-ninja",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://anongit.kde.org/messagelib.git",
+                    "branch": "master"
+                }
+            ]
+        },
+        {
+            "name": "mailimporter",
+            "config-opts": [
+                "-DBUILD_TESTING=OFF",
+                "-DCMAKE_BUILD_TYPE=RelWithDebInfo"
+            ],
+            "buildsystem": "cmake-ninja",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://anongit.kde.org/mailimporter.git",
+                    "branch": "master"
+                }
+            ]
+        },
+        {
+            "name": "mailcommon",
+            "config-opts": [
+                "-DBUILD_TESTING=OFF",
+                "-DCMAKE_BUILD_TYPE=RelWithDebInfo"
+            ],
+            "buildsystem": "cmake-ninja",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://anongit.kde.org/mailcommon.git",
+                    "branch": "master"
+                }
+            ]
+        },
+        {
+            "name": "kontactinterface",
+            "config-opts": [
+                "-DBUILD_TESTING=OFF",
+                "-DCMAKE_BUILD_TYPE=RelWithDebInfo"
+            ],
+            "buildsystem": "cmake-ninja",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://anongit.kde.org/kontactinterface.git",
+                    "branch": "master"
+                }
+            ]
+        },
+        {
+            "name": "libksieve",
+            "config-opts": [
+                "-DBUILD_TESTING=OFF",
+                "-DCMAKE_BUILD_TYPE=RelWithDebInfo"
+            ],
+            "buildsystem": "cmake-ninja",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://anongit.kde.org/libksieve.git",
+                    "branch": "master"
+                }
+            ]
+        },
+        {
+            "name": "kdepim-runtime",
+            "config-opts": [
+                "-DBUILD_TESTING=OFF",
+                "-DCMAKE_BUILD_TYPE=RelWithDebInfo"
+            ],
+            "buildsystem": "cmake-ninja",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://anongit.kde.org/kdepim-runtime.git",
+                    "branch": "master"
+                }
+            ],
+            "modules": [
+                {
+                    "name": "libkolabxml",
+                    "config-opts": [
+                        "-DBUILD_TESTS=OFF",
+                        "-DQT5_BUILD=ON",
+                        "-DCMAKE_BUILD_TYPE=RelWithDebInfo"
+                    ],
+                    "buildsystem": "cmake-ninja",
+                    "sources": [
+                        {
+                            "type": "git",
+                            "url": "https://git.kolab.org/diffusion/LKX/libkolabxml.git",
+                            "branch": "libkolabxml-1.1"
+                        }
+                    ],
+                    "modules": [
+                        {
+                            "name": "xerces-c",
+                            "config-opts": [
+                                "--disable-static"
+                            ],
+                            "sources": [
+                                {
+                                    "type": "archive",
+                                    "url": "http://archive.apache.org/dist/xerces/c/3/sources/xerces-c-3.1.4.tar.gz",
+                                    "sha256": "c98eedac4cf8a73b09366ad349cb3ef30640e7a3089d360d40a3dde93f66ecf6"
+                                }
+                            ],
+                            "cleanup": [
+                                "/bin"
+                            ]
+                        },
+                        {
+                            "name": "xsd",
+                            "make-install-args": [
+                                "install_prefix=/app"
+                            ],
+                            "no-autogen": true,
+                            "sources": [
+                                {
+                                    "type": "archive",
+                                    "url": "http://www.codesynthesis.com/download/xsd/4.0/xsd-4.0.0+dep.tar.bz2",
+                                    "sha256": "eca52a9c8f52cdbe2ae4e364e4a909503493a0d51ea388fc6c9734565a859817"
+                                }
+                            ],
+                            "cleanup": [
+                                "/share/doc/xsd",
+                                "/share/doc/libxsd"
+                            ]
+                        },
+                        {
+                            "name": "kdelibs4support",
+                            "config-opts": [
+                                "-DBUILD_TESTING=OFF",
+                                "-DCMAKE_BUILD_TYPE=RelWithDebInfo"
+                            ],
+                            "buildsystem": "cmake-ninja",
+                            "sources": [
+                                {
+                                    "type": "git",
+                                    "url": "https://anongit.kde.org/kdelibs4support.git",
+                                    "branch": "master"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "ktnef",
+            "config-opts": [
+                "-DBUILD_TESTING=OFF",
+                "-DCMAKE_BUILD_TYPE=RelWithDebInfo"
+            ],
+            "buildsystem": "cmake-ninja",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://anongit.kde.org/ktnef.git",
+                    "branch": "master"
+                }
+            ]
+        },
+        {
+            "name": "kmail",
+            "config-opts": [
+                "-DBUILD_TESTING=OFF",
+                "-DCMAKE_BUILD_TYPE=RelWithDebInfo"
+            ],
+            "buildsystem": "cmake-ninja",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://anongit.kde.org/kmail.git",
+                    "branch": "master"
+                }
+            ]
+        },
+        {
+            "name": "akregator",
+            "config-opts": [
+                "-DBUILD_TESTING=OFF",
+                "-DCMAKE_BUILD_TYPE=RelWithDebInfo"
+            ],
+            "buildsystem": "cmake-ninja",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://anongit.kde.org/akregator.git",
+                    "branch": "master"
+                }
+            ]
+        },
+        {
+            "name": "korganizer",
+            "config-opts": [
+                "-DBUILD_TESTING=OFF",
+                "-DCMAKE_BUILD_TYPE=RelWithDebInfo"
+            ],
+            "buildsystem": "cmake-ninja",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://anongit.kde.org/korganizer.git",
+                    "branch": "master"
+                }
+            ]
+        },
+        {
+            "name": "kalarm",
+            "config-opts": [
+                "-DBUILD_TESTING=OFF",
+                "-DCMAKE_BUILD_TYPE=RelWithDebInfo"
+            ],
+            "buildsystem": "cmake-ninja",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://anongit.kde.org/kalarm.git",
+                    "branch": "master"
+                }
+            ]
+        },
+        {
+            "name": "kaddressbook",
+            "config-opts": [
+                "-DBUILD_TESTING=OFF",
+                "-DCMAKE_BUILD_TYPE=RelWithDebInfo"
+            ],
+            "buildsystem": "cmake-ninja",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://anongit.kde.org/kaddressbook.git",
+                    "branch": "master"
+                }
+            ]
+        },
+        {
+            "name": "knotes",
+            "config-opts": [
+                "-DBUILD_TESTING=OFF",
+                "-DCMAKE_BUILD_TYPE=RelWithDebInfo"
+            ],
+            "buildsystem": "cmake-ninja",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://anongit.kde.org/knotes.git",
+                    "branch": "master"
+                }
+            ]
+        },
+        {
+            "name": "kontact",
+            "config-opts": [
+                "-DBUILD_TESTING=OFF",
+                "-DCMAKE_BUILD_TYPE=RelWithDebInfo"
+            ],
+            "buildsystem": "cmake-ninja",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://anongit.kde.org/kontact.git",
+                    "branch": "master"
+                },
+                {
+                    "type": "file",
+                    "path": "run_kontact.sh"
+                }
+            ],
+            "post-install": [
+                "install run_kontact.sh /app/bin/run_kontact.sh"
+            ]
+        },
+        {
+            "name": "akonadi-import-wizard",
+            "config-opts": [
+                "-DBUILD_TESTING=OFF",
+                "-DCMAKE_BUILD_TYPE=RelWithDebInfo"
+            ],
+            "buildsystem": "cmake-ninja",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://anongit.kde.org/akonadi-import-wizard.git",
+                    "branch": "master"
+                }
+            ]
+        },
+
+        {
+            "name": "kdepim-addons",
+            "config-opts": [
+                "-DBUILD_TESTING=OFF",
+                "-DCMAKE_BUILD_TYPE=RelWithDebInfo"
+            ],
+            "buildsystem": "cmake-ninja",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://anongit.kde.org/kdepim-addons.git",
+                    "branch": "master"
+                }
+            ],
+            "modules": [
+                {
+                    "name": "kitinerary",
+                    "config-opts": [
+                        "-DBUILD_TESTING=OFF",
+                        "-DCMAKE_BUILD_TYPE=RelWithDebInfo"
+                    ],
+                    "buildsystem": "cmake-ninja",
+                    "sources": [
+                        {
+                            "type": "git",
+                            "url": "https://anongit.kde.org/kitinerary.git",
+                            "branch": "master"
+                        }
+                    ],
+                    "modules": [
+                        {
+                            "name": "kpkpass",
+                            "config-opts": [
+                                "-DBUILD_TESTING=OFF",
+                                "-DCMAKE_BUILD_TYPE=RelWithDebInfo"
+                            ],
+                            "buildsystem": "cmake-ninja",
+                            "sources": [
+                                {
+                                    "type": "git",
+                                    "url": "https://anongit.kde.org/kpkpass.git",
+                                    "branch": "master"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "grantlee-editor",
+            "config-opts": [
+                "-DBUILD_TESTING=OFF",
+                "-DCMAKE_BUILD_TYPE=RelWithDebInfo"
+            ],
+            "buildsystem": "cmake-ninja",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://anongit.kde.org/grantlee-editor.git",
                     "branch": "master"
                 }
             ]
         },
         {
             "name": "kmail-account-wizard",
-            "config-opts": [ "-DBUILD_TESTING=OFF"  ],
+            "config-opts": [
+                "-DBUILD_TESTING=OFF",
+                "-DCMAKE_BUILD_TYPE=RelWithDebInfo"
+            ],
             "buildsystem": "cmake-ninja",
             "sources": [
                 {
                     "type": "git",
-                    "url": "git://anongit.kde.org/kmail-account-wizard.git",
+                    "url": "https://anongit.kde.org/kmail-account-wizard.git",
                     "branch": "master"
                 }
             ],
             "modules": [
                 {
                     "name": "kross",
-                    "config-opts": [ "-DBUILD_TESTING=OFF"  ],
+                    "config-opts": [
+                        "-DBUILD_TESTING=OFF",
+                        "-DCMAKE_BUILD_TYPE=RelWithDebInfo"
+                    ],
                     "buildsystem": "cmake-ninja",
-                    "sources": [ { "type": "git", "url": "git://anongit.kde.org/kross.git", "branch": "v5.49.0" } ]
+                    "sources": [
+                        {
+                            "type": "git",
+                            "url": "https://anongit.kde.org/kross.git",
+                            "branch": "master"
+                        }
+                    ]
                 }
             ]
         },
         {
             "name": "pim-data-exporter",
-            "config-opts": [ "-DBUILD_TESTING=OFF"  ],
+            "config-opts": [
+                "-DBUILD_TESTING=OFF",
+                "-DCMAKE_BUILD_TYPE=RelWithDebInfo"
+            ],
             "buildsystem": "cmake-ninja",
             "sources": [
                 {
                     "type": "git",
-                    "url": "git://anongit.kde.org/pim-data-exporter.git",
+                    "url": "https://anongit.kde.org/pim-data-exporter.git",
                     "branch": "master"
                 }
             ]
         },
         {
             "name": "pim-sieve-editor",
-            "config-opts": [ "-DBUILD_TESTING=OFF"  ],
+            "config-opts": [
+                "-DBUILD_TESTING=OFF",
+                "-DCMAKE_BUILD_TYPE=RelWithDebInfo"
+            ],
             "buildsystem": "cmake-ninja",
             "sources": [
                 {
                     "type": "git",
-                    "url": "git://anongit.kde.org/pim-sieve-editor.git",
+                    "url": "https://anongit.kde.org/pim-sieve-editor.git",
                     "branch": "master"
                 }
             ]
         },
         {
             "name": "mbox-importer",
-            "config-opts": [ "-DBUILD_TESTING=OFF"  ],
+            "config-opts": [
+                "-DBUILD_TESTING=OFF",
+                "-DCMAKE_BUILD_TYPE=RelWithDebInfo"
+            ],
             "buildsystem": "cmake-ninja",
             "sources": [
                 {
                     "type": "git",
-                    "url": "git://anongit.kde.org/mbox-importer.git",
+                    "url": "https://anongit.kde.org/mbox-importer.git",
                     "branch": "master"
                 }
             ]
