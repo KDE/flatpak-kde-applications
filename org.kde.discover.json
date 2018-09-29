@@ -67,7 +67,7 @@
                 },
                 {
                     "name": "gobject-introspection",
-                    "sources": [ { "type": "git", "url": "git://git.gnome.org/gobject-introspection", "branch": "1.56.1" } ]
+                    "sources": [ { "type": "git", "url": "https://gitlab.gnome.org/GNOME/gobject-introspection", "branch": "1.56.1" } ]
                 }
             ]
         },
