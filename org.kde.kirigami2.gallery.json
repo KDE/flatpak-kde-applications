@@ -10,11 +10,11 @@
 
     "modules": [
         {
-            "name": "kirigami",
-            "config-opts": ["-DCMAKE_BUILD_TYPE=debug", "-DPLASMA_ENABLED=OFF", "-DBUILD_EXAMPLES=ON"],
+            "name": "kirigamigallery",
+            "config-opts": ["-DCMAKE_BUILD_TYPE=debug"],
             "buildsystem": "cmake-ninja",
             "builddir": true,
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kirigami.git", "branch": "master" } ]
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kirigami-gallery.git", "branch": "master" } ]
         }
     ]
 }
