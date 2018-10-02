@@ -468,7 +468,8 @@
             "name": "akonadi-search",
             "config-opts": [
                 "-DBUILD_TESTING=OFF",
-                "-DCMAKE_BUILD_TYPE=RelWithDebInfo"
+                "-DCMAKE_BUILD_TYPE=RelWithDebInfo",
+                "-DAKONADISEARCH_ENABLE_KRUNNER_RUNNER=OFF"
             ],
             "buildsystem": "cmake-ninja",
             "sources": [
@@ -476,64 +477,6 @@
                     "type": "git",
                     "url": "https://anongit.kde.org/akonadi-search.git",
                     "branch": "master"
-                }
-            ],
-            "modules": [
-                {
-                    "name": "krunner",
-                    "config-opts": [
-                        "-DBUILD_TESTING=OFF",
-                        "-DCMAKE_BUILD_TYPE=RelWithDebInfo"
-                    ],
-                    "buildsystem": "cmake-ninja",
-                    "sources": [
-                        {
-                            "type": "git",
-                            "url": "https://anongit.kde.org/krunner.git",
-                            "branch": "master"
-                        }
-                    ],
-                    "modules": [
-                        {
-                            "name": "plasma-framework",
-                            "config-opts": [
-                                "-DBUILD_TESTING=OFF",
-                                "-DCMAKE_BUILD_TYPE=RelWithDebInfo"
-                            ],
-                            "buildsystem": "cmake-ninja",
-                            "sources": [
-                                {
-                                    "type": "git",
-                                    "url": "https://anongit.kde.org/plasma-framework.git",
-                                    "branch": "master"
-                                }
-                            ],
-                            "cleanup": [
-                                "/bin/plasmapkg2"
-                            ],
-                            "modules": [
-                                {
-                                    "name": "kactivities",
-                                    "config-opts": [
-                                        "-DBUILD_TESTING=OFF",
-                                        "-DCMAKE_BUILD_TYPE=RelWithDebInfo"
-                                    ],
-                                    "buildsystem": "cmake-ninja",
-                                    "builddir": true,
-                                    "sources": [
-                                        {
-                                            "type": "git",
-                                            "url": "https://anongit.kde.org/kactivities.git",
-                                            "branch": "master"
-                                        }
-                                    ],
-                                    "cleanup": [
-                                        "/bin/kactivities-cli"
-                                    ]
-                                }
-                            ]
-                        }
-                    ]
                 }
             ]
         },
