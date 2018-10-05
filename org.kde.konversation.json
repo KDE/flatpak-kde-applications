@@ -7,8 +7,16 @@
     "command": "konversation",
     "tags": ["nightly"],
     "desktop-file-name-prefix": "(Nightly) ",
-    "finish-args": ["--share=ipc", "--share=network", "--socket=x11", "--socket=wayland",
-                    "--talk-name=org.kde.StatusNotifierWatcher", "--talk-name=org.freedesktop.Notifications" ],
+    "finish-args": [
+        "--share=ipc",
+        "--share=network",
+        "--socket=x11",
+        "--socket=wayland",
+        "--filesystem=xdg-config/kdeglobals:ro",
+        "--talk-name=org.kde.StatusNotifierWatcher",
+        "--talk-name=org.freedesktop.Notifications",
+        "--talk-name=com.canonical.AppMenu.Registrar"
+    ],
     "separate-locales": false,
 
     "modules": [

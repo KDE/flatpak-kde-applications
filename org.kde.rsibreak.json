@@ -8,8 +8,15 @@
     "command": "rsibreak",
     "tags": ["nightly"],
     "desktop-file-name-prefix": "(Nightly) ",
-    "finish-args": ["--share=ipc", "--socket=x11", "--socket=wayland", "--filesystem=host" ],
-    
+    "finish-args": [
+        "--share=ipc",
+        "--socket=x11",
+        "--socket=wayland",
+        "--filesystem=host",
+        "--filesystem=xdg-config/kdeglobals:ro",
+        "--talk-name=com.canonical.AppMenu.Registrar"
+    ],
+
     "modules": [
         {
             "name": "rsibreak",

@@ -15,7 +15,9 @@
         "--socket=pulseaudio",
         "--device=dri",
         "--filesystem=host",
-        "--system-talk-name=org.freedesktop.GeoClue2"
+        "--filesystem=xdg-config/kdeglobals:ro",
+        "--system-talk-name=org.freedesktop.GeoClue2",
+        "--talk-name=com.canonical.AppMenu.Registrar"
     ],
 
     "modules": [

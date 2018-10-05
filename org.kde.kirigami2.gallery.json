@@ -6,7 +6,15 @@
     "sdk": "org.kde.Sdk",
     "tags": ["nightly"],
     "desktop-file-name-prefix": "(Nightly) ",
-    "finish-args": ["--share=ipc", "--share=network", "--socket=x11", "--socket=wayland", "--device=dri" ],
+    "finish-args": [
+        "--share=ipc",
+        "--share=network",
+        "--socket=x11",
+        "--socket=wayland",
+        "--device=dri",
+        "--filesystem=xdg-config/kdeglobals:ro",
+        "--talk-name=com.canonical.AppMenu.Registrar"
+    ],
 
     "modules": [
         {

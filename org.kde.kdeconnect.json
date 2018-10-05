@@ -7,8 +7,18 @@
     "command": "kdeconnect-indicator",
     "tags": ["nightly"],
     "desktop-file-name-prefix": "(Nightly) ",
-    "finish-args": ["--share=ipc", "--socket=x11", "--socket=wayland", "--share=network", "--own-name=org.kde.kdeconnectd", "--own-name=org.kde.kdeconnect-indicator",
-                    "--talk-name=org.mpris.MediaPlayer2", "--talk-name=org.mpris.MediaPlayer2.Player" ],
+    "finish-args": [
+        "--share=ipc",
+        "--socket=x11",
+        "--socket=wayland",
+        "--share=network",
+        "--filesystem=xdg-config/kdeglobals:ro",
+        "--own-name=org.kde.kdeconnectd",
+        "--own-name=org.kde.kdeconnect-indicator",
+        "--talk-name=org.mpris.MediaPlayer2",
+        "--talk-name=org.mpris.MediaPlayer2.Player",
+        "--talk-name=com.canonical.AppMenu.Registrar"
+    ],
     "rename-desktop-file": "org.kde.kdeconnect.nonplasma.desktop",
 
     "modules": [

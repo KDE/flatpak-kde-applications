@@ -7,7 +7,14 @@
     "command": "calligraplan",
     "tags": ["nightly"],
     "desktop-file-name-prefix": "(Nightly) ",
-    "finish-args": ["--share=network", "--share=ipc", "--socket=x11", "--socket=wayland" ],
+    "finish-args": [
+        "--share=network",
+        "--share=ipc",
+        "--socket=x11",
+        "--socket=wayland",
+        "--filesystem=xdg-config/kdeglobals:ro",
+        "--talk-name=com.canonical.AppMenu.Registrar"
+    ],
 
     "modules": [
         "boost.json",
