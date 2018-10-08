@@ -40,9 +40,9 @@
         "--talk-name=org.kde.knotify",
         "--talk-name=org.kde.kwalletd5",
         "--talk-name=org.kde.kcookiejar5",
-        "--talk-name=com.canonical.AppMenu.Registrar"
+        "--talk-name=com.canonical.AppMenu.Registrar",
         "--system-talk-name=org.freedesktop.NetworkManager",
-        "--filesystem=xdg-config/kdeglobals:ro",
+        "--filesystem=xdg-config/kdeglobals:ro"
     ],
     "cleanup": [
         "/lib/cmake",

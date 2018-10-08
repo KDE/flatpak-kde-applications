@@ -22,7 +22,6 @@
     ],
     "build-options" : {
         "env": {
-            /* Such hack, much bad */
             "MOUNT_FUSE_PATH": "../tmp/",
             "BASH_COMPLETIONSDIR": "/app/share/bash-completion/completions"
         }
@@ -94,7 +93,6 @@
                          "/share/dbus-1/services/org.freedesktop.*",
                          "/share/gdm" ],
             "post-install": [
-                /* These are needed for the triggers */
                 "cp /usr/bin/gtk-update-icon-cache /app/bin",
                 "cp /usr/bin/update-mime-database /app/bin",
                 "cp /usr/bin/update-desktop-database /app/bin"],
