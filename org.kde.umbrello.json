@@ -6,7 +6,7 @@
     "runtime": "org.kde.Platform",
     "runtime-version": "5.11",
     "sdk": "org.kde.Sdk",
-    "command": "umbrello",
+    "command": "umbrello5",
     "tags": ["nightly"],
     "desktop-file-name-prefix": "(Nightly) ",
     "finish-args": ["--share=ipc", "--socket=x11", "--socket=wayland" ],
