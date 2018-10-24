@@ -29,14 +29,14 @@
             "sources": [
                 {
                     "type": "git",
-                    "url": "git://git.gnome.org/gtk+",
+                    "url": "https://gitlab.gnome.org/GNOME/gtk.git",
                     "branch": "gtk-2-24"
                 }
             ]
         },
         {
             "name": "mlt",
-            "sources": [ { "type": "git", "url": "https://github.com/mltframework/mlt.git", "branch": "v6.6.0" } ]
+            "sources": [ { "type": "git", "url": "https://github.com/mltframework/mlt.git", "branch": "v6.10.0" } ]
         },
         {
             "name": "kdenlive",
