@@ -21,7 +21,6 @@
     "separate-locales": false,
 
     "modules": [
-        "qtwebkit.json",
         {
             "name": "trojita",
             "buildsystem": "cmake-ninja",

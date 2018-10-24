@@ -1,6 +1,8 @@
 {
     "id": "org.kde.umbrello",
     "branch": "master",
+    "base": "io.qt.qtwebkit.BaseApp",
+    "base-version": "5.11",
     "runtime": "org.kde.Platform",
     "runtime-version": "5.11",
     "sdk": "org.kde.Sdk",
@@ -10,7 +12,6 @@
     "finish-args": ["--share=ipc", "--socket=x11", "--socket=wayland" ],
 
     "modules": [
-        "qtwebkit.json",
         {
             "config-opts": [ "-DENABLE_TESTING=OFF" ],
             "name": "kdelibs4support",
@@ -20,7 +21,7 @@
         {
             "name": "umbrello",
             "buildsystem": "cmake-ninja",
-            "config-opts": ["-DBUILD_KF5=ON", "-DENABLE_TESTING=OFF" , "-DQt5WebKitWidgets_DIR=/app/lib/cmake/Qt5WebKitWidgets/"],
+            "config-opts": ["-DBUILD_KF5=ON", "-DENABLE_TESTING=OFF"],
             "sources": [
                 { "type": "git", "url": "git://anongit.kde.org/umbrello.git" }
             ]

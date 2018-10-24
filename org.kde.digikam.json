@@ -1,6 +1,8 @@
 {
     "id": "org.kde.digikam",
     "branch": "master",
+    "base": "io.qt.qtwebkit.BaseApp",
+    "base-version": "5.11",
     "runtime": "org.kde.Platform",
     "runtime-version": "5.11",
     "sdk": "org.kde.Sdk",
@@ -18,7 +20,6 @@
 
     "modules": [
         "boost.json",
-        "qtwebkit.json",
         {
             "name": "opencv",
             "buildsystem": "cmake-ninja",
@@ -35,7 +36,7 @@
         {
             "name": "digikam",
             "buildsystem": "cmake-ninja",
-            "config-opts": ["-DENABLE_TESTING=OFF" , "-DQt5WebKitWidgets_DIR=/app/lib/cmake/Qt5WebKitWidgets/"],
+            "config-opts": ["-DENABLE_TESTING=OFF"],
             "builddir": true,
             "sources": [ { "type": "git", "url": "git://anongit.kde.org/digikam.git" } ]
         }

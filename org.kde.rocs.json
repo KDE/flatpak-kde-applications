@@ -1,6 +1,8 @@
 {
     "id": "org.kde.rocs",
     "branch": "master",
+    "base": "io.qt.qtwebkit.BaseApp",
+    "base-version": "5.11",
     "runtime": "org.kde.Platform",
     "runtime-version": "5.11",
     "sdk": "org.kde.Sdk",
@@ -18,7 +20,6 @@
 
     "modules": [
         "boost.json",
-        "qtwebkit.json",
         {
             "name": "grantlee",
             "config-opts": [ "-DENABLE_TESTING=OFF" ],
@@ -28,7 +29,7 @@
         {
             "name": "rocs",
             "buildsystem": "cmake-ninja",
-            "config-opts": ["-DENABLE_TESTING=OFF" , "-DQt5WebKit_DIR=/app/lib/cmake/Qt5WebKit/", "-DQt5WebKitWidgets_DIR=/app/lib/cmake/Qt5WebKitWidgets/"],
+            "config-opts": ["-DENABLE_TESTING=OFF"],
             "sources": [ { "type": "git", "url": "git://anongit.kde.org/rocs.git" } ]
         }
     ]
