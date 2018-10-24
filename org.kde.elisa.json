@@ -7,18 +7,7 @@
     "command": "elisa",
     "tags": ["nightly"],
     "desktop-file-name-prefix": "(Nightly) ",
-    "finish-args": [
-        "--share=ipc",
-        "--socket=x11",
-        "--socket=wayland",
-        "--filesystem=home",
-        "--filesystem=xdg-config/kdeglobals:ro",
-        "--socket=pulseaudio",
-        "--device=dri",
-        "--socket=session-bus",
-        "--env=BALOO_DB_PATH=.local/share/baloo",
-        "--talk-name=com.canonical.AppMenu.Registrar"
-    ],
+    "finish-args": ["--share=ipc", "--socket=x11", "--socket=wayland", "--filesystem=home", "--socket=pulseaudio", "--device=dri", "--socket=session-bus", "--env=BALOO_DB_PATH=.local/share/baloo" ],
 
     "modules": [
         {

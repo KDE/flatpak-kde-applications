@@ -9,15 +9,8 @@
     "command": "digikam",
     "tags": ["nightly"],
     "desktop-file-name-prefix": "(Nightly) ",
-    "finish-args": [
-        "--share=ipc",
-        "--socket=x11",
-        "--socket=wayland",
-        "--filesystem=host",
-        "--filesystem=xdg-config/kdeglobals:ro",
-        "--talk-name=com.canonical.AppMenu.Registrar"
-    ],
-
+    "finish-args": ["--share=ipc", "--socket=x11", "--socket=wayland", "--filesystem=host" ],
+    
     "modules": [
         "boost.json",
         {

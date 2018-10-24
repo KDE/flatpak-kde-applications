@@ -15,9 +15,7 @@
         "--socket=wayland",
         "--device=dri",
         "--filesystem=home",
-        "--filesystem=xdg-config/kdeglobals:ro",
-        "--talk-name=org.freedesktop.Notifications",
-        "--talk-name=com.canonical.AppMenu.Registrar"
+        "--talk-name=org.freedesktop.Notifications"
     ],
     "separate-locales": false,
 

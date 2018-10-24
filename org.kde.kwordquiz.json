@@ -13,9 +13,7 @@
         "--share=ipc",
         "--socket=x11",
         "--socket=pulseaudio",
-        "--device=dri",
-        "--filesystem=xdg-config/kdeglobals:ro",
-        "--talk-name=com.canonical.AppMenu.Registrar"
+        "--device=dri"
     ],
     "modules": [
         {

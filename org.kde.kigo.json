@@ -13,9 +13,7 @@
         "--socket=wayland",
         "--socket=pulseaudio",
         "--device=dri",
-        "--filesystem=host",
-        "--filesystem=xdg-config/kdeglobals:ro",
-        "--talk-name=com.canonical.AppMenu.Registrar"
+        "--filesystem=host"
     ],
     "modules": [
         "libkdegames.json",

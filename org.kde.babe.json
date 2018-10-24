@@ -8,17 +8,7 @@
     "command": "babe",
     "tags": ["nightly"],
     "desktop-file-name-prefix": "(Nightly) ",
-    "finish-args": [
-        "--share=ipc",
-        "--socket=x11",
-        "--socket=wayland",
-        "--filesystem=host",
-        "--filesystem=xdg-config/kdeglobals:ro",
-        "--socket=pulseaudio",
-        "--socket=session-bus",
-        "--share=network",
-        "--talk-name=com.canonical.AppMenu.Registrar"
-    ],
+    "finish-args": ["--share=ipc", "--socket=x11", "--socket=wayland", "--filesystem=host", "--socket=pulseaudio", "--socket=session-bus", "--share=network" ],
 
     "modules": [
         {

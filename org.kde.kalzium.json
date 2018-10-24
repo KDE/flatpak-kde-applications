@@ -12,9 +12,7 @@
         "--device=dri",
         "--share=ipc",
         "--socket=x11",
-        "--socket=wayland",
-        "--filesystem=xdg-config/kdeglobals:ro",
-        "--talk-name=com.canonical.AppMenu.Registrar"
+        "--socket=wayland"
     ],
     "modules": [
         {

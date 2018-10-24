@@ -7,17 +7,7 @@
     "command": "atelier",
     "tags": ["nightly"],
     "desktop-file-name-prefix": "(Nightly) ",
-    "finish-args": [
-        "--share=ipc",
-        "--socket=x11",
-        "--share=network",
-        "--socket=wayland",
-        "--filesystem=host",
-        "--device=all",
-        "--filesystem=xdg-config/kdeglobals:ro",
-        "--talk-name=com.canonical.AppMenu.Registrar"
-    ],
-
+    "finish-args": ["--share=ipc", "--socket=x11", "--share=network", "--socket=wayland", "--filesystem=host", "--device=all" ],
     "modules": [
                 {
             "name": "cmake",
