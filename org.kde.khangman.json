@@ -7,7 +7,7 @@
     "command": "khangman",
     "rename-icon": "khangman",
     "tags": ["nightly"],
-    "desktop-file-name-prefix": "(Nightly) ",
+    "desktop-file-name-suffix": " (Nightly)",
     "finish-args": [
         "--share=network",
         "--socket=pulseaudio",

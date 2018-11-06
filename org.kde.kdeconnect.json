@@ -6,7 +6,7 @@
     "sdk": "org.kde.Sdk",
     "command": "kdeconnect-indicator",
     "tags": ["nightly"],
-    "desktop-file-name-prefix": "(Nightly) ",
+    "desktop-file-name-suffix": " (Nightly)",
     "finish-args": ["--share=ipc", "--socket=x11", "--socket=wayland", "--share=network", "--own-name=org.kde.kdeconnectd", "--own-name=org.kde.kdeconnect-indicator",
                     "--talk-name=org.mpris.MediaPlayer2", "--talk-name=org.mpris.MediaPlayer2.Player" ],
     "rename-desktop-file": "org.kde.kdeconnect.nonplasma.desktop",

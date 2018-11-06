@@ -6,7 +6,7 @@
     "sdk": "org.kde.Sdk",
     "command": "lskat",
     "tags": ["nightly"],
-    "desktop-file-name-prefix": "(Nightly) ",
+    "desktop-file-name-suffix": " (Nightly)",
     "finish-args": ["--share=ipc", "--socket=x11", "--socket=wayland" ],
 
     "modules": [

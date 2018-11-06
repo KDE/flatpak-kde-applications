@@ -7,7 +7,7 @@
     "sdk": "org.kde.Sdk",
     "command": "babe",
     "tags": ["nightly"],
-    "desktop-file-name-prefix": "(Nightly) ",
+    "desktop-file-name-suffix": " (Nightly)",
     "finish-args": ["--share=ipc", "--socket=x11", "--socket=wayland", "--filesystem=host", "--socket=pulseaudio", "--socket=session-bus", "--share=network" ],
 
     "modules": [

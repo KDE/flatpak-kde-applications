@@ -7,7 +7,7 @@
     "command": "plasmashell",
     "rename-desktop-file": "org.kde.kfontview.desktop",
     "tags": ["nightly"],
-    "desktop-file-name-prefix": "(Nightly) ",
+    "desktop-file-name-suffix": " (Nightly)",
     "finish-args": ["--share=ipc", "--socket=x11", "--socket=wayland", "--filesystem=host" ],
     
     "modules": [
