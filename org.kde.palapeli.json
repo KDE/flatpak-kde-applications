@@ -21,7 +21,7 @@
             "config-opts": [ "-DENABLE_TESTING=OFF" ],
             "name": "kdelibs4support",
             "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kdelibs4support.git", "branch": "v5.51.0" } ]
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kdelibs4support.git", "branch": "v5.52.0" } ]
         },
         {
             "name": "palapeli",

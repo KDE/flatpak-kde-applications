@@ -15,7 +15,7 @@
             "name": "kross",
             "buildsystem": "cmake-ninja",
             "config-opts": [ "-DENABLE_TESTING=OFF" ],
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kross.git", "branch": "v5.51.0" } ]
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kross.git", "branch": "v5.52.0" } ]
         },
         {
             "name": "lokalize",
