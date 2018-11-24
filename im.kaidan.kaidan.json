@@ -21,13 +21,12 @@
 
     "modules": [
         {
-            "name": "gloox",
-            "buildsystem": "autotools",
+            "name": "qxmpp",
+            "buildsystem": "cmake",
             "sources": [
                 {
-                    "type": "archive",
-                    "url": "https://camaya.net/download/gloox-1.0.21.tar.bz2",
-                    "sha256": "3c13155c10e3182a1a57779134cc524efb3657545849534b2831fae0e2c3a7cc"
+                    "type": "git",
+                    "url": "https://github.com/qxmpp-project/qxmpp"
                 }
             ]
         },
@@ -38,7 +37,7 @@
             "sources": [
                 {
                     "type": "git",
-                    "url": "https://github.com/kaidanim/kaidan",
+                    "url": "https://git.kaidan.im/kaidan/kaidan",
                     "branch": "master"
                 }
             ]
