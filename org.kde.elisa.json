@@ -11,12 +11,6 @@
 
     "modules": [
         {
-            "config-opts": [ "-DENABLE_TESTING=OFF" ],
-            "name": "kdeclarative",
-            "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kdeclarative.git", "branch": "v5.52.0" } ]
-        },
-        {
             "config-opts": [ "-DBUILD_SHARED_LIBS=ON" ],
             "name": "taglib",
             "buildsystem": "cmake-ninja",
