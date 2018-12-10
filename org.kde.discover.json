@@ -7,7 +7,11 @@
     "command": "plasma-discover",
     "tags": ["nightly"],
     "desktop-file-name-suffix": " (Nightly)",
-    "finish-args": ["--share=ipc", "--socket=x11", "--socket=wayland", "--device=dri", "--share=network" ],
+    "finish-args": ["--share=ipc", "--socket=x11", "--socket=wayland", "--device=dri", "--share=network",
+        "--filesystem=home",
+        "--filesystem=~/.local/share/flatpak",
+        "--filesystem=xdg-data"
+    ],
 
     "cleanup": [
         "/share/bash-completion"
@@ -40,7 +44,7 @@
             ]
         },
         {
-            "config-opts": ["--libdir=lib", "-Denable-qt=true", "-Dstemming=false"],
+            "config-opts": ["--libdir=lib", "-Denable-qt=true", "-Dstemming=false", "-Dqt=true"],
             "name": "appstream",
             "buildsystem": "meson",
             "builddir": true,
@@ -70,6 +74,11 @@
                 }
             ]
         },
+	{
+	    "name": "glib-networking",
+            "buildsystem": "meson",
+	    "sources": [ { "type": "git", "url": "https://gitlab.gnome.org/GNOME/glib-networking.git", "branch": "glib-2-56" } ]
+	},
 
         {
             "name": "flatpak",
