@@ -4,7 +4,7 @@
     "runtime": "org.kde.Platform",
     "runtime-version": "5.11",
     "sdk": "org.kde.Sdk",
-    "command": "plasma-discover",
+    "command": "/app/bin/discoverwrapper.sh",
     "tags": ["nightly"],
     "desktop-file-name-suffix": " (Nightly)",
     "finish-args": ["--share=ipc", "--socket=x11", "--socket=wayland", "--device=dri", "--share=network",
@@ -137,7 +137,15 @@
                             "-DBUILD_SnapBackend=OFF", "-DBUILD_DummyBackend=ON"],
             "buildsystem": "cmake-ninja",
             "builddir": true,
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/discover.git" } ],
+            "sources": [
+                { "type": "git", "url": "git://anongit.kde.org/discover.git" },
+                {
+                    "type": "file",
+                    "path": "discover/wrapper.sh",
+                    "dest-filename": "discoverwrapper.sh"
+                }
+            ],
+            "post-install": [ "cp discoverwrapper.sh /app/bin/" ],
             "modules-not-building": [
                 {
                     "name": "snapd-glib",
