@@ -131,6 +131,20 @@
             ]
         },
         {
+            "name": "wrapper",
+            "buildsystem": "simple",
+            "build-commands": [
+                "install -m775 discoverwrapper.sh ${FLATPAK_DEST}/bin"
+            ],
+            "sources": [
+                {
+                    "type": "file",
+                    "path": "discover/wrapper.sh",
+                    "dest-filename": "discoverwrapper.sh"
+                }
+            ]
+        },
+        {
             "name": "discover",
             "config-opts": ["-DENABLE_TESTING=OFF" ,
                             "-DBUILD_SnapBackend=OFF", "-DBUILD_DummyBackend=ON"],
@@ -143,20 +157,6 @@
                 {
                     "name": "snapd-glib",
                     "sources": [ { "type": "git", "url": "https://github.com/snapcore/snapd-glib.git", "branch": "master" } ]
-                }
-            ]
-        },
-        {
-            "name": "wrapper",
-            "buildsystem": "simple",
-            "build-commands": [
-                "install -m775 discoverwrapper.sh ${FLATPAK_DEST}/bin"
-            ],
-            "sources": [
-                {
-                    "type": "file",
-                    "path": "discover/wrapper.sh",
-                    "dest-filename": "discoverwrapper.sh"
                 }
             ]
         }
