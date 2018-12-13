@@ -130,7 +130,6 @@
                 }
             ]
         },
-
         {
             "name": "discover",
             "config-opts": ["-DENABLE_TESTING=OFF" ,
@@ -138,18 +137,26 @@
             "buildsystem": "cmake-ninja",
             "builddir": true,
             "sources": [
-                { "type": "git", "url": "git://anongit.kde.org/discover.git" },
-                {
-                    "type": "file",
-                    "path": "discover/wrapper.sh",
-                    "dest-filename": "discoverwrapper.sh"
-                }
+                { "type": "git", "url": "git://anongit.kde.org/discover.git" }
             ],
-            "post-install": [ "cp discoverwrapper.sh /app/bin/" ],
             "modules-not-building": [
                 {
                     "name": "snapd-glib",
                     "sources": [ { "type": "git", "url": "https://github.com/snapcore/snapd-glib.git", "branch": "master" } ]
+                }
+            ]
+        },
+        {
+            "name": "wrapper",
+            "buildsystem": "simple",
+            "build-commands": [
+                "install -m775 discoverwrapper.sh ${FLATPAK_DEST}/bin"
+            ],
+            "sources": [
+                {
+                    "type": "file",
+                    "path": "discover/wrapper.sh",
+                    "dest-filename": "discoverwrapper.sh"
                 }
             ]
         }
