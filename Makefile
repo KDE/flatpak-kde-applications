@@ -10,6 +10,9 @@ all: $(REPO)/config $(foreach file, $(wildcard *.*.*.json), $(subst .json,.app,$
 %.app: %.remoteapp
 	./build.sh $<
 
+%.test: %.app
+	flatpak-builder --run app $(subst .app,.json,$<) $(COMMAND)
+
 %.flatpak: %.app
 	flatpak build-bundle ${REPO} $@ $*
 
