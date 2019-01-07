@@ -3,7 +3,7 @@
     "branch": "master",
     "rename-icon": "kontact",
     "runtime": "org.kde.Platform",
-    "runtime-version": "5.11",
+    "runtime-version": "5.12",
     "sdk": "org.kde.Sdk",
     "tags": [ "nightly" ],
     "desktop-file-name-suffix": " (Nightly)",

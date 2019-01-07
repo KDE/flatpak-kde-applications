@@ -2,7 +2,7 @@
     "id": "org.kde.step",
     "branch": "master",
     "runtime": "org.kde.Platform",
-    "runtime-version": "5.11",
+    "runtime-version": "5.12",
     "sdk": "org.kde.Sdk",
     "command": "step",
     "tags": ["nightly"],

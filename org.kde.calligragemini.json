@@ -2,7 +2,7 @@
     "id": "org.kde.calligragemini",
     "branch": "master",
     "runtime": "org.kde.Platform",
-    "runtime-version": "5.11",
+    "runtime-version": "5.12",
     "sdk": "org.kde.Sdk",
     "command": "calligragemini",
     "tags": ["nightly"],
