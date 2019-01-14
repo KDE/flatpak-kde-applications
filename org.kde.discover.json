@@ -20,49 +20,57 @@
             "BASH_COMPLETIONSDIR": "/app/share/bash-completion/completions"
         }
     },
+
     "modules": [
-        {
-            "name": "yaml",
-            "config-opts": [ "--disable-static", "--enable-x11" ],
-            "sources": [
-                 {
-                     "type": "archive",
-                     "url": "http://pyyaml.org/download/libyaml/yaml-0.1.7.zip",
-                     "sha256": "bd16d734a82ccc806eab7784b3a97ee4773daf359496b298968fc2eedc3d1b19"
-                 }
-            ]
-        },
         {
             "name": "appstream",
             "config-opts": [ "--libdir=lib", "-Dstemming=false", "-Dqt=true" ],
             "buildsystem": "meson",
             "builddir": true,
             "sources": [ { "type": "git", "url": "https://github.com/ximion/appstream.git", "branch": "master" } ],
+
             "modules": [
                 {
-                    "name": "glib",
-                    "config-opts": [ "--with-pcre=system", "--with-python=python3" ],
-                    "ensure-writable": [ "/share/glib-2.0/codegen/*.pyc" ],
-                    "cleanup-platform": [ "/share/glib-2.0/codegen",
-                                        "/bin/gdbus-codegen",
-                                        "/bin/glib-*",
-                                        "/bin/gobject-query",
-                                        "/bin/gresource",
-                                        "/bin/gtester*"
-                                    ],
-                    "sources": [ { "type": "git", "url": "https://gitlab.gnome.org/GNOME/glib.git", "branch": "glib-2-58" } ]
-                },
-                {
                     "name": "gobject-introspection",
-                    "sources": [ { "type": "git", "url": "https://gitlab.gnome.org/GNOME/gobject-introspection", "branch": "gnome-3-30" } ]
+                    "sources": [ { "type": "git", "url": "https://gitlab.gnome.org/GNOME/gobject-introspection", "branch": "gnome-3-30" } ],
+
+                    "modules": [
+                        {
+                            "name": "glib",
+                            "config-opts": [ "--with-pcre=system", "--with-python=python3" ],
+                            "ensure-writable": [ "/share/glib-2.0/codegen/*.pyc" ],
+                            "cleanup-platform": [
+                                "/share/glib-2.0/codegen",
+                                "/bin/gdbus-codegen",
+                                "/bin/glib-*",
+                                "/bin/gobject-query",
+                                "/bin/gresource",
+                                "/bin/gtester*"
+                            ],
+                            "sources": [ { "type": "git", "url": "https://gitlab.gnome.org/GNOME/glib.git", "branch": "glib-2-58" } ]
+                        },
+
+                        {
+                            "name": "glib-networking",
+                            "buildsystem": "meson",
+                            "sources": [ { "type": "git", "url": "https://gitlab.gnome.org/GNOME/glib-networking.git", "branch": "glib-2-58" } ]
+                        }
+                    ]
+                },
+
+                {
+                    "name": "yaml",
+                    "config-opts": [ "--disable-static", "--enable-x11" ],
+                    "sources": [
+                        {
+                            "type": "archive",
+                            "url": "http://pyyaml.org/download/libyaml/yaml-0.1.7.zip",
+                            "sha256": "bd16d734a82ccc806eab7784b3a97ee4773daf359496b298968fc2eedc3d1b19"
+                        }
+                    ]
                 }
             ]
         },
-	{
-	    "name": "glib-networking",
-            "buildsystem": "meson",
-	    "sources": [ { "type": "git", "url": "https://gitlab.gnome.org/GNOME/glib-networking.git", "branch": "glib-2-58" } ]
-	},
 
         {
             "name": "flatpak",
@@ -82,26 +90,36 @@
                 "cp /usr/bin/update-mime-database /app/bin",
                 "cp /usr/bin/update-desktop-database /app/bin"],
             "sources": [ { "type": "git", "url": "https://github.com/flatpak/flatpak", "branch": "flatpak-1.0.x" } ],
+
             "modules": [
-                {
-                    "name": "libfuse",
-                    "config-opts": ["--disable-util"],
-                    "cleanup": [ "/bin" ],
-                    "sources": [
-                        {
-                            "type": "archive",
-                            "url": "https://github.com/libfuse/libfuse/releases/download/fuse-2.9.7/fuse-2.9.7.tar.gz",
-                            "sha256": "832432d1ad4f833c20e13b57cf40ce5277a9d33e483205fc63c78111b3358874"
-                        }
-                    ]
-                },
                 {
                     "name": "ostree",
                     "config-opts": ["--disable-man"],
                     "cleanup": [ "/bin", "/etc/grub.d", "/libexec" ],
-                    "sources": [ { "type": "git", "url": "https://github.com/ostreedev/ostree.git", "tag": "v2018.9" } ]
+                    "sources": [ { "type": "git", "url": "https://github.com/ostreedev/ostree.git", "tag": "v2018.9" } ],
+
+                    "modules": [
+                        {
+                            "name": "libfuse",
+                            "config-opts": ["--disable-util"],
+                            "cleanup": [ "/bin" ],
+                            "sources": [
+                                {
+                                    "type": "archive",
+                                    "url": "https://github.com/libfuse/libfuse/releases/download/fuse-2.9.7/fuse-2.9.7.tar.gz",
+                                    "sha256": "832432d1ad4f833c20e13b57cf40ce5277a9d33e483205fc63c78111b3358874"
+                                }
+                            ]
+                        }
+                    ]
                 }
             ]
+        },
+
+        {
+            "name": "snapd-glib",
+            "disabled": true,
+            "sources": [ { "type": "git", "url": "https://github.com/snapcore/snapd-glib.git", "branch": "master" } ]
         },
 
         {
@@ -109,14 +127,7 @@
             "config-opts": [ "-DENABLE_TESTING=OFF", "-DBUILD_DummyBackend=ON" ],
             "buildsystem": "cmake-ninja",
             "builddir": true,
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/discover.git" } ],
-            "modules": [
-                {
-                    "name": "snapd-glib",
-                    "disabled": true,
-                    "sources": [ { "type": "git", "url": "https://github.com/snapcore/snapd-glib.git", "branch": "master" } ]
-                }
-            ]
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/discover.git" } ]
         }
     ]
 }
