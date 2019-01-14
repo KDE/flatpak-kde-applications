@@ -59,23 +59,18 @@
                                         "/bin/gresource",
                                         "/bin/gtester*"
                                     ],
-                    "sources": [
-                        {
-                            "type": "git",
-                            "url": "https://gitlab.gnome.org/GNOME/glib.git"
-                        }
-                    ]
+                    "sources": [ { "type": "git", "url": "https://gitlab.gnome.org/GNOME/glib.git", "branch": "glib-2-58" } ]
                 },
                 {
                     "name": "gobject-introspection",
-                    "sources": [ { "type": "git", "url": "https://gitlab.gnome.org/GNOME/gobject-introspection", "branch": "1.56.1" } ]
+                    "sources": [ { "type": "git", "url": "https://gitlab.gnome.org/GNOME/gobject-introspection", "branch": "gnome-3-30" } ]
                 }
             ]
         },
 	{
 	    "name": "glib-networking",
             "buildsystem": "meson",
-	    "sources": [ { "type": "git", "url": "https://gitlab.gnome.org/GNOME/glib-networking.git", "branch": "glib-2-56" } ]
+	    "sources": [ { "type": "git", "url": "https://gitlab.gnome.org/GNOME/glib-networking.git", "branch": "glib-2-58" } ]
 	},
 
         {
@@ -95,13 +90,7 @@
                 "cp /usr/bin/gtk-update-icon-cache /app/bin",
                 "cp /usr/bin/update-mime-database /app/bin",
                 "cp /usr/bin/update-desktop-database /app/bin"],
-            "sources": [
-                {
-                    "type": "git",
-                    "url": "https://github.com/flatpak/flatpak",
-                    "branch": "1.0.6"
-                }
-            ],
+            "sources": [ { "type": "git", "url": "https://github.com/flatpak/flatpak", "branch": "flatpak-1.0.x" } ],
             "modules": [
                 {
                     "name": "libfuse",
@@ -119,12 +108,7 @@
                     "name": "ostree",
                     "config-opts": ["--disable-man"],
                     "cleanup": [ "/bin", "/etc/grub.d", "/libexec" ],
-                    "sources": [
-                        {
-                            "type": "git",
-                            "url": "https://github.com/ostreedev/ostree.git"
-                        }
-                    ]
+                    "sources": [ { "type": "git", "url": "https://github.com/ostreedev/ostree.git", "tag": "v2018.9" } ]
                 }
             ]
         },
