@@ -26,7 +26,7 @@
             "config-opts": ["-DENABLE_TESTING=OFF"  ],
             "name": "kfilemetadata",
             "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kfilemetadata.git", "branch": "v5.53.0" } ]
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kfilemetadata.git", "branch": "v5.54.0" } ]
         },
         {
             "name": "lmdb",
@@ -39,7 +39,7 @@
             "config-opts": ["-DENABLE_TESTING=OFF" , "-DLMDB_DIR=/app"],
             "name": "baloo",
             "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/baloo.git", "branch": "v5.53.0" } ]
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/baloo.git", "branch": "v5.54.0" } ]
         },
         {
             "name": "elisa",
