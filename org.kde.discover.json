@@ -8,9 +8,7 @@
     "tags": ["nightly"],
     "desktop-file-name-suffix": " (Nightly)",
     "finish-args": ["--share=ipc", "--socket=x11", "--socket=wayland", "--device=dri", "--share=network",
-        "--filesystem=home",
-        "--filesystem=xdg-data/flatpak",
-        "--filesystem=xdg-data"
+        "--filesystem=xdg-data/flatpak"
     ],
 
     "cleanup": [
