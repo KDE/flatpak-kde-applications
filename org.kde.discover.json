@@ -133,14 +133,14 @@
 
         {
             "name": "discover",
-            "config-opts": ["-DENABLE_TESTING=OFF" ,
-                            "-DBUILD_SnapBackend=OFF", "-DBUILD_DummyBackend=ON"],
+            "config-opts": [ "-DENABLE_TESTING=OFF", "-DBUILD_DummyBackend=ON" ],
             "buildsystem": "cmake-ninja",
             "builddir": true,
             "sources": [ { "type": "git", "url": "git://anongit.kde.org/discover.git" } ],
-            "modules-not-building": [
+            "modules": [
                 {
                     "name": "snapd-glib",
+                    "disabled": true,
                     "sources": [ { "type": "git", "url": "https://github.com/snapcore/snapd-glib.git", "branch": "master" } ]
                 }
             ]
