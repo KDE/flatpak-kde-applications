@@ -44,8 +44,8 @@
             ]
         },
         {
-            "config-opts": ["--libdir=lib", "-Denable-qt=true", "-Dstemming=false", "-Dqt=true"],
             "name": "appstream",
+            "config-opts": [ "--libdir=lib", "-Dstemming=false", "-Dqt=true" ],
             "buildsystem": "meson",
             "builddir": true,
             "sources": [ { "type": "git", "url": "https://github.com/ximion/appstream.git", "branch": "master" } ],
