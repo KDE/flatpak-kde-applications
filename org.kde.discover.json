@@ -8,7 +8,8 @@
     "tags": ["nightly"],
     "desktop-file-name-suffix": " (Nightly)",
     "finish-args": ["--share=ipc", "--socket=x11", "--socket=wayland", "--device=dri", "--share=network",
-        "--filesystem=xdg-data/flatpak"
+        "--filesystem=xdg-data/flatpak",
+        "--filesystem=/var/lib/flatpak"
     ],
 
     "cleanup": [
@@ -74,10 +75,13 @@
 
         {
             "name": "flatpak",
-            "config-opts": ["--disable-documentation",
-                            "--disable-seccomp",
-                            "--disable-sandboxed-triggers",
-                            "--disable-system-helper"],
+            "config-opts": [
+                "--disable-documentation",
+                "--disable-seccomp",
+                "--disable-sandboxed-triggers",
+                "--disable-system-helper",
+                "--localstatedir=/var"
+            ],
             "make-args": [ "XDG_APP_BINDIR=/usr/bin" ],
             "cleanup": [ "/etc/profile.d",
                          "/libexec",
