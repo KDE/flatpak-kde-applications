@@ -11,6 +11,18 @@
 
     "modules": [
         {
+            "config-opts": [ "BUILDCC=gcc", "--disable-lua", "--disable-a52", "--disable-qt", "--disable-ncurses" ],
+            "name": "libvlc",
+            "builsystem": "autotools",
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "ftp://ftp.videolan.org/pub/videolan/vlc/3.0.4/vlc-3.0.4.tar.xz",
+                    "sha256": "01f3db3790714038c01f5e23c709e31ecd6f1c046ac93d19e1dde38b3fc05a9e"
+                }
+            ]
+        },
+        {
             "config-opts": [ "-DBUILD_SHARED_LIBS=ON" ],
             "name": "taglib",
             "buildsystem": "cmake-ninja",
