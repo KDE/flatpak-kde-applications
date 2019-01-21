@@ -4,9 +4,9 @@
     "runtime": "org.kde.Platform",
     "runtime-version": "5.12",
     "sdk": "org.kde.Sdk",
-    "command": "kexi-3.2",
+    "command": "kexi-3.3",
     "tags": ["nightly"],
-    "rename-desktop-file": "org.kde.kexi-3.2.desktop",
+    "rename-desktop-file": "org.kde.kexi-3.3.desktop",
     "desktop-file-name-suffix": " (Nightly)",
     "finish-args": ["--share=ipc", "--socket=x11", "--socket=wayland" ],
 
