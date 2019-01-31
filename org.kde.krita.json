@@ -24,8 +24,21 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "http://www.exiv2.org/exiv2-0.25.tar.gz",
-                    "sha256": "c80bfc778a15fdb06f71265db2c3d49d8493c382e516cb99b8c9f9cbde36efa4"
+                    "url": "http://www.exiv2.org/builds/exiv2-0.27.0a-Source.tar.gz",
+                    "sha256": "a4adfa7aaf295b0383adead476f8e0493b9d6c6c7570d5884d2ebf8a2871902f"
+                }
+            ]
+        },
+        {
+            "name": "quazip",
+            "buildsystem": "cmake-ninja",
+            "builddir": true,
+            "config-opts": [ "-DBUILD_WITH_QT4=OFF" ],
+            "sources": [
+                { "type": "git", "url": "https://github.com/stachenov/quazip.git" },
+                {
+                    "type": "patch",
+                    "path": "quazip-install-properly.patch"
                 }
             ]
         },
