@@ -1,6 +1,6 @@
 {
     "id": "org.kde.kexi-stable",
-    "branch": "nightly-stable",
+    "branch": "master",
     "runtime": "org.kde.Platform",
     "runtime-version": "5.12",
     "sdk": "org.kde.Sdk",
