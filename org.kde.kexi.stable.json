@@ -1,0 +1,35 @@
+{
+    "id": "org.kde.kexi",
+    "branch": "master",
+    "runtime": "org.kde.Platform",
+    "runtime-version": "5.12",
+    "sdk": "org.kde.Sdk",
+    "command": "kexi-3.2",
+    "tags": ["nightly-stable"],
+    "rename-desktop-file": "org.kde.kexi-3.2.desktop",
+    "desktop-file-name-suffix": " (Nightly, Stable)",
+    "finish-args": ["--share=ipc", "--socket=x11", "--socket=wayland" ],
+
+    "modules": [
+        {
+            "name": "kdb",
+            "buildsystem": "cmake-ninja",
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kdb.git" } ]
+        },
+        {
+            "name": "kproperty",
+            "buildsystem": "cmake-ninja",
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kproperty.git" } ]
+        },
+        {
+            "name": "kreport",
+            "buildsystem": "cmake-ninja",
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kreport.git" } ]
+        },
+        {
+            "name": "kexi",
+            "buildsystem": "cmake-ninja",
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kexi.git", "branch": "3.2" } ]
+        }
+    ]
+}
