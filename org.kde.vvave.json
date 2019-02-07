@@ -1,11 +1,11 @@
 {
-    "id": "org.kde.babe",
+    "id": "org.kde.vvave",
     "branch": "master",
-    "rename-icon": "babe",
+    "rename-icon": "vvave",
     "runtime": "org.kde.Platform",
     "runtime-version": "5.12",
     "sdk": "org.kde.Sdk",
-    "command": "babe",
+    "command": "vvave",
     "tags": ["nightly"],
     "desktop-file-name-suffix": " (Nightly)",
     "finish-args": ["--share=ipc", "--socket=x11", "--socket=wayland", "--filesystem=host", "--socket=pulseaudio", "--socket=session-bus", "--share=network" ],
@@ -23,11 +23,18 @@
             ]
         },
         {
-            "name": "babe",
+            "name": "mauikit",
+            "buildsystem": "cmake-ninja",
+            "sources": [
+                { "type": "git", "url": "git://anongit.kde.org/mauikit.git" }
+            ]
+        },
+        {
+            "name": "vvave",
             "buildsystem": "cmake-ninja",
             "config-opts": [ "-DCMAKE_EXE_LINKER_FLAGS=-lz" ],
             "sources": [
-                { "type": "git", "url": "git://anongit.kde.org/babe.git" }
+                { "type": "git", "url": "git://anongit.kde.org/vvave.git" }
             ]
         }
     ]
