@@ -1,0 +1,84 @@
+{
+    "id": "org.kde.peruse",
+    "branch": "master",
+    "runtime": "org.kde.Platform",
+    "runtime-version": "5.12",
+    "sdk": "org.kde.Sdk",
+    "command": "peruse",
+    "tags": ["nightly"],
+    "desktop-file-name-suffix": " (Nightly)",
+    "finish-args": [
+        "--share=ipc",
+        "--socket=x11",
+        "--socket=wayland",
+        "--device=dri"
+    ],
+    "modules": [
+        "boost.json",
+        {
+            "name": "kjs",
+            "config-opts": [ "-DENABLE_TESTING=OFF" ],
+            "buildsystem": "cmake-ninja",
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kjs.git", "branch": "v5.54.0" } ]
+        },
+        {
+            "name": "khtml",
+            "config-opts": [ "-DENABLE_TESTING=OFF" ],
+            "buildsystem": "cmake-ninja",
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/khtml.git", "branch": "v5.54.0" } ]
+        },
+        {
+            "config-opts": [ "-DENABLE_TESTING=OFF" ],
+            "name": "kdelibs4support",
+            "buildsystem": "cmake-ninja",
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kdelibs4support.git", "branch": "v5.54.0" } ]
+        },
+        {
+            "name": "kactivities",
+            "config-opts": [ "-DENABLE_TESTING=OFF" ],
+            "buildsystem": "cmake-ninja",
+            "builddir": true,
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kactivities.git", "branch": "v5.54.0" } ]
+        },
+        {
+            "name": "purpose",
+            "config-opts": [ "-DENABLE_TESTING=OFF" ],
+            "buildsystem": "cmake-ninja",
+            "builddir": true,
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/purpose.git", "branch": "v5.54.0" } ]
+        },
+        {
+            "name": "poppler",
+            "config-opts": [ "-DENABLE_TESTING=OFF" ],
+            "buildsystem": "cmake-ninja",
+            "builddir": true,
+            "sources": [ { "type": "git", "url": "git://anongit.freedesktop.org/poppler/poppler.git", "branch": "master" } ],
+            "modules": [
+                {
+                    "name": "openjpeg2",
+                    "buildsystem": "cmake-ninja",
+                    "builddir": true,
+                    "sources": [ { "type": "git", "url": "https://github.com/szukw000/openjpeg.git", "branch": "v2.1.2" } ]
+                }
+            ]
+        },
+        {
+            "name": "okular",
+            "buildsystem": "cmake-ninja",
+            "builddir": true,
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/okular.git", "branch": "master" } ]
+        },
+        {
+            "config-opts": ["-DENABLE_TESTING=OFF"  ],
+            "name": "kfilemetadata",
+            "buildsystem": "cmake-ninja",
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kfilemetadata.git", "branch": "v5.54.0" } ]
+        },
+        {
+            "name": "peruse",
+            "buildsystem": "cmake-ninja",
+            "builddir": true,
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/peruse.git", "branch": "master" } ]
+        }
+    ]
+}
