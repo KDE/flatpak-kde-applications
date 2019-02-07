@@ -34,13 +34,7 @@
             "buildsystem": "cmake-ninja",
             "builddir": true,
             "config-opts": [ "-DBUILD_WITH_QT4=OFF" ],
-            "sources": [
-                { "type": "git", "url": "https://github.com/stachenov/quazip.git" },
-                {
-                    "type": "patch",
-                    "path": "quazip-install-properly.patch"
-                }
-            ]
+            "sources": [ { "type": "git", "url": "https://github.com/stachenov/quazip.git" } ]
         },
         {
             "name": "krita",
