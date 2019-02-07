@@ -1,0 +1,4 @@
+https://invent.kde.org/dkardarakos/calindori/blob/master/
+ID=org.kde.itinerary
+JSON=org.kde.phone.calindori.json
+GITURL=git@invent.kde.org:dkardarakos/calindori.git
