@@ -1,0 +1,106 @@
+{
+    "id": "org.kde.itinerary",
+    "branch": "master",
+    "runtime": "org.kde.Platform",
+    "runtime-version": "5.12",
+    "sdk": "org.kde.Sdk",
+    "command": "itinerary",
+    "tags": ["nightly"],
+    "desktop-file-name-suffix": " (Nightly)",
+    "finish-args": [
+        "--share=ipc",
+        "--socket=x11",
+        "--socket=wayland",
+        "--device=dri"
+    ],
+    "modules": [
+        {
+            "name": "poppler",
+            "config-opts": [ "-DENABLE_TESTING=OFF", "-DENABLE_UNSTABLE_API_ABI_HEADERS=ON" ],
+            "buildsystem": "cmake-ninja",
+            "builddir": true,
+            "sources": [ { "type": "git", "url": "git://anongit.freedesktop.org/poppler/poppler.git", "branch": "master" } ],
+            "modules": [
+                {
+                    "name": "openjpeg2",
+                    "buildsystem": "cmake-ninja",
+                    "builddir": true,
+                    "sources": [ { "type": "git", "url": "https://github.com/szukw000/openjpeg.git", "branch": "v2.1.2" } ]
+                }
+            ]
+        },
+        {
+            "name": "purpose",
+            "config-opts": [ "-DENABLE_TESTING=OFF" ],
+            "buildsystem": "cmake-ninja",
+            "builddir": true,
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/purpose.git", "branch": "v5.54.0" } ]
+        },
+        {
+            "name": "kitinerary",
+            "config-opts": [ "-DENABLE_TESTING=OFF" ],
+            "buildsystem": "cmake-ninja",
+            "builddir": true,
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kitinerary.git" } ],
+            "modules": [
+                {
+                    "name": "kcontacts",
+                    "config-opts": [ "-DBUILD_TESTING=OFF", "-DCMAKE_BUILD_TYPE=RelWithDebInfo" ],
+                    "buildsystem": "cmake-ninja",
+                    "sources": [ { "type": "git", "url": "https://anongit.kde.org/kcontacts.git" } ]
+                },
+                {
+                    "name": "kpkpass",
+                    "config-opts": [ "-DBUILD_TESTING=OFF", "-DCMAKE_BUILD_TYPE=RelWithDebInfo" ],
+                    "buildsystem": "cmake-ninja",
+                    "sources": [ { "type": "git", "url": "https://anongit.kde.org/kpkpass.git" } ]
+                },
+                {
+                    "name": "kcalcore",
+                    "config-opts": [ "-DBUILD_TESTING=OFF", "-DCMAKE_BUILD_TYPE=RelWithDebInfo" ],
+                    "buildsystem": "cmake-ninja",
+                    "sources": [ { "type": "git", "url": "https://anongit.kde.org/kcalcore.git" } ],
+                    "modules": [
+                        {
+                            "name": "libical",
+                            "buildsystem": "cmake-ninja",
+                            "config-opts": [
+                                "-DCMAKE_BUILD_TYPE=RelWithDebInfo"
+                            ],
+                            "sources": [
+                                {
+                                    "type": "archive",
+                                    "url": "https://github.com/libical/libical/releases/download/v3.0.4/libical-3.0.4.tar.gz",
+                                    "sha256": "72b216e10233c3f60cb06062facf41f3b0f70615e5a60b47f9853341a0d5d145"
+                                }
+                            ],
+                            "cleanup": [
+                                "/share/gtk-doc"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "kmime",
+                    "config-opts": [ "-DBUILD_TESTING=OFF", "-DCMAKE_BUILD_TYPE=RelWithDebInfo" ],
+                    "buildsystem": "cmake-ninja",
+                    "sources": [ { "type": "git", "url": "https://anongit.kde.org/kmime.git" } ]
+                }
+            ]
+        },
+        {
+            "name": "icon",
+            "buildsystem": "simple",
+            "build-commands": [
+                "mkdir -p /app/share/icons/hicolor/actions/22/",
+                "install -D /usr/share/icons/breeze/actions/22/map-globe.svg /app/share/icons/hicolor/32x32/apps/"
+            ]
+        },
+        {
+            "name": "itinerary",
+            "buildsystem": "cmake-ninja",
+            "builddir": true,
+            "sources": [ { "type": "git", "url": "https://anongit.kde.org/itinerary.git" } ]
+        }
+    ]
+}
