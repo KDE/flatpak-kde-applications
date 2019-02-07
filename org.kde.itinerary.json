@@ -30,11 +30,20 @@
             ]
         },
         {
-            "name": "purpose",
+            "name": "prison",
             "config-opts": [ "-DENABLE_TESTING=OFF" ],
             "buildsystem": "cmake-ninja",
             "builddir": true,
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/purpose.git", "branch": "v5.54.0" } ]
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/prison.git", "branch": "v5.54.0" } ],
+            "modules": [
+                {
+                    "name": "qrencode",
+                    "buildsystem": "cmake-ninja",
+                    "config-opts": [ "-DBUILD_SHARED_LIBS=ON", "-DWITH_TOOLS=OFF" ],
+                    "builddir": true,
+                    "sources": [ { "type": "git", "url": "https://github.com/fukuchi/libqrencode.git" } ]
+                }
+            ]
         },
         {
             "name": "kitinerary",
