@@ -547,7 +547,7 @@
                 {
                     "type": "git",
                     "url": "https://anongit.kde.org/kholidays.git",
-                    "branch": "master"
+                    "branch": "v5.54.0"
                 }
             ]
         },
@@ -607,7 +607,7 @@
                 {
                     "type": "git",
                     "url": "https://anongit.kde.org/syndication.git",
-                    "branch": "master"
+                    "branch": "v5.54.0"
                 }
             ]
         },
