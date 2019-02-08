@@ -266,7 +266,7 @@
                 {
                     "type": "git",
                     "url": "https://anongit.kde.org/prison.git",
-                    "branch": "master"
+                    "branch": "v5.54.0"
                 }
             ],
             "modules": [
@@ -373,10 +373,6 @@
                     "type": "git",
                     "url": "https://anongit.kde.org/kpimtextedit.git",
                     "branch": "master"
-                },
-                {
-                    "type": "patch",
-                    "path": "kontact-kpimtextedit-revert-qttextspeech-dep.patch"
                 }
             ]
         },
