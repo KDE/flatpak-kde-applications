@@ -2,7 +2,7 @@
     "id": "org.kde.digikam",
     "branch": "master",
     "base": "io.qt.qtwebkit.BaseApp",
-    "base-version": "stable",
+    "base-version": "5.11",
     "runtime": "org.kde.Platform",
     "runtime-version": "5.12",
     "sdk": "org.kde.Sdk",
