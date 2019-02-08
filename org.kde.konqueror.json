@@ -11,7 +11,6 @@
     "finish-args": ["--share=ipc", "--socket=x11", "--socket=wayland", "--filesystem=host" ],
 
     "modules": [
-        "boost.json",
         {
             "config-opts": [ "-DENABLE_TESTING=OFF" ],
             "name": "kjs",
@@ -31,13 +30,6 @@
             "sources": [ { "type": "git", "url": "git://anongit.kde.org/kdelibs4support.git", "branch": "v5.54.0" } ]
         },
         { "name": "ksu", "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "git://anongit.kde.org/kdesu.git", "branch": "v5.54.0" } ] },
-        {
-            "name": "kactivities",
-            "config-opts": [ "-DENABLE_TESTING=OFF" ],
-            "buildsystem": "cmake-ninja",
-            "builddir": true,
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kactivities.git", "branch": "v5.54.0" } ]
-        },
         {
             "name": "konqueror",
             "buildsystem": "cmake-ninja",
