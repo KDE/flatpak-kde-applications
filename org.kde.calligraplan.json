@@ -10,7 +10,7 @@
     "finish-args": ["--share=network", "--share=ipc", "--socket=x11", "--socket=wayland" ],
 
     "modules": [
-        "boost.json",
+        "eigen.json",
         {
             "name": "kjs",
             "buildsystem": "cmake-ninja",
@@ -41,13 +41,12 @@
             "buildsystem": "cmake-ninja",
             "sources": [ { "type": "git", "url": "git://anongit.kde.org/kdiagram.git" } ]
         },
-        "eigen.json",
         {
             "name": "calligraplan",
             "buildsystem": "cmake-ninja",
             "builddir": true,
-            "config-opts": ["-DENABLE_TESTING=OFF" , "-DPRODUCTSET=PLAN"],
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/calligra.git" } ]
+            "config-opts": ["-DENABLE_TESTING=OFF"],
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/calligraplan.git" } ]
         }
     ]
 }
