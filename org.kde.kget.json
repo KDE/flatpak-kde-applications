@@ -11,6 +11,7 @@
 
     "modules": [
         "boost.json",
+        "gpgme.json",
         {
             "config-opts": [ "-DENABLE_TESTING=OFF" ],
             "name": "kdelibs4support",
