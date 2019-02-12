@@ -7,7 +7,7 @@
     "command": "kdevelop",
     "tags": ["nightly"],
     "desktop-file-name-suffix": " (Nightly)",
-    "finish-args": ["--share=ipc", "--socket=x11", "--socket=wayland", "--filesystem=host" ],
+    "finish-args": ["--share=ipc", "--socket=x11", "--socket=wayland", "--filesystem=host", "--allow=devel" ],
 
     "modules": [
         "boost.json",
@@ -22,20 +22,6 @@
             "config-opts": [ "-DENABLE_TESTING=OFF" ],
             "buildsystem": "cmake-ninja",
             "sources": [ { "type": "git", "url": "git://anongit.kde.org/libkomparediff2.git" } ]
-        },
-        {
-            "name": "llvmclang",
-            "buildsystem": "cmake-ninja",
-            "builddir": true,
-            "config-opts": ["-DLLVM_BUILD_LLVM_DYLIB=ON", "-DLLVM_LINK_LLVM_DYLIB=ON"],
-            "cleanup": [ "/lib/*.a" ],
-            "sources": [
-                { "type": "git", "url": "http://llvm.org/git/llvm.git", "branch": "release_70" },
-                {
-                    "type": "git", "url": "http://llvm.org/git/clang.git", "branch": "release_70",
-                    "dest": "llvm/tools"
-                }
-            ]
         },
         {
             "name": "kdevelop",
