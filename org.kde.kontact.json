@@ -60,38 +60,8 @@
     "rename-icon": "kontact",
     "copy-icon": true,
     "modules": [
-        {
-            "name": "gpgme",
-            "sources": [
-                {
-                    "type": "archive",
-                    "url": "https://gnupg.org/ftp/gcrypt/gpgme/gpgme-1.11.1.tar.bz2",
-                    "sha256": "2d1b111774d2e3dd26dcd7c251819ce4ef774ec5e566251eb9308fa7542fbd6f"
-                }
-            ],
-            "modules": [
-                {
-                    "name": "libgpg-error",
-                    "sources": [
-                        {
-                            "type": "archive",
-                            "url": "https://www.gnupg.org/ftp/gcrypt/libgpg-error/libgpg-error-1.32.tar.bz2",
-                            "sha256": "c345c5e73cc2332f8d50db84a2280abfb1d8f6d4f1858b9daa30404db44540ca"
-                        }
-                    ]
-                },
-                {
-                    "name": "libassuan",
-                    "sources": [
-                        {
-                            "type": "archive",
-                            "url": "https://www.gnupg.org/ftp/gcrypt/libassuan/libassuan-2.5.1.tar.bz2",
-                            "sha256": "47f96c37b4f2aac289f0bc1bacfa8bd8b4b209a488d3d15e2229cb6cc9b26449"
-                        }
-                    ]
-                }
-            ]
-        },
+        "boost.json",
+        "gpgme.json",
         {
             "name": "kdiagram",
             "config-opts": [
@@ -138,21 +108,6 @@
                     "cleanup": [
                         "/share/gtk-doc"
                     ]
-                }
-            ]
-        },
-        {
-            "name": "boost",
-            "buildsystem": "simple",
-            "build-commands": [
-                "./bootstrap.sh --prefix=/app --with-libraries=graph,program_options,system,thread",
-                "./b2 -j $FLATPAK_BUILDER_N_JOBS install"
-            ],
-            "sources": [
-                {
-                    "type": "archive",
-                    "url": "https://dl.bintray.com/boostorg/release/1.68.0/source/boost_1_68_0.tar.bz2",
-                    "sha256": "7f6130bc3cf65f56a618888ce9d5ea704fa10b462be126ad053e80e553d6d8b7"
                 }
             ]
         },
