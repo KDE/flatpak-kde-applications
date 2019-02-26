@@ -1,6 +1,8 @@
 {
     "id": "org.kde.trojita",
     "rename-icon": "trojita",
+    "base": "io.qt.qtwebkit.BaseApp",
+    "base-version": "5.12",
     "runtime": "org.kde.Platform",
     "runtime-version": "5.12",
     "sdk": "org.kde.Sdk",

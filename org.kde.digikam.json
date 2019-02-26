@@ -2,7 +2,7 @@
     "id": "org.kde.digikam",
     "branch": "master",
     "base": "io.qt.qtwebkit.BaseApp",
-    "base-version": "5.11",
+    "base-version": "5.12",
     "runtime": "org.kde.Platform",
     "runtime-version": "5.12",
     "sdk": "org.kde.Sdk",
@@ -18,13 +18,13 @@
             "buildsystem": "cmake-ninja",
             "builddir": true,
             "config-opts": ["-DENABLE_TESTING=OFF" , "-DWITH_OPENCL=ON", "-DWITH_OPENGL=ON", "-DWITH_TBB=ON", "-DWITH_XINE=ON"],
-            "sources": [ { "type": "git", "url": "http://github.com/Itseez/opencv.git", "branch": "3.3.1" } ]
+            "sources": [ { "type": "git", "url": "https://github.com/Itseez/opencv.git", "branch": "3.4.5" } ]
         },
         {
             "name": "exiv2",
             "buildsystem": "cmake-ninja",
             "builddir": true,
-            "sources": [ { "type": "git", "url": "https://github.com/Exiv2/exiv2.git", "branch": "v0.26" } ]
+            "sources": [ { "type": "git", "url": "https://github.com/Exiv2/exiv2.git", "branch": "0.27" } ]
         },
         {
             "name": "digikam",
