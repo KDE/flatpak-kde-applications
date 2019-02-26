@@ -30,8 +30,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://www.gnupg.org/ftp/gcrypt/libgcrypt/libgcrypt-1.7.7.tar.bz2",
-                    "sha256": "b9b85eba0793ea3e6e66b896eb031fa05e1a4517277cc9ab10816b359254cd9a"
+                    "url": "https://www.gnupg.org/ftp/gcrypt/libgcrypt/libgcrypt-1.8.4.tar.bz2",
+                    "sha256": "f638143a0672628fde0cad745e9b14deb85dffb175709cacc1f4fe24b93f2227"
                 }
             ]
         },
@@ -43,6 +43,14 @@
                     "url": "https://github.com/LibVNC/libvncserver/archive/LibVNCServer-0.9.11.tar.gz",
                     "sha256": "193d630372722a532136fd25c5326b2ca1a636cbb8bf9bb115ef869c804d2894"
                 }
+            ]
+        },
+        {
+            "name": "icon",
+            "buildsystem": "simple",
+            "build-commands": [
+                "mkdir -p /app/share/icons/hicolor/32x32/apps/",
+                "install -D /usr/share/icons/breeze/apps/48/krfb.svg /app/share/icons/hicolor/32x32/apps/"
             ]
         },
         {
