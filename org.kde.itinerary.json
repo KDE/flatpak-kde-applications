@@ -34,7 +34,7 @@
             "config-opts": [ "-DENABLE_TESTING=OFF" ],
             "buildsystem": "cmake-ninja",
             "builddir": true,
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/prison.git", "branch": "v5.55.0" } ],
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/prison.git", "branch": "v5.56.0" } ],
             "modules": [
                 {
                     "name": "qrencode",

@@ -221,7 +221,7 @@
                 {
                     "type": "git",
                     "url": "https://anongit.kde.org/prison.git",
-                    "branch": "v5.55.0"
+                    "branch": "v5.56.0"
                 }
             ],
             "modules": [
@@ -502,7 +502,7 @@
                 {
                     "type": "git",
                     "url": "https://anongit.kde.org/kholidays.git",
-                    "branch": "v5.55.0"
+                    "branch": "v5.56.0"
                 }
             ]
         },
@@ -562,7 +562,7 @@
                 {
                     "type": "git",
                     "url": "https://anongit.kde.org/syndication.git",
-                    "branch": "v5.55.0"
+                    "branch": "v5.56.0"
                 }
             ]
         },
