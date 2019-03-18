@@ -17,6 +17,17 @@
     ],
     "modules": [
         {
+            "name": "purpose",
+            "buildsystem": "cmake-ninja",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "git://anongit.kde.org/purpose.git",
+                    "tag": "v5.56.0"
+                }
+            ]
+        },
+        {
             "name": "icon",
             "buildsystem": "simple",
             "build-commands": [
