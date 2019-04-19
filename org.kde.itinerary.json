@@ -11,12 +11,13 @@
         "--share=ipc",
         "--socket=x11",
         "--socket=wayland",
-        "--device=dri"
+        "--device=dri",
+        "--share=network"
     ],
     "modules": [
         {
             "name": "poppler",
-            "config-opts": [ "-DENABLE_TESTING=OFF", "-DENABLE_UNSTABLE_API_ABI_HEADERS=ON" ],
+            "config-opts": [ "-DENABLE_TESTING=OFF", "-DENABLE_UNSTABLE_API_ABI_HEADERS=ON", "-DENABLE_CPP=OFF", "-DENABLE_GLIB=OFF", "-DENABLE_GOBJECT_INTROSPECTION=OFF", "-DENABLE_UTILS=OFF" ],
             "buildsystem": "cmake-ninja",
             "builddir": true,
             "sources": [ { "type": "git", "url": "git://anongit.freedesktop.org/poppler/poppler.git", "branch": "master" } ],
@@ -25,9 +26,11 @@
                     "name": "openjpeg2",
                     "buildsystem": "cmake-ninja",
                     "builddir": true,
-                    "sources": [ { "type": "git", "url": "https://github.com/uclouvain/openjpeg.git", "branch": "v2.3.1" } ]
+                    "sources": [ { "type": "git", "url": "https://github.com/uclouvain/openjpeg.git", "branch": "v2.3.1" } ],
+                    "cleanup": [ "/bin", "/include", "/lib/openjpeg-*", "/lib/pkgconfig" ]
                 }
-            ]
+            ],
+            "cleanup": [ "/include", "/lib/pkgconfig" ]
         },
         {
             "name": "prison",
@@ -41,9 +44,11 @@
                     "buildsystem": "cmake-ninja",
                     "config-opts": [ "-DBUILD_SHARED_LIBS=ON", "-DWITH_TOOLS=OFF" ],
                     "builddir": true,
-                    "sources": [ { "type": "git", "url": "https://github.com/fukuchi/libqrencode.git" } ]
+                    "sources": [ { "type": "git", "url": "https://github.com/fukuchi/libqrencode.git" } ],
+                    "cleanup": [ "/include", "/lib/pkgconfig", "/share/man" ]
                 }
-            ]
+            ],
+            "cleanup": [ "/include", "/lib/cmake", "/mkspecs", "/etc/xdg/*categories" ]
         },
         {
             "name": "kitinerary",
@@ -56,26 +61,30 @@
                     "name": "kcontacts",
                     "config-opts": [ "-DBUILD_TESTING=OFF", "-DCMAKE_BUILD_TYPE=RelWithDebInfo" ],
                     "buildsystem": "cmake-ninja",
-                    "sources": [ { "type": "git", "url": "https://anongit.kde.org/kcontacts.git" } ]
+                    "builddir": true,
+                    "sources": [ { "type": "git", "url": "https://anongit.kde.org/kcontacts.git" } ],
+                    "cleanup": [ "/include", "/lib/cmake", "/mkspecs", "/etc/xdg/*categories" ]
                 },
                 {
                     "name": "kpkpass",
                     "config-opts": [ "-DBUILD_TESTING=OFF", "-DCMAKE_BUILD_TYPE=RelWithDebInfo" ],
                     "buildsystem": "cmake-ninja",
-                    "sources": [ { "type": "git", "url": "https://anongit.kde.org/kpkpass.git" } ]
+                    "builddir": true,
+                    "sources": [ { "type": "git", "url": "https://anongit.kde.org/kpkpass.git" } ],
+                    "cleanup": [ "/include", "/lib/cmake", "/mkspecs", "/etc/xdg/*categories" ]
                 },
                 {
                     "name": "kcalcore",
                     "config-opts": [ "-DBUILD_TESTING=OFF", "-DCMAKE_BUILD_TYPE=RelWithDebInfo" ],
+                    "builddir": true,
                     "buildsystem": "cmake-ninja",
                     "sources": [ { "type": "git", "url": "https://anongit.kde.org/kcalcore.git" } ],
                     "modules": [
                         {
                             "name": "libical",
                             "buildsystem": "cmake-ninja",
-                            "config-opts": [
-                                "-DCMAKE_BUILD_TYPE=RelWithDebInfo"
-                            ],
+                            "builddir": true,
+                            "config-opts": [ "-DCMAKE_BUILD_TYPE=RelWithDebInfo", "-DICAL_BUILD_DOCS=OFF", "-DICAL_GLIB=OFF", "-DWITH_CXX_BINDINGS=OFF", "-DSHARED_ONLY=ON" ],
                             "sources": [
                                 {
                                     "type": "archive",
@@ -83,26 +92,46 @@
                                     "sha256": "72b216e10233c3f60cb06062facf41f3b0f70615e5a60b47f9853341a0d5d145"
                                 }
                             ],
-                            "cleanup": [
-                                "/share/gtk-doc"
-                            ]
+                            "cleanup": [ "/include", "/lib/cmake", "/lib/pkgconfig" ]
                         }
-                    ]
+                    ],
+                    "cleanup": [ "/include", "/lib/cmake", "/mkspecs", "/etc/xdg/*categories" ]
                 },
                 {
                     "name": "kmime",
                     "config-opts": [ "-DBUILD_TESTING=OFF", "-DCMAKE_BUILD_TYPE=RelWithDebInfo" ],
                     "buildsystem": "cmake-ninja",
-                    "sources": [ { "type": "git", "url": "https://anongit.kde.org/kmime.git" } ]
+                    "builddir": true,
+                    "sources": [ { "type": "git", "url": "https://anongit.kde.org/kmime.git" } ],
+                    "cleanup": [ "/include", "/lib/cmake", "/mkspecs", "/etc/xdg/*categories" ]
+                },
+                {
+                    "name": "zxing",
+                    "config-opts": [ "-DBUILD_SHARED_LIBS=ON" ],
+                    "buildsystem": "cmake-ninja",
+                    "builddir": true,
+                    "subdir": "core",
+                    "sources": [ { "type": "git", "url": "https://github.com/nu-book/zxing-cpp" } ],
+                    "cleanup": [ "/include", "/lib/cmake", "/mkspecs", "/etc/xdg/*categories" ]
                 }
-            ]
+            ],
+            "cleanup": [ "/include", "/lib/cmake", "/mkspecs", "/etc/xdg/*categories", "/lib/libexec" ]
+        },
+        {
+            "name": "kholidays",
+            "config-opts": [ "-DENABLE_TESTING=OFF" ],
+            "buildsystem": "cmake-ninja",
+            "builddir": true,
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kholidays.git", "branch": "v5.56.0" } ],
+            "cleanup": [ "/include", "/lib/cmake", "/mkspecs", "/etc/xdg/*categories" ]
         },
         {
             "name": "kpublictransport",
             "config-opts": [ "-DENABLE_TESTING=OFF" ],
             "buildsystem": "cmake-ninja",
             "builddir": true,
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kpublictransport.git" } ]
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kpublictransport.git" } ],
+            "cleanup": [ "/include", "/lib/cmake", "/mkspecs", "/etc/xdg/*categories" ]
         },
         {
             "name": "icon",
@@ -116,7 +145,8 @@
             "name": "itinerary",
             "buildsystem": "cmake-ninja",
             "builddir": true,
-            "sources": [ { "type": "git", "url": "https://anongit.kde.org/itinerary.git" } ]
+            "sources": [ { "type": "git", "url": "https://anongit.kde.org/itinerary.git" } ],
+            "cleanup": [ "/etc/xdg/*categories" ]
         }
     ]
 }
