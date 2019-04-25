@@ -58,6 +58,7 @@
         },
         {
             "name": "kdenlive",
+            "config-opts": [ "-DCMAKE_BUILD_TYPE=Debug" ],
             "buildsystem": "cmake-ninja",
             "sources": [ { "type": "git", "url": "git://anongit.kde.org/kdenlive.git" } ]
         }
