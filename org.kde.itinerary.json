@@ -25,7 +25,7 @@
                     "name": "openjpeg2",
                     "buildsystem": "cmake-ninja",
                     "builddir": true,
-                    "sources": [ { "type": "git", "url": "https://github.com/szukw000/openjpeg.git", "branch": "v2.1.2" } ]
+                    "sources": [ { "type": "git", "url": "https://github.com/uclouvain/openjpeg.git", "branch": "v2.3.1" } ]
                 }
             ]
         },
