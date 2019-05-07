@@ -162,8 +162,8 @@
         "sources": [
             {
                 "type": "archive",
-                "url": "https://github.com/libofx/libofx/archive/0.9.13.tar.gz",
-                "sha256": "8e8838e81da76aa32b5bd4f38297b612bd7ec3110bf1b139e49ba8aaba94d3e2"
+                "url": "https://github.com/libofx/libofx/archive/0.9.14.tar.gz",
+                "sha256": "85a732efe3026e96fe1cf694ebdcf5d2c3b67adba85b9019abac44e7c43d8ce5"
             }
         ]
       },
@@ -172,6 +172,8 @@
          "buildsystem":"cmake-ninja",
          "config-opts":[
             "-DENABLE_TESTING=OFF",
+            "-DSKG_BUILD_TEST=OFF",
+            "-DSKG_DESIGNER=OFF",
             "-DQt5WebKit_DIR=/app/lib/cmake/Qt5WebKit/",
             "-DQt5WebKitWidgets_DIR=/app/lib/cmake/Qt5WebKitWidgets/"
          ],
