@@ -34,21 +34,7 @@
             "builddir": true,
             "sources": [ { "type": "git", "url": "git://anongit.kde.org/purpose.git", "branch": "v5.56.0" } ]
         },
-        {
-            "name": "poppler",
-            "config-opts": [ "-DENABLE_TESTING=OFF" ],
-            "buildsystem": "cmake-ninja",
-            "builddir": true,
-            "sources": [ { "type": "git", "url": "git://anongit.freedesktop.org/poppler/poppler.git", "branch": "master" } ],
-            "modules": [
-                {
-                    "name": "openjpeg2",
-                    "buildsystem": "cmake-ninja",
-                    "builddir": true,
-                    "sources": [ { "type": "git", "url": "https://github.com/uclouvain/openjpeg.git", "branch": "v2.3.1" } ]
-                }
-            ]
-        },
+        "poppler.json",
         {
             "name": "libspectre",
             "sources": [
