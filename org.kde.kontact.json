@@ -221,7 +221,7 @@
                 {
                     "type": "git",
                     "url": "https://anongit.kde.org/prison.git",
-                    "branch": "v5.57.0"
+                    "branch": "v5.58.0"
                 }
             ],
             "modules": [
@@ -260,7 +260,7 @@
             "name": "purpose",
             "config-opts": [ "-DBUILD_TESTING=OFF", "-DCMAKE_BUILD_TYPE=RelWithDebInfo" ],
             "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "https://anongit.kde.org/purpose.git", "branch": "v5.57.0" } ]
+            "sources": [ { "type": "git", "url": "https://anongit.kde.org/purpose.git", "branch": "v5.58.0" } ]
         },
         {
             "name": "akonadi-contacts",
@@ -508,22 +508,7 @@
                 {
                     "type": "git",
                     "url": "https://anongit.kde.org/kholidays.git",
-                    "branch": "v5.57.0"
-                }
-            ]
-        },
-        {
-            "name": "kalarmcal",
-            "config-opts": [
-                "-DBUILD_TESTING=OFF",
-                "-DCMAKE_BUILD_TYPE=RelWithDebInfo"
-            ],
-            "buildsystem": "cmake-ninja",
-            "sources": [
-                {
-                    "type": "git",
-                    "url": "https://anongit.kde.org/kalarmcal.git",
-                    "branch": "master"
+                    "branch": "v5.58.0"
                 }
             ]
         },
@@ -568,7 +553,7 @@
                 {
                     "type": "git",
                     "url": "https://anongit.kde.org/syndication.git",
-                    "branch": "v5.57.0"
+                    "branch": "v5.58.0"
                 }
             ]
         },
@@ -843,7 +828,7 @@
                                 {
                                     "type": "git",
                                     "url": "https://anongit.kde.org/kdelibs4support.git",
-                                    "branch": "v5.57.0"
+                                    "branch": "v5.58.0"
                                 }
                             ]
                         }
@@ -907,21 +892,6 @@
                 {
                     "type": "git",
                     "url": "https://anongit.kde.org/korganizer.git",
-                    "branch": "master"
-                }
-            ]
-        },
-        {
-            "name": "kalarm",
-            "config-opts": [
-                "-DBUILD_TESTING=OFF",
-                "-DCMAKE_BUILD_TYPE=RelWithDebInfo"
-            ],
-            "buildsystem": "cmake-ninja",
-            "sources": [
-                {
-                    "type": "git",
-                    "url": "https://anongit.kde.org/kalarm.git",
                     "branch": "master"
                 }
             ]
@@ -1084,7 +1054,7 @@
                         {
                             "type": "git",
                             "url": "https://anongit.kde.org/kross.git",
-                            "branch": "v5.57.0"
+                            "branch": "v5.58.0"
                         }
                     ]
                 }
