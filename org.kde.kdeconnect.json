@@ -35,6 +35,12 @@
             "sources": [ { "type": "git", "url": "git://anongit.kde.org/qca.git" } ]
         },
         {
+            "config-opts": [ "-DENABLE_TESTING=OFF" ],
+            "name": "pulseaudio-qt",
+            "buildsystem": "cmake-ninja",
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/pulseaudio-qt.git" } ]
+        },
+        {
             "name": "kdeconnect",
             "buildsystem": "cmake-ninja",
             "sources": [ { "type": "git", "url": "git://anongit.kde.org/kdeconnect-kde.git" } ]
