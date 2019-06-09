@@ -3,7 +3,6 @@
     "branch": "master",
     "runtime": "org.kde.Platform",
     "runtime-version": "5.12",
-    "rename-desktop-file": "rsibreak.desktop",
     "sdk": "org.kde.Sdk",
     "command": "rsibreak",
     "tags": ["nightly"],
