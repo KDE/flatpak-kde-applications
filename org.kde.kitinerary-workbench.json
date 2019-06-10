@@ -83,6 +83,14 @@
             "cleanup": [ "/include", "/lib/cmake", "/mkspecs", "/etc/xdg/*categories", "/lib/libexec" ]
         },
         {
+            "name": "icon",
+            "buildsystem": "simple",
+            "build-commands": [
+                "mkdir -p /app/share/icons/hicolor/32x32/apps/",
+                "install -D /usr/share/icons/breeze/actions/22/map-globe.svg /app/share/icons/hicolor/32x32/apps/"
+            ]
+        },
+        {
             "name": "kitinerary-workbench",
             "buildsystem": "cmake-ninja",
             "builddir": true,
