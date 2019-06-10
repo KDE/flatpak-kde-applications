@@ -11,6 +11,14 @@
 
     "modules": [
         {
+            "name": "icon",
+            "buildsystem": "simple",
+            "build-commands": [
+                "mkdir -p /app/share/icons/hicolor/32x32/apps/",
+                "install -D /usr/share/icons/breeze/apps/32/utilities-log-viewer.svg /app/share/icons/hicolor/32x32/apps/"
+            ]
+        },
+        {
             "name": "ksystemlog",
             "buildsystem": "cmake-ninja",
             "sources": [
