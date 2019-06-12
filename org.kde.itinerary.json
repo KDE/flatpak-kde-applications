@@ -21,7 +21,7 @@
             "config-opts": [ "-DENABLE_TESTING=OFF" ],
             "buildsystem": "cmake-ninja",
             "builddir": true,
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/prison.git", "branch": "v5.56.0" } ],
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/prison.git", "branch": "v5.59.0" } ],
             "modules": [
                 {
                     "name": "qrencode",
@@ -105,7 +105,7 @@
             "config-opts": [ "-DENABLE_TESTING=OFF" ],
             "buildsystem": "cmake-ninja",
             "builddir": true,
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kholidays.git", "branch": "v5.56.0" } ],
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kholidays.git", "branch": "v5.59.0" } ],
             "cleanup": [ "/include", "/lib/cmake", "/mkspecs", "/etc/xdg/*categories" ]
         },
         {

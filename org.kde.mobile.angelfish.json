@@ -23,7 +23,7 @@
                 {
                     "type": "git",
                     "url": "git://anongit.kde.org/purpose.git",
-                    "tag": "v5.56.0"
+                    "tag": "v5.59.0"
                 }
             ]
         },
