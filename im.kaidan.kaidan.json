@@ -33,7 +33,7 @@
         {
             "name": "kaidan",
             "buildsystem": "cmake-ninja",
-            "config-opts": ["-DI18N=1"],
+            "config-opts": ["-DI18N=1", "-DQUICK_COMPILER=0"],
             "sources": [
                 {
                     "type": "git",
