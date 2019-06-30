@@ -18,6 +18,19 @@
             "sources": [ { "type": "git", "url": "git://anongit.kde.org/kross.git", "branch": "v5.59.0" } ]
         },
         {
+            "name": "hunspell",
+            "sources": [
+                { "type": "git", "url": "https://github.com/hunspell/hunspell.git" },
+                {
+                    "type": "script",
+                    "dest-filename": "autogen.sh",
+                    "commands": [
+                        "AUTOMAKE=\"automake --foreign\" autoreconf -vfi"
+                    ]
+                }
+            ]
+        },
+        {
             "name": "lokalize",
             "buildsystem": "cmake-ninja",
             "sources": [ { "type": "git", "url": "git://anongit.kde.org/lokalize.git" } ]
