@@ -28,8 +28,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "ftp://ftp.videolan.org/pub/videolan/vlc/3.0.6/vlc-3.0.6.tar.xz",
-                    "sha256": "18c16d4be0f34861d0aa51fbd274fb87f0cab3b7119757ead93f3db3a1f27ed3"
+                    "url": "ftp://ftp.videolan.org/pub/videolan/vlc/3.0.7.1/vlc-3.0.7.1.tar.xz",
+                    "sha256": "0655804371096772f06104b75c21cde8a76e3b6c8a2fdadc97914f082c6264f5"
                 }
             ]
         },
