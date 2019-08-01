@@ -7,7 +7,9 @@
     "command": "spectacle",
     "tags": ["nightly"],
     "desktop-file-name-suffix": " (Nightly)",
-    "finish-args": ["--share=ipc", "--socket=x11", "--socket=wayland" ],
+    "finish-args": ["--share=ipc", "--socket=x11", "--socket=wayland",
+        "--talk-name=org.kde.kglobalaccel",
+        "--talk-name=org.kde.KWin"],
 
     "modules": [
         {
