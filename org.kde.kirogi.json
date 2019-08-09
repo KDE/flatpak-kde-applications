@@ -1,0 +1,25 @@
+{
+    "id": "org.kde.kirogi",
+    "branch": "master",
+    "rename-icon": "kirogi",
+    "runtime": "org.kde.Platform",
+    "runtime-version": "5.12",
+    "sdk": "org.kde.Sdk",
+    "command": "kirogi",
+    "tags": ["nightly"],
+    "desktop-file-name-prefix": "(Nightly) ",
+    "finish-args": ["--share=ipc", "--socket=x11", "--socket=wayland", "--filesystem=host", "--device=dri"],
+
+    "modules": [
+        {
+            "name": "kirogi",
+            "buildsystem": "cmake-ninja",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "git://anongit.kde.org/kirogi.git"
+                }
+            ]
+        }
+    ]
+}
