@@ -1,3 +1,4 @@
+ID=org.kde.ark
 JSON=org.kde.ark.json
 GITURL=git://anongit.kde.org/ark.git
 BRANCH=v19.08.0
