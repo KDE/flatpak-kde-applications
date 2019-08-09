@@ -14,7 +14,7 @@
             "name": "purpose",
             "config-opts": ["-DENABLE_TESTING=OFF"],
             "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/purpose.git", "branch": "v5.59.0" } ]
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/purpose.git", "branch": "v5.60.0" } ]
         },
         {
             "name": "kamoso",

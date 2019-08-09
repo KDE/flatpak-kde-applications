@@ -19,20 +19,20 @@
             "name": "kjs",
             "config-opts": [ "-DENABLE_TESTING=OFF" ],
             "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kjs.git", "branch": "v5.59.0" } ]
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kjs.git", "branch": "v5.60.0" } ]
         },
         {
             "name": "khtml",
             "config-opts": [ "-DENABLE_TESTING=OFF" ],
             "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/khtml.git", "branch": "v5.59.0" } ]
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/khtml.git", "branch": "v5.60.0" } ]
         },
         {
             "name": "purpose",
             "config-opts": [ "-DENABLE_TESTING=OFF" ],
             "buildsystem": "cmake-ninja",
             "builddir": true,
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/purpose.git", "branch": "v5.59.0" } ]
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/purpose.git", "branch": "v5.60.0" } ]
         },
         "poppler.json",
         {
