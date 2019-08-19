@@ -12,6 +12,19 @@
 
     "modules": [
         {
+            "name": "gst-plugins-good",
+            "config-opts": [
+                "--disable-gst_v4l2"
+            ],
+            "sources": [
+                {
+                    "type" : "archive",
+                    "url" : "https://gstreamer.freedesktop.org/src/gst-plugins-good/gst-plugins-good-1.14.4.tar.xz",
+                    "sha256": "5f8b553260cb0aac56890053d8511db1528d53cae10f0287cfce2cb2acc70979"
+                }
+            ]
+        },
+        {
             "name": "kirogi",
             "buildsystem": "cmake-ninja",
             "sources": [
