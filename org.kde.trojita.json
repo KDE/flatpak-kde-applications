@@ -16,7 +16,9 @@
         "--socket=wayland",
         "--device=dri",
         "--filesystem=home",
-        "--talk-name=org.freedesktop.Notifications"
+        "--talk-name=org.freedesktop.Notifications",
+        "--talk-name=org.kde.StatusNotifierWatcher",
+        "--own-name=org.kde.StatusNotifierItem-2-2"
     ],
     "separate-locales": false,
 
