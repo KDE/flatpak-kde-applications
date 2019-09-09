@@ -10,6 +10,7 @@
     "finish-args": ["--share=network", "--share=ipc", "--socket=x11", "--socket=wayland" ],
 
     "modules": [
+	"poppler.json",
         {
             "name": "analitza",
             "buildsystem": "cmake-ninja",
