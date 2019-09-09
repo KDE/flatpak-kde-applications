@@ -1,6 +1,6 @@
 {
   "id": "org.kde.KStyle.HighContrast",
-  "branch": "5.9",
+  "branch": "master",
   "runtime": "org.kde.Platform",
   "build-extension": true,
   "sdk": "org.kde.Sdk",
