@@ -69,6 +69,14 @@
                             "sha256": "bd16d734a82ccc806eab7784b3a97ee4773daf359496b298968fc2eedc3d1b19"
                         }
                     ]
+                },
+
+                {
+                    "name": "lmdb",
+                    "sources": [ { "type": "git", "url": "git://github.com/LMDB/lmdb.git", "branch": "LMDB_0.9.18"}],
+                    "no-autogen": true,
+                    "make-install-args": ["prefix=/app"],
+                    "subdir" : "libraries/liblmdb"
                 }
             ]
         },
