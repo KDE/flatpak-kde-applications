@@ -13,12 +13,18 @@
         "libkdegames.json",
         {
             "name": "freecell-solver",
-            "buildsystem": "cmake-ninja",
+            "buildsystem": "cmake",
+            "config-opts": [ "-DFCS_WITH_TEST_SUITE=OFF", "-DFCS_BUILD_DOCS=OFF" ],
+            "build-options" : {
+                "env": {
+                    "PERLLIB": "/app/lib/perl5/site_perl/5.28.1:/app/lib/perl5/site_perl/5.28.1/arch"
+                }
+            },
             "sources": [
                 {
                     "type": "archive",
-                    "url": "http://fc-solve.shlomifish.org/downloads/fc-solve/freecell-solver-4.18.0.tar.xz",
-                    "sha256": "d6369779837eef203e5a0051031245da772291cf2d6ff9f66555c69bcc8aaab2"
+                    "url": "https://fc-solve.shlomifish.org/downloads/fc-solve/freecell-solver-5.14.0.tar.xz",
+                    "sha256": "b09e7394181fcd972436fbbcd2192a9085b8924b70c892ad88b9ad95a7abee12"
                 }
             ],
             "modules": [
@@ -33,6 +39,55 @@
                             "type": "archive",
                             "url": "https://files.pythonhosted.org/packages/ee/b5/5aca5217501fbd06b1e5aed6d5986baa0da5380880e6bb6f421ed18e3a32/random2-1.0.1.zip",
                             "sha256": "34ad30aac341039872401595df9ab2c9dc36d0b7c077db1cea9ade430ed1c007"
+                        }
+                    ]
+                },
+                {
+                    "name": "pbr",
+                    "buildsystem": "simple",
+                    "build-commands": [
+                        "pip3 install --prefix=/app --no-deps ."
+                    ],
+                    "sources": [ { "type": "git", "url": "https://github.com/openstack/pbr.git", "branch": "5.4.3" } ]
+                },
+                {
+                    "name": "pysol_cards",
+                    "buildsystem": "simple",
+                    "build-commands": [
+                        "pip3 install --prefix=/app --no-deps ."
+                    ],
+                    "sources": [
+                        {
+                            "type": "archive",
+                            "url": "https://pypi.io/packages/source/p/pysol_cards/pysol_cards-0.8.6.tar.gz",
+                            "sha256": "6e536a60fad9a59d5ecc197b0a22718fa8b16de42ede37caa8f7b87b8e256148"
+                        }
+                    ]
+                },
+                {
+                    "name": "perl-modules",
+                    "buildsystem": "simple",
+                    "build-commands": [
+                        "echo 'this is a bit sad'",
+                        "tar xhf Path-Tiny-0.108.tar.gz",
+                        "tar xhf Template-Toolkit-2.29.tar.gz",
+                        "cd Path-Tiny-0.108 && perl Makefile.PL PREFIX=/app && make && make install",
+                        "cd Template-Toolkit-2.29 && perl Makefile.PL PREFIX=/app && make && make install",
+                        "ln -s /app/lib/perl5/site_perl/5.28.1/${FLATPAK_ARCH}-linux /app/lib/perl5/site_perl/5.28.1/arch"
+                    ],
+                    "post-install": [
+                        "chmod -R u+w /app/lib/perl5/site_perl"
+                    ],
+                    "sources": [
+                        {
+                            "type": "file",
+                            "url": "https://cpan.metacpan.org/authors/id/D/DA/DAGOLDEN/Path-Tiny-0.108.tar.gz",
+                            "sha256": "3c49482be2b3eb7ddd7e73a5b90cff648393f5d5de334ff126ce7a3632723ff5"
+                        },
+                        {
+                            "type": "file",
+                            "url": "https://search.cpan.org/CPAN/authors/id/A/AT/ATOOMIC/Template-Toolkit-2.29.tar.gz",
+                            "sha256": "2bddd71cf41fb805fd5234780daf53226b8e7004c623e1647ba2658113614779"
                         }
                     ]
                 }
