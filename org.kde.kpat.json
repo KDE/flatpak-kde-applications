@@ -73,7 +73,7 @@
                         "tar xhf Template-Toolkit-2.29.tar.gz",
                         "cd Path-Tiny-0.108 && perl Makefile.PL PREFIX=/app && make && make install",
                         "cd Template-Toolkit-2.29 && perl Makefile.PL PREFIX=/app && make && make install",
-                        "ln -s /app/lib/perl5/site_perl/5.28.1/${FLATPAK_ARCH}-linux /app/lib/perl5/site_perl/5.28.1/arch"
+                        "ln -s /app/lib/perl5/site_perl/5.28.1/$(basename `ls -d /usr/lib/perl5/5.28.1/*-linux`) /app/lib/perl5/site_perl/5.28.1/arch"
                     ],
                     "post-install": [
                         "chmod -R u+w /app/lib/perl5/site_perl"
