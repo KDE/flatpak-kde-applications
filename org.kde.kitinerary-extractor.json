@@ -34,11 +34,11 @@
                     "cleanup": [ "/include", "/lib/cmake", "/mkspecs", "/etc/xdg/*categories" ]
                 },
                 {
-                    "name": "kcalcore",
+                    "name": "kcalendarcore",
                     "config-opts": [ "-DBUILD_TESTING=OFF", "-DCMAKE_BUILD_TYPE=RelWithDebInfo" ],
                     "builddir": true,
                     "buildsystem": "cmake-ninja",
-                    "sources": [ { "type": "git", "url": "https://anongit.kde.org/kcalcore.git" } ],
+                    "sources": [ { "type": "git", "url": "https://anongit.kde.org/kcalendarcore.git" } ],
                     "modules": [
                         {
                             "name": "libical",

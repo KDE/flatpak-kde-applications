@@ -78,7 +78,7 @@
             ]
         },
         {
-            "name": "kcalcore",
+            "name": "kcalendarcore",
             "config-opts": [
                 "-DBUILD_TESTING=OFF",
                 "-DCMAKE_BUILD_TYPE=RelWithDebInfo"
@@ -87,7 +87,7 @@
             "sources": [
                 {
                     "type": "git",
-                    "url": "https://anongit.kde.org/kcalcore.git",
+                    "url": "https://anongit.kde.org/kcalendarcore.git",
                     "branch": "master"
                 }
             ],
