@@ -32,34 +32,6 @@
 
             "modules": [
                 {
-                    "name": "gobject-introspection",
-                    "sources": [ { "type": "git", "url": "https://gitlab.gnome.org/GNOME/gobject-introspection", "branch": "gnome-3-30" } ],
-
-                    "modules": [
-                        {
-                            "name": "glib",
-                            "config-opts": [ "--with-pcre=system", "--with-python=python3" ],
-                            "ensure-writable": [ "/share/glib-2.0/codegen/*.pyc" ],
-                            "cleanup-platform": [
-                                "/share/glib-2.0/codegen",
-                                "/bin/gdbus-codegen",
-                                "/bin/glib-*",
-                                "/bin/gobject-query",
-                                "/bin/gresource",
-                                "/bin/gtester*"
-                            ],
-                            "sources": [ { "type": "git", "url": "https://gitlab.gnome.org/GNOME/glib.git", "branch": "glib-2-58" } ]
-                        },
-
-                        {
-                            "name": "glib-networking",
-                            "buildsystem": "meson",
-                            "sources": [ { "type": "git", "url": "https://gitlab.gnome.org/GNOME/glib-networking.git", "branch": "glib-2-58" } ]
-                        }
-                    ]
-                },
-
-                {
                     "name": "lmdb",
                     "sources": [ { "type": "git", "url": "https://github.com/LMDB/lmdb", "branch": "mdb.master" } ],
                     "no-autogen": true,
@@ -77,14 +49,6 @@
                             "sha256": "bd16d734a82ccc806eab7784b3a97ee4773daf359496b298968fc2eedc3d1b19"
                         }
                     ]
-                },
-
-                {
-                    "name": "lmdb",
-                    "sources": [ { "type": "git", "url": "git://github.com/LMDB/lmdb.git", "branch": "LMDB_0.9.18"}],
-                    "no-autogen": true,
-                    "make-install-args": ["prefix=/app"],
-                    "subdir" : "libraries/liblmdb"
                 }
             ]
         },
