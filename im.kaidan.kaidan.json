@@ -49,12 +49,12 @@
             "name": "kaidan",
             "buildsystem": "cmake-ninja",
             "config-opts": ["-DI18N=1", "-DQUICK_COMPILER=0"],
-            "disable-submodules": true,
             "sources": [
                 {
                     "type": "git",
                     "url": "https://anongit.kde.org/kaidan",
-                    "branch": "master"
+                    "branch": "master",
+                    "disable-submodules": true
                 }
             ]
         }
