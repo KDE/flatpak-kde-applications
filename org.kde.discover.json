@@ -78,7 +78,7 @@
             "modules": [
                 {
                     "name": "ostree",
-                    "config-opts": ["--disable-man"],
+                    "config-opts": [ "--disable-man", "--without-libsystemd" ],
                     "cleanup": [ "/bin", "/etc/grub.d", "/libexec" ],
                     "sources": [ { "type": "git", "url": "https://github.com/ostreedev/ostree.git", "tag": "v2018.9" } ],
 
