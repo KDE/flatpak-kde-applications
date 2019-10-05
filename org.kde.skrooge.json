@@ -162,8 +162,8 @@
         "sources": [
             {
                 "type": "archive",
-                "url": "https://github.com/libofx/libofx/archive/0.9.14.tar.gz",
-                "sha256": "85a732efe3026e96fe1cf694ebdcf5d2c3b67adba85b9019abac44e7c43d8ce5"
+                "url": "https://github.com/libofx/libofx/archive/0.9.15.tar.gz",
+                "sha256": "74a9370da560526424ab62d79f7301f86620a8566c3f38cfc4684e63a4aac155"
             }
         ]
       },
