@@ -1,5 +1,5 @@
 {
-    "id": "org.kde.falkon",
+    "id": "org.kde.Falkon",
     "branch": "master",
     "runtime": "org.kde.Platform",
     "runtime-version": "5.12",
@@ -8,6 +8,7 @@
     "command": "falkon",
     "tags": ["nightly"],
     "desktop-file-name-suffix": " (Nightly)",
+    "rename-desktop-file": "org.kde.falkon.desktop",
     "finish-args": [
         "--share=ipc",
         "--share=network",
