@@ -1,0 +1,14 @@
+diff --git a/gst-libs/gst/rtsp/gstrtspconnection.c b/gst-libs/gst/rtsp/gstrtspconnection.c
+index b97aef669c43a4346868b9afcf30477601c2b535..9f63533652832b564f1bfcab993da1785d48e6fd 100644
+--- a/gst-libs/gst/rtsp/gstrtspconnection.c
++++ b/gst-libs/gst/rtsp/gstrtspconnection.c
+@@ -360,7 +360,8 @@ gst_rtsp_connection_create (const GstRTSPUrl * url, GstRTSPConnection ** conn)
+   newconn->url = gst_rtsp_url_copy (url);
+   newconn->timer = g_timer_new ();
+   newconn->timeout = 60;
+-  newconn->cseq = 0;            /* RFC 7826: "it is RECOMMENDED to start at 0." */
++  newconn->cseq = 1;            /* RFC 7826: "it is RECOMMENDED to start at 0.",
++                                   but some servers don't copy values <1 due to bugs. */
+ 
+   newconn->remember_session_id = TRUE;
+ 
