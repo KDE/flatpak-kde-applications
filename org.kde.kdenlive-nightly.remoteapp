@@ -1,0 +1,3 @@
+ID=org.kde.kdenlive
+JSON=packaging/flatpak/org.kde.kdenlive-nightly.json
+GITURL=git://anongit.kde.org/kdenlive.git
