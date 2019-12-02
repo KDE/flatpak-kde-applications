@@ -28,7 +28,7 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "ftp://ftp.videolan.org/pub/videolan/vlc/3.0.8/vlc-3.0.8.tar.xz",
+                    "url": "https://download.videolan.org/pub/videolan/vlc/3.0.8/vlc-3.0.8.tar.xz",
                     "sha256": "e0149ef4a20a19b9ecd87309c2d27787ee3f47dfd47c6639644bc1f6fd95bdf6"
                 }
             ]
