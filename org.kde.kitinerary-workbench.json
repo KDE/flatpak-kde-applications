@@ -2,7 +2,7 @@
     "id": "org.kde.kitinerary-workbench",
     "branch": "master",
     "runtime": "org.kde.Platform",
-    "runtime-version": "5.12",
+    "runtime-version": "5.13",
     "sdk": "org.kde.Sdk",
     "command": "kitinerary-workbench",
     "tags": ["nightly"],
@@ -24,43 +24,11 @@
             "sources": [ { "type": "git", "url": "git://anongit.kde.org/kitinerary.git" } ],
             "modules": [
                 {
-                    "name": "kcontacts",
-                    "config-opts": [ "-DBUILD_TESTING=OFF", "-DCMAKE_BUILD_TYPE=RelWithDebInfo" ],
-                    "buildsystem": "cmake-ninja",
-                    "builddir": true,
-                    "sources": [ { "type": "git", "url": "https://anongit.kde.org/kcontacts.git" } ],
-                    "cleanup": [ "/include", "/lib/cmake", "/mkspecs", "/etc/xdg/*categories" ]
-                },
-                {
                     "name": "kpkpass",
                     "config-opts": [ "-DBUILD_TESTING=OFF", "-DCMAKE_BUILD_TYPE=RelWithDebInfo" ],
                     "buildsystem": "cmake-ninja",
                     "builddir": true,
                     "sources": [ { "type": "git", "url": "https://anongit.kde.org/kpkpass.git" } ],
-                    "cleanup": [ "/include", "/lib/cmake", "/mkspecs", "/etc/xdg/*categories" ]
-                },
-                {
-                    "name": "kcalendarcore",
-                    "config-opts": [ "-DBUILD_TESTING=OFF", "-DCMAKE_BUILD_TYPE=RelWithDebInfo" ],
-                    "builddir": true,
-                    "buildsystem": "cmake-ninja",
-                    "sources": [ { "type": "git", "url": "https://anongit.kde.org/kcalendarcore.git" } ],
-                    "modules": [
-                        {
-                            "name": "libical",
-                            "buildsystem": "cmake-ninja",
-                            "builddir": true,
-                            "config-opts": [ "-DCMAKE_BUILD_TYPE=RelWithDebInfo", "-DICAL_BUILD_DOCS=OFF", "-DICAL_GLIB=OFF", "-DWITH_CXX_BINDINGS=OFF", "-DSHARED_ONLY=ON" ],
-                            "sources": [
-                                {
-                                    "type": "archive",
-                                    "url": "https://github.com/libical/libical/releases/download/v3.0.4/libical-3.0.4.tar.gz",
-                                    "sha256": "72b216e10233c3f60cb06062facf41f3b0f70615e5a60b47f9853341a0d5d145"
-                                }
-                            ],
-                            "cleanup": [ "/include", "/lib/cmake", "/lib/pkgconfig" ]
-                        }
-                    ],
                     "cleanup": [ "/include", "/lib/cmake", "/mkspecs", "/etc/xdg/*categories" ]
                 },
                 {
