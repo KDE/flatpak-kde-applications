@@ -44,7 +44,7 @@
             "config-opts": [ "-DENABLE_TESTING=OFF" ],
             "name": "kpeople",
             "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kpeople.git" } ]
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kpeople.git", "tag": "v5.64.0" } ]
         },
         {
             "name": "kdeconnect",
