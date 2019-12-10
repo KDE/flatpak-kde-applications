@@ -12,15 +12,9 @@
     "modules": [
         {
             "config-opts": [ "-DENABLE_TESTING=OFF" ],
-            "name": "kdelibs4support",
-            "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kdelibs4support.git", "branch": "v5.60.0" } ]
-        },
-        {
-            "config-opts": [ "-DENABLE_TESTING=OFF" ],
             "name": "plasma-framework",
             "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/plasma-framework.git", "branch": "v5.60.0" } ]
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/plasma-framework.git", "branch": "v5.64.0" } ]
         },
         {
             "name": "kmix",
