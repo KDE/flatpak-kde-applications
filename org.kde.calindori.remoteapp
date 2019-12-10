@@ -1,3 +1,3 @@
-ID=org.kde.itinerary
+ID=org.kde.phone.calindori
 JSON=org.kde.phone.calindori.json
-GITURL=https://invent.kde.org/dkardarakos/calindori.git
+GITURL=https://invent.kde.org/kde/calindori.git
