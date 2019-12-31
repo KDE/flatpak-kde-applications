@@ -1,0 +1,33 @@
+{
+    "id": "org.kde.ktrip",
+    "branch": "master",
+    "runtime": "org.kde.Platform",
+    "runtime-version": "5.13",
+    "sdk": "org.kde.Sdk",
+    "command": "ktrip",
+    "tags": ["nightly"],
+    "desktop-file-name-suffix": " (Nightly)",
+    "finish-args": [
+        "--share=ipc",
+        "--socket=x11",
+        "--socket=wayland",
+        "--device=dri",
+        "--share=network"
+    ],
+
+    "modules": [
+        {
+            "config-opts": [ "-DENABLE_TESTING=OFF" ],
+            "name": "kpublictransport",
+            "buildsystem": "cmake-ninja",
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kpublictransport.git"} ]
+        },
+        {
+            "name": "ktrip",
+            "buildsystem": "cmake-ninja",
+            "sources": [
+                { "type": "git", "url": "git://anongit.kde.org/ktrip.git" }
+            ]
+        }
+    ]
+}
