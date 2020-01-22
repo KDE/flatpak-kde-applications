@@ -1,0 +1,3 @@
+ID=org.kde.phonebook
+JSON=org.kde.phonebook.json
+GITURL=https://invent.kde.org/kde/plasma-phonebook.git
