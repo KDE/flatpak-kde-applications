@@ -2,7 +2,7 @@
     "id": "org.kde.koko",
     "rename-icon": "koko",
     "runtime": "org.kde.Platform",
-    "runtime-version": "5.12",
+    "runtime-version": "5.13",
     "sdk": "org.kde.Sdk",
     "command": "koko",
     "tags": ["nightly"],
@@ -35,8 +35,8 @@
             "sources": [
                 {
                     "type": "git",
-                    "url": "https://github.com/KDE/purpose",
-                    "branch": "master"
+                    "url": "git://anongit.kde.org/purpose.git",
+                    "tag": "v5.65.0"
                 }
             ]
         },
@@ -46,26 +46,26 @@
             "sources": [
                 {
                     "type": "git",
-                    "url": "https://github.com/KDE/koko",
+                    "url": "git://anongit.kde.org/koko.git",
                     "branch": "master"
                 },
                 {
                     "type": "file",
                     "path": "koko/cities1000.zip",
                     "dest-filename": "src/cities1000.zip",
-                    "sha256": "3c4cce61c4afb8954db15ea1f32aa5036b4a66bf3057b19a27b85c1a20ab5613"
+                    "sha256": "9cc6a02f00e2170d15b64454dc81cb6df775657bcb0835ce36f9b02f792fb7f8"
                 },
                 {
                     "type": "file",
                     "path": "koko/admin2Codes.txt",
                     "dest-filename": "src/admin2Codes.txt",
-                    "sha256": "2f12b595df32f4fc57f85345600229e0097e52ad9bf7eeafb34b7da6fe9f1246"
+                    "sha256": "8829a3ec91f58036fa0ef668aa5de428b310b2aeb43a5842c6958a284a1e85b9"
                 },
                 {
                     "type": "file",
                     "path": "koko/admin1CodesASCII.txt",
                     "dest-filename": "src/admin1CodesASCII.txt",
-                    "sha256": "0f93bba814d3af0f05032e68655b1b84d2ef6ef05aab330091bcbf819976cc75"
+                    "sha256": "e6b32ae1754817f5af17713bb3c173e227b2d6f6ffd4d66bae27bbe42376cde7"
                 }
             ]
         }
