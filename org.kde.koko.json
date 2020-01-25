@@ -30,17 +30,6 @@
             ]
         },
         {
-            "name": "purpose",
-            "buildsystem": "cmake-ninja",
-            "sources": [
-                {
-                    "type": "git",
-                    "url": "git://anongit.kde.org/purpose.git",
-                    "tag": "v5.65.0"
-                }
-            ]
-        },
-        {
             "name": "koko",
             "buildsystem": "cmake-ninja",
             "sources": [
