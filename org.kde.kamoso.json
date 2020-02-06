@@ -2,7 +2,7 @@
     "id": "org.kde.kamoso",
     "branch": "master",
     "runtime": "org.kde.Platform",
-    "runtime-version": "5.12",
+    "runtime-version": "5.14",
     "sdk": "org.kde.Sdk",
     "command": "kamoso",
     "tags": ["nightly"],
@@ -14,7 +14,7 @@
             "name": "purpose",
             "config-opts": ["-DENABLE_TESTING=OFF"],
             "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/purpose.git", "branch": "v5.60.0" } ]
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/purpose.git", "branch": "v5.66.0" } ]
         },
         {
             "name": "kamoso",

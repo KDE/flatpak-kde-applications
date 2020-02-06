@@ -3,7 +3,7 @@
     "branch": "master",
     "rename-icon": "kontact",
     "runtime": "org.kde.Platform",
-    "runtime-version": "5.12",
+    "runtime-version": "5.14",
     "sdk": "org.kde.Sdk",
     "tags": [ "nightly" ],
     "desktop-file-name-suffix": " (Nightly)",
@@ -221,7 +221,7 @@
                 {
                     "type": "git",
                     "url": "https://anongit.kde.org/prison.git",
-                    "branch": "v5.60.0"
+                    "branch": "v5.66.0"
                 }
             ],
             "modules": [
@@ -255,12 +255,6 @@
                     ]
                 }
             ]
-        },
-        {
-            "name": "purpose",
-            "config-opts": [ "-DBUILD_TESTING=OFF", "-DCMAKE_BUILD_TYPE=RelWithDebInfo" ],
-            "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "https://anongit.kde.org/purpose.git", "branch": "v5.60.0" } ]
         },
         {
             "name": "akonadi-contacts",
@@ -508,7 +502,7 @@
                 {
                     "type": "git",
                     "url": "https://anongit.kde.org/kholidays.git",
-                    "branch": "v5.60.0"
+                    "branch": "v5.66.0"
                 }
             ]
         },
@@ -553,7 +547,7 @@
                 {
                     "type": "git",
                     "url": "https://anongit.kde.org/syndication.git",
-                    "branch": "v5.60.0"
+                    "branch": "v5.66.0"
                 }
             ]
         },
@@ -828,7 +822,7 @@
                                 {
                                     "type": "git",
                                     "url": "https://anongit.kde.org/kdelibs4support.git",
-                                    "branch": "v5.60.0"
+                                    "branch": "v5.66.0"
                                 }
                             ]
                         }
@@ -1054,7 +1048,7 @@
                         {
                             "type": "git",
                             "url": "https://anongit.kde.org/kross.git",
-                            "branch": "v5.60.0"
+                            "branch": "v5.66.0"
                         }
                     ]
                 }

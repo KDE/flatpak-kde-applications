@@ -2,7 +2,7 @@
     "id": "org.kde.kwave",
     "branch": "master",
     "runtime": "org.kde.Platform",
-    "runtime-version": "5.12",
+    "runtime-version": "5.14",
     "sdk": "org.kde.Sdk",
     "command": "kwave",
     "tags": ["nightly"],

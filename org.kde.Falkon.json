@@ -2,7 +2,7 @@
     "id": "org.kde.Falkon",
     "branch": "master",
     "runtime": "org.kde.Platform",
-    "runtime-version": "5.12",
+    "runtime-version": "5.14",
     "sdk": "org.kde.Sdk",
     "rename-icon": "falkon",
     "command": "falkon",
