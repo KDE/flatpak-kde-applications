@@ -1,3 +1,3 @@
 ID=org.kde.plasmatube
 JSON=org.kde.plasmatube.json
-GITURL=git://invent.kde.org/lnj/plasmatube.git
+GITURL=https://invent.kde.org/lnj/plasmatube.git
