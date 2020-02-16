@@ -78,40 +78,6 @@
             ]
         },
         {
-            "name": "kcalendarcore",
-            "config-opts": [
-                "-DBUILD_TESTING=OFF",
-                "-DCMAKE_BUILD_TYPE=RelWithDebInfo"
-            ],
-            "buildsystem": "cmake-ninja",
-            "sources": [
-                {
-                    "type": "git",
-                    "url": "https://anongit.kde.org/kcalendarcore.git",
-                    "branch": "master"
-                }
-            ],
-            "modules": [
-                {
-                    "name": "libical",
-                    "buildsystem": "cmake-ninja",
-                    "config-opts": [
-                        "-DCMAKE_BUILD_TYPE=RelWithDebInfo"
-                    ],
-                    "sources": [
-                        {
-                            "type": "archive",
-                            "url": "https://github.com/libical/libical/releases/download/v3.0.4/libical-3.0.4.tar.gz",
-                            "sha256": "72b216e10233c3f60cb06062facf41f3b0f70615e5a60b47f9853341a0d5d145"
-                        }
-                    ],
-                    "cleanup": [
-                        "/share/gtk-doc"
-                    ]
-                }
-            ]
-        },
-        {
             "name": "akonadi",
             "config-opts": [
                 "-DBUILD_TESTING=OFF",
@@ -181,21 +147,6 @@
             ]
         },
         {
-            "name": "kcontacts",
-            "config-opts": [
-                "-DBUILD_TESTING=OFF",
-                "-DCMAKE_BUILD_TYPE=RelWithDebInfo"
-            ],
-            "buildsystem": "cmake-ninja",
-            "sources": [
-                {
-                    "type": "git",
-                    "url": "https://anongit.kde.org/kcontacts.git",
-                    "branch": "master"
-                }
-            ]
-        },
-        {
             "name": "grantlee",
             "config-opts": [
                 "-DBUILD_TESTING=OFF",
@@ -207,52 +158,6 @@
                     "type": "archive",
                     "url": "https://github.com/steveire/grantlee/archive/v5.1.0.tar.gz",
                     "sha256": "3836572fe5e49d28a1d99186c6d96f88ff839644b4bc77b73b6d8208f6ccc9d1"
-                }
-            ]
-        },
-        {
-            "name": "prison",
-            "config-opts": [
-                "-DBUILD_TESTING=OFF",
-                "-DCMAKE_BUILD_TYPE=RelWithDebInfo"
-            ],
-            "buildsystem": "cmake-ninja",
-            "sources": [
-                {
-                    "type": "git",
-                    "url": "https://anongit.kde.org/prison.git",
-                    "branch": "v5.66.0"
-                }
-            ],
-            "modules": [
-                {
-                    "name": "qrencode",
-                    "rm-configure": true,
-                    "sources": [
-                        {
-                            "type": "archive",
-                            "url": "https://fukuchi.org/works/qrencode/qrencode-4.0.2.tar.gz",
-                            "sha256": "dbabe79c07614625d1f74d8c0ae2ee5358c4e27eab8fd8fe31f9365f821a3b1d"
-                        },
-                        {
-                            "type": "script",
-                            "dest-filename": "autogen.sh",
-                            "commands": [
-                                "cp -p /usr/share/automake-*/config.{sub,guess} .",
-                                "autoconf -f -B build/autoconf_prepend-include"
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "name": "libdmtx",
-                    "sources": [
-                        {
-                            "type": "archive",
-                            "url": "https://github.com/dmtx/libdmtx/archive/v0.7.5.tar.gz",
-                            "sha256": "be0c5275695a732a5f434ded1fcc232aa63b1a6015c00044fe87f3a689b75f2e"
-                        }
-                    ]
                 }
             ]
         },
@@ -492,21 +397,6 @@
             ]
         },
         {
-            "name": "kholidays",
-            "config-opts": [
-                "-DBUILD_TESTING=OFF",
-                "-DCMAKE_BUILD_TYPE=RelWithDebInfo"
-            ],
-            "buildsystem": "cmake-ninja",
-            "sources": [
-                {
-                    "type": "git",
-                    "url": "https://anongit.kde.org/kholidays.git",
-                    "branch": "v5.66.0"
-                }
-            ]
-        },
-        {
             "name": "akonadi-calendar",
             "config-opts": [
                 "-DBUILD_TESTING=OFF",
@@ -533,21 +423,6 @@
                     "type": "git",
                     "url": "https://anongit.kde.org/akonadi-notes.git",
                     "branch": "master"
-                }
-            ]
-        },
-        {
-            "name": "syndication",
-            "config-opts": [
-                "-DBUILD_TESTING=OFF",
-                "-DCMAKE_BUILD_TYPE=RelWithDebInfo"
-            ],
-            "buildsystem": "cmake-ninja",
-            "sources": [
-                {
-                    "type": "git",
-                    "url": "https://anongit.kde.org/syndication.git",
-                    "branch": "v5.66.0"
                 }
             ]
         },
