@@ -1,0 +1,110 @@
+{
+    "name": "okular-dependencies",
+    "buildsystem": null,
+    "modules": [
+        {
+            "name": "kjs",
+            "config-opts": [ "-DENABLE_TESTING=OFF" ],
+            "buildsystem": "cmake-ninja",
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kjs.git", "branch": "v5.66.0" } ]
+        },
+        {
+            "name": "khtml",
+            "config-opts": [ "-DENABLE_TESTING=OFF" ],
+            "buildsystem": "cmake-ninja",
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/khtml.git", "branch": "v5.66.0" } ]
+        },
+        {
+            "name": "purpose",
+            "config-opts": [ "-DENABLE_TESTING=OFF" ],
+            "buildsystem": "cmake-ninja",
+            "builddir": true,
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/purpose.git", "branch": "v5.66.0" } ]
+        },
+        "poppler.json",
+        {
+            "name": "libspectre",
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "http://libspectre.freedesktop.org/releases/libspectre-0.2.8.tar.gz",
+                    "sha256": "65256af389823bbc4ee4d25bfd1cc19023ffc29ae9f9677f2d200fa6e98bc7a8"
+                }
+            ],
+            "modules": [
+                {
+                    "name": "ghostscript",
+                    "config-opts": [ "--disable-cups" ],
+                    "make-args": [ "so" ],
+                    "make-install-args": [ "soinstall" ],
+                    "cleanup": [ "/bin", "/share/man", "/share/ghostscript/9.20/doc/", "/share/ghostscript/9.20/examples" ],
+                    "rm-configure": true,
+                    "sources": [
+                        {
+                            "type": "archive",
+                            "url": "https://github.com/ArtifexSoftware/ghostpdl-downloads/releases/download/gs920/ghostscript-9.20.tar.xz",
+                            "sha256": "3c0f3dc5df6f784850fa4ce7dcc3d6c56ef543af1fbaedd1d9f8d9f8b66de0ab"
+                        },
+                        {
+                            "type": "script",
+                            "dest-filename": "autogen.sh",
+                            "commands": [
+                                "AUTOMAKE=\"automake --foreign\" autoreconf -vfi"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "kdegraphics-mobipocket",
+            "config-opts": ["-DCMAKE_BUILD_TYPE=Release" ],
+            "buildsystem": "cmake-ninja",
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kdegraphics-mobipocket" } ]
+        },
+        {
+            "name": "libzip",
+            "buildsystem": "cmake-ninja",
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://libzip.org/download/libzip-1.4.0.tar.xz",
+                    "sha256": "e508aba025f5f94b267d5120fc33761bcd98440ebe49dbfe2ed3df3afeacc7b1"
+                }
+            ]
+        },
+        {
+            "name": "chmlib",
+            "rm-configure": true,
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "http://www.jedrea.com/chmlib/chmlib-0.40.tar.bz2",
+                    "sha256": "3449d64b0cf71578b2c7e3ddc048d4af3661f44a83941ea074a7813f3a59ffa3"
+                },
+                {
+                    "type": "patch",
+                    "path": "chmlib-arm.patch"
+                },
+                {
+                    "type": "script",
+                    "dest-filename": "autogen.sh",
+                    "commands": [
+                        "AUTOMAKE=\"automake --foreign\" autoreconf -vfi"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "ebook-tools",
+            "buildsystem": "cmake-ninja",
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://downloads.sourceforge.net/project/ebook-tools/ebook-tools/0.2.2/ebook-tools-0.2.2.tar.gz",
+                    "sha256": "cbc35996e911144fa62925366ad6a6212d6af2588f1e39075954973bbee627ae"
+                }
+            ]
+        }
+    ]
+}

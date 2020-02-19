@@ -1,10 +1,10 @@
 {
-    "id": "org.kde.okular",
+    "id": "org.kde.okular.kirigami",
     "branch": "master",
     "runtime": "org.kde.Platform",
     "runtime-version": "5.14",
     "sdk": "org.kde.Sdk",
-    "command": "okular",
+    "command": "okularkirigami",
     "rename-icon": "okular",
     "tags": ["nightly"],
     "desktop-file-name-suffix": " (Nightly)",
@@ -20,6 +20,7 @@
         {
             "name": "okular",
             "buildsystem": "cmake-ninja",
+            "config-opts": [ "-DOKULAR_UI=mobile" ],
             "builddir": true,
             "sources": [ { "type": "git", "url": "git://anongit.kde.org/okular.git", "branch": "master" } ]
         }
