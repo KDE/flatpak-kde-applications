@@ -2,7 +2,7 @@
     "id": "org.kde.itinerary",
     "branch": "master",
     "runtime": "org.kde.Platform",
-    "runtime-version": "5.13",
+    "runtime-version": "5.14",
     "sdk": "org.kde.Sdk",
     "command": "itinerary",
     "tags": ["nightly"],
