@@ -14,6 +14,7 @@
         "--socket=x11",
         "--socket=wayland",
         "--device=dri",
+        "--device=all",
         "--filesystem=home",
         "--talk-name=org.freedesktop.Notifications",
         "--env=QT_QUICK_CONTROLS_STYLE=org.kde.desktop"
@@ -44,6 +45,29 @@
                 }
             ],
             "cleanup": [ "/include", "/lib/cmake", "/mkspecs", "/etc/xdg/*categories" ]
+        },
+        {
+            "name": "gst-plugins-bad",
+            "buildsystem": "meson",
+            "builddir": true,
+            "config-opts": [
+                "-Ddisable_gtkdoc=true"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://gstreamer.freedesktop.org/src/gst-plugins-bad/gst-plugins-bad-1.16.1.tar.xz",
+                    "sha256": "56481c95339b8985af13bac19b18bc8da7118c2a7d9440ed70e7dcd799c2adb5"
+                }
+            ],
+            "cleanup": [
+                "/include",
+                "/lib/*.la",
+                "/lib/gstreamer-1.0/*.la",
+                "/lib/gstreamer-1.0/include",
+                "/lib/pkgconfig",
+                "/share/gtk-doc"
+            ]
         },
         {
             "name": "kaidan",
