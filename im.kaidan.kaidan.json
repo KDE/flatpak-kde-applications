@@ -15,7 +15,6 @@
         "--socket=wayland",
         "--device=dri",
         "--device=all",
-        "--filesystem=home",
         "--talk-name=org.freedesktop.Notifications",
         "--env=QT_QUICK_CONTROLS_STYLE=org.kde.desktop"
     ],
