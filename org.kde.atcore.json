@@ -10,18 +10,6 @@
     "finish-args": ["--share=ipc", "--socket=x11", "--socket=wayland", "--device=all" ],
     "modules": [
         {
-            "name": "cmake",
-            "buildsystem":"cmake-ninja",
-            "cleanup": [
-                "/bin",
-                "/doc",
-                "/share"
-            ],
-            "sources":[
-                {"type":"archive","url":"https://cmake.org/files/v3.11/cmake-3.11.4.tar.gz","sha256":"8f864e9f78917de3e1483e256270daabc4a321741592c5b36af028e72bff87f5"}
-            ]
-        },
-        {
             "name": "atcore",
             "config-opts": ["-DBUILD_GUI=ON"],
             "buildsystem": "cmake-ninja",
