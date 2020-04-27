@@ -23,6 +23,11 @@
             "sources": [ { "type": "git", "url": "git://anongit.kde.org/kpublictransport.git"} ]
         },
         {
+            "name": "kirigami-addons",
+            "buildsystem": "cmake-ninja",
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kirigami-addons.git"} ]
+        },
+        {
             "name": "ktrip",
             "buildsystem": "cmake-ninja",
             "sources": [
