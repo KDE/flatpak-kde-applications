@@ -10,7 +10,7 @@
     "tags": ["nightly"],
     "desktop-file-name-suffix": " (Nightly)",
     "finish-args": ["--share=ipc", "--socket=cups", "--socket=x11", "--socket=wayland", "--filesystem=host" ],
-    
+
     "modules": [
         "boost.json",
         {
@@ -30,7 +30,7 @@
         {
             "name": "digikam",
             "buildsystem": "cmake-ninja",
-            "config-opts": ["-DENABLE_TESTING=OFF"],
+            "config-opts": ["-BUILD_TESTING=OFF" , "-DENABLE_KFILEMETADATASUPPORT=OFF" . "-DENABLE_AKONADICONTACTSUPPORT=OFF" . "-DENABLE_MYSQLSUPPORT=ON" . "-DENABLE_INTERNALMYSQL=ON" . "-DENABLE_MEDIAPLAYER=OFF" . "-DENABLE_DBUS=ON" . "-DENABLE_APPSTYLES=ON" . "-DENABLE_QWEBENGINE=ON"].
             "builddir": true,
             "sources": [ { "type": "git", "url": "git://anongit.kde.org/digikam.git" } ]
         }
