@@ -28,6 +28,13 @@
             "sources": [ { "type": "git", "url": "https://github.com/Exiv2/exiv2.git", "branch": "0.27-maintenance" } ]
         },
         {
+            "name": "qtav",
+            "buildsystem": "cmake-ninja",
+            "config-opts": ["-DBUILD_EXAMPLES=OFF" . "-DBUILD_TESTS=OFF" . "-DBUILD_PLAYERS=OFF" . "-DBUILD_QT5OPENGL=ON"],
+            "builddir": true,
+            "sources": [ { "type": "git", "url": "https://github.com/wang-bin/QtAV.git" } ]
+        },
+        {
             "name": "digikam",
             "buildsystem": "cmake-ninja",
             "config-opts": ["-BUILD_TESTING=OFF" , "-DENABLE_KFILEMETADATASUPPORT=OFF" . "-DENABLE_AKONADICONTACTSUPPORT=OFF" . "-DENABLE_MYSQLSUPPORT=ON" . "-DENABLE_INTERNALMYSQL=ON" . "-DENABLE_MEDIAPLAYER=OFF" . "-DENABLE_DBUS=ON" . "-DENABLE_APPSTYLES=ON" . "-DENABLE_QWEBENGINE=ON"].
