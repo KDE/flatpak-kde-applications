@@ -39,7 +39,7 @@
             "buildsystem": "cmake-ninja",
             "config-opts": ["-DBUILD_TESTS=OFF", "-DBUILD_EXAMPLES=OFF", "-DBUILD_PLAYERS=OFF", "-DBUILD_QT5OPENGL=ON"],
             "builddir": true,
-            "sources": [ { "type": "git", "url": "https://github.com/wang-bin/QtAV.git", "tag": "v1.13.0", "disable-submodules": false } ]
+            "sources": [ { "type": "git", "url": "https://github.com/wang-bin/QtAV.git", "disable-submodules": false } ]
         },
         {
             "name": "digikam",
