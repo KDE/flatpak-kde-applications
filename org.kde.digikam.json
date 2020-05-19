@@ -39,7 +39,9 @@
             "buildsystem": "cmake-ninja",
             "config-opts": ["-DBUILD_TESTS=OFF", "-DBUILD_EXAMPLES=OFF", "-DBUILD_PLAYERS=OFF", "-DBUILD_QT5OPENGL=ON"],
             "builddir": true,
-            "sources": [ { "type": "git", "url": "https://github.com/wang-bin/QtAV.git", "disable-submodules": false } ]
+            "sources": [ { "type": "git", "url": "https://github.com/wang-bin/QtAV.git", "disable-submodules": false },
+                         { "type": "patch", "path": "digikam-qtav-disable-qml.patch"}
+                       ]
         },
         {
             "name": "digikam",
