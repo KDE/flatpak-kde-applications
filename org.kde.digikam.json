@@ -13,6 +13,7 @@
 
     "modules": [
         "boost.json",
+        "eigen.json",
         {
             "name": "opencv",
             "buildsystem": "cmake-ninja",
