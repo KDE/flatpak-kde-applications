@@ -22,6 +22,16 @@
             "sources": [ { "type": "git", "url": "https://github.com/Itseez/opencv.git", "tag": "3.4.10" } ]
         },
         {
+            "name": "sane",
+            "buildsystem": "autotools",
+            "sources": [ { "type": "git", "url": "https://gitlab.com/sane-project/backends", "tag": "1_0_30"} ]
+        },
+        {
+            "name": "libksane",
+            "buildsystem": "cmake-ninja",
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/libksane.git" } ]
+        },
+        {
             "name": "exiv2",
             "buildsystem": "cmake-ninja",
             "config-opts": ["-DBUILD_SHARED_LIBS=ON", "-DEXIV2_ENABLE_XMP=ON", "-DEXIV2_ENABLE_EXTERNAL_XMP=OFF", "-DEXIV2_ENABLE_PNG=ON", "-DEXIV2_ENABLE_HEIF=ON", "-DEXIV2_ENABLE_NLS=ON", "-DEXIV2_ENABLE_PRINTUCS2=ON", "-DEXIV2_ENABLE_LENSDATA=ON", "-DEXIV2_ENABLE_VIDEO=OFF", "-DEXIV2_ENABLE_WEBREADY=OFF", "-DEXIV2_ENABLE_DYNAMIC_RUNTIME=OFF", "-DEXIV2_ENABLE_CURL=OFF", "-DEXIV2_ENABLE_SSH=OFF", "-DEXIV2_BUILD_SAMPLES=OFF", "-DEXIV2_BUILD_PO=OFF", "-DEXIV2_BUILD_EXIV2_COMMAND=OFF", "-DEXIV2_BUILD_UNIT_TESTS=OFF", "-DEXIV2_BUILD_DOC=OFF", "-DEXIV2_TEAM_EXTRA_WARNINGS=OFF", "-DEXIV2_TEAM_WARNINGS_AS_ERRORS=OFF", "-DEXIV2_TEAM_USE_SANITIZERS=OFF", "-DEXIV2_ENABLE_WIN_UNICODE=OFF"],
