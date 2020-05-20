@@ -43,6 +43,13 @@
             "sources": [ { "type": "git", "url": "https://github.com/wang-bin/QtAV.git", "disable-submodules": false } ]
         },
         {
+            "name": "lensfun",
+            "buildsystem": "cmake-ninja",
+            "config-opts": ["-DBUILD_STATIC=OFF", "-DBUILD_WITH_MSVC_STATIC_RUNTIME=OFF", "-DBUILD_TESTS=OFF", "-DBUILD_LENSTOOL=OFF", "-DBUILD_DOC=OFF", "-DINSTALL_PYTHON_MODULE=OFF", "-DINSTALL_HELPER_SCRIPTS=OFF"],
+            "builddir": true,
+            "sources": [ { "type": "git", "url": "https://github.com/lensfun/lensfun.git" } ]
+        },
+        {
             "name": "digikam",
             "buildsystem": "cmake-ninja",
             "config-opts": ["-DBUILD_TESTING=OFF" , "-DENABLE_KFILEMETADATASUPPORT=OFF", "-DENABLE_AKONADICONTACTSUPPORT=OFF", "-DENABLE_MYSQLSUPPORT=ON", "-DENABLE_INTERNALMYSQL=ON", "-DENABLE_MEDIAPLAYER=ON", "-DENABLE_DBUS=ON", "-DENABLE_APPSTYLES=ON", "-DENABLE_QWEBENGINE=ON"],
