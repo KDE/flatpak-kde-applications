@@ -44,7 +44,7 @@
         {
             "name": "digikam",
             "buildsystem": "cmake-ninja",
-            "config-opts": ["-DBUILD_TESTING=OFF" , "-DENABLE_KFILEMETADATASUPPORT=OFF", "-DENABLE_AKONADICONTACTSUPPORT=OFF", "-DENABLE_MYSQLSUPPORT=ON", "-DENABLE_INTERNALMYSQL=ON", "-DENABLE_MEDIAPLAYER=OFF", "-DENABLE_DBUS=ON", "-DENABLE_APPSTYLES=ON", "-DENABLE_QWEBENGINE=ON"],
+            "config-opts": ["-DBUILD_TESTING=OFF" , "-DENABLE_KFILEMETADATASUPPORT=OFF", "-DENABLE_AKONADICONTACTSUPPORT=OFF", "-DENABLE_MYSQLSUPPORT=ON", "-DENABLE_INTERNALMYSQL=ON", "-DENABLE_MEDIAPLAYER=ON", "-DENABLE_DBUS=ON", "-DENABLE_APPSTYLES=ON", "-DENABLE_QWEBENGINE=ON"],
             "builddir": true,
             "sources": [ { "type": "git", "url": "https://invent.kde.org/graphics/digikam.git" } ]
         }
