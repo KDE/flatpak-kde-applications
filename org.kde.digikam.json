@@ -210,6 +210,32 @@
             "sources": [ { "type": "git", "url": "https://github.com/lensfun/lensfun.git" } ]
         },
         {
+            "name": "imagemagick",
+            "buildsystem": "autotools",
+            "config-opts": [
+                "--without-freetype",
+                "--without-fontconfig",
+                "--without-raw",
+                "--without-lqr",
+                "--without-openjp2",
+                "--without-threads",
+                "--without-perl",
+                "--without-x",
+                "--without-heic",
+                "--disable-docs",
+                "--disable-static",
+                "--with-magick-plus-plus",
+                "--with-flif",
+                "--with-jbig",
+                "--with-webp",
+                "--with-openexr",
+                "--disable-hdri",
+                "--with-quantum-depth=16"
+            ],
+            "builddir": true,
+            "sources": [ { "type": "git", "url": "https://github.com/ImageMagick/ImageMagick.git", "tag": "7.0.10-13" } ]
+        },
+        {
             "name": "x265",
             "buildsystem": "cmake-ninja",
             "builddir": true,
