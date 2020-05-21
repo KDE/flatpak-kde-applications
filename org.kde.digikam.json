@@ -119,6 +119,11 @@
             "sources": [ { "type": "git", "url": "https://github.com/gphoto/libgphoto2.git", "tag": "v2.5.24"} ]
         },
         {
+            "name": "lqr1",
+            "buildsystem": "autotools",
+            "sources": [ { "type": "git", "url": "https://github.com/carlobaldassi/liblqr.git"} ]
+        },
+        {
             "name": "jasper",
             "buildsystem": "cmake-ninja",
             "config-opts": [
