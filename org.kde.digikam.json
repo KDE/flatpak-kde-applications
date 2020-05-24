@@ -18,7 +18,7 @@
             "name": "x265",
             "buildsystem": "cmake-ninja",
             "builddir": true,
-            "subdir" : "source"
+            "subdir" : "source",
             "sources": [ { "type": "git", "url": "https://github.com/videolan/x265.git", "tag": "3.3" } ]
         },
         {
