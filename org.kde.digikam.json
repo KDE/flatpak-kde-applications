@@ -271,6 +271,16 @@
             ],
             "builddir": true,
             "sources": [ { "type": "git", "url": "https://invent.kde.org/graphics/digikam.git" } ]
+        },
+        {
+            "name": "gmic-qt",
+            "buildsystem": "cmake-ninja",
+            "config-opts": [
+                "-DGMIC_QT_HOST=digikam",
+                "-DENABLE_ASAN=OFF"
+            ],
+            "builddir": true,
+            "sources": [ { "type": "git", "url": "https://github.com/cgilles/gmic-qt.git", "disable-submodules": false } ]
         }
     ]
 }
