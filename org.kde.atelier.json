@@ -10,30 +10,8 @@
     "finish-args": ["--share=ipc", "--socket=x11", "--share=network", "--socket=wayland", "--filesystem=host", "--device=all" ],
     "modules": [
         {
-            "name": "qwt",
-            "buildsystem": "qmake",
-            "cleanup": [
-                "/doc",
-                "/include",
-                "/features",
-                "/share",
-                "/plugins"
-            ],
-            "sources": [
-                {
-                    "type": "archive",
-                    "url": "https://downloads.sourceforge.net/project/qwt/qwt/6.1.4/qwt-6.1.4.tar.bz2",
-                    "sha256":"1529215329e51fc562e0009505a838f427919a18b362afff441f035b2d9b5bd9"
-                },
-                {
-                    "type": "patch",
-                    "path": "qwtPatch.patch"
-                }
-            ]
-        },
-        {
             "name": "atcore",
-            "config-opts": ["-DBUILD_GUI=ON"],
+            "config-opts": ["-DBUILD_GUI=OFF"],
             "buildsystem": "cmake-ninja",
             "cleanup": [
                 "/mkspecs",
