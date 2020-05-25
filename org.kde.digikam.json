@@ -280,7 +280,18 @@
                 "-DENABLE_ASAN=OFF"
             ],
             "builddir": true,
-            "sources": [ { "type": "git", "url": "https://github.com/cgilles/gmic-qt.git", "disable-submodules": false } ]
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://github.com/cgilles/gmic-qt.git",
+                    "disable-submodules": false
+                },
+                {
+                    "type": "file",
+                    "url": "https://gmic.eu/gmic_stdlib.h",
+                    "dest-filename": "gmic/src/gmic_stdlib.h"
+                }
+            ]
         }
     ]
 }
