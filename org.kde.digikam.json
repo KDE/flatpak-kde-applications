@@ -284,7 +284,7 @@
                 {
                     "type": "git",
                     "url": "https://github.com/cgilles/gmic-qt.git",
-                    "disable-submodules": false
+                    "branch": "bundle"
                 }
             ]
         }
