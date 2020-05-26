@@ -287,6 +287,17 @@
                     "branch": "bundle"
                 }
             ]
+        },
+        {
+            "name": "mosaicwall",
+            "buildsystem": "cmake-ninja",
+            "builddir": true,
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://github.com/scheckmedia/ImageMosaicWall.git"
+                }
+            ]
         }
     ]
 }
