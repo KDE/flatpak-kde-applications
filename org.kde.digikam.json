@@ -291,6 +291,9 @@
         {
             "name": "mosaicwall",
             "buildsystem": "cmake-ninja",
+            "config-opts": [
+                "-DENABLE_DPLUGIN=ON"
+            ],
             "builddir": true,
             "sources": [
                 {
