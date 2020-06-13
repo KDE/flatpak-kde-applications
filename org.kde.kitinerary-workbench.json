@@ -21,14 +21,14 @@
             "config-opts": [ "-DENABLE_TESTING=OFF" ],
             "buildsystem": "cmake-ninja",
             "builddir": true,
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kitinerary.git" } ],
+            "sources": [ { "type": "git", "url": "https://invent.kde.org/pim/kitinerary.git" } ],
             "modules": [
                 {
                     "name": "kpkpass",
                     "config-opts": [ "-DBUILD_TESTING=OFF", "-DCMAKE_BUILD_TYPE=RelWithDebInfo" ],
                     "buildsystem": "cmake-ninja",
                     "builddir": true,
-                    "sources": [ { "type": "git", "url": "https://anongit.kde.org/kpkpass.git" } ],
+                    "sources": [ { "type": "git", "url": "https://invent.kde.org/pim/kpkpass.git" } ],
                     "cleanup": [ "/include", "/lib/cmake", "/mkspecs", "/etc/xdg/*categories" ]
                 },
                 {
@@ -36,7 +36,7 @@
                     "config-opts": [ "-DBUILD_TESTING=OFF", "-DCMAKE_BUILD_TYPE=RelWithDebInfo" ],
                     "buildsystem": "cmake-ninja",
                     "builddir": true,
-                    "sources": [ { "type": "git", "url": "https://anongit.kde.org/kmime.git" } ],
+                    "sources": [ { "type": "git", "url": "https://invent.kde.org/pim/kmime.git" } ],
                     "cleanup": [ "/include", "/lib/cmake", "/mkspecs", "/etc/xdg/*categories" ]
                 },
                 {
@@ -62,7 +62,7 @@
             "name": "kitinerary-workbench",
             "buildsystem": "cmake-ninja",
             "builddir": true,
-            "sources": [ { "type": "git", "url": "https://anongit.kde.org/kitinerary-workbench.git" } ],
+            "sources": [ { "type": "git", "url": "https://invent.kde.org/pim/kitinerary-workbench.git" } ],
             "cleanup": [ "/etc/xdg/*categories" ]
         }
     ]

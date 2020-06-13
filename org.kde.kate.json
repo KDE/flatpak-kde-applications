@@ -15,13 +15,13 @@
             "name": "konsole",
             "buildsystem": "cmake-ninja",
             "sources": [
-                { "type": "git", "url": "git://anongit.kde.org/konsole.git" }
+                { "type": "git", "url": "https://invent.kde.org/utilities/konsole.git" }
             ]
         },
         {
             "name": "kate",
             "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kate.git" } ]
+            "sources": [ { "type": "git", "url": "https://invent.kde.org/utilities/kate.git" } ]
         }
     ]
 }

@@ -21,14 +21,14 @@
             "config-opts": [ "-DENABLE_TESTING=OFF" ],
             "buildsystem": "cmake-ninja",
             "builddir": true,
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kitinerary.git" } ],
+            "sources": [ { "type": "git", "url": "https://invent.kde.org/pim/kitinerary.git" } ],
             "modules": [
                 {
                     "name": "kpkpass",
                     "config-opts": [ "-DBUILD_TESTING=OFF", "-DCMAKE_BUILD_TYPE=RelWithDebInfo" ],
                     "buildsystem": "cmake-ninja",
                     "builddir": true,
-                    "sources": [ { "type": "git", "url": "https://anongit.kde.org/kpkpass.git" } ],
+                    "sources": [ { "type": "git", "url": "https://invent.kde.org/pim/kpkpass.git" } ],
                     "cleanup": [ "/include", "/lib/cmake", "/mkspecs", "/etc/xdg/*categories" ]
                 },
                 {
@@ -36,7 +36,7 @@
                     "config-opts": [ "-DBUILD_TESTING=OFF", "-DCMAKE_BUILD_TYPE=RelWithDebInfo" ],
                     "buildsystem": "cmake-ninja",
                     "builddir": true,
-                    "sources": [ { "type": "git", "url": "https://anongit.kde.org/kmime.git" } ],
+                    "sources": [ { "type": "git", "url": "https://invent.kde.org/pim/kmime.git" } ],
                     "cleanup": [ "/include", "/lib/cmake", "/mkspecs", "/etc/xdg/*categories" ]
                 },
                 {
@@ -55,7 +55,7 @@
             "config-opts": [ "-DENABLE_TESTING=OFF" ],
             "buildsystem": "cmake-ninja",
             "builddir": true,
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kpublictransport.git" } ],
+            "sources": [ { "type": "git", "url": "https://invent.kde.org/libraries/kpublictransport.git" } ],
             "cleanup": [ "/include", "/lib/cmake", "/mkspecs", "/etc/xdg/*categories" ]
         },
         {
@@ -70,7 +70,7 @@
             "name": "itinerary",
             "buildsystem": "cmake-ninja",
             "builddir": true,
-            "sources": [ { "type": "git", "url": "https://anongit.kde.org/itinerary.git" } ],
+            "sources": [ { "type": "git", "url": "https://invent.kde.org/pim/itinerary.git" } ],
             "cleanup": [ "/etc/xdg/*categories" ]
         }
     ]

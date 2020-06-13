@@ -72,7 +72,7 @@
             "sources": [
                 {
                     "type": "git",
-                    "url": "https://anongit.kde.org/kdiagram.git",
+                    "url": "https://invent.kde.org/graphics/kdiagram.git",
                     "branch": "master"
                 }
             ]
@@ -89,7 +89,7 @@
             "sources": [
                 {
                     "type": "git",
-                    "url": "https://anongit.kde.org/akonadi.git",
+                    "url": "https://invent.kde.org/pim/akonadi.git",
                     "branch": "master"
                 }
             ],
@@ -126,7 +126,7 @@
             "sources": [
                 {
                     "type": "git",
-                    "url": "https://anongit.kde.org/kmime.git",
+                    "url": "https://invent.kde.org/pim/kmime.git",
                     "branch": "master"
                 }
             ]
@@ -141,7 +141,7 @@
             "sources": [
                 {
                     "type": "git",
-                    "url": "https://anongit.kde.org/akonadi-mime.git",
+                    "url": "https://invent.kde.org/pim/akonadi-mime.git",
                     "branch": "master"
                 }
             ]
@@ -171,7 +171,7 @@
             "sources": [
                 {
                     "type": "git",
-                    "url": "https://anongit.kde.org/akonadi-contacts.git",
+                    "url": "https://invent.kde.org/pim/akonadi-contacts.git",
                     "branch": "master"
                 }
             ]
@@ -186,7 +186,7 @@
             "sources": [
                 {
                     "type": "git",
-                    "url": "https://anongit.kde.org/libkgapi.git",
+                    "url": "https://invent.kde.org/pim/libkgapi.git",
                     "branch": "master"
                 }
             ]
@@ -201,7 +201,7 @@
             "sources": [
                 {
                     "type": "git",
-                    "url": "https://anongit.kde.org/ksmtp.git",
+                    "url": "https://invent.kde.org/pim/ksmtp.git",
                     "branch": "master"
                 }
             ]
@@ -216,7 +216,7 @@
             "sources": [
                 {
                     "type": "git",
-                    "url": "https://anongit.kde.org/kmailtransport.git",
+                    "url": "https://invent.kde.org/pim/kmailtransport.git",
                     "branch": "master"
                 }
             ]
@@ -231,7 +231,7 @@
             "sources": [
                 {
                     "type": "git",
-                    "url": "https://anongit.kde.org/kpimtextedit.git",
+                    "url": "https://invent.kde.org/pim/kpimtextedit.git",
                     "branch": "master"
                 }
             ]
@@ -246,7 +246,7 @@
             "sources": [
                 {
                     "type": "git",
-                    "url": "https://anongit.kde.org/kidentitymanagement.git",
+                    "url": "https://invent.kde.org/pim/kidentitymanagement.git",
                     "branch": "master"
                 }
             ]
@@ -261,7 +261,7 @@
             "sources": [
                 {
                     "type": "git",
-                    "url": "https://anongit.kde.org/kcalutils.git",
+                    "url": "https://invent.kde.org/pim/kcalutils.git",
                     "branch": "master"
                 }
             ]
@@ -295,7 +295,7 @@
             "sources": [
                 {
                     "type": "git",
-                    "url": "https://anongit.kde.org/kldap.git",
+                    "url": "https://invent.kde.org/pim/kldap.git",
                     "branch": "master"
                 }
             ],
@@ -331,7 +331,7 @@
             "sources": [
                 {
                     "type": "git",
-                    "url": "https://anongit.kde.org/akonadi-search.git",
+                    "url": "https://invent.kde.org/pim/akonadi-search.git",
                     "branch": "master"
                 }
             ]
@@ -346,7 +346,7 @@
             "sources": [
                 {
                     "type": "git",
-                    "url": "https://anongit.kde.org/kmbox.git",
+                    "url": "https://invent.kde.org/pim/kmbox.git",
                     "branch": "master"
                 }
             ]
@@ -361,7 +361,7 @@
             "sources": [
                 {
                     "type": "git",
-                    "url": "https://anongit.kde.org/libkdepim.git",
+                    "url": "https://invent.kde.org/pim/libkdepim.git",
                     "branch": "master"
                 }
             ]
@@ -376,7 +376,7 @@
             "sources": [
                 {
                     "type": "git",
-                    "url": "https://anongit.kde.org/kimap.git",
+                    "url": "https://invent.kde.org/pim/kimap.git",
                     "branch": "master"
                 }
             ]
@@ -391,7 +391,7 @@
             "sources": [
                 {
                     "type": "git",
-                    "url": "https://anongit.kde.org/pimcommon.git",
+                    "url": "https://invent.kde.org/pim/pimcommon.git",
                     "branch": "master"
                 }
             ]
@@ -406,7 +406,7 @@
             "sources": [
                 {
                     "type": "git",
-                    "url": "https://anongit.kde.org/akonadi-calendar.git",
+                    "url": "https://invent.kde.org/pim/akonadi-calendar.git",
                     "branch": "master"
                 }
             ]
@@ -421,7 +421,7 @@
             "sources": [
                 {
                     "type": "git",
-                    "url": "https://anongit.kde.org/akonadi-notes.git",
+                    "url": "https://invent.kde.org/pim/akonadi-notes.git",
                     "branch": "master"
                 }
             ]
@@ -436,7 +436,7 @@
             "sources": [
                 {
                     "type": "git",
-                    "url": "https://anongit.kde.org/kdav.git",
+                    "url": "https://invent.kde.org/pim/kdav.git",
                     "branch": "master"
                 }
             ]
@@ -451,7 +451,7 @@
             "sources": [
                 {
                     "type": "git",
-                    "url": "https://anongit.kde.org/libkleo.git",
+                    "url": "https://invent.kde.org/pim/libkleo.git",
                     "branch": "master"
                 }
             ]
@@ -466,7 +466,7 @@
             "sources": [
                 {
                     "type": "git",
-                    "url": "https://anongit.kde.org/grantleetheme.git",
+                    "url": "https://invent.kde.org/pim/grantleetheme.git",
                     "branch": "master"
                 }
             ]
@@ -481,7 +481,7 @@
             "sources": [
                 {
                     "type": "git",
-                    "url": "https://anongit.kde.org/kdepim-apps-libs.git",
+                    "url": "https://invent.kde.org/pim/kdepim-apps-libs.git",
                     "branch": "master"
                 }
             ]
@@ -496,7 +496,7 @@
             "sources": [
                 {
                     "type": "git",
-                    "url": "https://anongit.kde.org/libgravatar.git",
+                    "url": "https://invent.kde.org/pim/libgravatar.git",
                     "branch": "master"
                 }
             ]
@@ -511,7 +511,7 @@
             "sources": [
                 {
                     "type": "git",
-                    "url": "https://anongit.kde.org/calendarsupport.git",
+                    "url": "https://invent.kde.org/pim/calendarsupport.git",
                     "branch": "master"
                 }
             ]
@@ -526,7 +526,7 @@
             "sources": [
                 {
                     "type": "git",
-                    "url": "https://anongit.kde.org/eventviews.git",
+                    "url": "https://invent.kde.org/pim/eventviews.git",
                     "branch": "master"
                 }
             ]
@@ -541,7 +541,7 @@
             "sources": [
                 {
                     "type": "git",
-                    "url": "https://anongit.kde.org/incidenceeditor.git",
+                    "url": "https://invent.kde.org/pim/incidenceeditor.git",
                     "branch": "master"
                 }
             ]
@@ -556,7 +556,7 @@
             "sources": [
                 {
                     "type": "git",
-                    "url": "https://anongit.kde.org/messagelib.git",
+                    "url": "https://invent.kde.org/pim/messagelib.git",
                     "branch": "master"
                 }
             ]
@@ -571,7 +571,7 @@
             "sources": [
                 {
                     "type": "git",
-                    "url": "https://anongit.kde.org/mailimporter.git",
+                    "url": "https://invent.kde.org/pim/mailimporter.git",
                     "branch": "master"
                 }
             ]
@@ -586,7 +586,7 @@
             "sources": [
                 {
                     "type": "git",
-                    "url": "https://anongit.kde.org/mailcommon.git",
+                    "url": "https://invent.kde.org/pim/mailcommon.git",
                     "branch": "master"
                 }
             ]
@@ -601,7 +601,7 @@
             "sources": [
                 {
                     "type": "git",
-                    "url": "https://anongit.kde.org/kontactinterface.git",
+                    "url": "https://invent.kde.org/pim/kontactinterface.git",
                     "branch": "master"
                 }
             ]
@@ -616,7 +616,7 @@
             "sources": [
                 {
                     "type": "git",
-                    "url": "https://anongit.kde.org/libksieve.git",
+                    "url": "https://invent.kde.org/pim/libksieve.git",
                     "branch": "master"
                 }
             ]
@@ -631,7 +631,7 @@
             "sources": [
                 {
                     "type": "git",
-                    "url": "https://anongit.kde.org/kdepim-runtime.git",
+                    "url": "https://invent.kde.org/pim/kdepim-runtime.git",
                     "branch": "master"
                 }
             ],
@@ -696,7 +696,7 @@
                             "sources": [
                                 {
                                     "type": "git",
-                                    "url": "https://anongit.kde.org/kdelibs4support.git",
+                                    "url": "https://invent.kde.org/frameworks/kdelibs4support.git",
                                     "branch": "v5.66.0"
                                 }
                             ]
@@ -715,7 +715,7 @@
             "sources": [
                 {
                     "type": "git",
-                    "url": "https://anongit.kde.org/ktnef.git",
+                    "url": "https://invent.kde.org/pim/ktnef.git",
                     "branch": "master"
                 }
             ]
@@ -730,7 +730,7 @@
             "sources": [
                 {
                     "type": "git",
-                    "url": "https://anongit.kde.org/kmail.git",
+                    "url": "https://invent.kde.org/pim/kmail.git",
                     "branch": "master"
                 }
             ]
@@ -745,7 +745,7 @@
             "sources": [
                 {
                     "type": "git",
-                    "url": "https://anongit.kde.org/akregator.git",
+                    "url": "https://invent.kde.org/pim/akregator.git",
                     "branch": "master"
                 }
             ]
@@ -760,7 +760,7 @@
             "sources": [
                 {
                     "type": "git",
-                    "url": "https://anongit.kde.org/korganizer.git",
+                    "url": "https://invent.kde.org/pim/korganizer.git",
                     "branch": "master"
                 }
             ]
@@ -775,7 +775,7 @@
             "sources": [
                 {
                     "type": "git",
-                    "url": "https://anongit.kde.org/kaddressbook.git",
+                    "url": "https://invent.kde.org/pim/kaddressbook.git",
                     "branch": "master"
                 }
             ]
@@ -790,7 +790,7 @@
             "sources": [
                 {
                     "type": "git",
-                    "url": "https://anongit.kde.org/knotes.git",
+                    "url": "https://invent.kde.org/pim/knotes.git",
                     "branch": "master"
                 }
             ]
@@ -805,7 +805,7 @@
             "sources": [
                 {
                     "type": "git",
-                    "url": "https://anongit.kde.org/kontact.git",
+                    "url": "https://invent.kde.org/pim/kontact.git",
                     "branch": "master"
                 },
                 {
@@ -827,7 +827,7 @@
             "sources": [
                 {
                     "type": "git",
-                    "url": "https://anongit.kde.org/akonadi-import-wizard.git",
+                    "url": "https://invent.kde.org/pim/akonadi-import-wizard.git",
                     "branch": "master"
                 }
             ]
@@ -843,7 +843,7 @@
             "sources": [
                 {
                     "type": "git",
-                    "url": "https://anongit.kde.org/kdepim-addons.git",
+                    "url": "https://invent.kde.org/pim/kdepim-addons.git",
                     "branch": "master"
                 }
             ],
@@ -858,7 +858,7 @@
                     "sources": [
                         {
                             "type": "git",
-                            "url": "https://anongit.kde.org/kitinerary.git",
+                            "url": "https://invent.kde.org/pim/kitinerary.git",
                             "branch": "master"
                         }
                     ],
@@ -873,7 +873,7 @@
                             "sources": [
                                 {
                                     "type": "git",
-                                    "url": "https://anongit.kde.org/kpkpass.git",
+                                    "url": "https://invent.kde.org/pim/kpkpass.git",
                                     "branch": "master"
                                 }
                             ]
@@ -892,7 +892,7 @@
             "sources": [
                 {
                     "type": "git",
-                    "url": "https://anongit.kde.org/grantlee-editor.git",
+                    "url": "https://invent.kde.org/pim/grantlee-editor.git",
                     "branch": "master"
                 }
             ]
@@ -907,7 +907,7 @@
             "sources": [
                 {
                     "type": "git",
-                    "url": "https://anongit.kde.org/kmail-account-wizard.git",
+                    "url": "https://invent.kde.org/pim/kmail-account-wizard.git",
                     "branch": "master"
                 }
             ],
@@ -922,7 +922,7 @@
                     "sources": [
                         {
                             "type": "git",
-                            "url": "https://anongit.kde.org/kross.git",
+                            "url": "https://invent.kde.org/frameworks/kross.git",
                             "branch": "v5.66.0"
                         }
                     ]
@@ -939,7 +939,7 @@
             "sources": [
                 {
                     "type": "git",
-                    "url": "https://anongit.kde.org/pim-data-exporter.git",
+                    "url": "https://invent.kde.org/pim/pim-data-exporter.git",
                     "branch": "master"
                 }
             ]
@@ -954,7 +954,7 @@
             "sources": [
                 {
                     "type": "git",
-                    "url": "https://anongit.kde.org/pim-sieve-editor.git",
+                    "url": "https://invent.kde.org/pim/pim-sieve-editor.git",
                     "branch": "master"
                 }
             ]
@@ -969,7 +969,7 @@
             "sources": [
                 {
                     "type": "git",
-                    "url": "https://anongit.kde.org/mbox-importer.git",
+                    "url": "https://invent.kde.org/pim/mbox-importer.git",
                     "branch": "master"
                 }
             ]

@@ -6,20 +6,20 @@
             "name": "kjs",
             "config-opts": [ "-DENABLE_TESTING=OFF" ],
             "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kjs.git", "branch": "v5.66.0" } ]
+            "sources": [ { "type": "git", "url": "https://invent.kde.org/frameworks/kjs.git", "branch": "v5.66.0" } ]
         },
         {
             "name": "khtml",
             "config-opts": [ "-DENABLE_TESTING=OFF" ],
             "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/khtml.git", "branch": "v5.66.0" } ]
+            "sources": [ { "type": "git", "url": "https://invent.kde.org/frameworks/khtml.git", "branch": "v5.66.0" } ]
         },
         {
             "name": "purpose",
             "config-opts": [ "-DENABLE_TESTING=OFF" ],
             "buildsystem": "cmake-ninja",
             "builddir": true,
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/purpose.git", "branch": "v5.66.0" } ]
+            "sources": [ { "type": "git", "url": "https://invent.kde.org/frameworks/purpose.git", "branch": "v5.66.0" } ]
         },
         "poppler.json",
         {
@@ -60,7 +60,7 @@
             "name": "kdegraphics-mobipocket",
             "config-opts": ["-DCMAKE_BUILD_TYPE=Release" ],
             "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kdegraphics-mobipocket" } ]
+            "sources": [ { "type": "git", "url": "https://invent.kde.org/graphics/kdegraphics-mobipocket" } ]
         },
         {
             "name": "libzip",

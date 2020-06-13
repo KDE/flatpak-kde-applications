@@ -22,7 +22,7 @@
             "buildsystem": "cmake-ninja",
             "config-opts": [ "-DOKULAR_UI=mobile" ],
             "builddir": true,
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/okular.git", "branch": "master" } ]
+            "sources": [ { "type": "git", "url": "https://invent.kde.org/graphics/okular.git", "branch": "master" } ]
         }
     ]
 }
