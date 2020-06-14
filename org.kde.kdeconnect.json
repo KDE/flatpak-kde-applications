@@ -32,24 +32,18 @@
             "config-opts": [ "-DENABLE_TESTING=OFF" ],
             "name": "qca",
             "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/qca.git" } ]
+            "sources": [ { "type": "git", "url": "https://invent.kde.org/libraries/qca.git" } ]
         },
         {
             "config-opts": [ "-DENABLE_TESTING=OFF" ],
             "name": "pulseaudio-qt",
             "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/pulseaudio-qt.git" } ]
-        },
-        {
-            "config-opts": [ "-DENABLE_TESTING=OFF" ],
-            "name": "kpeople",
-            "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kpeople.git", "tag": "v5.64.0" } ]
+            "sources": [ { "type": "git", "url": "https://invent.kde.org/libraries/pulseaudio-qt.git" } ]
         },
         {
             "name": "kdeconnect",
             "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kdeconnect-kde.git" } ]
+            "sources": [ { "type": "git", "url": "https://invent.kde.org/network/kdeconnect-kde.git" } ]
         }
     ]
 }

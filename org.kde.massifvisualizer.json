@@ -14,12 +14,12 @@
             "config-opts": [ "-DENABLE_TESTING=OFF" ],
             "name": "kdiagram",
             "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kdiagram.git" } ]
+            "sources": [ { "type": "git", "url": "https://invent.kde.org/graphics/kdiagram.git" } ]
         },
         {
             "name": "massif-visualizer",
             "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/massif-visualizer.git" } ]
+            "sources": [ { "type": "git", "url": "https://invent.kde.org/sdk/massif-visualizer.git" } ]
         }
     ]
 }

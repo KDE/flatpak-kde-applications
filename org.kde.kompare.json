@@ -14,13 +14,13 @@
             "name": "libkomparediff2",
             "config-opts": [ "-DENABLE_TESTING=OFF" ],
             "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/libkomparediff2.git" } ]
+            "sources": [ { "type": "git", "url": "https://invent.kde.org/sdk/libkomparediff2.git" } ]
         },
         {
             "name": "kompare",
             "buildsystem": "cmake-ninja",
             "builddir": true,
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kompare.git" } ]
+            "sources": [ { "type": "git", "url": "https://invent.kde.org/sdk/kompare.git" } ]
         }
     ]
 }

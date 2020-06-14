@@ -20,18 +20,18 @@
             "config-opts": [ "-DENABLE_TESTING=OFF" ],
             "name": "kpublictransport",
             "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kpublictransport.git"} ]
+            "sources": [ { "type": "git", "url": "https://invent.kde.org/libraries/kpublictransport.git"} ]
         },
         {
             "name": "kirigami-addons",
             "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kirigami-addons.git"} ]
+            "sources": [ { "type": "git", "url": "https://invent.kde.org/libraries/kirigami-addons.git"} ]
         },
         {
             "name": "ktrip",
             "buildsystem": "cmake-ninja",
             "sources": [
-                { "type": "git", "url": "git://anongit.kde.org/ktrip.git" }
+                { "type": "git", "url": "https://invent.kde.org/utilities/ktrip.git" }
             ]
         }
     ]

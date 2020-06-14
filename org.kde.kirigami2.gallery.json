@@ -14,7 +14,7 @@
             "config-opts": ["-DCMAKE_BUILD_TYPE=debug"],
             "buildsystem": "cmake-ninja",
             "builddir": true,
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kirigami-gallery.git", "branch": "master" } ]
+            "sources": [ { "type": "git", "url": "https://invent.kde.org/sdk/kirigami-gallery.git", "branch": "master" } ]
         }
     ]
 }

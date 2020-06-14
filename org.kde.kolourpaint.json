@@ -11,16 +11,10 @@
 
     "modules": [
         {
-            "config-opts": [ "-DENABLE_TESTING=OFF" ],
-            "name": "kdelibs4support",
-            "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kdelibs4support.git", "branch": "v5.66.0" } ]
-        },
-        {
             "name": "kolourpaint",
             "buildsystem": "cmake-ninja",
             "sources": [
-                { "type": "git", "url": "git://anongit.kde.org/kolourpaint.git" }
+                { "type": "git", "url": "https://invent.kde.org/graphics/kolourpaint.git" }
             ]
         }
     ]

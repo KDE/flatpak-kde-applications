@@ -11,12 +11,6 @@
 
     "modules": [
         {
-            "config-opts": [ "-DENABLE_TESTING=OFF" ],
-            "name": "kfilemetadata",
-            "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kfilemetadata.git", "branch": "v5.66.0" } ]
-        },
-        {
             "name": "lmdb",
             "sources": [ { "type": "git", "url": "git://github.com/LMDB/lmdb.git", "branch": "LMDB_0.9.18"}],
             "no-autogen": true,
@@ -27,25 +21,25 @@
             "config-opts": ["-DENABLE_TESTING=OFF" , "-DLMDB_DIR=/app"],
             "name": "baloo",
             "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/baloo.git", "branch": "v5.66.0" } ]
+            "sources": [ { "type": "git", "url": "https://invent.kde.org/frameworks/baloo.git", "branch": "v5.66.0" } ]
         },
         {
             "config-opts": ["-DENABLE_TESTING=OFF" , "-DLMDB_DIR=/app"],
             "name": "baloo-widgets",
             "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/baloo-widgets.git" } ]
+            "sources": [ { "type": "git", "url": "https://invent.kde.org/libraries/baloo-widgets.git" } ]
         },
         {
             "name": "dolphin",
             "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/dolphin.git" },
+            "sources": [ { "type": "git", "url": "https://invent.kde.org/system/dolphin.git" },
                          {"type": "patch", "path": "dolphinpatch.patch"}
                        ]
         },
         {
             "name": "dolphin-plugins",
             "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/dolphin-plugins.git" } ]
+            "sources": [ { "type": "git", "url": "https://invent.kde.org/sdk/dolphin-plugins.git" } ]
         }
     ]
 }

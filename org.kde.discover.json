@@ -111,7 +111,7 @@
             "config-opts": [ "-DENABLE_TESTING=OFF", "-DBUILD_DummyBackend=ON" ],
             "buildsystem": "cmake-ninja",
             "builddir": true,
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/discover.git" } ]
+            "sources": [ { "type": "git", "url": "https://invent.kde.org/plasma/discover.git" } ]
         }
     ]
 }

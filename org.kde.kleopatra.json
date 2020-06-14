@@ -12,8 +12,8 @@
     "modules": [
         "boost.json",
         "gpgme.json",
-        { "name": "kmime", "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "git://anongit.kde.org/kmime" } ] },
-        { "name": "libkleo", "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "git://anongit.kde.org/libkleo.git" } ] },
-        { "name": "kleopatra", "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "git://anongit.kde.org/kleopatra.git" } ] }
+        { "name": "kmime", "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "https://invent.kde.org/pim/kmime" } ] },
+        { "name": "libkleo", "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "https://invent.kde.org/pim/libkleo.git" } ] },
+        { "name": "kleopatra", "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "https://invent.kde.org/pim/kleopatra.git" } ] }
     ]
 }
