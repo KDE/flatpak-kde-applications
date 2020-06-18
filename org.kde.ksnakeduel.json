@@ -15,7 +15,7 @@
             "name": "ksnakeduel",
             "buildsystem": "cmake-ninja",
             "sources": [
-                { "type": "git", "url": "git://anongit.kde.org/ksnakeduel.git" }
+                { "type": "git", "url": "https://anongit.kde.org/ksnakeduel.git" }
             ]
         }
     ]

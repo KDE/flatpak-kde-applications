@@ -15,27 +15,27 @@
             "name": "breeze-icons",
             "config-opts": [ "-DSKIP_INSTALL_ICONS=ON" ],
             "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/breeze-icons.git", "branch": "v5.66.0" } ]
+            "sources": [ { "type": "git", "url": "https://anongit.kde.org/breeze-icons.git", "branch": "v5.66.0" } ]
         },
         {
             "name": "kdb",
             "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kdb.git" } ]
+            "sources": [ { "type": "git", "url": "https://anongit.kde.org/kdb.git" } ]
         },
         {
             "name": "kproperty",
             "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kproperty.git" } ]
+            "sources": [ { "type": "git", "url": "https://anongit.kde.org/kproperty.git" } ]
         },
         {
             "name": "kreport",
             "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kreport.git" } ]
+            "sources": [ { "type": "git", "url": "https://anongit.kde.org/kreport.git" } ]
         },
         {
             "name": "kexi",
             "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kexi.git" } ]
+            "sources": [ { "type": "git", "url": "https://anongit.kde.org/kexi.git" } ]
         }
     ]
 }

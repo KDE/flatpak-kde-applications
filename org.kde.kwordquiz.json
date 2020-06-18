@@ -20,17 +20,17 @@
             "config-opts": [ "-DENABLE_TESTING=OFF" ],
             "name": "kdelibs4support",
             "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kdelibs4support.git", "branch": "v5.66.0" } ]
+            "sources": [ { "type": "git", "url": "https://anongit.kde.org/kdelibs4support.git", "branch": "v5.66.0" } ]
         },
         {
             "name": "libkeduvocdocument",
             "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/libkeduvocdocument.git" } ]
+            "sources": [ { "type": "git", "url": "https://anongit.kde.org/libkeduvocdocument.git" } ]
         },
         {
             "name": "kwordquiz",
             "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kwordquiz.git" } ]
+            "sources": [ { "type": "git", "url": "https://anongit.kde.org/kwordquiz.git" } ]
         }
     ]
 }

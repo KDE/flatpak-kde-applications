@@ -15,7 +15,7 @@
             "name": "kollision",
             "buildsystem": "cmake-ninja",
             "sources": [
-                { "type": "git", "url": "git://anongit.kde.org/kollision.git" }
+                { "type": "git", "url": "https://anongit.kde.org/kollision.git" }
             ]
         }
     ]

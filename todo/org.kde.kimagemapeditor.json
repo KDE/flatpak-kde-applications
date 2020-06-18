@@ -14,7 +14,7 @@
             "name": "kimagemapeditor",
             "buildsystem": "cmake-ninja",
             "sources": [
-                { "type": "git", "url": "git://anongit.kde.org/kimagemapeditor.git", "branch": "frameworks----------------------" }
+                { "type": "git", "url": "https://anongit.kde.org/kimagemapeditor.git", "branch": "frameworks----------------------" }
             ]
         }
     ]

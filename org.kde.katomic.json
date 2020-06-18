@@ -22,7 +22,7 @@
             "name": "katomic",
             "buildsystem": "cmake-ninja",
             "sources": [
-                { "type": "git", "url": "git://anongit.kde.org/katomic.git" }
+                { "type": "git", "url": "https://anongit.kde.org/katomic.git" }
             ]
         }
     ]

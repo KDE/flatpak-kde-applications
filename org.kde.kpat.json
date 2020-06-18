@@ -97,7 +97,7 @@
             "name": "kpat",
             "buildsystem": "cmake-ninja",
             "sources": [
-                { "type": "git", "url": "git://anongit.kde.org/kpat.git" }
+                { "type": "git", "url": "https://anongit.kde.org/kpat.git" }
             ]
         }
     ]

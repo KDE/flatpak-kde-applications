@@ -16,7 +16,7 @@
             "buildsystem": "cmake-ninja",
             "builddir": true,
             "sources": [
-                { "type": "git", "url": "git://anongit.kde.org/picmi.git" }
+                { "type": "git", "url": "https://anongit.kde.org/picmi.git" }
             ]
         }
     ]

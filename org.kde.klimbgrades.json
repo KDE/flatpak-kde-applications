@@ -14,7 +14,7 @@
             "name": "klimbgrades",
             "buildsystem": "cmake-ninja",
             "builddir": true,
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/klimbgrades.git" } ]
+            "sources": [ { "type": "git", "url": "https://anongit.kde.org/klimbgrades.git" } ]
         }
     ]
 }

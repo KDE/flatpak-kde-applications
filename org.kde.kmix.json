@@ -14,13 +14,13 @@
             "config-opts": [ "-DENABLE_TESTING=OFF" ],
             "name": "plasma-framework",
             "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/plasma-framework.git", "branch": "v5.64.0" } ]
+            "sources": [ { "type": "git", "url": "https://anongit.kde.org/plasma-framework.git", "branch": "v5.64.0" } ]
         },
         {
             "name": "kmix",
             "buildsystem": "cmake-ninja",
             "sources": [
-                { "type": "git", "url": "git://anongit.kde.org/kmix.git" }
+                { "type": "git", "url": "https://anongit.kde.org/kmix.git" }
             ]
         }
     ]

@@ -21,12 +21,12 @@
             "name": "libkomparediff2",
             "config-opts": [ "-DENABLE_TESTING=OFF" ],
             "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/libkomparediff2.git" } ]
+            "sources": [ { "type": "git", "url": "https://anongit.kde.org/libkomparediff2.git" } ]
         },
         {
             "name": "kdevelop",
             "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kdevelop.git", "branch": "master" } ]
+            "sources": [ { "type": "git", "url": "https://anongit.kde.org/kdevelop.git", "branch": "master" } ]
         }
     ]
 }

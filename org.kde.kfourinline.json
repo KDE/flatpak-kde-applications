@@ -15,7 +15,7 @@
             "name": "kfourinline",
             "buildsystem": "cmake-ninja",
             "sources": [
-                { "type": "git", "url": "git://anongit.kde.org/kfourinline.git" }
+                { "type": "git", "url": "https://anongit.kde.org/kfourinline.git" }
             ]
         }
     ]

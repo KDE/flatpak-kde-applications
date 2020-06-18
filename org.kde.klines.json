@@ -21,7 +21,7 @@
             "name": "klines",
             "buildsystem": "cmake-ninja",
             "sources": [
-                { "type": "git", "url": "git://anongit.kde.org/klines.git" }
+                { "type": "git", "url": "https://anongit.kde.org/klines.git" }
             ]
         }
     ]

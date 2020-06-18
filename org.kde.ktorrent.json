@@ -15,31 +15,31 @@
             "config-opts": [ "-DENABLE_TESTING=OFF" ],
             "name": "qca",
             "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/qca.git" } ]
+            "sources": [ { "type": "git", "url": "https://anongit.kde.org/qca.git" } ]
         },
         {
             "config-opts": [ "-DENABLE_TESTING=OFF" ],
             "name": "kdelibs4support",
             "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kdelibs4support.git", "branch": "v5.66.0" } ]
+            "sources": [ { "type": "git", "url": "https://anongit.kde.org/kdelibs4support.git", "branch": "v5.66.0" } ]
         },
         {
             "config-opts": [ "-DENABLE_TESTING=OFF" ],
             "name": "kross",
             "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kross.git", "branch": "v5.66.0" } ]
+            "sources": [ { "type": "git", "url": "https://anongit.kde.org/kross.git", "branch": "v5.66.0" } ]
         },
         {
             "config-opts": [ "-DENABLE_TESTING=OFF" ],
             "name": "libktorrent",
             "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/libktorrent.git" } ]
+            "sources": [ { "type": "git", "url": "https://anongit.kde.org/libktorrent.git" } ]
         },
         {
             "name": "ktorrent",
             "buildsystem": "cmake-ninja",
             "builddir": true,
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/ktorrent.git" } ]
+            "sources": [ { "type": "git", "url": "https://anongit.kde.org/ktorrent.git" } ]
         }
     ]
 }

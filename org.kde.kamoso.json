@@ -14,13 +14,13 @@
             "name": "purpose",
             "config-opts": ["-DENABLE_TESTING=OFF"],
             "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/purpose.git", "branch": "v5.66.0" } ]
+            "sources": [ { "type": "git", "url": "https://anongit.kde.org/purpose.git", "branch": "v5.66.0" } ]
         },
         {
             "name": "kamoso",
             "config-opts": ["-DENABLE_TESTING=OFF"],
             "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kamoso.git", "branch": "Applications/18.12" } ]
+            "sources": [ { "type": "git", "url": "https://anongit.kde.org/kamoso.git", "branch": "Applications/18.12" } ]
         }
     ]
 }

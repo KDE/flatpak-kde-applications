@@ -1,3 +1,3 @@
 ID=org.kde.krita-stable
 JSON=packaging/linux/flatpak/org.kde.krita-stable.yaml
-GITURL=git://anongit.kde.org/krita.git
+GITURL=https://anongit.kde.org/krita.git

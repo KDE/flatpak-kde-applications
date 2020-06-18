@@ -22,7 +22,7 @@
             "name": "killbots",
             "buildsystem": "cmake-ninja",
             "sources": [
-                { "type": "git", "url": "git://anongit.kde.org/killbots.git" }
+                { "type": "git", "url": "https://anongit.kde.org/killbots.git" }
             ]
         }
     ]

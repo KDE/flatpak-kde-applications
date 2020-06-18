@@ -19,14 +19,14 @@
                 "/*/cmake"
             ],
             "sources": [ 
-                { "type": "git", "url": "git://anongit.kde.org/atcore.git" } 
+                { "type": "git", "url": "https://anongit.kde.org/atcore.git" } 
             ]
         },
         {
             "name": "atelier",
             "buildsystem": "cmake-ninja",
             "sources": [
-                { "type": "git", "url": "git://anongit.kde.org/atelier.git" }
+                { "type": "git", "url": "https://anongit.kde.org/atelier.git" }
             ]
         }
     ]

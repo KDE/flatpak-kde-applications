@@ -36,7 +36,7 @@
             "sources": [
                 {
                     "type": "git",
-                    "url": "git://anongit.kde.org/kio-extras.git",
+                    "url": "https://anongit.kde.org/kio-extras.git",
                     "branch": "release/19.12"
                 }
             ]
@@ -47,7 +47,7 @@
             "sources": [
                 {
                     "type": "git",
-                    "url": "git://anongit.kde.org/koko.git",
+                    "url": "https://anongit.kde.org/koko.git",
                     "branch": "master"
                 },
                 {

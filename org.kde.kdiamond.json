@@ -22,7 +22,7 @@
             "name": "kdiamond",
             "buildsystem": "cmake-ninja",
             "sources": [
-                { "type": "git", "url": "git://anongit.kde.org/kdiamond.git" }
+                { "type": "git", "url": "https://anongit.kde.org/kdiamond.git" }
             ]
         }
     ]

@@ -15,7 +15,7 @@
         {
             "name": "konversation",
             "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/konversation.git" } ]
+            "sources": [ { "type": "git", "url": "https://anongit.kde.org/konversation.git" } ]
         }
     ]
 }

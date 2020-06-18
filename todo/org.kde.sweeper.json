@@ -14,7 +14,7 @@
             "name": "sweeper",
             "buildsystem": "cmake-ninja",
             "sources": [
-                { "type": "git", "url": "git://anongit.kde.org/sweeper.git", "branch": "frameworks" }
+                { "type": "git", "url": "https://anongit.kde.org/sweeper.git", "branch": "frameworks" }
             ]
         }
     ]

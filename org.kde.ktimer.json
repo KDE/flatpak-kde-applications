@@ -14,7 +14,7 @@
             "name": "ktimer",
             "buildsystem": "cmake-ninja",
             "sources": [
-                { "type": "git", "url": "git://anongit.kde.org/ktimer.git" }
+                { "type": "git", "url": "https://anongit.kde.org/ktimer.git" }
             ]
         }
     ]

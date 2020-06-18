@@ -16,12 +16,12 @@
         {
             "name": "analitza",
             "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/analitza.git" } ]
+            "sources": [ { "type": "git", "url": "https://anongit.kde.org/analitza.git" } ]
         },
         {
             "name": "kalgebra",
             "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kalgebra.git" } ]
+            "sources": [ { "type": "git", "url": "https://anongit.kde.org/kalgebra.git" } ]
         }
     ]
 }

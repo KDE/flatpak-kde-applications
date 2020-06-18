@@ -22,7 +22,7 @@
             "name": "kblocks",
             "buildsystem": "cmake-ninja",
             "sources": [
-                { "type": "git", "url": "git://anongit.kde.org/kblocks.git" }
+                { "type": "git", "url": "https://anongit.kde.org/kblocks.git" }
             ]
         }
     ]

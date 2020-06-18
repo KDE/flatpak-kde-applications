@@ -14,7 +14,7 @@
             "name": "kruler",
             "buildsystem": "cmake-ninja",
             "sources": [
-                { "type": "git", "url": "git://anongit.kde.org/kruler.git" }
+                { "type": "git", "url": "https://anongit.kde.org/kruler.git" }
             ]
         }
     ]

@@ -20,7 +20,7 @@
             "name": "ksquares",
             "buildsystem": "cmake-ninja",
             "sources": [
-                { "type": "git", "url": "git://anongit.kde.org/ksquares.git" }
+                { "type": "git", "url": "https://anongit.kde.org/ksquares.git" }
             ]
         }
     ]

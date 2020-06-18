@@ -44,7 +44,7 @@
             "sources": [
                 {
                     "type": "git",
-                    "url": "git://anongit.kde.org/kirogi.git"
+                    "url": "https://anongit.kde.org/kirogi.git"
                 }
             ]
         }

@@ -14,7 +14,7 @@
             "name": "kfloppy",
             "buildsystem": "cmake-ninja",
             "sources": [
-                { "type": "git", "url": "git://anongit.kde.org/kfloppy.git" }
+                { "type": "git", "url": "https://anongit.kde.org/kfloppy.git" }
             ]
         }
     ]

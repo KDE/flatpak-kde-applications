@@ -20,7 +20,7 @@
         {
             "name": "artikulate",
             "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/artikulate.git" } ]
+            "sources": [ { "type": "git", "url": "https://anongit.kde.org/artikulate.git" } ]
         }
     ]
 }

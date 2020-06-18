@@ -1,3 +1,3 @@
 ID=org.kde.khipu
 JSON=org.kde.khipu.json
-GITURL=git://anongit.kde.org/khipu.git
+GITURL=https://anongit.kde.org/khipu.git

@@ -24,12 +24,12 @@
         {
             "name": "kqtquickcharts",
             "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kqtquickcharts.git" } ]
+            "sources": [ { "type": "git", "url": "https://anongit.kde.org/kqtquickcharts.git" } ]
         },
         {
             "name": "ktouch",
             "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/ktouch.git" } ]
+            "sources": [ { "type": "git", "url": "https://anongit.kde.org/ktouch.git" } ]
         }
     ]
 }

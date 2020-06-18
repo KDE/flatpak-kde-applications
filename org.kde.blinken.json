@@ -13,7 +13,7 @@
         {
             "name": "blinken",
             "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/blinken.git" } ]
+            "sources": [ { "type": "git", "url": "https://anongit.kde.org/blinken.git" } ]
         }
     ]
 }

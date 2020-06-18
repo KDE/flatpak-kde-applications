@@ -22,7 +22,7 @@
             "name": "ksystemlog",
             "buildsystem": "cmake-ninja",
             "sources": [
-                { "type": "git", "url": "git://anongit.kde.org/ksystemlog.git" }
+                { "type": "git", "url": "https://anongit.kde.org/ksystemlog.git" }
             ]
         }
     ]

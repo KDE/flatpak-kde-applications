@@ -15,38 +15,38 @@
             "name": "kjs",
             "buildsystem": "cmake-ninja",
             "config-opts": [ "-DENABLE_TESTING=OFF" ],
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kjs.git", "branch": "v5.66.0" } ]
+            "sources": [ { "type": "git", "url": "https://anongit.kde.org/kjs.git", "branch": "v5.66.0" } ]
         },
         {
             "name": "khtml",
             "config-opts": [ "-DENABLE_TESTING=OFF" ],
             "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/khtml.git", "branch": "v5.66.0" } ]
+            "sources": [ { "type": "git", "url": "https://anongit.kde.org/khtml.git", "branch": "v5.66.0" } ]
         },
         {
             "config-opts": [ "-DENABLE_TESTING=OFF" ],
             "name": "kross",
             "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kross.git", "branch": "v5.66.0" } ]
+            "sources": [ { "type": "git", "url": "https://anongit.kde.org/kross.git", "branch": "v5.66.0" } ]
         },
         {
             "config-opts": [ "-DENABLE_TESTING=OFF" ],
             "name": "kdelibs4support",
             "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kdelibs4support.git", "branch": "v5.66.0" } ]
+            "sources": [ { "type": "git", "url": "https://anongit.kde.org/kdelibs4support.git", "branch": "v5.66.0" } ]
         },
         {
             "config-opts": [ "-DENABLE_TESTING=OFF" ],
             "name": "kdiagram",
             "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kdiagram.git" } ]
+            "sources": [ { "type": "git", "url": "https://anongit.kde.org/kdiagram.git" } ]
         },
         {
             "name": "calligraplan",
             "buildsystem": "cmake-ninja",
             "builddir": true,
             "config-opts": ["-DENABLE_TESTING=OFF"],
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/calligraplan.git" } ]
+            "sources": [ { "type": "git", "url": "https://anongit.kde.org/calligraplan.git" } ]
         }
     ]
 }

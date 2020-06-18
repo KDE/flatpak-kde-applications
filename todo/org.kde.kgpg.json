@@ -14,18 +14,18 @@
             "config-opts": [ "-DENABLE_TESTING=OFF" ],
             "name": "kdelibs4support",
             "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kdelibs4support.git", "branch": "v5.66.0" } ]
+            "sources": [ { "type": "git", "url": "https://anongit.kde.org/kdelibs4support.git", "branch": "v5.66.0" } ]
         },
         { "name": "grantlee", "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "https://github.com/steveire/grantlee.git" } ] },
-        { "name": "kcontacts", "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "git://anongit.kde.org/kcontacts" } ] },
-        { "name": "kmime", "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "git://anongit.kde.org/kmime" } ] },
-        { "name": "akonadi-mime", "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "git://anongit.kde.org/akonadi-mime" } ] },
-        { "name": "akonadi-contacts", "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "git://anongit.kde.org/akonadi-contacts" } ] },
+        { "name": "kcontacts", "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "https://anongit.kde.org/kcontacts" } ] },
+        { "name": "kmime", "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "https://anongit.kde.org/kmime" } ] },
+        { "name": "akonadi-mime", "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "https://anongit.kde.org/akonadi-mime" } ] },
+        { "name": "akonadi-contacts", "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "https://anongit.kde.org/akonadi-contacts" } ] },
         {
             "name": "kgpg",
             "buildsystem": "cmake-ninja",
             "sources": [
-                { "type": "git", "url": "git://anongit.kde.org/kgpg.git" }
+                { "type": "git", "url": "https://anongit.kde.org/kgpg.git" }
             ]
         }
     ]

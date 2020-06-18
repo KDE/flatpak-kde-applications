@@ -19,7 +19,7 @@
             "name": "ksudoku",
             "buildsystem": "cmake-ninja",
             "sources": [
-                { "type": "git", "url": "git://anongit.kde.org/ksudoku.git" }
+                { "type": "git", "url": "https://anongit.kde.org/ksudoku.git" }
             ]
         }
     ]

@@ -15,7 +15,7 @@
             "name": "gcompris",
             "buildsystem": "cmake",
             "builddir": true,
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/gcompris.git" } ]
+            "sources": [ { "type": "git", "url": "https://anongit.kde.org/gcompris.git" } ]
         }
     ]
 }

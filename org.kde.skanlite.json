@@ -19,13 +19,13 @@
         {
             "name": "libksane",
             "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/libksane.git" } ]
+            "sources": [ { "type": "git", "url": "https://anongit.kde.org/libksane.git" } ]
         },
         {
             "name": "skanlite",
             "buildsystem": "cmake-ninja",
             "builddir": true,
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/skanlite.git" } ]
+            "sources": [ { "type": "git", "url": "https://anongit.kde.org/skanlite.git" } ]
         }
     ]
 }

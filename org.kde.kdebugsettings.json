@@ -13,7 +13,7 @@
         {
             "name": "kdebugsettings",
             "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kdebugsettings.git" } ]
+            "sources": [ { "type": "git", "url": "https://anongit.kde.org/kdebugsettings.git" } ]
         }
     ]
 }
