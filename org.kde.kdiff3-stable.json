@@ -1,21 +1,19 @@
 {
-    "id": "org.kde.kdiff3",
+    "id": "org.kde.kdiff3-stable",
     "branch": "master",
     "runtime": "org.kde.Platform",
     "runtime-version": "5.14",
     "sdk": "org.kde.Sdk",
     "command": "kdiff3",
-    "tags": ["nightly"],
-    "desktop-file-name-suffix": " (Nightly)",
+    "tags": ["nightly-stable"],
+    "desktop-file-name-suffix": " (Nightly, Stable)",
     "finish-args": ["--share=ipc", "--socket=x11", "--socket=wayland", "--filesystem=host" ],
-
     "modules": [
-        "boost.json",
         {
             "name": "kdiff3",
             "buildsystem": "cmake-ninja",
             "sources": [
-                { "type": "git", "url": "https://invent.kde.org/sdk/kdiff3.git" }
+                { "type": "git", "url": "https://invent.kde.org/sdk/kdiff3.git", "branch": "1.8" }
             ]
         }
     ]
