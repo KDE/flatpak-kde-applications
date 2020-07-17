@@ -7,19 +7,73 @@
     "command": "massif-visualizer",
     "tags": ["nightly"],
     "desktop-file-name-suffix": " (Nightly)",
-    "finish-args": ["--share=ipc", "--socket=x11", "--socket=wayland", "--filesystem=host" ],
-    
+    "finish-args": [
+        "--device=dri",
+        "--share=ipc",
+        "--socket=cups",
+        "--socket=wayland",
+        "--socket=x11"
+    ],
     "modules": [
         {
-            "config-opts": [ "-DENABLE_TESTING=OFF" ],
+          "name": "boost",
+          "buildsystem": "simple",
+          "build-commands": [
+            "./bootstrap.sh --prefix=/app",
+            "./b2 -j $FLATPAK_BUILDER_N_JOBS",
+            "./b2 install"
+          ],
+          "cleanup": [
+            "/lib/libboost_*.a"
+          ],
+          "sources": [
+            {
+              "type": "archive",
+              "url": "https://dl.bintray.com/boostorg/release/1.73.0/source/boost_1_73_0.tar.bz2",
+              "sha256": "4eb3b8d442b426dc35346235c8733b5ae35ba431690e38c6a8263dce9fcbb402"
+            }
+          ]
+        },
+        {
+            "name": "graphviz",
+            "buildsystem": "autotools",
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://www2.graphviz.org/Packages/stable/portable_source/graphviz-2.44.0.tar.gz",
+                    "sha256": "9aabd13a8018b708ab3c822de2326c19d0a52ed59f50a6b0f9318c07e2a6d93b"
+                }
+            ]
+        },
+        {
+            "name": "kgraphviewer",
+            "buildsystem": "cmake",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://invent.kde.org/graphics/kgraphviewer.git"
+                }
+            ]
+        },
+        {
             "name": "kdiagram",
             "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "https://invent.kde.org/graphics/kdiagram.git" } ]
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://invent.kde.org/graphics/kdiagram.git"
+                }
+            ]
         },
         {
             "name": "massif-visualizer",
             "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "https://invent.kde.org/sdk/massif-visualizer.git" } ]
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://invent.kde.org/sdk/massif-visualizer.git"
+                }
+            ]
         }
     ]
 }
