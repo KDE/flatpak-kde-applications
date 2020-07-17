@@ -22,9 +22,7 @@
         {
             "name": "okteta",
             "buildsystem": "cmake",
-            "sources": [
-                { "type": "git", "url": "https://anongit.kde.org/okteta.git" }
-            ]
+            "sources": [ { "type": "git", "url": "https://invent.kde.org/utilities/okteta.git", "branch": "master" } ]
         }
     ]
 }
