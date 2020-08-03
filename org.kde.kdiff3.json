@@ -7,7 +7,7 @@
     "command": "kdiff3",
     "tags": ["nightly"],
     "desktop-file-name-suffix": " (Nightly)",
-    "finish-args": ["--share=ipc", "--socket=x11", "--socket=wayland", "--filesystem=host" ],
+    "finish-args": ["--device=dri", "--share=network", "--share=ipc", "--socket=system-bus", "--socket=x11", "--socket=wayland", "--filesystem=host" ],
 
     "modules": [
         "boost.json",

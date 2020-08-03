@@ -1,13 +1,13 @@
 {
     "id": "org.kde.kdiff3",
-    "branch": "master",
+    "branch": "stable",
     "runtime": "org.kde.Platform",
     "runtime-version": "5.14",
     "sdk": "org.kde.Sdk",
     "command": "kdiff3",
     "tags": ["nightly-stable"],
     "desktop-file-name-suffix": " (Nightly, Stable)",
-    "finish-args": ["--share=ipc", "--socket=x11", "--socket=wayland", "--filesystem=host" ],
+    "finish-args": ["--device=dri", "--share=network", "--share=ipc", "--socket=system-bus", "--socket=x11", "--socket=wayland", "--filesystem=host" ],
     "modules": [
         {
             "name": "kdiff3",
