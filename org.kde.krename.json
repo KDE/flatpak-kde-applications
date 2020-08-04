@@ -1,0 +1,56 @@
+{
+    "id": "org.kde.krename",
+    "branch": "master",
+    "runtime": "org.kde.Platform",
+    "runtime-version": "5.14",
+    "sdk": "org.kde.Sdk",
+    "command": "krename",
+    "tags": ["nightly"],
+    "desktop-file-name-suffix": " (Nightly)",
+    "finish-args": ["--share=ipc", "--socket=x11", "--socket=wayland", "--filesystem=host" ],
+
+    "modules": [
+        {
+            "name": "libexif",
+            "buildsystem": "autotools",
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://github.com/libexif/libexif/releases/download/libexif-0_6_22-release/libexif-0.6.22.tar.xz",
+                    "sha256": "5048f1c8fc509cc636c2f97f4b40c293338b6041a5652082d5ee2cf54b530c56"
+                }
+            ]
+        },
+        {
+            "name": "taglib",
+            "config-opts": [ "-DBUILD_SHARED_LIBS=ON" ],
+            "buildsystem": "cmake-ninja",
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://taglib.github.io/releases/taglib-1.11.1.tar.gz",
+                    "sha256": "b6d1a5a610aae6ff39d93de5efd0fdc787aa9e9dc1e7026fa4c961b26563526b"
+                }
+            ]
+        },
+        {
+            "name": "kjs",
+            "config-opts": [ "-DENABLE_TESTING=OFF" ],
+            "buildsystem": "cmake-ninja",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://commits.kde.org/kjs.git",
+                    "branch": "v5.66.0"
+                }
+            ]
+        },
+        {
+            "name": "krename",
+            "buildsystem": "cmake-ninja",
+            "sources": [
+                { "type": "git", "url": "https://commits.kde.org/krename.git" }
+            ]
+        }
+    ]
+}
