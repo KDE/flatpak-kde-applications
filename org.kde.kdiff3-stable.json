@@ -1,6 +1,6 @@
 {
     "id": "org.kde.kdiff3-stable",
-    "branch": "master",
+    "branch": "1.8",
     "runtime": "org.kde.Platform",
     "runtime-version": "5.14",
     "sdk": "org.kde.Sdk",
