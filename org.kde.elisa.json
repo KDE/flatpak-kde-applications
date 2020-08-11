@@ -28,8 +28,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.videolan.org/pub/videolan/vlc/3.0.11/vlc-3.0.11.tar.xz",
-                    "sha256": "3e94a1acf33445e9da15d528aa48657aa26b912eaa2656b403d43860a8834919"
+                    "url": "ftp://ftp.videolan.org/pub/videolan/vlc/3.0.11.1/vlc-3.0.11.1.tar.xz",
+                    "sha256": "189311d28aa814f106a7b3645211ac52c0b3e2b9f4b348de2f63bab3218086b8"
                 }
             ]
         },
@@ -42,9 +42,15 @@
         },
         {
             "config-opts": ["-DENABLE_TESTING=OFF" , "-DLMDB_DIR=/app"],
+            "name": "kfilemetadata",
+            "buildsystem": "cmake-ninja",
+            "sources": [ { "type": "git", "url": "https://invent.kde.org/frameworks/kfilemetadata.git", "branch": "v5.70.0" } ]
+        },
+        {
+            "config-opts": ["-DENABLE_TESTING=OFF" , "-DLMDB_DIR=/app"],
             "name": "baloo",
             "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "https://invent.kde.org/frameworks/baloo.git", "branch": "v5.64.0" } ]
+            "sources": [ { "type": "git", "url": "https://invent.kde.org/frameworks/baloo.git", "branch": "v5.70.0" } ]
         },
         {
             "name": "elisa",
