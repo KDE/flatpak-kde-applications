@@ -49,7 +49,7 @@
         {
             "config-opts": ["-DENABLE_TESTING=OFF" , "-DLMDB_DIR=/app"],
             "name": "baloo",
-            "buildsystem": "cmake-ninja",
+            "buildsystem": "cmake",
             "sources": [ { "type": "git", "url": "https://invent.kde.org/frameworks/baloo.git", "branch": "v5.70.0" } ]
         },
         {
