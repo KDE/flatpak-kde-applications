@@ -41,21 +41,25 @@
             "subdir" : "libraries/liblmdb"
         },
         {
-            "config-opts": ["-DENABLE_TESTING=OFF" , "-DLMDB_DIR=/app"],
+            "config-opts": ["-DENABLE_TESTING=OFF"],
             "name": "kfilemetadata",
             "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "https://invent.kde.org/frameworks/kfilemetadata.git", "branch": "v5.70.0" } ]
+            "sources": [ { "type": "git", "url": "https://invent.kde.org/frameworks/kfilemetadata.git", "branch": "v5.73.0" } ]
         },
         {
-            "config-opts": ["-DENABLE_TESTING=OFF" , "-DLMDB_DIR=/app"],
+            "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib", "-DLMDB_DIR=/app"],
             "name": "baloo",
-            "buildsystem": "cmake",
-            "sources": [ { "type": "git", "url": "https://invent.kde.org/frameworks/baloo.git", "branch": "v5.70.0" } ]
+            "buildsystem": "cmake-ninja",
+            "builddir": true,
+            "sources": [ { "type": "git", "url": "https://invent.kde.org/frameworks/baloo.git", "branch": "v5.73.0" } ]
         },
         {
             "name": "elisa",
             "buildsystem": "cmake-ninja",
-            "config-opts": [],
+            "config-opts": [
+                "-DCMAKE_BUILD_TYPE=Release"
+            ],
+            "builddir": true,
             "sources": [
                 { "type": "git", "url": "https://invent.kde.org/multimedia/elisa.git" }
             ]
