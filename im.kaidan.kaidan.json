@@ -50,7 +50,7 @@
             "buildsystem": "meson",
             "builddir": true,
             "config-opts": [
-                "-Ddisable_gtkdoc=true"
+                "-Dflite=disabled"
             ],
             "sources": [
                 {
