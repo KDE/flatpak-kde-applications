@@ -41,6 +41,12 @@
             "sources": [ { "type": "git", "url": "https://invent.kde.org/libraries/pulseaudio-qt.git" } ]
         },
         {
+            "config-opts": [ "-DENABLE_TESTING=OFF" ],
+            "name": "kpeoplevcard",
+            "buildsystem": "cmake-ninja",
+            "sources": [ { "type": "git", "url": "https://invent.kde.org/pim/kpeoplevcard.git" } ]
+        },
+        {
             "name": "kdeconnect",
             "buildsystem": "cmake-ninja",
             "sources": [ { "type": "git", "url": "https://invent.kde.org/network/kdeconnect-kde.git" } ]
