@@ -2,7 +2,7 @@
     "id": "org.kde.kexi-stable",
     "branch": "master",
     "runtime": "org.kde.Platform",
-    "runtime-version": "5.14",
+    "runtime-version": "5.15",
     "sdk": "org.kde.Sdk",
     "command": "kexi-3.2",
     "tags": ["nightly-stable"],
