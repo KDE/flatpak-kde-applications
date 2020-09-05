@@ -4,6 +4,8 @@
     "rename-icon": "kontact",
     "runtime": "org.kde.Platform",
     "runtime-version": "5.15",
+    "base": "io.qt.qtwebengine.BaseApp",
+    "base-version": "5.15",
     "sdk": "org.kde.Sdk",
     "tags": [ "nightly" ],
     "desktop-file-name-suffix": " (Nightly)",
@@ -558,6 +560,14 @@
                     "type": "git",
                     "url": "https://invent.kde.org/pim/messagelib.git",
                     "branch": "master"
+                }
+            ],
+            "modules": [
+                {
+                    "config-opts": [ "-DENABLE_TESTING=OFF" ],
+                    "name": "qca",
+                    "buildsystem": "cmake-ninja",
+                    "sources": [ { "type": "git", "url": "https://invent.kde.org/libraries/qca.git" } ]
                 }
             ]
         },
