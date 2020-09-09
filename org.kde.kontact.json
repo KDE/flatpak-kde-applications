@@ -429,21 +429,6 @@
             ]
         },
         {
-            "name": "kdav",
-            "config-opts": [
-                "-DBUILD_TESTING=OFF",
-                "-DCMAKE_BUILD_TYPE=RelWithDebInfo"
-            ],
-            "buildsystem": "cmake-ninja",
-            "sources": [
-                {
-                    "type": "git",
-                    "url": "https://invent.kde.org/pim/kdav.git",
-                    "branch": "master"
-                }
-            ]
-        },
-        {
             "name": "libkleo",
             "config-opts": [
                 "-DBUILD_TESTING=OFF",
