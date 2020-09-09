@@ -1,0 +1,3 @@
+ID=org.kde.keysmith
+JSON=org.kde.keysmith.json
+GITURL=https://invent.kde.org/utilities/keysmith.git
