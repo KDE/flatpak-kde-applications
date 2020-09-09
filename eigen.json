@@ -5,8 +5,8 @@
     "sources": [
         {
             "type": "archive",
-            "url": "https://bitbucket.org/eigen/eigen/get/3.3.4.tar.bz2",
-            "sha256": "dd254beb0bafc695d0f62ae1a222ff85b52dbaa3a16f76e781dce22d0d20a4a6"
+            "url": "https://gitlab.com/libeigen/eigen/-/archive/3.3.7/eigen-3.3.7.tar.bz2",
+            "sha256": "685adf14bd8e9c015b78097c1dc22f2f01343756f196acdc76a678e1ae352e11"
         }
     ]
 }
