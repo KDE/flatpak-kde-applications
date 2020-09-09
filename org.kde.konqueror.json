@@ -3,6 +3,8 @@
     "branch": "master",
     "runtime": "org.kde.Platform",
     "runtime-version": "5.15",
+    "base": "io.qt.qtwebengine.BaseApp",
+    "base-version": "5.15",
     "rename-desktop-file": "konqbrowser.desktop",
     "sdk": "org.kde.Sdk",
     "command": "konqueror",
@@ -11,12 +13,6 @@
     "finish-args": ["--share=ipc", "--socket=cups", "--socket=x11", "--socket=wayland", "--filesystem=host" ],
 
     "modules": [
-        {
-            "config-opts": [ "-DENABLE_TESTING=OFF" ],
-            "name": "kdelibs4support",
-            "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "https://invent.kde.org/frameworks/kdelibs4support.git", "branch": "v5.69.0" } ]
-        },
         { "name": "ksu", "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "https://invent.kde.org/frameworks/kdesu.git", "branch": "v5.69.0" } ] },
         {
             "name": "konqueror",
