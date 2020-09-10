@@ -31,12 +31,6 @@
         },
         {
             "config-opts": [ "-DENABLE_TESTING=OFF" ],
-            "name": "kdelibs4support",
-            "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "https://anongit.kde.org/kdelibs4support.git", "branch": "v5.66.0" } ]
-        },
-        {
-            "config-opts": [ "-DENABLE_TESTING=OFF" ],
             "name": "kdiagram",
             "buildsystem": "cmake-ninja",
             "sources": [ { "type": "git", "url": "https://anongit.kde.org/kdiagram.git" } ]
