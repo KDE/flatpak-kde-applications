@@ -12,7 +12,7 @@
     "modules": [
         {
             "name": "libgpg-error",
-            "sources": [ { "type": "archive", "url": "http://mirrors.dotsrc.org/gnupg/libgpg-error/libgpg-error-1.31.tar.bz2", "sha256": "40d0a823c9329478063903192a1f82496083b277265904878f4bc09e0db7a4ef" } ],
+            "sources": [ { "type": "archive", "url": "http://mirrors.dotsrc.org/gnupg/libgpg-error/libgpg-error-1.37.tar.bz2", "sha256": "b32d6ff72a73cf79797f7f2d039e95e9c6f92f0c1450215410840ab62aea9763" } ],
             "cleanup": [ "/lib/libgpg-error.la" ],
             "modules": [
                 {
