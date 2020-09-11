@@ -30,7 +30,6 @@
             "buildsystem": "cmake-ninja",
             "sources": [ { "type": "git", "url": "https://anongit.kde.org/khtml.git", "branch": "v5.66.0" } ]
         },
-        { "name": "kcontacts", "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "https://anongit.kde.org/kcontacts" } ] },
         { "name": "grantlee", "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "https://github.com/steveire/grantlee.git" } ] },
         { "name": "kpimtextedit", "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "https://anongit.kde.org/kpimtextedit" } ] },
         { "name": "kidentitymanagement", "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "https://anongit.kde.org/kidentitymanagement" } ] },
