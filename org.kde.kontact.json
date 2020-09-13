@@ -164,6 +164,36 @@
             ]
         },
         {
+            "name": "grantleetheme",
+            "config-opts": [
+                "-DBUILD_TESTING=OFF",
+                "-DCMAKE_BUILD_TYPE=RelWithDebInfo"
+            ],
+            "buildsystem": "cmake-ninja",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://invent.kde.org/pim/grantleetheme.git",
+                    "branch": "master"
+                }
+            ]
+        },
+        {
+            "name": "libkleo",
+            "config-opts": [
+                "-DBUILD_TESTING=OFF",
+                "-DCMAKE_BUILD_TYPE=RelWithDebInfo"
+            ],
+            "buildsystem": "cmake-ninja",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://invent.kde.org/pim/libkleo.git",
+                    "branch": "master"
+                }
+            ]
+        },
+        {
             "name": "akonadi-contacts",
             "config-opts": [
                 "-DBUILD_TESTING=OFF",
@@ -424,51 +454,6 @@
                 {
                     "type": "git",
                     "url": "https://invent.kde.org/pim/akonadi-notes.git",
-                    "branch": "master"
-                }
-            ]
-        },
-        {
-            "name": "libkleo",
-            "config-opts": [
-                "-DBUILD_TESTING=OFF",
-                "-DCMAKE_BUILD_TYPE=RelWithDebInfo"
-            ],
-            "buildsystem": "cmake-ninja",
-            "sources": [
-                {
-                    "type": "git",
-                    "url": "https://invent.kde.org/pim/libkleo.git",
-                    "branch": "master"
-                }
-            ]
-        },
-        {
-            "name": "grantleetheme",
-            "config-opts": [
-                "-DBUILD_TESTING=OFF",
-                "-DCMAKE_BUILD_TYPE=RelWithDebInfo"
-            ],
-            "buildsystem": "cmake-ninja",
-            "sources": [
-                {
-                    "type": "git",
-                    "url": "https://invent.kde.org/pim/grantleetheme.git",
-                    "branch": "master"
-                }
-            ]
-        },
-        {
-            "name": "kdepim-apps-libs",
-            "config-opts": [
-                "-DBUILD_TESTING=OFF",
-                "-DCMAKE_BUILD_TYPE=RelWithDebInfo"
-            ],
-            "buildsystem": "cmake-ninja",
-            "sources": [
-                {
-                    "type": "git",
-                    "url": "https://invent.kde.org/pim/kdepim-apps-libs.git",
                     "branch": "master"
                 }
             ]
@@ -849,7 +834,7 @@
                         {
                             "type": "git",
                             "url": "https://invent.kde.org/frameworks/kross.git",
-                            "branch": "v5.66.0"
+                            "branch": "v5.74.0"
                         }
                     ]
                 }
