@@ -34,7 +34,7 @@
         },
         {
             "name": "zxing",
-            "config-opts": [ "-DBUILD_SHARED_LIBS=ON" ],
+            "config-opts": [ "-DBUILD_SHARED_LIBS=ON", "-DBUILD_BLACKBOX_TESTS=OFF" ],
             "buildsystem": "cmake-ninja",
             "builddir": true,
             "sources": [
