@@ -14,7 +14,7 @@
             "name": "kamoso",
             "config-opts": ["-DENABLE_TESTING=OFF"],
             "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "https://anongit.kde.org/kamoso.git", "branch": "Applications/18.12" } ]
+            "sources": [ { "type": "git", "url": "https://anongit.kde.org/kamoso.git" } ]
         }
     ]
 }
