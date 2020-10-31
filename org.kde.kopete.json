@@ -16,19 +16,19 @@
             "config-opts": [ "-DENABLE_TESTING=OFF" ],
             "name": "kdelibs4support",
             "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "https://anongit.kde.org/kdelibs4support.git", "branch": "v5.73.0" } ]
+            "sources": [ { "type": "git", "url": "https://anongit.kde.org/kdelibs4support.git", "branch": "v5.75.0" } ]
         },
         {
             "config-opts": [ "-DENABLE_TESTING=OFF" ],
             "name": "kjs",
             "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "https://anongit.kde.org/kjs.git", "branch": "v5.66.0" } ]
+            "sources": [ { "type": "git", "url": "https://anongit.kde.org/kjs.git", "branch": "v5.75.0" } ]
         },
         {
             "config-opts": [ "-DENABLE_TESTING=OFF" ],
             "name": "khtml",
             "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "https://anongit.kde.org/khtml.git", "branch": "v5.66.0" } ]
+            "sources": [ { "type": "git", "url": "https://anongit.kde.org/khtml.git", "branch": "v5.75.0" } ]
         },
         { "name": "grantlee", "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "https://github.com/steveire/grantlee.git" } ] },
         { "name": "kpimtextedit", "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "https://anongit.kde.org/kpimtextedit" } ] },

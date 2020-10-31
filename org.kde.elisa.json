@@ -44,14 +44,14 @@
             "config-opts": ["-DENABLE_TESTING=OFF"],
             "name": "kfilemetadata",
             "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "https://invent.kde.org/frameworks/kfilemetadata.git", "branch": "v5.73.0" } ]
+            "sources": [ { "type": "git", "url": "https://invent.kde.org/frameworks/kfilemetadata.git", "branch": "v5.75.0" } ]
         },
         {
             "config-opts": ["-DENABLE_TESTING=OFF", "-DCMAKE_INSTALL_LIBDIR=lib", "-DLMDB_DIR=/app"],
             "name": "baloo",
             "buildsystem": "cmake-ninja",
             "builddir": true,
-            "sources": [ { "type": "git", "url": "https://invent.kde.org/frameworks/baloo.git", "branch": "v5.73.0" } ]
+            "sources": [ { "type": "git", "url": "https://invent.kde.org/frameworks/baloo.git", "branch": "v5.75.0" } ]
         },
         {
             "name": "elisa",

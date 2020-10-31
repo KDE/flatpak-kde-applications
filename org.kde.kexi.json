@@ -15,7 +15,7 @@
             "name": "breeze-icons",
             "config-opts": [ "-DSKIP_INSTALL_ICONS=ON" ],
             "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "https://anongit.kde.org/breeze-icons.git", "branch": "v5.66.0" } ]
+            "sources": [ { "type": "git", "url": "https://anongit.kde.org/breeze-icons.git", "branch": "v5.75.0" } ]
         },
         {
             "name": "kdb",

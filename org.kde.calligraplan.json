@@ -15,19 +15,19 @@
             "name": "kjs",
             "buildsystem": "cmake-ninja",
             "config-opts": [ "-DENABLE_TESTING=OFF" ],
-            "sources": [ { "type": "git", "url": "https://anongit.kde.org/kjs.git", "branch": "v5.66.0" } ]
+            "sources": [ { "type": "git", "url": "https://anongit.kde.org/kjs.git", "branch": "v5.75.0" } ]
         },
         {
             "name": "khtml",
             "config-opts": [ "-DENABLE_TESTING=OFF" ],
             "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "https://anongit.kde.org/khtml.git", "branch": "v5.66.0" } ]
+            "sources": [ { "type": "git", "url": "https://anongit.kde.org/khtml.git", "branch": "v5.75.0" } ]
         },
         {
             "config-opts": [ "-DENABLE_TESTING=OFF" ],
             "name": "kross",
             "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "https://anongit.kde.org/kross.git", "branch": "v5.66.0" } ]
+            "sources": [ { "type": "git", "url": "https://anongit.kde.org/kross.git", "branch": "v5.75.0" } ]
         },
         {
             "config-opts": [ "-DENABLE_TESTING=OFF" ],
