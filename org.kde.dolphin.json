@@ -21,17 +21,20 @@
             "config-opts": ["-DENABLE_TESTING=OFF" , "-DLMDB_DIR=/app"],
             "name": "baloo",
             "buildsystem": "cmake-ninja",
+	    "builddir": true,
             "sources": [ { "type": "git", "url": "https://invent.kde.org/frameworks/baloo.git", "branch": "v5.75.0" } ]
         },
         {
             "config-opts": ["-DENABLE_TESTING=OFF" , "-DLMDB_DIR=/app"],
             "name": "baloo-widgets",
             "buildsystem": "cmake-ninja",
+	    "builddir": true,
             "sources": [ { "type": "git", "url": "https://invent.kde.org/libraries/baloo-widgets.git" } ]
         },
         {
             "name": "dolphin",
             "buildsystem": "cmake-ninja",
+	    "builddir": true,
             "sources": [ { "type": "git", "url": "https://invent.kde.org/system/dolphin.git" },
                          {"type": "patch", "path": "dolphinpatch.patch"}
                        ]
@@ -39,6 +42,7 @@
         {
             "name": "dolphin-plugins",
             "buildsystem": "cmake-ninja",
+	    "builddir": true,
             "sources": [ { "type": "git", "url": "https://invent.kde.org/sdk/dolphin-plugins.git" } ]
         }
     ]

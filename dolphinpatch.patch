@@ -1,8 +1,8 @@
 diff --git a/CMakeLists.txt b/CMakeLists.txt
-index 080fc5fea..928dd3265 100644
+index 49842bd4c..b1d298e92 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
-@@ -133,9 +133,9 @@ install(FILES
+@@ -166,9 +166,9 @@
      COMPONENT Devel
  )
  
@@ -12,23 +12,24 @@ index 080fc5fea..928dd3265 100644
 +configure_file(org.freedesktop.FileManager1.service.in
 +               ${CMAKE_CURRENT_BINARY_DIR}/org.freedesktop.FileManager1.service)
 +install(FILES ${CMAKE_CURRENT_BINARY_DIR}/org.freedesktop.FileManager1.service
-         DESTINATION ${DBUS_SERVICES_INSTALL_DIR})
+         DESTINATION ${KDE_INSTALL_DBUSSERVICEDIR})
+ install(FILES dolphin.categories  DESTINATION  ${KDE_INSTALL_LOGGINGCATEGORIESDIR})
  
- feature_summary(WHAT ALL FATAL_ON_MISSING_REQUIRED_PACKAGES)
 diff --git a/org.kde.dolphin.FileManager1.service.in b/org.freedesktop.FileManager1.service.in
 similarity index 100%
 rename from org.kde.dolphin.FileManager1.service.in
 rename to org.freedesktop.FileManager1.service.in
 diff --git a/src/main.cpp b/src/main.cpp
-index 789a52996..18c6c2c78 100644
+index ef2905d77..56d1789b0 100644
 --- a/src/main.cpp
 +++ b/src/main.cpp
-@@ -104,7 +104,7 @@ extern "C" Q_DECL_EXPORT int kdemain(int argc, char **argv)
+@@ -145,7 +145,7 @@ extern "C" Q_DECL_EXPORT int kdemain(int argc, char **argv)
+         QObject::connect(&app, &QGuiApplication::commitDataRequest, disableSessionManagement);
+         QObject::connect(&app, &QGuiApplication::saveStateRequest, disableSessionManagement);
  
-     KAboutData::setApplicationData(aboutData);
- 
--    KDBusService dolphinDBusService;
-+    KDBusService dolphinDBusService(KDBusService::NoExitOnFailure);
-     DBusInterface interface;
- 
-     QCommandLineParser parser;
+-        KDBusService dolphinDBusService;
++        KDBusService dolphinDBusService(KDBusService::NoExitOnFailure);
+         DBusInterface interface;
+         interface.setAsDaemon();
+         return app.exec();
+
