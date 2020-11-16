@@ -11,11 +11,7 @@
 
     "modules": [
 	"poppler.json",
-        {
-            "name": "analitza",
-            "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "https://anongit.kde.org/analitza.git" } ]
-        },
+	"analitza.json",
         {
             "name": "cantor",
             "buildsystem": "cmake-ninja",
