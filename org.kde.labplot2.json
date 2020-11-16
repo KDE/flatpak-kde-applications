@@ -10,6 +10,9 @@
     "finish-args": ["--share=ipc", "--socket=x11", "--socket=wayland" ],
 
     "modules": [
+        "eigen.json",
+        "poppler.json",
+        "analitza.json",
         {
             "name": "gsl",
             "sources": [
@@ -63,6 +66,13 @@
             ]
         },
         {
+            "name": "qtmqtt",
+	    "buildsystem": "qmake",
+	    "builddir": true,
+	    "make-install-args": ["INSTALL_ROOT=/app/qtmqtt"],
+	    "sources": [ { "type": "git", "url": "https://github.com/qt/qtmqtt.git", "branch": "v5.15.1" } ]
+	},
+        {
             "name": "kuserfeedback",
 	    "buildsystem": "cmake-ninja",
             "sources": [
@@ -84,8 +94,14 @@
             ]
         },
         {
+            "name": "cantor",
+            "buildsystem": "cmake-ninja",
+            "sources": [ { "type": "git", "url": "https://anongit.kde.org/cantor.git" } ]
+        },
+        {
             "name": "labplot",
             "buildsystem": "cmake-ninja",
+            "config-opts": [ "-DQt5Mqtt_DIR=/app/qtmqtt/usr/lib/x86_64-linux-gnu/cmake/Qt5Mqtt" ],
             "sources": [ { "type": "git", "url": "https://anongit.kde.org/labplot.git", "branch": "master" } ]
         }
     ]
