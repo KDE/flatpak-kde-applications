@@ -1,0 +1,166 @@
+{
+    "id": "org.kde.gwenview",
+    "branch": "master",
+    "runtime": "org.kde.Platform",
+    "runtime-version": "5.15",
+    "sdk": "org.kde.Sdk",
+    "command": "gwenview",
+    "rename-icon": "gwenview",
+    "tags": ["nightly"],
+    "desktop-file-name-suffix": " (Nightly)",
+    "finish-args": [
+        "--device=dri",
+        "--filesystem=host",
+        "--share=ipc",
+        "--socket=fallback-x11",
+        "--socket=wayland"
+    ],
+    "cleanup": [
+        "*.a",
+        "*.la",
+        "/include",
+        "/lib/cmake",
+        "/lib/pkgconfig",
+        "/share/man"
+    ],
+    "modules": [
+        {
+            "name": "exiv2",
+            "buildsystem": "cmake-ninja",
+            "builddir": true,
+            "config-opts": [
+                "-DBUILD_SHARED_LIBS=ON",
+                "-DEXIV2_ENABLE_XMP=ON",
+                "-DEXIV2_ENABLE_EXTERNAL_XMP=OFF",
+                "-DEXIV2_ENABLE_PNG=ON",
+                "-DEXIV2_ENABLE_NLS=ON",
+                "-DEXIV2_ENABLE_PRINTUCS2=ON",
+                "-DEXIV2_ENABLE_LENSDATA=ON",
+                "-DEXIV2_ENABLE_VIDEO=OFF",
+                "-DEXIV2_ENABLE_WEBREADY=OFF",
+                "-DEXIV2_ENABLE_DYNAMIC_RUNTIME=OFF",
+                "-DEXIV2_ENABLE_CURL=OFF",
+                "-DEXIV2_ENABLE_SSH=OFF",
+                "-DEXIV2_BUILD_SAMPLES=OFF",
+                "-DEXIV2_BUILD_PO=OFF",
+                "-DEXIV2_BUILD_EXIV2_COMMAND=OFF",
+                "-DEXIV2_BUILD_UNIT_TESTS=OFF",
+                "-DEXIV2_BUILD_DOC=OFF",
+                "-DEXIV2_TEAM_EXTRA_WARNINGS=OFF",
+                "-DEXIV2_TEAM_WARNINGS_AS_ERRORS=OFF",
+                "-DEXIV2_TEAM_USE_SANITIZERS=OFF",
+                "-DEXIV2_ENABLE_WIN_UNICODE=OFF"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://exiv2.org/builds/exiv2-0.27.3-Source.tar.gz",
+                    "sha256": "a79f5613812aa21755d578a297874fb59a85101e793edc64ec2c6bd994e3e778"
+                }
+            ]
+        },
+        {
+            "name": "cfitsio",
+            "buildsystem": "simple",
+            "build-commands": [
+                "sed -e 's|LDFLAGS=.*|LDFLAGS=\"$LDFLAGS\"|g' -i configure.in",
+                "autoreconf -vi",
+                "./configure --prefix=/ --enable-reentrant",
+                "make shared",
+                "make utils",
+                "make DESTDIR=${FLATPAK_DEST} install",
+                "install -D -m644 License.txt ${FLATPAK_DEST}/share/licenses/cfitsio/LICENSE"
+            ],
+            "cleanup": [
+                "/bin/cookbook",
+                "/bin/smem",
+                "/bin/testprog"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://heasarc.gsfc.nasa.gov/FTP/software/fitsio/c/cfitsio-3.49.tar.gz",
+                    "sha256": "5b65a20d5c53494ec8f638267fca4a629836b7ac8dd0ef0266834eab270ed4b3"
+                }
+            ]
+        },
+        {
+            "name": "jasper",
+            "buildsystem": "cmake-ninja",
+            "builddir": true,
+            "config-opts": [
+                "-DJAS_ENABLE_SHARED=ON",
+                "-DJAS_ENABLE_LIBJPEG=ON",
+                "-DJAS_ENABLE_OPENGL=OFF",
+                "-DJAS_LOCAL=OFF",
+                "-DJAS_ENABLE_DOC=OFF",
+                "-DJAS_ENABLE_PROGRAMS=OFF"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://github.com/jasper-software/jasper/archive/version-2.0.22.tar.gz",
+                    "sha256": "afc4166bff29b8a0dc46ed5e8d6a208d7976fccfd0b1146e3400c8b2948794a2"
+                }
+            ]
+        },
+        {
+            "name": "libraw",
+            "builddir": true,
+            "config-opts": [
+                "--disable-examples",
+                "--disable-static"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://www.libraw.org/data/LibRaw-0.20.2.tar.gz",
+                    "sha256": "dc1b486c2003435733043e4e05273477326e51c3ea554c6864a4eafaff1004a6"
+                },
+                {
+                    "type": "shell",
+                    "commands": [ "autoreconf -vfi" ]
+                }
+            ]
+        },
+        {
+            "name": "libkdcraw",
+            "buildsystem": "cmake-ninja",
+            "config-opts": [
+                "-DBUILD_TESTING=OFF"
+            ],
+            "builddir": true,
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://invent.kde.org/graphics/libkdcraw.git"
+                }
+            ]
+        },
+        {
+            "name": "libkipi",
+            "buildsystem": "cmake-ninja",
+            "config-opts": [
+                "-DBUILD_TESTING=OFF"
+            ],
+            "builddir": true,
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://invent.kde.org/graphics/libkipi.git"
+                }
+            ]
+        },
+        {
+            "name": "gwenview",
+            "buildsystem": "cmake-ninja",
+            "builddir": true,
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://invent.kde.org/graphics/gwenview.git"
+                }
+            ]
+        }
+    ]
+}
