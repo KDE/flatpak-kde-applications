@@ -7,7 +7,7 @@
     "command": "neochat",
     "tags": ["nightly"],
     "desktop-file-name-suffix": " (Nightly)",
-    "finish-args": ["--share=network", "--share=ipc", "--socket=x11", "--socket=wayland", "--device=dri", "--filesystem=xdg-download", "--talk-name=org.freedesktop.Notifications", "--talk-name=org.kde.kwalletd5" ],
+    "finish-args": ["--share=network", "--share=ipc", "--socket=x11", "--socket=wayland", "--device=dri", "--filesystem=xdg-download", "--talk-name=org.freedesktop.Notifications", "--talk-name=org.kde.kwalletd5", "--talk-name=org.kde.StatusNotifierWatcher", "--own-name=org.kde.StatusNotifierItem-2-2" ],
 
     "modules": [
         {
