@@ -1,4 +1,3 @@
 ID=org.kde.ark
 JSON=flatpak/org.kde.ark.json
-GITURL=https://anongit.kde.org/ark.git
-BRANCH=v19.08.0
+GITURL=https://invent.kde.org/utilities/ark.git
