@@ -38,10 +38,13 @@
             "sources": [ { "type": "archive", "url": "https://github.com/frankosterfeld/qtkeychain/archive/v0.10.0.tar.gz", "sha256": "5f916cd97843de550467db32d2e10f218b904af5b21cfdfcc7c6425d7dfc3ec2" } ],
             "config-opts": [ "-DCMAKE_INSTALL_LIBDIR=/app/lib", "-DLIB_INSTALL_DIR=/app/lib", "-DBUILD_TRANSLATIONS=NO" ]
         },
-                {
+        {
             "name": "neochat",
             "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "https://invent.kde.org/network/neochat" } ]
+            "sources": [ { "type": "git", "url": "https://invent.kde.org/network/neochat" } ],
+            "config-opts": [
+                "-DNEOCHAT_FLATPAK=ON"
+            ]
         }
     ]
 }
