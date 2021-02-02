@@ -1,0 +1,88 @@
+{
+    "id": "io.thp.gpodder-qml",
+    "branch": "master",
+    "runtime": "org.kde.Platform",
+    "runtime-version": "5.15",
+    "sdk": "org.kde.Sdk",
+    "command": "gpodder",
+    "tags": ["nightly"],
+    "desktop-file-name-suffix": " (Nightly)",
+    "finish-args": [
+        "--share=ipc",
+        "--socket=x11",
+        "--device=dri",
+        "--socket=wayland",
+        "--socket=pulseaudio",
+        "--share=network"
+    ],
+    "modules": [
+        {
+            "name": "pyotherside",
+            "buildsystem": "simple",
+            "build-commands": [
+                "qmake",
+                "mkdir -p /app/lib/qml",
+                "make INSTALL_ROOT=/app install",
+                "cp --force --archive --update --link /app/usr/lib/qml/. /app/lib/qml/"
+            ],
+            "cleanup": [
+                "/app/usr/"
+            ],
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://github.com/thp/pyotherside"
+                }
+            ]
+        },
+        {
+            "name": "minidb",
+            "buildsystem": "simple",
+            "build-commands": [
+                "pip3 install --prefix=/app --no-deps ."
+            ],
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://github.com/thp/minidb"
+                }
+            ]
+        },
+        {
+            "name": "podcastparser",
+            "buildsystem": "simple",
+            "build-commands": [
+                "pip3 install --prefix=/app --no-deps ."
+            ],
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://github.com/gpodder/podcastparser"
+                }
+            ]
+        },
+        {
+            "name": "gpodder-core",
+            "buildsystem": "simple",
+            "build-commands": [
+                "pip3 install --prefix=/app --no-deps ."
+            ],
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://github.com/gpodder/gpodder-core"
+                }
+            ]
+        },
+        {
+            "name": "gpodder-plamo",
+            "buildsystem": "cmake-ninja",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://invent.kde.org/jbbgameich/gpodder-qml"
+                }
+            ]
+        }
+    ]
+}
