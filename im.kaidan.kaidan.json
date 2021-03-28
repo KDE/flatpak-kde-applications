@@ -1,6 +1,5 @@
 {
     "id": "im.kaidan.kaidan",
-    "rename-desktop-file": "kaidan.desktop",
     "rename-icon": "kaidan",
     "runtime": "org.kde.Platform",
     "runtime-version": "5.15",
