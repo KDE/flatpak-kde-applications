@@ -13,7 +13,7 @@
         {
             "name": "arkade",
             "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "https://invent.kde.org/games/arkade", "branch": "main" } ]
+            "sources": [ { "type": "git", "url": "https://invent.kde.org/games/arkade", "branch": "master" } ]
         }
     ]
 }
