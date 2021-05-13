@@ -1,0 +1,89 @@
+{
+    "id": "org.kde.index",
+    "rename-icon": "index",
+    "runtime": "org.kde.Platform",
+    "runtime-version": "5.15",
+    "sdk": "org.kde.Sdk",
+    "command": "index",
+    "tags": ["nightly"],
+    "desktop-file-name-suffix": " (Nightly)",
+    "finish-args": [
+        "--share=ipc",
+        "--share=network",
+        "--socket=x11",
+        "--socket=wayland",
+        "--device=dri",
+        "--filesystem=host",
+        "--env=XDG_DATA_DIRS=/usr/share:/app/share/"
+    ],
+    "separate-locales": false,
+    "modules": [
+        {
+            "name": "mauikit",
+            "buildsystem": "cmake-ninja",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://anongit.kde.org/mauikit.git",
+                    "branch": "master"
+                }
+            ]
+        },
+        {
+            "name": "mauikit-filebrowsing",
+            "buildsystem": "cmake-ninja",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://invent.kde.org/maui/mauikit-filebrowsing.git",
+                    "branch": "master"
+                }
+            ]
+        },
+        {
+            "name": "kio-extras",
+            "buildsystem": "cmake-ninja",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://anongit.kde.org/kio-extras.git",
+                    "branch": "release/21.04"
+                }
+            ]
+        },
+        {
+            "name": "kdecoration",
+            "buildsystem": "cmake-ninja",
+            "sources": [
+                {
+                    "type": "archive",
+                    "sha256": "bc550b7bfde5b5762e76b33ac53f8268b6178ae389c953d729b864b22787d54c",
+                    "url": "https://download.kde.org/stable/plasma/5.21.5/kdecoration-5.21.5.tar.xz"
+                }
+            ]
+        },
+        {
+            "name": "applet-window-buttons",
+            "buildsystem": "cmake-ninja",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://github.com/psifidotos/applet-window-buttons",
+                    "branch": "master"
+                }
+            ]
+        },
+        {
+            "name": "index-fm",
+            "buildsystem": "cmake-ninja",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://anongit.kde.org/index-fm.git",
+                    "branch": "master"
+                }
+            ]
+        }
+    ]
+}
+
