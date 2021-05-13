@@ -12,17 +12,23 @@
         "--share=network",
         "--socket=x11",
         "--socket=wayland",
-        "--talk-name=org.freedesktop.Notifications"
+        "--device=dri",
+        "--system-talk-name=org.freedesktop.GeoClue2"
     ],
     "separate-locales": false,
 
     "modules": [
         {
+            "name": "kweathercore",
+            "config-opts": [ "-DBUILD_TESTING=OFF" ],
+            "buildsystem": "cmake-ninja",
+            "sources": [ { "type": "git", "url": "https://invent.kde.org/libraries/kweathercore.git", "branch": "master" } ]
+        },
+        {
             "name": "kweather",
             "buildsystem": "cmake-ninja",
-            "sources": [ 
-                { "type": "git", "url": "https://invent.kde.org/plasma-mobile/kweather.git"} 
-            ]
+            "config-opts": [ "-DBUILD_TESTING=OFF" ],
+            "sources": [ { "type": "git", "url": "https://invent.kde.org/plasma-mobile/kweather.git"} ]
         }
     ]
 }
