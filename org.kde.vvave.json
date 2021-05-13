@@ -1,6 +1,5 @@
 {
     "id": "org.kde.vvave",
-    "branch": "master",
     "rename-icon": "vvave",
     "runtime": "org.kde.Platform",
     "runtime-version": "5.15",
@@ -8,16 +7,29 @@
     "command": "vvave",
     "tags": ["nightly"],
     "desktop-file-name-suffix": " (Nightly)",
-    "finish-args": ["--share=ipc", "--socket=x11", "--socket=wayland", "--filesystem=host", "--socket=pulseaudio", "--socket=session-bus", "--share=network" ],
-
+    "finish-args": [
+        "--share=ipc",
+        "--share=network",
+        "--socket=x11",
+        "--socket=wayland",
+        "--device=dri",
+        "--filesystem=home",
+        "--own-name=org.mpris.MediaPlayer2.vvave",
+        "--socket=pulseaudio",
+        "--env=XDG_DATA_DIRS=/usr/share:/app/share/"
+    ],
+    "separate-locales": false,
     "modules": [
         {
+            "config-opts": [
+                "-DBUILD_SHARED_LIBS=ON"
+            ],
             "name": "taglib",
             "buildsystem": "cmake-ninja",
             "sources": [
                 {
                     "type": "archive",
-                    "url": "http://taglib.github.io/releases/taglib-1.11.1.tar.gz",
+                    "url": "https://taglib.github.io/releases/taglib-1.11.1.tar.gz",
                     "sha256": "b6d1a5a610aae6ff39d93de5efd0fdc787aa9e9dc1e7026fa4c961b26563526b"
                 }
             ]
@@ -30,6 +42,39 @@
             ]
         },
         {
+            "name": "mauikit-filebrowsing",
+            "buildsystem": "cmake-ninja",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://invent.kde.org/maui/mauikit-filebrowsing.git",
+                    "branch": "master"
+                }
+            ]
+        },
+        {
+            "name": "kdecoration",
+            "buildsystem": "cmake-ninja",
+            "sources": [
+                {
+                    "type": "archive",
+                    "sha256": "bc550b7bfde5b5762e76b33ac53f8268b6178ae389c953d729b864b22787d54c",
+                    "url": "https://download.kde.org/stable/plasma/5.21.5/kdecoration-5.21.5.tar.xz"
+                }
+            ]
+        },
+        {
+            "name": "applet-window-buttons",
+            "buildsystem": "cmake-ninja",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://github.com/psifidotos/applet-window-buttons",
+                    "branch": "master"
+                }
+            ]
+        },
+        {
             "name": "vvave",
             "buildsystem": "cmake-ninja",
             "config-opts": [ "-DCMAKE_EXE_LINKER_FLAGS=-lz" ],
@@ -39,3 +84,4 @@
         }
     ]
 }
+
