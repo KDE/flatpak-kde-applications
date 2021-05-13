@@ -37,7 +37,7 @@
                 {
                     "type": "git",
                     "url": "https://anongit.kde.org/kio-extras.git",
-                    "branch": "release/20.12"
+                    "branch": "release/21.04"
                 }
             ]
         },
