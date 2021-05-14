@@ -1,3 +1,3 @@
-ID=org.kde.mobile.angelfish
-JSON=org.kde.mobile.angelfish.json
+ID=org.kde.angelfish
+JSON=org.kde.angelfish.json
 GITURL=https://invent.kde.org/plasma-mobile/plasma-angelfish.git
