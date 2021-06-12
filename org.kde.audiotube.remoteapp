@@ -1,0 +1,3 @@
+ID=org.kde.audiotube
+JSON=org.kde.audiotube.json
+GITURL=https://invent.kde.org/plasma-mobile/audiotube.git
