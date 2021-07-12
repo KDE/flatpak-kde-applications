@@ -1,0 +1,32 @@
+{
+    "id": "org.kde.vakzination",
+    "branch": "master",
+    "runtime": "org.kde.Platform",
+    "runtime-version": "5.15",
+    "sdk": "org.kde.Sdk",
+    "command": "vakzination",
+    "tags": ["nightly"],
+    "desktop-file-name-suffix": " (Nightly)",
+    "finish-args": [
+        "--share=ipc",
+        "--socket=fallback-x11",
+        "--socket=wayland",
+        "--device=dri",
+        "--share=network"
+    ],
+
+    "modules": [
+        {
+            "name": "khealthcertificate",
+            "buildsystem": "cmake-ninja",
+            "sources": [ { "type": "git", "url": "https://invent.kde.org/pim/khealthcertificate.git"} ]
+        },
+        {
+            "name": "vakzination",
+            "buildsystem": "cmake-ninja",
+            "sources": [
+                { "type": "git", "url": "https://invent.kde.org/plasma-mobile/vakzination.git" }
+            ]
+        }
+    ]
+}
