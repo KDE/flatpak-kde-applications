@@ -16,6 +16,7 @@
     ],
 
     "modules": [
+        "poppler.json",
         {
             "name": "khealthcertificate",
             "buildsystem": "cmake-ninja",
