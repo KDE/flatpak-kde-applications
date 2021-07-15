@@ -22,6 +22,21 @@
             "sources": [ { "type": "git", "url": "https://invent.kde.org/pim/khealthcertificate.git"} ]
         },
         {
+            "name": "kpkpass",
+            "buildsystem": "cmake-ninja",
+            "sources": [ { "type": "git", "url": "https://invent.kde.org/pim/kpkpass.git" } ]
+        },
+        {
+            "name": "kpkpass",
+            "buildsystem": "cmake-ninja",
+            "sources": [ { "type": "git", "url": "https://invent.kde.org/pim/kmime.git" } ]
+        },
+        {
+            "name": "kpimitinerary",
+            "buildsystem": "cmake-ninja",
+            "sources": [ { "type": "git", "url": "https://invent.kde.org/pim/kitinerary.git" } ]
+        },
+        {
             "name": "vakzination",
             "buildsystem": "cmake-ninja",
             "sources": [
