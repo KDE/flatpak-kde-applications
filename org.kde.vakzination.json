@@ -18,6 +18,14 @@
     "modules": [
         "poppler.json",
         {
+            "name": "zxing",
+            "config-opts": [ "-DBUILD_SHARED_LIBS=ON", "-DBUILD_BLACKBOX_TESTS=OFF" ],
+            "buildsystem": "cmake-ninja",
+            "builddir": true,
+            "sources": [ { "type": "git", "url": "https://github.com/nu-book/zxing-cpp" } ],
+            "cleanup": [ "/include", "/lib/cmake", "/mkspecs", "/etc/xdg/*categories" ]
+        },
+        {
             "name": "khealthcertificate",
             "buildsystem": "cmake-ninja",
             "sources": [ { "type": "git", "url": "https://invent.kde.org/pim/khealthcertificate.git"} ]
