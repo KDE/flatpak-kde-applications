@@ -37,6 +37,7 @@
         },
         {
             "name": "LibVNCServer",
+            "buildsystem": "cmake-ninja",
             "sources": [
                 {
                     "type": "archive",
