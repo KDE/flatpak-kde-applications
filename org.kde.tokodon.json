@@ -1,0 +1,46 @@
+{
+    "id": "org.kde.tokodon",
+    "branch": "master",
+    "runtime": "org.kde.Platform",
+    "runtime-version": "5.15",
+    "sdk": "org.kde.Sdk",
+    "command": "tokodon",
+    "tags": ["nightly"],
+    "desktop-file-name-suffix": " (Nightly)",
+    "finish-args": [
+        "--share=ipc",
+        "--socket=fallback-x11",
+        "--socket=wayland",
+        "--device=dri",
+        "--share=network"
+    ],
+
+    "modules": [
+        {
+            "name": "icon",
+            "buildsystem": "simple",
+            "build-commands": [
+                "mkdir -p /app/share/icons/hicolor/32x32/apps/",
+                "install -D /usr/share/icons/breeze/mimetypes/64/none.svg /app/share/icons/hicolor/32x32/apps/org.kde.tokodon.svg"
+            ]
+        },
+        {
+            "name": "libsecret",
+            "sources": [ { "type": "archive", "url": "https://gitlab.gnome.org/GNOME/libsecret/-/archive/0.20.4/libsecret-0.20.4.tar.gz", "sha256": "ca34e69b210df221ae5da6692c2cb15ef169bb4daf42e204442f24fdb0520d4b" } ],
+            "config-opts": [ "--disable-static", "--disable-gtk-doc", "--disable-manpages" ]
+        },
+        {
+            "name": "qtkeychain",
+            "buildsystem": "cmake-ninja",
+            "sources": [ { "type": "archive", "url": "https://github.com/frankosterfeld/qtkeychain/archive/v0.12.0.tar.gz", "sha256": "cc547d58c1402f6724d3ff89e4ca83389d9e2bdcfd9ae3d695fcdffa50a625a8" } ],
+            "config-opts": [ "-DCMAKE_INSTALL_LIBDIR=/app/lib", "-DLIB_INSTALL_DIR=/app/lib", "-DBUILD_TRANSLATIONS=NO" ]
+        },
+        {
+            "name": "tokodon",
+            "buildsystem": "cmake-ninja",
+            "sources": [
+                { "type": "git", "url": "https://invent.kde.org/network/tokodon.git" }
+            ]
+        }
+    ]
+}
