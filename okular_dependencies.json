@@ -6,13 +6,13 @@
             "name": "kjs",
             "config-opts": [ "-DENABLE_TESTING=OFF" ],
             "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "https://invent.kde.org/frameworks/kjs.git", "branch": "v5.75.0" } ]
+            "sources": [ { "type": "git", "url": "https://invent.kde.org/frameworks/kjs.git", "branch": "v5.85.0" } ]
         },
         {
             "name": "khtml",
             "config-opts": [ "-DENABLE_TESTING=OFF" ],
             "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "https://invent.kde.org/frameworks/khtml.git", "branch": "v5.75.0" } ]
+            "sources": [ { "type": "git", "url": "https://invent.kde.org/frameworks/khtml.git", "branch": "v5.85.0" } ]
         },
         "poppler.json",
         {
