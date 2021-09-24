@@ -14,7 +14,7 @@
             "name": "taglib",
             "buildsystem": "cmake-ninja",
             "config-opts": ["-DENABLE_TESTING=OFF" , "-DBUILD_SHARED_LIBS=ON"],
-            "sources": [ { "type": "git", "url": "https://github.com/taglib/taglib.git", "branch": "v1.11.1" } ]
+            "sources": [ { "type": "git", "url": "https://github.com/taglib/taglib.git", "tag": "v1.12" } ]
         },
         {
             "name": "juk",

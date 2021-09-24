@@ -13,7 +13,7 @@
         "libkdegames.json",
         {
             "name": "glu",
-            "sources": [ { "type": "git", "url": "https://anongit.freedesktop.org/git/mesa/glu.git", "branch": "glu-9.0.1" } ]
+            "sources": [ { "type": "git", "url": "https://anongit.freedesktop.org/git/mesa/glu.git", "branch": "glu-9.0.2" } ]
         },
         {
             "name": "ksudoku",

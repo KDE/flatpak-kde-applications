@@ -33,7 +33,7 @@
             "modules": [
                 {
                     "name": "lmdb",
-                    "sources": [ { "type": "git", "url": "https://github.com/LMDB/lmdb", "branch": "mdb.master" } ],
+                    "sources": [ { "type": "git", "url": "https://github.com/LMDB/lmdb", "branch": "LMDB_0.9.29" } ],
                     "no-autogen": true,
                     "make-install-args": ["prefix=/app"],
                     "subdir" : "libraries/liblmdb"
@@ -73,7 +73,7 @@
                 "cp /usr/bin/gtk-update-icon-cache /app/bin",
                 "cp /usr/bin/update-mime-database /app/bin",
                 "cp /usr/bin/update-desktop-database /app/bin"],
-            "sources": [ { "type": "git", "url": "https://github.com/flatpak/flatpak", "branch": "flatpak-1.0.x" } ],
+            "sources": [ { "type": "git", "url": "https://github.com/flatpak/flatpak", "branch": "flatpak-1.10.x" } ],
 
             "modules": [
                 {
@@ -90,7 +90,7 @@
                             "sources": [
                                 {
                                     "type": "archive",
-                                    "url": "https://github.com/libfuse/libfuse/releases/download/fuse-2.9.7/fuse-2.9.7.tar.gz",
+                                    "url": "https://github.com/libfuse/libfuse/releases/download/fuse-3.10.5/fuse-3.10.5.tar.xz",
                                     "sha256": "832432d1ad4f833c20e13b57cf40ce5277a9d33e483205fc63c78111b3358874"
                                 }
                             ]

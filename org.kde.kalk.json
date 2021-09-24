@@ -31,8 +31,7 @@
             "sources": [
                 {
                     "type": "git",
-                    "url": "https://invent.kde.org/jbbgameich/qtfeedback/",
-                    "branch": "kf5"
+                    "url": "https://invent.kde.org/jbbgameich/qtfeedback/"
                 }
             ]
         },
