@@ -33,7 +33,7 @@
             "modules": [
                 {
                     "name": "lmdb",
-                    "sources": [ { "type": "git", "url": "https://github.com/LMDB/lmdb", "branch": "LMDB_0.9.29" } ],
+                    "sources": [ { "type": "git", "url": "https://github.com/LMDB/lmdb", "tag": "LMDB_0.9.29" } ],
                     "no-autogen": true,
                     "make-install-args": ["prefix=/app"],
                     "subdir" : "libraries/liblmdb"
@@ -80,7 +80,7 @@
                     "name": "ostree",
                     "config-opts": [ "--disable-man", "--without-libsystemd" ],
                     "cleanup": [ "/bin", "/etc/grub.d", "/libexec" ],
-                    "sources": [ { "type": "git", "url": "https://github.com/ostreedev/ostree.git", "tag": "v2018.9" } ],
+                    "sources": [ { "type": "git", "url": "https://github.com/ostreedev/ostree.git", "tag": "v2021.4" } ],
 
                     "modules": [
                         {

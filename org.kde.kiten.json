@@ -14,13 +14,13 @@
             "config-opts": [ "-DENABLE_TESTING=OFF" ],
             "name": "kjs",
             "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "https://invent.kde.org/frameworks/kjs.git", "branch": "v5.85.0" } ]
+            "sources": [ { "type": "git", "url": "https://invent.kde.org/frameworks/kjs.git", "tag": "v5.85.0" } ]
         },
         {
             "config-opts": [ "-DENABLE_TESTING=OFF" ],
             "name": "khtml",
             "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "https://invent.kde.org/frameworks/khtml.git", "branch": "v5.85.0" } ]
+            "sources": [ { "type": "git", "url": "https://invent.kde.org/frameworks/khtml.git", "tag": "v5.85.0" } ]
         },
         {
             "name": "kiten",

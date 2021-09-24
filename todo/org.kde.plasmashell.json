@@ -70,11 +70,11 @@
             "config-opts": [ "-DENABLE_TESTING=OFF" ],
             "name": "kfilemetadata",
             "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "https://invent.kde.org/kde/kfilemetadata.git", "branch": "v5.85.0" } ]
+            "sources": [ { "type": "git", "url": "https://invent.kde.org/kde/kfilemetadata.git", "tag": "v5.85.0" } ]
         },
         {
             "name": "lmdb",
-            "sources": [ { "type": "git", "url": "git://github.com/LMDB/lmdb.git", "branch": "LMDB_0.9.29"}],
+            "sources": [ { "type": "git", "url": "git://github.com/LMDB/lmdb.git", "tag": "LMDB_0.9.29"}],
             "no-autogen": true,
             "make-install-args": ["prefix=/app"],
             "subdir" : "libraries/liblmdb"
@@ -83,7 +83,7 @@
             "config-opts": ["-DENABLE_TESTING=OFF" , "-DLMDB_DIR=/app"],
             "name": "baloo",
             "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "https://invent.kde.org/kde/baloo.git", "branch": "v5.85.0" } ]
+            "sources": [ { "type": "git", "url": "https://invent.kde.org/kde/baloo.git", "tag": "v5.85.0" } ]
         },
         {
             "name": "kdecoration",
@@ -181,13 +181,13 @@
             "name": "purpose",
             "buildsystem": "cmake-ninja",
             "builddir": true,
-            "sources": [ { "type": "git", "url": "https://invent.kde.org/frameworks/purpose.git", "branch": "v5.85.0" } ]
+            "sources": [ { "type": "git", "url": "https://invent.kde.org/frameworks/purpose.git", "tag": "v5.85.0" } ]
         },
         {
             "name": "kross",
             "buildsystem": "cmake-ninja",
             "builddir": true,
-            "sources": [ { "type": "git", "url": "https://invent.kde.org/kde/kross.git", "branch": "v5.85.0" } ]
+            "sources": [ { "type": "git", "url": "https://invent.kde.org/kde/kross.git", "tag": "v5.85.0" } ]
         },
         {
             "name": "kdeplasma-addons",

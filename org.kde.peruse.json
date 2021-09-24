@@ -18,7 +18,7 @@
             "name": "kjs",
             "config-opts": [ "-DENABLE_TESTING=OFF" ],
             "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "https://invent.kde.org/frameworks/kjs.git", "branch": "v5.85.0" } ]
+            "sources": [ { "type": "git", "url": "https://invent.kde.org/frameworks/kjs.git", "tag": "v5.85.0" } ]
         },
         "poppler.json",
         {

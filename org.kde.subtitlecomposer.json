@@ -53,7 +53,7 @@
 			"name": "kross",
 			"sources": [
 				{
-					"branch": "v5.85.0",
+					"tag": "v5.85.0",
 					"type": "git",
 					"url": "https://invent.kde.org/frameworks/kross.git"
 				}

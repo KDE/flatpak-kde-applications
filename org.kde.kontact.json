@@ -834,7 +834,7 @@
                         {
                             "type": "git",
                             "url": "https://invent.kde.org/frameworks/kross.git",
-                            "branch": "v5.85.0"
+                            "tag": "v5.85.0"
                         }
                     ]
                 }

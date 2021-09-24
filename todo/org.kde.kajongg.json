@@ -25,7 +25,7 @@
                 "python setup.py install --prefix=/app --optimize=1"
             ],
             "sources": [
-                { "type": "git", "url": "https://github.com/glyph/automat.git", "branch": "v0.5.0" }
+                { "type": "git", "url": "https://github.com/glyph/automat.git", "tag": "v0.5.0" }
             ]
         },
         {

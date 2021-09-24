@@ -44,7 +44,7 @@
             "name": "kpeople",
             "config-opts": [ "-DENABLE_TESTING=OFF" ],
             "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "https://invent.kde.org/frameworks/kpeople.git", "branch": "v5.85.0" } ]
+            "sources": [ { "type": "git", "url": "https://invent.kde.org/frameworks/kpeople.git", "tag": "v5.85.0" } ]
         },
 
         {

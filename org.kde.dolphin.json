@@ -12,7 +12,7 @@
     "modules": [
         {
             "name": "lmdb",
-            "sources": [ { "type": "git", "url": "git://github.com/LMDB/lmdb.git", "branch": "LMDB_0.9.29"}],
+            "sources": [ { "type": "git", "url": "git://github.com/LMDB/lmdb.git", "tag": "LMDB_0.9.29"}],
             "no-autogen": true,
             "make-install-args": ["prefix=/app"],
             "subdir" : "libraries/liblmdb"
@@ -22,7 +22,7 @@
             "name": "baloo",
             "buildsystem": "cmake-ninja",
 	    "builddir": true,
-            "sources": [ { "type": "git", "url": "https://invent.kde.org/frameworks/baloo.git", "branch": "v5.85.0" } ]
+            "sources": [ { "type": "git", "url": "https://invent.kde.org/frameworks/baloo.git", "tag": "v5.85.0" } ]
         },
         {
             "config-opts": ["-DENABLE_TESTING=OFF" , "-DLMDB_DIR=/app"],

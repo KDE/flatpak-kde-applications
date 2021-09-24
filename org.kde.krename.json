@@ -41,7 +41,7 @@
                 {
                     "type": "git",
                     "url": "https://commits.kde.org/kjs.git",
-                    "branch": "v5.85.0"
+                    "tag": "v5.85.0"
                 }
             ]
         },
