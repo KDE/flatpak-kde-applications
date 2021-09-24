@@ -22,7 +22,7 @@
             "name": "kbounce",
             "buildsystem": "cmake-ninja",
             "sources": [
-                { "type": "git", "url": "https://anongit.kde.org/kbounce.git" }
+                { "type": "git", "url": "https://invent.kde.org/kde/kbounce.git" }
             ]
         }
     ]

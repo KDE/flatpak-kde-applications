@@ -13,7 +13,7 @@
         {
             "name": "kig",
             "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "https://anongit.kde.org/kig.git" } ]
+            "sources": [ { "type": "git", "url": "https://invent.kde.org/kde/kig.git" } ]
         }
     ]
 }

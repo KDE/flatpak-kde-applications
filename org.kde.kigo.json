@@ -34,7 +34,7 @@
             "name": "kigo",
             "buildsystem": "cmake-ninja",
             "sources": [
-                { "type": "git", "url": "https://anongit.kde.org/kigo.git" }
+                { "type": "git", "url": "https://invent.kde.org/kde/kigo.git" }
             ]
         }
     ]

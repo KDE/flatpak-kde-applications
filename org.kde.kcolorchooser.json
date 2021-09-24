@@ -21,7 +21,7 @@
         {
             "name": "kcolorchooser",
             "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "https://anongit.kde.org/kcolorchooser.git" } ]
+            "sources": [ { "type": "git", "url": "https://invent.kde.org/kde/kcolorchooser.git" } ]
         }
     ]
 }

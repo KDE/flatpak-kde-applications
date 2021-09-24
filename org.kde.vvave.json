@@ -38,7 +38,7 @@
             "name": "mauikit",
             "buildsystem": "cmake-ninja",
             "sources": [
-                { "type": "git", "url": "https://anongit.kde.org/mauikit.git" }
+                { "type": "git", "url": "https://invent.kde.org/kde/mauikit.git" }
             ]
         },
         {
@@ -79,7 +79,7 @@
             "buildsystem": "cmake-ninja",
             "config-opts": [ "-DCMAKE_EXE_LINKER_FLAGS=-lz" ],
             "sources": [
-                { "type": "git", "url": "https://anongit.kde.org/vvave.git" }
+                { "type": "git", "url": "https://invent.kde.org/kde/vvave.git" }
             ]
         }
     ]

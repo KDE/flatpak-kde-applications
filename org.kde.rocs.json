@@ -23,7 +23,7 @@
             "name": "rocs",
             "buildsystem": "cmake-ninja",
             "config-opts": ["-DENABLE_TESTING=OFF" ],
-            "sources": [ { "type": "git", "url": "https://anongit.kde.org/rocs.git" } ]
+            "sources": [ { "type": "git", "url": "https://invent.kde.org/kde/rocs.git" } ]
         }
     ]
 }

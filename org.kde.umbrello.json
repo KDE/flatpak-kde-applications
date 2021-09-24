@@ -16,14 +16,14 @@
             "config-opts": [ "-DENABLE_TESTING=OFF" ],
             "name": "kdelibs4support",
             "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "https://anongit.kde.org/kdelibs4support.git", "branch": "v5.75.0" } ]
+            "sources": [ { "type": "git", "url": "https://invent.kde.org/frameworks/kdelibs4support.git", "branch": "v5.85.0" } ]
         },
         {
             "name": "umbrello",
             "buildsystem": "cmake-ninja",
             "config-opts": ["-DBUILD_KF5=ON", "-DENABLE_TESTING=OFF", "-DQt5WebKit_DIR=/app/lib/cmake/Qt5WebKit/", "-DQt5WebKitWidgets_DIR=/app/lib/cmake/Qt5WebKitWidgets/"],
             "sources": [
-                { "type": "git", "url": "https://anongit.kde.org/umbrello.git" }
+                { "type": "git", "url": "https://invent.kde.org/kde/umbrello.git" }
             ]
         }
     ]

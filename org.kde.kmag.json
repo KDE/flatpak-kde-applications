@@ -14,7 +14,7 @@
             "name": "kmag",
             "buildsystem": "cmake-ninja",
             "sources": [
-                { "type": "git", "url": "https://anongit.kde.org/kmag.git" }
+                { "type": "git", "url": "https://invent.kde.org/kde/kmag.git" }
             ]
         }
     ]

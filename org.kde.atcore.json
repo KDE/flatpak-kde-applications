@@ -19,7 +19,7 @@
                 "/*/cmake"
             ],
             "sources": [ 
-                { "type": "git", "url": "https://anongit.kde.org/atcore.git" } 
+                { "type": "git", "url": "https://invent.kde.org/kde/atcore.git" }
             ]
         }
     ]

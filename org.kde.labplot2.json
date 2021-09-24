@@ -98,13 +98,13 @@
         {
             "name": "cantor",
             "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "https://anongit.kde.org/cantor.git" } ]
+            "sources": [ { "type": "git", "url": "https://invent.kde.org/kde/cantor.git" } ]
         },
         {
             "name": "labplot",
             "buildsystem": "cmake-ninja",
             "config-opts": [ "-DQt5Mqtt_DIR=/app/qtmqtt/usr/lib/x86_64-linux-gnu/cmake/Qt5Mqtt" ],
-            "sources": [ { "type": "git", "url": "https://anongit.kde.org/labplot.git", "branch": "master" } ]
+            "sources": [ { "type": "git", "url": "https://invent.kde.org/kde/labplot.git", "branch": "master" } ]
         }
     ]
 }

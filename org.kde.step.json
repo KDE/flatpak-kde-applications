@@ -14,7 +14,7 @@
         {
             "name": "step",
             "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "https://anongit.kde.org/step.git" } ]
+            "sources": [ { "type": "git", "url": "https://invent.kde.org/kde/step.git" } ]
         }
     ]
 }

@@ -33,7 +33,7 @@
             "name": "kwave",
             "buildsystem": "cmake-ninja",
             "sources": [
-                { "type": "git", "url": "https://anongit.kde.org/kwave.git" }
+                { "type": "git", "url": "https://invent.kde.org/kde/kwave.git" }
             ]
         }
     ]

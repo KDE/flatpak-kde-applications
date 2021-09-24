@@ -24,7 +24,7 @@
             "sources": [
                 {
                     "type": "git",
-                    "url": "https://anongit.kde.org/mauikit.git",
+                    "url": "https://invent.kde.org/kde/mauikit.git",
                     "branch": "master"
                 }
             ]
@@ -46,7 +46,7 @@
             "sources": [
                 {
                     "type": "git",
-                    "url": "https://anongit.kde.org/kio-extras.git",
+                    "url": "https://invent.kde.org/kde/kio-extras.git",
                     "branch": "release/21.04"
                 }
             ]
@@ -79,7 +79,7 @@
             "sources": [
                 {
                     "type": "git",
-                    "url": "https://anongit.kde.org/index-fm.git",
+                    "url": "https://invent.kde.org/kde/index-fm.git",
                     "branch": "master"
                 }
             ]

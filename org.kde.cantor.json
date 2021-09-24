@@ -15,7 +15,7 @@
         {
             "name": "cantor",
             "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "https://anongit.kde.org/cantor.git" } ]
+            "sources": [ { "type": "git", "url": "https://invent.kde.org/kde/cantor.git" } ]
         }
     ]
 }

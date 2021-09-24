@@ -30,7 +30,7 @@
             "sources": [
                 {
                     "type": "git",
-                    "url": "https://anongit.kde.org/falkon.git"
+                    "url": "https://invent.kde.org/kde/falkon.git"
                 }
             ]
         }

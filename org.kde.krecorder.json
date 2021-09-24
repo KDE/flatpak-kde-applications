@@ -14,7 +14,7 @@
             "name": "krecorder",
             "buildsystem": "cmake-ninja",
             "sources": [
-                { "type": "git", "url": "https://anongit.kde.org/krecorder.git" }
+                { "type": "git", "url": "https://invent.kde.org/kde/krecorder.git" }
             ]
         }
     ]

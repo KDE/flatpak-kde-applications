@@ -15,7 +15,7 @@
             "name": "kblackbox",
             "buildsystem": "cmake-ninja",
             "sources": [
-                { "type": "git", "url": "https://anongit.kde.org/kblackbox.git" }
+                { "type": "git", "url": "https://invent.kde.org/kde/kblackbox.git" }
             ]
         }
     ]

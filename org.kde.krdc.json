@@ -29,7 +29,7 @@
             "name": "krdc",
             "buildsystem": "cmake-ninja",
             "sources": [
-                { "type": "git", "url": "https://anongit.kde.org/krdc.git" }
+                { "type": "git", "url": "https://invent.kde.org/kde/krdc.git" }
             ]
         }
     ]

@@ -15,7 +15,7 @@
             "name": "kspaceduel",
             "buildsystem": "cmake-ninja",
             "sources": [
-                { "type": "git", "url": "https://anongit.kde.org/kspaceduel.git" }
+                { "type": "git", "url": "https://invent.kde.org/kde/kspaceduel.git" }
             ]
         }
     ]

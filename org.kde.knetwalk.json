@@ -22,7 +22,7 @@
             "name": "knetwalk",
             "buildsystem": "cmake-ninja",
             "sources": [
-                { "type": "git", "url": "https://anongit.kde.org/knetwalk.git" }
+                { "type": "git", "url": "https://invent.kde.org/kde/knetwalk.git" }
             ]
         }
     ]

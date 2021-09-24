@@ -1,3 +1,3 @@
 ID=org.kde.digikam
 JSON=project/bundles/flatpak/org.kde.digikam.json
-GITURL=https://anongit.kde.org/digikam.git
+GITURL=https://invent.kde.org/kde/digikam.git

@@ -19,12 +19,12 @@
         {
             "name": "libkeduvocdocument",
             "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "https://anongit.kde.org/libkeduvocdocument.git" } ]
+            "sources": [ { "type": "git", "url": "https://invent.kde.org/kde/libkeduvocdocument.git" } ]
         },
         {
             "name": "kwordquiz",
             "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "https://anongit.kde.org/kwordquiz.git" } ]
+            "sources": [ { "type": "git", "url": "https://invent.kde.org/kde/kwordquiz.git" } ]
         }
     ]
 }

@@ -29,7 +29,7 @@
             "sources": [
                 {
                     "type": "git",
-                    "url": "https://anongit.kde.org/trojita",
+                    "url": "https://invent.kde.org/kde/trojita",
                     "branch": "master"
                 }
             ]

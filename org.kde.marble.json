@@ -20,7 +20,7 @@
             "name": "marble",
             "buildsystem": "cmake-ninja",
             "builddir": true,
-            "sources": [ { "type": "git", "url": "https://anongit.kde.org/marble.git" } ]
+            "sources": [ { "type": "git", "url": "https://invent.kde.org/kde/marble.git" } ]
         }
     ]
 }

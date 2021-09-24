@@ -17,7 +17,7 @@
             "name": "konversation-konvi2x",
             "buildsystem": "cmake-ninja",
             "config-opts": ["-DCMAKE_BUILD_TYPE=debug"],
-            "sources": [ { "type": "git", "url": "https://anongit.kde.org/konversation.git", "branch": "wip/qtquick" } ]
+            "sources": [ { "type": "git", "url": "https://invent.kde.org/kde/konversation.git", "branch": "wip/qtquick" } ]
         }
     ]
 }

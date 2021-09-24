@@ -2,7 +2,7 @@
     "config-opts": [ "-DENABLE_TESTING=OFF" ],
     "name": "libkdegames",
     "buildsystem": "cmake-ninja",
-    "sources": [ { "type": "git", "url": "https://anongit.kde.org/libkdegames.git" } ],
+    "sources": [ { "type": "git", "url": "https://invent.kde.org/kde/libkdegames.git" } ],
     "modules": [
         {
             "config-opts": [ "-DENABLE_TESTING=OFF" ],

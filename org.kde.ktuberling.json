@@ -21,7 +21,7 @@
             "name": "ktuberling",
             "buildsystem": "cmake-ninja",
             "builddir": true,
-            "sources": [ { "type": "git", "url": "https://anongit.kde.org/ktuberling.git" } ]
+            "sources": [ { "type": "git", "url": "https://invent.kde.org/kde/ktuberling.git" } ]
         }
     ]
 }

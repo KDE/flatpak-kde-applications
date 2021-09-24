@@ -15,7 +15,7 @@
             "name": "rsibreak",
             "buildsystem": "cmake-ninja",
             "builddir": true,
-            "sources": [ { "type": "git", "url": "https://anongit.kde.org/rsibreak.git" } ]
+            "sources": [ { "type": "git", "url": "https://invent.kde.org/kde/rsibreak.git" } ]
         }
     ]
 }

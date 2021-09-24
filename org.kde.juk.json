@@ -21,7 +21,7 @@
             "buildsystem": "cmake-ninja",
             "config-opts": [ "-DENABLE_TESTING=OFF" ],
             "sources": [
-                { "type": "git", "url": "https://anongit.kde.org/juk.git" }
+                { "type": "git", "url": "https://invent.kde.org/kde/juk.git" }
             ]
         }
     ]

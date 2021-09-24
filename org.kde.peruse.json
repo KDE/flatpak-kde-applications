@@ -18,20 +18,20 @@
             "name": "kjs",
             "config-opts": [ "-DENABLE_TESTING=OFF" ],
             "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "https://anongit.kde.org/kjs.git", "branch": "v5.74.0" } ]
+            "sources": [ { "type": "git", "url": "https://invent.kde.org/frameworks/kjs.git", "branch": "v5.85.0" } ]
         },
         "poppler.json",
         {
             "name": "okular",
             "buildsystem": "cmake-ninja",
             "builddir": true,
-            "sources": [ { "type": "git", "url": "https://anongit.kde.org/okular.git", "branch": "master" } ]
+            "sources": [ { "type": "git", "url": "https://invent.kde.org/kde/okular.git", "branch": "master" } ]
         },
         {
             "name": "peruse",
             "buildsystem": "cmake-ninja",
             "builddir": true,
-            "sources": [ { "type": "git", "url": "https://anongit.kde.org/peruse.git", "branch": "master" } ]
+            "sources": [ { "type": "git", "url": "https://invent.kde.org/kde/peruse.git", "branch": "master" } ]
         }
     ]
 }

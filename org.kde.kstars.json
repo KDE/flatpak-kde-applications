@@ -14,7 +14,7 @@
         {
             "name": "kstars",
             "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "https://anongit.kde.org/kstars.git" } ]
+            "sources": [ { "type": "git", "url": "https://invent.kde.org/kde/kstars.git" } ]
         }
     ]
 }

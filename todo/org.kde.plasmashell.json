@@ -16,61 +16,61 @@
             "name": "kactivities",
             "buildsystem": "cmake-ninja",
             "builddir": true,
-            "sources": [ { "type": "git", "url": "https://anongit.kde.org/kactivities.git", "branch": "master" } ]
+            "sources": [ { "type": "git", "url": "https://invent.kde.org/kde/kactivities.git", "branch": "master" } ]
         },
         {
             "name": "plasma-framework",
             "buildsystem": "cmake-ninja",
             "builddir": true,
-            "sources": [ { "type": "git", "url": "https://anongit.kde.org/plasma-framework.git", "branch": "master" } ]
+            "sources": [ { "type": "git", "url": "https://invent.kde.org/kde/plasma-framework.git", "branch": "master" } ]
         },
         {
             "name": "krunner",
             "buildsystem": "cmake-ninja",
             "builddir": true,
-            "sources": [ { "type": "git", "url": "https://anongit.kde.org/krunner.git", "branch": "master" } ]
+            "sources": [ { "type": "git", "url": "https://invent.kde.org/kde/krunner.git", "branch": "master" } ]
         },
         {
             "name": "kjs",
             "buildsystem": "cmake-ninja",
             "builddir": true,
-            "sources": [ { "type": "git", "url": "https://anongit.kde.org/kjs.git", "branch": "master" } ]
+            "sources": [ { "type": "git", "url": "https://invent.kde.org/frameworks/kjs.git", "branch": "master" } ]
         },
         {
             "name": "kjsembed",
             "buildsystem": "cmake-ninja",
             "builddir": true,
-            "sources": [ { "type": "git", "url": "https://anongit.kde.org/kjsembed.git", "branch": "master" } ]
+            "sources": [ { "type": "git", "url": "https://invent.kde.org/kde/kjsembed.git", "branch": "master" } ]
         },
         {
             "name": "kdesu",
             "buildsystem": "cmake-ninja",
             "builddir": true,
-            "sources": [ { "type": "git", "url": "https://anongit.kde.org/kdesu.git", "branch": "master" } ]
+            "sources": [ { "type": "git", "url": "https://invent.kde.org/frameworks/kdesu.git", "branch": "master" } ]
         },
         {
             "name": "libksysguard",
             "buildsystem": "cmake-ninja",
             "builddir": true,
-            "sources": [ { "type": "git", "url": "https://anongit.kde.org/libksysguard.git", "branch": "master" } ]
+            "sources": [ { "type": "git", "url": "https://invent.kde.org/kde/libksysguard.git", "branch": "master" } ]
         },
         {
             "name": "ksysguard",
             "buildsystem": "cmake-ninja",
             "builddir": true,
-            "sources": [ { "type": "git", "url": "https://anongit.kde.org/ksysguard.git", "branch": "master" } ]
+            "sources": [ { "type": "git", "url": "https://invent.kde.org/kde/ksysguard.git", "branch": "master" } ]
         },
         {
             "name": "kdelibs4support",
             "buildsystem": "cmake-ninja",
             "builddir": true,
-            "sources": [ { "type": "git", "url": "https://anongit.kde.org/kdelibs4support.git", "branch": "master" } ]
+            "sources": [ { "type": "git", "url": "https://invent.kde.org/frameworks/kdelibs4support.git", "branch": "master" } ]
         },
         {
             "config-opts": [ "-DENABLE_TESTING=OFF" ],
             "name": "kfilemetadata",
             "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "https://anongit.kde.org/kfilemetadata.git", "branch": "v5.75.0" } ]
+            "sources": [ { "type": "git", "url": "https://invent.kde.org/kde/kfilemetadata.git", "branch": "v5.85.0" } ]
         },
         {
             "name": "lmdb",
@@ -83,25 +83,25 @@
             "config-opts": ["-DENABLE_TESTING=OFF" , "-DLMDB_DIR=/app"],
             "name": "baloo",
             "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "https://anongit.kde.org/baloo.git", "branch": "v5.75.0" } ]
+            "sources": [ { "type": "git", "url": "https://invent.kde.org/kde/baloo.git", "branch": "v5.85.0" } ]
         },
         {
             "name": "kdecoration",
             "buildsystem": "cmake-ninja",
             "builddir": true,
-            "sources": [ { "type": "git", "url": "https://anongit.kde.org/kdecoration.git", "branch": "master" } ]
+            "sources": [ { "type": "git", "url": "https://invent.kde.org/kde/kdecoration.git", "branch": "master" } ]
         },
         {
             "name": "breeze",
             "buildsystem": "cmake-ninja",
             "builddir": true,
-            "sources": [ { "type": "git", "url": "https://anongit.kde.org/breeze.git", "branch": "master" } ]
+            "sources": [ { "type": "git", "url": "https://invent.kde.org/kde/breeze.git", "branch": "master" } ]
         },
         {
             "name": "kscreenlocker",
             "buildsystem": "cmake-ninja",
             "builddir": true,
-            "sources": [ { "type": "git", "url": "https://anongit.kde.org/kscreenlocker.git", "branch": "master" } ]
+            "sources": [ { "type": "git", "url": "https://invent.kde.org/kde/kscreenlocker.git", "branch": "master" } ]
         },
         {
             "name": "libxkbcommon",
@@ -140,25 +140,25 @@
             "name": "kwin",
             "buildsystem": "cmake-ninja",
             "builddir": true,
-            "sources": [ { "type": "git", "url": "https://anongit.kde.org/kwin.git", "branch": "master" } ]
+            "sources": [ { "type": "git", "url": "https://invent.kde.org/kde/kwin.git", "branch": "master" } ]
         },
         {
             "name": "plasma-workspace",
             "buildsystem": "cmake-ninja",
             "builddir": true,
-            "sources": [ { "type": "git", "url": "https://anongit.kde.org/plasma-workspace.git", "branch": "master" } ]
+            "sources": [ { "type": "git", "url": "https://invent.kde.org/kde/plasma-workspace.git", "branch": "master" } ]
         },
         {
             "name": "kpeople",
             "buildsystem": "cmake-ninja",
             "builddir": true,
-            "sources": [ { "type": "git", "url": "https://anongit.kde.org/kpeople.git", "branch": "master" } ]
+            "sources": [ { "type": "git", "url": "https://invent.kde.org/kde/kpeople.git", "branch": "master" } ]
         },
         {
             "name": "kactivities-stats",
             "buildsystem": "cmake-ninja",
             "builddir": true,
-            "sources": [ { "type": "git", "url": "https://anongit.kde.org/kactivities-stats.git", "branch": "master" } ]
+            "sources": [ { "type": "git", "url": "https://invent.kde.org/kde/kactivities-stats.git", "branch": "master" } ]
         },
         {
             "name": "libxkbfile",
@@ -175,25 +175,25 @@
             "name": "plasma-desktop",
             "buildsystem": "cmake-ninja",
             "builddir": true,
-            "sources": [ { "type": "git", "url": "https://anongit.kde.org/plasma-desktop.git", "branch": "master" } ]
+            "sources": [ { "type": "git", "url": "https://invent.kde.org/kde/plasma-desktop.git", "branch": "master" } ]
         },
         {
             "name": "purpose",
             "buildsystem": "cmake-ninja",
             "builddir": true,
-            "sources": [ { "type": "git", "url": "https://anongit.kde.org/purpose.git", "branch": "v5.75.0" } ]
+            "sources": [ { "type": "git", "url": "https://invent.kde.org/frameworks/purpose.git", "branch": "v5.85.0" } ]
         },
         {
             "name": "kross",
             "buildsystem": "cmake-ninja",
             "builddir": true,
-            "sources": [ { "type": "git", "url": "https://anongit.kde.org/kross.git", "branch": "v5.75.0" } ]
+            "sources": [ { "type": "git", "url": "https://invent.kde.org/kde/kross.git", "branch": "v5.85.0" } ]
         },
         {
             "name": "kdeplasma-addons",
             "buildsystem": "cmake-ninja",
             "builddir": true,
-            "sources": [ { "type": "git", "url": "https://anongit.kde.org/kdeplasma-addons.git", "branch": "master" } ]
+            "sources": [ { "type": "git", "url": "https://invent.kde.org/kde/kdeplasma-addons.git", "branch": "master" } ]
         }
     ]
 }

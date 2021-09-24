@@ -20,17 +20,17 @@
         {
             "name": "libkeduvocdocument",
             "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "https://anongit.kde.org/libkeduvocdocument.git" } ]
+            "sources": [ { "type": "git", "url": "https://invent.kde.org/kde/libkeduvocdocument.git" } ]
         },
         {
             "name": "kdeedu-data",
             "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "https://anongit.kde.org/kdeedu-data.git" } ]
+            "sources": [ { "type": "git", "url": "https://invent.kde.org/kde/kdeedu-data.git" } ]
         },
         {
             "name": "khangman",
             "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "https://anongit.kde.org/khangman.git" } ]
+            "sources": [ { "type": "git", "url": "https://invent.kde.org/kde/khangman.git" } ]
         }
     ]
 }

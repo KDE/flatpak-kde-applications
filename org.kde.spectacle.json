@@ -15,13 +15,13 @@
         {
             "name": "purpose",
             "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "https://anongit.kde.org/purpose.git", "branch": "v5.75.0" } ]
+            "sources": [ { "type": "git", "url": "https://invent.kde.org/frameworks/purpose.git", "branch": "v5.85.0" } ]
         },
         {
             "name": "spectacle",
             "buildsystem": "cmake-ninja",
             "sources": [
-                { "type": "git", "url": "https://anongit.kde.org/spectacle.git" }
+                { "type": "git", "url": "https://invent.kde.org/kde/spectacle.git" }
             ]
         }
     ]

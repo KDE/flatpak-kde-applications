@@ -23,7 +23,7 @@
         {
             "name": "kcalc",
             "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "https://anongit.kde.org/kcalc.git" } ]
+            "sources": [ { "type": "git", "url": "https://invent.kde.org/kde/kcalc.git" } ]
         }
     ]
 }

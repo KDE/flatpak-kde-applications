@@ -14,7 +14,7 @@
             "name": "klinkstatus",
             "buildsystem": "cmake-ninja",
             "sources": [
-                { "type": "git", "url": "https://anongit.kde.org/klinkstatus.git", "branch": "frameworks----------" }
+                { "type": "git", "url": "https://invent.kde.org/kde/klinkstatus.git", "branch": "frameworks----------" }
             ]
         }
     ]

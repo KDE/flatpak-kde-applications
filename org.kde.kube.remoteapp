@@ -1,4 +1,4 @@
 ID=org.kde.kube
 JSON=dist/flatpak/org.kde.kube.json
-GITURL=https://anongit.kde.org/kube.git
+GITURL=https://invent.kde.org/kde/kube.git
 GITBRANCH=develop

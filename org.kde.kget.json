@@ -16,27 +16,27 @@
             "config-opts": [ "-DENABLE_TESTING=OFF" ],
             "name": "kdelibs4support",
             "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "https://anongit.kde.org/kdelibs4support.git", "branch": "v5.85.0" } ]
+            "sources": [ { "type": "git", "url": "https://invent.kde.org/frameworks/kdelibs4support.git", "branch": "v5.85.0" } ]
         },
         {
             "name": "qca",
             "buildsystem": "cmake-ninja",
             "sources": [
-                { "type": "git", "url": "https://anongit.kde.org/qca.git", "tag": "v2.3.3" }
+                { "type": "git", "url": "https://invent.kde.org/kde/qca.git", "tag": "v2.3.3" }
             ]
         },
         {
             "name": "libktorrent",
             "buildsystem": "cmake-ninja",
             "sources": [
-                { "type": "git", "url": "https://anongit.kde.org/libktorrent.git", "tag": "v21.08.1" }
+                { "type": "git", "url": "https://invent.kde.org/kde/libktorrent.git", "tag": "v21.08.1" }
             ]
         },
         {
             "name": "kget",
             "buildsystem": "cmake-ninja",
             "sources": [
-                { "type": "git", "url": "https://anongit.kde.org/kget.git" }
+                { "type": "git", "url": "https://invent.kde.org/kde/kget.git" }
             ]
         }
     ]

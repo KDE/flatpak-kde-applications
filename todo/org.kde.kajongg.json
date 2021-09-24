@@ -14,7 +14,7 @@
             "name": "libkmahjongg",
             "buildsystem": "cmake-ninja",
             "sources": [
-                { "type": "git", "url": "https://anongit.kde.org/libkmahjongg.git" }
+                { "type": "git", "url": "https://invent.kde.org/kde/libkmahjongg.git" }
             ]
         },
         {
@@ -43,7 +43,7 @@
             "name": "kajongg",
             "buildsystem": "cmake-ninja",
             "sources": [
-                { "type": "git", "url": "https://anongit.kde.org/kajongg.git" }
+                { "type": "git", "url": "https://invent.kde.org/kde/kajongg.git" }
             ]
         }
     ]

@@ -51,7 +51,7 @@
             "sources": [
                 {
                     "type": "git",
-                    "url": "https://anongit.kde.org/kaidan",
+                    "url": "https://invent.kde.org/kde/kaidan",
                     "branch": "master"
                 }
             ]

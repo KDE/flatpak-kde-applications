@@ -22,7 +22,7 @@
         {
             "name": "kjournald",
             "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "https://anongit.kde.org/kjournald.git" } ]
+            "sources": [ { "type": "git", "url": "https://invent.kde.org/kde/kjournald.git" } ]
         }
     ]
 }

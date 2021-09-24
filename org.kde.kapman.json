@@ -22,7 +22,7 @@
             "name": "kapman",
             "buildsystem": "cmake-ninja",
             "sources": [
-                { "type": "git", "url": "https://anongit.kde.org/kapman.git" }
+                { "type": "git", "url": "https://invent.kde.org/kde/kapman.git" }
             ]
         }
     ]
