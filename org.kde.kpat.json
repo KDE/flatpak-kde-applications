@@ -41,9 +41,9 @@
                     "config-opts": [ "-DWITH_TEST_SUITE=OFF" ],
                     "sources": [
                         {
-                            "type": "git",
-                            "url": "https://github.com/shlomif/rinutils.git",
-                            "tag": "0.10.0"
+                            "type": "archive",
+                            "url": "https://github.com/shlomif/rinutils/releases/download/0.10.0/rinutils-0.10.0.tar.xz",
+                            "sha256": "70d89f0a8464f8f494f33704b7c9396e7fca392e8aafaa4465710c1a389e9806"
                         }
                     ]
                 },

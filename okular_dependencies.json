@@ -34,9 +34,9 @@
                     "rm-configure": true,
                     "sources": [
                         {
-                            "type": "git",
-                            "url": "https://github.com/ArtifexSoftware/ghostpdl-downloads.git",
-                            "tag": "gs9540"
+                            "type": "archive",
+                            "url": "https://github.com/ArtifexSoftware/ghostpdl-downloads/releases/download/gs9540/ghostscript-9.54.0.tar.xz",
+                            "sha256": "c2b7b43cde600f4e70efb2cd95865f6d884a67315c3de235914697d8ccde6e3b"
                         },
                         {
                             "type": "script",
