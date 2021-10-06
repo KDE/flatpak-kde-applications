@@ -39,6 +39,11 @@
             "config-opts": [ "-DCMAKE_INSTALL_LIBDIR=/app/lib", "-DLIB_INSTALL_DIR=/app/lib", "-DBUILD_TRANSLATIONS=NO" ]
         },
         {
+            "name": "qcoro",
+            "buildsystem": "cmake-ninja",
+            "sources": [ { "type": "archive", "url": "https://github.com/danvratil/qcoro/archive/refs/tags/v0.2.0.tar.gz", "sha256": "daae3ffd9a470e13e8ad7c98cdc58714ea9f08593b8367ffc56c4edc2e52de74" } ]
+        },
+        {
             "name": "neochat",
             "buildsystem": "cmake-ninja",
             "sources": [ { "type": "git", "url": "https://invent.kde.org/network/neochat" } ],
