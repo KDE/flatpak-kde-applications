@@ -3,7 +3,7 @@
 	"finish-args": [
 		"--share=ipc",
 		"--device=dri",
-		"--socket=x11",
+		"--socket=fallback-x11",
 		"--socket=wayland",
 		"--socket=pulseaudio"
 	],
@@ -21,6 +21,17 @@
 		"/man",
 		"/share/man"
 	],
+	"cleanup-commands": [
+		"mkdir -p /app/lib/ffmpeg"
+    ],
+	"rename-icon": "subtitlecomposer",
+	"add-extensions": {
+		"org.freedesktop.Platform.ffmpeg-full": {
+			"directory": "lib/ffmpeg",
+			"add-ld-path": ".",
+			"version": "21.08"
+		}
+	},
 	"modules": [
 		{
 			"buildsystem": "autotools",
