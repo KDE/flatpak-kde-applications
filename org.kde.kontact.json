@@ -309,9 +309,12 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://oligarchy.co.uk/xapian/1.4.7/xapian-core-1.4.7.tar.xz",
-                    "sha256": "13f08a0b649c7afa804fa0e85678d693fd6069dd394c9b9e7d41973d74a3b5d3"
+                    "url": " https://oligarchy.co.uk/xapian/1.4.18/xapian-core-1.4.18.tar.xz",
+                    "sha256": "196ddbb4ad10450100f0991a599e4ed944cbad92e4a6fe813be6dce160244b77"
                 }
+            ],
+            "config-opts": [
+                "--disable-documentation"
             ],
             "cleanup": [
                 "/share/doc/xapian-core",
