@@ -16,7 +16,6 @@
     "modules": [
         {
             "name": "mpfr",
-            "config-opts": [ "--disable-static" ],
             "sources": [ 
                 {
                     "type": "archive",
@@ -31,7 +30,8 @@
             "sources": [
                 {
                     "type": "git",
-                    "url": "https://invent.kde.org/jbbgameich/qtfeedback/"
+                    "url": "https://invent.kde.org/jbbgameich/qtfeedback/",
+                    "commit": "a2fe291197c3a8912dbd1bc0a870c081c446e317"
                 }
             ]
         },
