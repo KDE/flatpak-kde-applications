@@ -4,7 +4,7 @@
     "runtime": "org.kde.Platform",
     "runtime-version": "5.15-21.08",
     "base": "io.qt.qtwebengine.BaseApp",
-    "base-version": "5.15",
+    "base-version": "5.15-21.08",
     "rename-desktop-file": "konqbrowser.desktop",
     "sdk": "org.kde.Sdk",
     "command": "konqueror",
