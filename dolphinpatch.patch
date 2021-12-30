@@ -1,29 +1,20 @@
 diff --git a/CMakeLists.txt b/CMakeLists.txt
-index 49842bd4c..b1d298e92 100644
+index 92b311bfc..c21f0f61b 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
-@@ -166,9 +166,9 @@
-     COMPONENT Devel
+@@ -180,7 +180,6 @@ ecm_generate_dbus_service_file(
+    EXECUTABLE "${KDE_INSTALL_FULL_BINDIR}/dolphin --daemon"
+    SYSTEMD_SERVICE plasma-dolphin.service
+    DESTINATION ${KDE_INSTALL_DBUSSERVICEDIR}
+-   RENAME org.kde.dolphin.FileManager1.service
  )
  
--configure_file(org.kde.dolphin.FileManager1.service.in
--               ${CMAKE_CURRENT_BINARY_DIR}/org.kde.dolphin.FileManager1.service)
--install(FILES ${CMAKE_CURRENT_BINARY_DIR}/org.kde.dolphin.FileManager1.service
-+configure_file(org.freedesktop.FileManager1.service.in
-+               ${CMAKE_CURRENT_BINARY_DIR}/org.freedesktop.FileManager1.service)
-+install(FILES ${CMAKE_CURRENT_BINARY_DIR}/org.freedesktop.FileManager1.service
-         DESTINATION ${KDE_INSTALL_DBUSSERVICEDIR})
- install(FILES dolphin.categories  DESTINATION  ${KDE_INSTALL_LOGGINGCATEGORIESDIR})
- 
-diff --git a/org.kde.dolphin.FileManager1.service.in b/org.freedesktop.FileManager1.service.in
-similarity index 100%
-rename from org.kde.dolphin.FileManager1.service.in
-rename to org.freedesktop.FileManager1.service.in
+ ecm_install_configured_files(INPUT plasma-dolphin.service.in DESTINATION ${SYSTEMD_USER_UNIT_INSTALL_DIR})
 diff --git a/src/main.cpp b/src/main.cpp
-index ef2905d77..56d1789b0 100644
+index 779690c1c..7956824f4 100644
 --- a/src/main.cpp
 +++ b/src/main.cpp
-@@ -145,7 +145,7 @@ extern "C" Q_DECL_EXPORT int kdemain(int argc, char **argv)
+@@ -148,7 +148,7 @@ int main(int argc, char **argv)
          QObject::connect(&app, &QGuiApplication::commitDataRequest, disableSessionManagement);
          QObject::connect(&app, &QGuiApplication::saveStateRequest, disableSessionManagement);
  
