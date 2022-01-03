@@ -38,8 +38,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "http://ftp.indexdata.dk/pub/yaz/yaz-5.31.0.tar.gz",
-                    "sha256": "864d4476d1578ac132782b3d4e2eb96391bd88f7ae3040ddcb1556aba6fe0d15"
+                    "url": "http://ftp.indexdata.dk/pub/yaz/yaz-5.31.1.tar.gz",
+                    "sha256": "14cc34d19fd1fd27e544619f4c13300f14dc807088a1acc69fcb5c28d29baa15"
                 }
             ]
         },
