@@ -55,12 +55,14 @@
         "/bin/afmtodit",
         "/usr/bin/xsd",
         "/lib/libKF5*.so",
+        "/lib/libboost_*.so",
         "*.a",
         "*.la"
     ],
     "rename-icon": "kontact",
     "copy-icon": true,
     "modules": [
+        "boost.json",
         "gpgme.json",
         {
             "name": "qtkeychain",
