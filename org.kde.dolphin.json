@@ -32,12 +32,11 @@
             "sources": [ { "type": "git", "url": "https://invent.kde.org/libraries/baloo-widgets.git" } ]
         },
         {
+	    "config-opts": ["-DFLATPAK=ON"],
             "name": "dolphin",
             "buildsystem": "cmake-ninja",
 	    "builddir": true,
-            "sources": [ { "type": "git", "url": "https://invent.kde.org/system/dolphin.git" },
-                         {"type": "patch", "path": "dolphinpatch.patch"}
-                       ]
+            "sources": [ { "type": "git", "url": "https://invent.kde.org/system/dolphin.git" } ]
         },
         {
             "name": "dolphin-plugins",
