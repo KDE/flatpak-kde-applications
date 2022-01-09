@@ -63,7 +63,8 @@
             "name": "tellico",
             "buildsystem": "cmake-ninja",
             "config-opts": [
-                "-DBUILD_TESTING=FALSE"
+                "-DBUILD_TESTING=FALSE",
+                "-DCMAKE_BUILD_TYPE=RelWithDebInfo"
             ],
             "sources": [
                 {
