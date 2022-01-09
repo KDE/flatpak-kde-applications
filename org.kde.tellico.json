@@ -15,6 +15,7 @@
     "finish-args": [
         "--share=ipc",
         "--share=network",
+        "--filesystem=host",
         "--socket=x11",
         "--socket=wayland",
         "--device=dri"
