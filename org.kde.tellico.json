@@ -35,6 +35,17 @@
             ]
         },
         {
+            "name": "kcddb",
+            "buildsystem": "cmake-ninja",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://invent.kde.org/multimedia/libkcddb.git",
+                    "branch": "release/21.12"
+                }
+            ]
+        },
+        {
             "name": "yaz",
             "buildsystem": "autotools",
             "sources": [
