@@ -28,7 +28,7 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "http://taglib.github.io/releases/taglib-1.12.tar.gz",
+                    "url": "https://taglib.org/releases/taglib-1.12.tar.gz"
                     "sha256": "7fccd07669a523b07a15bd24c8da1bbb92206cb19e9366c3692af3d79253b703"
                 }
             ]
@@ -39,7 +39,7 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "http://ftp.indexdata.dk/pub/yaz/yaz-5.31.1.tar.gz",
+                    "url": "https://ftp.indexdata.com/pub/yaz/yaz-5.31.1.tar.gz",
                     "sha256": "14cc34d19fd1fd27e544619f4c13300f14dc807088a1acc69fcb5c28d29baa15"
                 }
             ]
