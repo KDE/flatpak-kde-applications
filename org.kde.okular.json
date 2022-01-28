@@ -9,11 +9,15 @@
     "tags": ["nightly"],
     "desktop-file-name-suffix": " (Nightly)",
     "finish-args": [
-        "--share=ipc",
-        "--socket=cups",
-        "--socket=x11",
-        "--socket=wayland",
-        "--device=dri"
+       "--share=ipc",
+       "--share=network",
+       "--socket=cups",
+       "--socket=pulseaudio",
+       "--socket=x11",
+       "--socket=wayland",
+       "--env=QT_QPA_PLATFORM=xcb",
+       "--device=dri",
+       "--filesystem=host"
     ],
     "modules": [
         "okular_dependencies.json",
