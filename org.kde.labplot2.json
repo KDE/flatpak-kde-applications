@@ -9,7 +9,7 @@
     "command": "labplot2",
     "tags": ["nightly"],
     "desktop-file-name-suffix": " (Nightly)",
-    "finish-args": ["--share=network", "--share=ipc", "--socket=x11", "--socket=wayland", "--filesystem=host" ],
+    "finish-args": ["--share=network", "--share=ipc", "--socket=x11", "--socket=wayland", "--filesystem=host", "--filesystem=/tmp" ],
 
     "modules": [
         "eigen.json",
