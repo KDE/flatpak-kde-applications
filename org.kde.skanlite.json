@@ -11,16 +11,7 @@
     "separate-locales": false,
 
     "modules": [
-        {
-            "name": "sane",
-            "buildsystem": "autotools",
-            "sources": [ { "type": "git", "url": "https://gitlab.com/sane-project/backends", "tag": "RELEASE_1_0_27"} ]
-        },
-        {
-            "name": "libksane",
-            "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "https://invent.kde.org/kde/libksane.git" } ]
-        },
+        "ksane-dependencies.json",
         {
             "name": "skanlite",
             "buildsystem": "cmake-ninja",

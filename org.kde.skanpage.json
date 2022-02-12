@@ -11,21 +11,12 @@
     "separate-locales": false,
 
     "modules": [
-        {
-            "name": "sane",
-            "buildsystem": "autotools",
-            "sources": [ { "type": "git", "url": "https://gitlab.com/sane-project/backends", "tag": "1.0.32"} ]
-        },
-        {
-            "name": "libksane",
-            "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "https://invent.kde.org/kde/libksane.git" } ]
-        },
+        "ksane-dependencies.json",
         {
             "name": "skanpage",
             "buildsystem": "cmake-ninja",
             "builddir": true,
-            "sources": [ { "type": "git", "url": "https://invent.kde.org/kde/skanpage.git" } ]
+            "sources": [ { "type": "git", "url": "https://invent.kde.org/utilities/skanpage.git" } ]
         }
     ]
 }
