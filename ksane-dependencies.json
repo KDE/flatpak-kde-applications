@@ -13,6 +13,34 @@
             ]
         },
         {
+            "name": "avahi",
+            "buildsystem": "autotools",
+            "config-opts": [
+                "--disable-gtk",
+                "--disable-qt3",
+                "--disable-qt4",
+                "--disable-mono",
+                "--disable-monodoc",
+                "--with-distro=none",
+                "--disable-pygobject",
+                "--disable-python-dbus",
+                "--disable-python",
+                "--disable-manpages",
+                "--disable-libdaemon",
+                "--disable-daemon",
+                "--enable-compat-libdns_sd",
+                "--disable-libevent"
+            ],
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://github.com/lathiat/avahi",
+                    "tag": "v0.8",
+                    "commit": "f060abee2807c943821d88839c013ce15db17b58"
+                }
+            ]
+        },
+        {
             "name": "sane",
             "buildsystem": "autotools",
             "config-opts": [
@@ -21,7 +49,8 @@
                 "--with-gphoto2",
                 "--enable-pthread",
                 "--enable-pnm-backend",
-                "--enable-pthread"
+                "--enable-pthread",
+                "--enable-avahi"
             ],
             "sources": [ { "type": "git", "url": "https://gitlab.com/sane-project/backends", "tag": "1.1.1"} ]
         },
