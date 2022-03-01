@@ -16,9 +16,21 @@
             "sources": [ { "type": "git", "url": "https://invent.kde.org/libraries/kquickimageeditor" } ]
         },
         {
+            "name": "olm",
+            "buildsystem": "cmake-ninja",
+            "sources": [ { "type": "git", "url": "https://gitlab.matrix.org/matrix-org/olm.git", "tag": "3.2.8" } ]
+        },
+        {
+            "name": "qtkeychain",
+            "buildsystem": "cmake-ninja",
+            "sources": [ { "type": "archive", "url": "https://github.com/frankosterfeld/qtkeychain/archive/v0.12.0.tar.gz", "sha256": "cc547d58c1402f6724d3ff89e4ca83389d9e2bdcfd9ae3d695fcdffa50a625a8" } ],
+            "config-opts": [ "-DCMAKE_INSTALL_LIBDIR=/app/lib", "-DLIB_INSTALL_DIR=/app/lib", "-DBUILD_TRANSLATIONS=NO" ]
+        },
+        {
             "name": "libQuotient",
             "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "https://github.com/quotient-im/libQuotient.git", "branch": "0.6.x" } ]
+            "sources": [ { "type": "git", "url": "https://github.com/quotient-im/libQuotient.git", "branch": "dev" } ],
+            "config-opts": [ "-DQuotient_ENABLE_E2EE=ON"]
         },
         {
             "name": "cmark",
@@ -31,12 +43,6 @@
             "name": "libsecret",
             "sources": [ { "type": "archive", "url": "https://gitlab.gnome.org/GNOME/libsecret/-/archive/0.20.4/libsecret-0.20.4.tar.gz", "sha256": "ca34e69b210df221ae5da6692c2cb15ef169bb4daf42e204442f24fdb0520d4b" } ],
             "config-opts": [ "--disable-static", "--disable-gtk-doc", "--disable-manpages" ]
-        },
-        {
-            "name": "qtkeychain",
-            "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "archive", "url": "https://github.com/frankosterfeld/qtkeychain/archive/v0.12.0.tar.gz", "sha256": "cc547d58c1402f6724d3ff89e4ca83389d9e2bdcfd9ae3d695fcdffa50a625a8" } ],
-            "config-opts": [ "-DCMAKE_INSTALL_LIBDIR=/app/lib", "-DLIB_INSTALL_DIR=/app/lib", "-DBUILD_TRANSLATIONS=NO" ]
         },
         {
             "name": "qcoro",
