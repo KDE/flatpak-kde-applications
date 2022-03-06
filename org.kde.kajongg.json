@@ -1,0 +1,29 @@
+{
+    "id": "org.kde.kajongg",
+    "branch": "master",
+    "runtime": "org.kde.Platform",
+    "runtime-version": "5.15-21.08",
+    "sdk": "org.kde.Sdk",
+    "command": "kajongg",
+    "rename-icons": "kajongg",
+    "tags": ["nightly"],
+    "desktop-file-name-suffix": " (Nightly)",
+    "finish-args": [
+        "--share=ipc",
+        "--socket=fallback-x11",
+        "--socket=wayland",
+        "--socket=pulseaudio",
+        "--device=dri"
+    ],
+    "modules": [
+        "libkdegames.json",
+        {
+            "name": "kajongg",
+            "buildsystem": "cmake-ninja",
+            "sources": [
+                { "type": "git", "url": "https://invent.kde.org/games/libkmahjongg.git" },
+                { "type": "git", "url": "https://invent.kde.org/games/kajongg.git" }
+            ]
+        }
+    ]
+}
