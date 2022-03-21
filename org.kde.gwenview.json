@@ -55,7 +55,13 @@
                 {
                     "type": "archive",
                     "url": "https://exiv2.org/builds/exiv2-0.27.3-Source.tar.gz",
-                    "sha256": "a79f5613812aa21755d578a297874fb59a85101e793edc64ec2c6bd994e3e778"
+                    "sha256": "a79f5613812aa21755d578a297874fb59a85101e793edc64ec2c6bd994e3e778",
+                    "x-checker-data": {
+                        "type": "anitya",
+                        "project-id": 8763,
+                        "stable-only": true,
+                        "url-template": "https://download.kde.org/stable/release-service/$version/src/libkexiv2-$version.tar.xz"
+                    }
                 }
             ]
         },
@@ -80,7 +86,13 @@
                 {
                     "type": "archive",
                     "url": "https://heasarc.gsfc.nasa.gov/FTP/software/fitsio/c/cfitsio-3.49.tar.gz",
-                    "sha256": "5b65a20d5c53494ec8f638267fca4a629836b7ac8dd0ef0266834eab270ed4b3"
+                    "sha256": "5b65a20d5c53494ec8f638267fca4a629836b7ac8dd0ef0266834eab270ed4b3",
+                    "x-checker-data": {
+                        "type": "html",
+                        "url": "http://heasarc.gsfc.nasa.gov/FTP/software/fitsio/c/",
+                        "version-pattern": "cfitsio-([\\d\\.-]+)\\.tar\\.gz",
+                        "url-template": "http://heasarc.gsfc.nasa.gov/FTP/software/fitsio/c/cfitsio-$version.tar.gz"
+                    }
                 }
             ]
         },
@@ -115,7 +127,13 @@
                 {
                     "type": "archive",
                     "url": "https://www.libraw.org/data/LibRaw-0.20.2.tar.gz",
-                    "sha256": "dc1b486c2003435733043e4e05273477326e51c3ea554c6864a4eafaff1004a6"
+                    "sha256": "dc1b486c2003435733043e4e05273477326e51c3ea554c6864a4eafaff1004a6",
+                    "x-checker-data": {
+                        "type": "anitya",
+                        "project-id": 1709,
+                        "stable-only": true,
+                        "url-template": "https://www.libraw.org/data/LibRaw-$version.tar.gz"
+                    }
                 },
                 {
                     "type": "shell",

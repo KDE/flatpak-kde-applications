@@ -58,7 +58,13 @@
                 {
                     "type": "archive",
                     "sha256": "3ab5b5cc8030552215845690fb7107764e59ead9ce9b5a50f6a810b5166c0069",
-                    "url": "https://download.kde.org/stable/plasma/5.23.4/kdecoration-5.23.4.tar.xz"
+                    "url": "https://download.kde.org/stable/plasma/5.23.4/kdecoration-5.23.4.tar.xz",
+                    "x-checker-data": {
+                        "type": "anitya",
+                        "project-id": 8761,
+                        "stable-only": true,
+                        "url-template": "https://download.kde.org/stable/plasma/$version/kdecoration-$version.tar.xz"
+                    }
                 }
             ]
         },

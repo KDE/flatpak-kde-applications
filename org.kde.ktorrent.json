@@ -52,7 +52,13 @@
                 {
                     "type": "archive",
                     "url": "https://github.com/maxmind/geoip-api-c/archive/v1.6.12.tar.gz",
-                    "sha256": "99b119f8e21e94f1dfd6d49fbeed29a70df1544896e76cd456f25e397b07d476"
+                    "sha256": "99b119f8e21e94f1dfd6d49fbeed29a70df1544896e76cd456f25e397b07d476",
+                    "x-checker-data": {
+                        "type": "anitya",
+                        "project-id": 11781,
+                        "stable-only": true,
+                        "url-template": "https://github.com/maxmind/geoip-api-c/archive/v$version.tar.gz"
+                    }
                 }
             ]
         },
@@ -79,7 +85,12 @@
                 {
                     "type": "git",
                     "url": "https://invent.kde.org/frameworks/kross.git",
-                    "tag": "v5.85.0"
+                    "tag": "v5.92.0",
+                    "x-checker-data": {
+                        "type": "git",
+                        "tag-pattern": "^v([\\d.]+)$"
+                    },
+                    "commit": "a855fccda3fb1998517a15902eab3f3694c977d8"
                 }
             ]
         },

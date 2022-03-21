@@ -13,7 +13,22 @@
     "finish-args": ["--share=ipc", "--socket=cups", "--socket=x11", "--socket=wayland", "--filesystem=host" ],
 
     "modules": [
-        { "name": "ksu", "buildsystem": "cmake-ninja", "sources": [ { "type": "git", "url": "https://invent.kde.org/frameworks/kdesu.git", "tag": "v5.85.0" } ] },
+        {
+            "name": "ksu",
+            "buildsystem": "cmake-ninja",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://invent.kde.org/frameworks/kdesu.git",
+                    "tag": "v5.92.0",
+                    "x-checker-data": {
+                        "type": "git",
+                        "tag-pattern": "^v([\\d.]+)$"
+                    },
+                    "commit": "17ca3a91012d768f4778a1d59a7c9f50a0d07697"
+                }
+            ]
+        },
         {
             "name": "konqueror",
             "buildsystem": "cmake-ninja",

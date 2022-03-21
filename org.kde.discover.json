@@ -28,12 +28,28 @@
             "config-opts": [ "--libdir=lib", "-Dstemming=false", "-Dqt=true" ],
             "buildsystem": "meson",
             "builddir": true,
-            "sources": [ { "type": "git", "url": "https://github.com/ximion/appstream.git", "branch": "master" } ],
-
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://github.com/ximion/appstream.git",
+                    "branch": "master"
+                }
+            ],
             "modules": [
                 {
                     "name": "lmdb",
-                    "sources": [ { "type": "git", "url": "https://github.com/LMDB/lmdb", "tag": "LMDB_0.9.29" } ],
+                    "sources": [
+                        {
+                            "type": "git",
+                            "url": "https://github.com/LMDB/lmdb",
+                            "tag": "LMDB_0.9.29",
+                            "x-checker-data": {
+                                "type": "git",
+                                "tag-pattern": "^LMDB_([\\d.]+)$"
+                            },
+                            "commit": "8ad7be2510414b9506ec9f9e24f24d04d9b04a1a"
+                        }
+                    ],
                     "no-autogen": true,
                     "make-install-args": ["prefix=/app"],
                     "subdir" : "libraries/liblmdb"
@@ -45,8 +61,14 @@
                     "sources": [
                         {
                             "type": "archive",
-                            "url": "http://pyyaml.org/download/libyaml/yaml-0.1.7.zip",
-                            "sha256": "bd16d734a82ccc806eab7784b3a97ee4773daf359496b298968fc2eedc3d1b19"
+                            "url": "http://pyyaml.org/download/libyaml/yaml-0.2.5.zip",
+                            "sha256": "45ec4bc54856a45e9815c897f8f7236c541b7673e18d49504335ece464aa02cc",
+                            "x-checker-data": {
+                                "type": "anitya",
+                                "project-id": 13522,
+                                "stable-only": true,
+                                "url-template": "http://pyyaml.org/download/libyaml/yaml-$version.zip"
+                            }
                         }
                     ]
                 }
@@ -73,15 +95,30 @@
                 "cp /usr/bin/gtk-update-icon-cache /app/bin",
                 "cp /usr/bin/update-mime-database /app/bin",
                 "cp /usr/bin/update-desktop-database /app/bin"],
-            "sources": [ { "type": "git", "url": "https://github.com/flatpak/flatpak", "branch": "flatpak-1.10.x" } ],
-
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://github.com/flatpak/flatpak",
+                    "branch": "flatpak-1.10.x"
+                }
+            ],
             "modules": [
                 {
                     "name": "ostree",
                     "config-opts": [ "--disable-man", "--without-libsystemd" ],
                     "cleanup": [ "/bin", "/etc/grub.d", "/libexec" ],
-                    "sources": [ { "type": "git", "url": "https://github.com/ostreedev/ostree.git", "tag": "v2021.4" } ],
-
+                    "sources": [
+                        {
+                            "type": "git",
+                            "url": "https://github.com/ostreedev/ostree.git",
+                            "tag": "v2022.2",
+                            "x-checker-data": {
+                                "type": "git",
+                                "tag-pattern": "^v([\\d.]+)$"
+                            },
+                            "commit": "fbc6d21c2f71099fbab44cbdd74222b91f61c667"
+                        }
+                    ],
                     "modules": [
                         {
                             "name": "libfuse",
@@ -91,7 +128,13 @@
                                 {
                                     "type": "archive",
                                     "url": "https://github.com/libfuse/libfuse/releases/download/fuse-3.10.5/fuse-3.10.5.tar.xz",
-                                    "sha256": "832432d1ad4f833c20e13b57cf40ce5277a9d33e483205fc63c78111b3358874"
+                                    "sha256": "b2e283485d47404ac896dd0bb7f7ba81e1470838e677e45f659804c3a3b69666",
+                                    "x-checker-data": {
+                                        "type": "anitya",
+                                        "project-id": 861,
+                                        "stable-only": true,
+                                        "url-template": "https://github.com/libfuse/libfuse/releases/download/fuse-$version/fuse-$version.tar.xz"
+                                    }
                                 }
                             ]
                         }

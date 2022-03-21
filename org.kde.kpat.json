@@ -30,8 +30,14 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://fc-solve.shlomifish.org/downloads/fc-solve/freecell-solver-6.2.0.tar.xz",
-                    "sha256": "2267758cc00ec7e7f0c47e61f398032afb4bb5386d1e54d5164ca815547f7423"
+                    "url": "https://fc-solve.shlomifish.org/downloads/fc-solve/freecell-solver-6.6.0.tar.xz",
+                    "sha256": "16b58e78d44d95d0ff1b10496dd2d8bd27de592a26f8f874e95a1d841309048c",
+                    "x-checker-data": {
+                        "type": "html",
+                        "url": "https://fc-solve.shlomifish.org/download.html",
+                        "version-pattern": "freecell-solver-([\\d\\.-]+)\\.tar\\.xz",
+                        "url-template": "https://fc-solve.shlomifish.org/downloads/fc-solve/freecell-solver-$version.tar.xz"
+                    }
                 }
             ],
             "modules": [
@@ -43,7 +49,13 @@
                         {
                             "type": "archive",
                             "url": "https://github.com/shlomif/rinutils/releases/download/0.10.0/rinutils-0.10.0.tar.xz",
-                            "sha256": "70d89f0a8464f8f494f33704b7c9396e7fca392e8aafaa4465710c1a389e9806"
+                            "sha256": "70d89f0a8464f8f494f33704b7c9396e7fca392e8aafaa4465710c1a389e9806",
+                            "x-checker-data": {
+                                "type": "anitya",
+                                "project-id": 230526,
+                                "stable-only": true,
+                                "url-template": "https://github.com/shlomif/rinutils/releases/download/$version/rinutils-$version.tar.xz"
+                            }
                         }
                     ]
                 },
@@ -67,7 +79,17 @@
                     "build-commands": [
                         "pip3 install --prefix=/app --no-deps ."
                     ],
-                    "sources": [ { "type": "git", "url": "https://github.com/openstack/pbr.git", "tag": "5.6.0" } ]
+                    "sources": [
+                        {
+                            "type": "git",
+                            "url": "https://github.com/openstack/pbr.git",
+                            "tag": "5.6.0",
+                            "x-checker-data": {
+                                "type": "git",
+                                "tag-pattern": "^([\\d.]+)$"
+                            }
+                        }
+                    ]
                 },
                 {
                     "name": "pysol_cards",

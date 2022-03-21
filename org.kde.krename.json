@@ -17,7 +17,12 @@
                 {
                     "type": "git",
                     "url": "https://github.com/libexif/libexif.git",
-                    "tag": "v0.6.23"
+                    "tag": "v0.6.24",
+                    "x-checker-data": {
+                        "type": "git",
+                        "tag-pattern": "^v([\\d.]+)$"
+                    },
+                    "commit": "5bc74ae756f01bba42e73281fad67053bc7ac5f7"
                 }
             ]
         },
@@ -29,7 +34,13 @@
                 {
                     "type": "archive",
                     "url": "https://taglib.github.io/releases/taglib-1.12.tar.gz",
-                    "sha256": "7fccd07669a523b07a15bd24c8da1bbb92206cb19e9366c3692af3d79253b703"
+                    "sha256": "7fccd07669a523b07a15bd24c8da1bbb92206cb19e9366c3692af3d79253b703",
+                    "x-checker-data": {
+                        "type": "anitya",
+                        "project-id": 1982,
+                        "stable-only": true,
+                        "url-template": "https://taglib.github.io/releases/taglib-$version.tar.gz"
+                    }
                 }
             ]
         },
@@ -41,7 +52,12 @@
                 {
                     "type": "git",
                     "url": "https://commits.kde.org/kjs.git",
-                    "tag": "v5.85.0"
+                    "tag": "v5.92.0",
+                    "x-checker-data": {
+                        "type": "git",
+                        "tag-pattern": "^v([\\d.]+)$"
+                    },
+                    "commit": "ff72aaa777fd7cd2df19db699e02b045c07efecb"
                 }
             ]
         },

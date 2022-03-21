@@ -59,7 +59,13 @@
         {
             "name": "qtkeychain",
             "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "archive", "url": "https://github.com/frankosterfeld/qtkeychain/archive/v0.12.0.tar.gz", "sha256": "cc547d58c1402f6724d3ff89e4ca83389d9e2bdcfd9ae3d695fcdffa50a625a8" } ],
+            "sources": [ { "type": "archive", "url": "https://github.com/frankosterfeld/qtkeychain/archive/v0.12.0.tar.gz", "sha256": "cc547d58c1402f6724d3ff89e4ca83389d9e2bdcfd9ae3d695fcdffa50a625a8" ,
+                "x-checker-data": {
+                    "type": "anitya",
+                    "project-id": 4138,
+                    "stable-only": true,
+                    "url-template": "https://github.com/frankosterfeld/qtkeychain/archive/v$version.tar.gz"
+                }} ],
             "config-opts": [ "-DCMAKE_INSTALL_LIBDIR=/app/lib", "-DLIB_INSTALL_DIR=/app/lib", "-DBUILD_TRANSLATIONS=NO" ]
         },
         {
@@ -157,7 +163,13 @@
                 {
                     "type": "archive",
                     "url": "https://github.com/steveire/grantlee/archive/v5.2.0.tar.gz",
-                    "sha256": "139acee5746b957bdf1327ec0d97c604d4c0b9be42aec5d584297cb5ed6a990a"
+                    "sha256": "139acee5746b957bdf1327ec0d97c604d4c0b9be42aec5d584297cb5ed6a990a",
+                    "x-checker-data": {
+                        "type": "anitya",
+                        "project-id": 21448,
+                        "stable-only": true,
+                        "url-template": "https://github.com/steveire/grantlee/archive/v$version.tar.gz"
+                    }
                 }
             ]
         },
@@ -302,7 +314,13 @@
                 {
                     "type": "archive",
                     "url": " https://oligarchy.co.uk/xapian/1.4.18/xapian-core-1.4.18.tar.xz",
-                    "sha256": "196ddbb4ad10450100f0991a599e4ed944cbad92e4a6fe813be6dce160244b77"
+                    "sha256": "196ddbb4ad10450100f0991a599e4ed944cbad92e4a6fe813be6dce160244b77",
+                    "x-checker-data": {
+                        "type": "anitya",
+                        "project-id": 15919,
+                        "stable-only": true,
+                        "url-template": "https://oligarchy.co.uk/xapian/$version/xapian-core-$version.tar.xz"
+                    }
                 }
             ],
             "config-opts": [
@@ -343,7 +361,13 @@
                         {
                             "type": "archive",
                             "url": "http://mirror.eu.oneandone.net/software/openldap/openldap-release/openldap-2.4.44.tgz",
-                            "sha256": "d7de6bf3c67009c95525dde3a0212cc110d0a70b92af2af8e3ee800e81b88400"
+                            "sha256": "d7de6bf3c67009c95525dde3a0212cc110d0a70b92af2af8e3ee800e81b88400",
+                            "x-checker-data": {
+                                "type": "html",
+                                "url": "https://www.openldap.org/software/download/OpenLDAP/openldap-release/",
+                                "version-pattern": "openldap-([\\d\\.-]+).tgz",
+                                "url-template": "https://www.openldap.org/software/download/OpenLDAP/openldap-release/openldap-$version.tgz"
+                            }
                         }
                     ],
                     "cleanup": [

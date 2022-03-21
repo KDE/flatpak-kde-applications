@@ -16,7 +16,17 @@
             "config-opts": [ "-DENABLE_TESTING=OFF" ],
             "name": "kdelibs4support",
             "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "https://invent.kde.org/frameworks/kdelibs4support.git", "tag": "v5.85.0" } ]
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://invent.kde.org/frameworks/kdelibs4support.git",
+                    "tag": "v5.85.0",
+                    "x-checker-data": {
+                        "type": "git",
+                        "tag-pattern": "^v([\\d.]+)$"
+                    }
+                }
+            ]
         },
         {
             "config-opts": [ "-DENABLE_TESTING=OFF" ],

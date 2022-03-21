@@ -26,7 +26,13 @@
                 {
                     "type": "archive",
                     "url": "https://ftp.gnu.org/gnu/gnugo/gnugo-3.8.tar.gz",
-                    "sha256": "da68d7a65f44dcf6ce6e4e630b6f6dd9897249d34425920bfdd4e07ff1866a72"
+                    "sha256": "da68d7a65f44dcf6ce6e4e630b6f6dd9897249d34425920bfdd4e07ff1866a72",
+                    "x-checker-data": {
+                        "type": "anitya",
+                        "project-id": 1209,
+                        "stable-only": true,
+                        "url-template": "https://ftp.gnu.org/gnu/gnugo/gnugo-$version.tar.gz"
+                    }
                 }
             ]
         },

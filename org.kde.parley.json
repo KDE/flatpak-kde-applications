@@ -15,20 +15,55 @@
         {
             "name": "kjs",
             "buildsystem": "cmake-ninja",
-            "config-opts": [ "-DENABLE_TESTING=OFF" ],
-            "sources": [ { "type": "git", "url": "https://invent.kde.org/frameworks/kjs.git", "tag": "v5.85.0" } ]
+            "config-opts": [
+                "-DENABLE_TESTING=OFF"
+            ],
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://invent.kde.org/frameworks/kjs.git",
+                    "tag": "v5.92.0",
+                    "x-checker-data": {
+                        "type": "git",
+                        "tag-pattern": "^v([\\d.]+)$"
+                    },
+                    "commit": "ff72aaa777fd7cd2df19db699e02b045c07efecb"
+                }
+            ]
         },
         {
             "name": "khtml",
             "buildsystem": "cmake-ninja",
             "config-opts": [ "-DENABLE_TESTING=OFF" ],
-            "sources": [ { "type": "git", "url": "https://invent.kde.org/frameworks/khtml.git", "tag": "v5.85.0" } ]
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://invent.kde.org/frameworks/khtml.git",
+                    "tag": "v5.92.0",
+                    "x-checker-data": {
+                        "type": "git",
+                        "tag-pattern": "^v([\\d.]+)$"
+                    },
+                    "commit": "97ac7de4e0a54fab9822e143416e02e348af0290"
+                }
+            ]
         },
         {
             "name": "kross",
             "buildsystem": "cmake-ninja",
             "config-opts": [ "-DENABLE_TESTING=OFF" ],
-            "sources": [ { "type": "git", "url": "https://invent.kde.org/kde/kross.git", "tag": "v5.85.0" } ]
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://invent.kde.org/kde/kross.git",
+                    "tag": "v5.92.0",
+                    "x-checker-data": {
+                        "type": "git",
+                        "tag-pattern": "^v([\\d.]+)$"
+                    },
+                    "commit": "a855fccda3fb1998517a15902eab3f3694c977d8"
+                }
+            ]
         },
         {
             "name": "libkeduvocdocument",

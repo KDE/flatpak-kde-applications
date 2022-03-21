@@ -15,7 +15,17 @@
             "name": "kross",
             "buildsystem": "cmake-ninja",
             "config-opts": [ "-DENABLE_TESTING=OFF" ],
-            "sources": [ { "type": "git", "url": "https://invent.kde.org/kde/kross.git", "tag": "v5.85.0" } ]
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://invent.kde.org/kde/kross.git",
+                    "tag": "v5.85.0",
+                    "x-checker-data": {
+                        "type": "git",
+                        "tag-pattern": "^v([\\d.]+)$"
+                    }
+                }
+            ]
         },
         {
             "name": "hunspell",

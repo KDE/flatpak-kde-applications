@@ -13,8 +13,22 @@
         {
             "name": "taglib",
             "buildsystem": "cmake-ninja",
-            "config-opts": ["-DENABLE_TESTING=OFF" , "-DBUILD_SHARED_LIBS=ON"],
-            "sources": [ { "type": "git", "url": "https://github.com/taglib/taglib.git", "tag": "v1.12" } ]
+            "config-opts": [
+                "-DENABLE_TESTING=OFF",
+                "-DBUILD_SHARED_LIBS=ON"
+            ],
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://github.com/taglib/taglib.git",
+                    "tag": "v1.12",
+                    "x-checker-data": {
+                        "type": "git",
+                        "tag-pattern": "^v([\\d.]+)$"
+                    },
+                    "commit": "c8b39449c383158b4d669ee97374543f9d0733bf"
+                }
+            ]
         },
         {
             "name": "juk",

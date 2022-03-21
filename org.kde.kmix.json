@@ -14,7 +14,18 @@
             "config-opts": [ "-DENABLE_TESTING=OFF" ],
             "name": "plasma-framework",
             "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "https://invent.kde.org/kde/plasma-framework.git", "tag": "v5.85.0" } ]
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://invent.kde.org/kde/plasma-framework.git",
+                    "tag": "v5.92.0",
+                    "x-checker-data": {
+                        "type": "git",
+                        "tag-pattern": "^v([\\d.]+)$"
+                    },
+                    "commit": "46b5fcfc43d90d53200c1f12ea4f40fe9221ec9f"
+                }
+            ]
         },
         {
             "name": "kmix",

@@ -8,7 +8,13 @@
                 {
                     "type": "archive",
                     "url": "https://github.com/libusb/libusb/releases/download/v1.0.25/libusb-1.0.25.tar.bz2",
-                    "sha256": "8a28ef197a797ebac2702f095e81975e2b02b2eeff2774fa909c78a74ef50849"
+                    "sha256": "8a28ef197a797ebac2702f095e81975e2b02b2eeff2774fa909c78a74ef50849",
+                    "x-checker-data": {
+                        "type": "anitya",
+                        "project-id": 1749,
+                        "stable-only": true,
+                        "url-template": "https://github.com/libusb/libusb/releases/download/v$version/libusb-$version.tar.bz2"
+                    }
                 }
             ]
         },
@@ -36,6 +42,10 @@
                     "type": "git",
                     "url": "https://github.com/lathiat/avahi",
                     "tag": "v0.8",
+                    "x-checker-data": {
+                        "type": "git",
+                        "tag-pattern": "^v([\\d.]+)$"
+                    },
                     "commit": "f060abee2807c943821d88839c013ce15db17b58"
                 }
             ]
@@ -52,7 +62,18 @@
                 "--enable-pthread",
                 "--enable-avahi"
             ],
-            "sources": [ { "type": "git", "url": "https://gitlab.com/sane-project/backends", "tag": "1.1.1"} ]
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://gitlab.com/sane-project/backends",
+                    "tag": "1.1.1",
+                    "x-checker-data": {
+                        "type": "git",
+                        "tag-pattern": "^([\\d.]+)$"
+                    },
+                    "commit": "332edc8b7ce642bb06132cf204a8c2dd57720bce"
+                }
+            ]
         },
         {
             "name": "libksane",

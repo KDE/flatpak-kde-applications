@@ -17,7 +17,13 @@
                  {
                      "type": "archive",
                      "url": "https://xorg.freedesktop.org/releases/individual/lib/libxkbfile-1.0.9.tar.gz",
-                     "sha256": "95df50570f38e720fb79976f603761ae6eff761613eb56f258c3cb6bab4fd5e3"
+                     "sha256": "95df50570f38e720fb79976f603761ae6eff761613eb56f258c3cb6bab4fd5e3",
+                     "x-checker-data": {
+                        "type": "anitya",
+                        "project-id": 1781,
+                        "stable-only": true,
+                        "url-template": "https://xorg.freedesktop.org/releases/individual/lib/libxkbfile-$version.tar.gz"
+                    }
                  }
             ]
         },

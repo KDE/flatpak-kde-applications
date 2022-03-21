@@ -23,8 +23,14 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "http://downloads.yoctoproject.org/releases/matchbox/libfakekey/0.1/libfakekey-0.1.tar.bz2",
-                    "sha256": "c41042a70524895b0edf8077ae3ae1206f1a313bea5811dcc23033ea16a00194"
+                    "url": "https://git.yoctoproject.org/cgit/cgit.cgi/libfakekey/snapshot/libfakekey-0.3.tar.gz",
+                    "sha256": "d282fa6481a5b85f71e36e8bad4cfa938cc8eaac4c42ffa27f9203ac634813f4",
+                    "x-checker-data": {
+                        "type": "anitya",
+                        "project-id": 229563,
+                        "stable-only": true,
+                        "url-template": "https://git.yoctoproject.org/cgit/cgit.cgi/libfakekey/snapshot/libfakekey-$version.tar.gz"
+                    }
                 }
             ]
         },
@@ -44,9 +50,19 @@
             "name": "kpeople",
             "config-opts": [ "-DENABLE_TESTING=OFF" ],
             "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "https://invent.kde.org/frameworks/kpeople.git", "tag": "v5.89.0" } ]
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://invent.kde.org/frameworks/kpeople.git",
+                    "tag": "v5.92.0",
+                    "x-checker-data": {
+                        "type": "git",
+                        "tag-pattern": "^v([\\d.]+)$"
+                    },
+                    "commit": "b7616a6b8fdd600b7de14ab009c023f3ccdebe2a"
+                }
+            ]
         },
-
         {
             "config-opts": [ "-DENABLE_TESTING=OFF" ],
             "name": "kpeoplevcard",

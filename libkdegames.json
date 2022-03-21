@@ -8,7 +8,18 @@
             "config-opts": [ "-DENABLE_TESTING=OFF" ],
             "name": "openal",
             "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "https://github.com/kcat/openal-soft.git", "tag": "1.21.1" } ]
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://github.com/kcat/openal-soft.git",
+                    "tag": "1.21.1",
+                    "x-checker-data": {
+                        "type": "git",
+                        "tag-pattern": "^([\\d.]+)$"
+                    },
+                    "commit": "ae4eacf147e2c2340cc4e02a790df04c793ed0a9"
+                }
+            ]
         }
     ]
 }

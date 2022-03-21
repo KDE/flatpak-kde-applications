@@ -16,7 +16,13 @@
                 {
                     "type": "archive",
                     "url": "http://downloads.sourceforge.net/fluidsynth/fluidsynth-1.1.6.tar.gz",
-                    "sha256": "50853391d9ebeda9b4db787efb23f98b1e26b7296dd2bb5d0d96b5bccee2171c"
+                    "sha256": "50853391d9ebeda9b4db787efb23f98b1e26b7296dd2bb5d0d96b5bccee2171c",
+                    "x-checker-data": {
+                        "type": "anitya",
+                        "project-id": 8763,
+                        "stable-only": true,
+                        "url-template": "https://download.kde.org/stable/release-service/$version/src/minuet-$version.tar.xz"
+                    }
                 }
             ]
         },

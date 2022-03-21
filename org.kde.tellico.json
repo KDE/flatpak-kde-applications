@@ -30,7 +30,13 @@
                 {
                     "type": "archive",
                     "url": "https://taglib.org/releases/taglib-1.12.tar.gz",
-                    "sha256": "7fccd07669a523b07a15bd24c8da1bbb92206cb19e9366c3692af3d79253b703"
+                    "sha256": "7fccd07669a523b07a15bd24c8da1bbb92206cb19e9366c3692af3d79253b703",
+                    "x-checker-data": {
+                        "type": "anitya",
+                        "project-id": 1982,
+                        "stable-only": true,
+                        "url-template": "https://taglib.github.io/releases/taglib-$version.tar.gz"
+                    }
                 }
             ]
         },
@@ -52,7 +58,13 @@
                 {
                     "type": "archive",
                     "url": "https://ftp.indexdata.com/pub/yaz/yaz-5.31.1.tar.gz",
-                    "sha256": "14cc34d19fd1fd27e544619f4c13300f14dc807088a1acc69fcb5c28d29baa15"
+                    "sha256": "14cc34d19fd1fd27e544619f4c13300f14dc807088a1acc69fcb5c28d29baa15",
+                    "x-checker-data": {
+                        "type": "anitya",
+                        "project-id": 5287,
+                        "stable-only": true,
+                        "url-template": "https://ftp.indexdata.com/pub/yaz/yaz-$version.tar.gz"
+                    }
                 }
             ]
         },
@@ -67,7 +79,13 @@
                 {
                     "type": "archive",
                     "url": "https://ftp.gnu.org/gnu/libcdio/libcdio-2.1.0.tar.bz2",
-                    "sha256": "8550e9589dbd594bfac93b81ecf129b1dc9d0d51e90f9696f1b2f9b2af32712b"
+                    "sha256": "8550e9589dbd594bfac93b81ecf129b1dc9d0d51e90f9696f1b2f9b2af32712b",
+                    "x-checker-data": {
+                        "type": "anitya",
+                        "project-id": 1573,
+                        "stable-only": true,
+                        "url-template": "https://ftp.gnu.org/gnu/libcdio/libcdio-$version.tar.bz2"
+                    }
                 }
             ]
         },
