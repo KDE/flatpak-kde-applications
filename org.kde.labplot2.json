@@ -20,8 +20,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "http://ftp.gnu.org/gnu/gsl/gsl-2.6.tar.gz",
-                    "sha256": "b782339fc7a38fe17689cb39966c4d821236c28018b6593ddb6fd59ee40786a8"
+                    "url": "http://ftp.gnu.org/gnu/gsl/gsl-2.7.1.tar.gz",
+                    "sha256": "dcb0fbd43048832b757ff9942691a8dd70026d5da0ff85601e52687f6deeb34b"
                 }
             ]
         },
@@ -30,8 +30,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://support.hdfgroup.org/ftp/HDF5/releases/hdf5-1.10/hdf5-1.10.7/src/hdf5-1.10.7.tar.gz",
-                    "sha256": "7a1a0a54371275ce2dfc5cd093775bb025c365846512961e7e5ceaecb437ef15"
+                    "url": "https://support.hdfgroup.org/ftp/HDF5/releases/hdf5-1.10/hdf5-1.10.8/src/hdf5-1.10.8.tar.gz",
+                    "sha256": "d341b80d380dd763753a0ebe22915e11e87aac4e44a084a850646ff934d19c80"
                 }
             ]
         },
@@ -39,9 +39,9 @@
             "name": "netcdf",
             "sources": [
                 {
-                    "type": "git",
-                    "url": "https://github.com/Unidata/netcdf-c.git",
-                    "tag": "v4.8.1"
+                    "type": "archive",
+                    "url": "https://github.com/Unidata/netcdf-c/archive/v4.8.1.tar.gz",
+                    "sha256": "bc018cc30d5da402622bf76462480664c6668b55eb16ba205a0dfb8647161dd0"
                 }
             ]
         },
@@ -50,8 +50,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "http://heasarc.gsfc.nasa.gov/FTP/software/fitsio/c/cfitsio-3.49.tar.gz",
-                    "sha256": "5b65a20d5c53494ec8f638267fca4a629836b7ac8dd0ef0266834eab270ed4b3"
+                    "url": "http://heasarc.gsfc.nasa.gov/FTP/software/fitsio/c/cfitsio-4.1.0.tar.gz",
+                    "sha256": "b367c695d2831958e7166921c3b356d5dfa51b1ecee505b97416ba39d1b6c17a"
                 }
             ]
         },
@@ -62,8 +62,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://jugit.fz-juelich.de/mlz/libcerf/-/archive/v1.14/libcerf-v1.14.tar.gz",
-                    "sha256": "065346b3360943c9961517f8c49ae13fe956835f6fc3b53e9d307e41feec3a34"
+                    "url": "https://jugit.fz-juelich.de/mlz/libcerf/-/archive/v2.0/libcerf-v2.0.tar.gz",
+                    "sha256": "c86e8b1ea18ac7747582e83dba6f42f0faea1deb5005b7ffb2e508e36b579716"
                 }
             ]
         },
@@ -80,8 +80,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.kde.org/stable/kuserfeedback/kuserfeedback-1.0.0.tar.xz",
-                    "sha256": "5a2f53ebb4b99a280757ca32bd9b686a7764a726e7e4d8bafee33acbb44b9db7"
+                    "url": "https://download.kde.org/stable/kuserfeedback/kuserfeedback-1.2.0.tar.xz",
+                    "sha256": "76aac922b153249b274680a6f4c72c238ef14e3df04bad00cb64158b1063f264"
                 }
             ]
         },
