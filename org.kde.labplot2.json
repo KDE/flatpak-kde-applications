@@ -9,8 +9,25 @@
     "command": "labplot2",
     "tags": ["nightly"],
     "desktop-file-name-suffix": " (Nightly)",
-    "finish-args": ["--share=network", "--share=ipc", "--socket=x11", "--socket=wayland", "--filesystem=host", "--filesystem=/tmp" ],
-
+    "finish-args": [
+        "--share=network",
+        "--share=ipc",
+        "--socket=x11",
+        "--socket=wayland",
+        "--filesystem=host",
+        "--filesystem=/tmp"
+    ],
+    "cleanup": [
+        "/include",
+        "/lib/cmake",
+        "/lib/pkgconfig",
+        "/lib/*.la",
+        "/lib/*.a",
+        "/mkspecs",
+        "/share/aclocal",
+        "/share/info",
+        "/share/man"
+    ],
     "modules": [
         "eigen.json",
         "poppler.json",
