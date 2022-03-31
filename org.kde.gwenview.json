@@ -58,9 +58,9 @@
                     "sha256": "a79f5613812aa21755d578a297874fb59a85101e793edc64ec2c6bd994e3e778",
                     "x-checker-data": {
                         "type": "anitya",
-                        "project-id": 8763,
+                        "project-id": 769,
                         "stable-only": true,
-                        "url-template": "https://download.kde.org/stable/release-service/$version/src/libkexiv2-$version.tar.xz"
+                        "url-template": "https://github.com/Exiv2/exiv2/releases/download/v$version/exiv2-$version-Source.tar.gz"
                     }
                 }
             ]

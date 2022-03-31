@@ -15,13 +15,13 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "http://downloads.sourceforge.net/fluidsynth/fluidsynth-1.1.6.tar.gz",
-                    "sha256": "50853391d9ebeda9b4db787efb23f98b1e26b7296dd2bb5d0d96b5bccee2171c",
+                    "url": "https://github.com/FluidSynth/fluidsynth/archive/refs/tags/v2.2.6.tar.gz",
+                    "sha256": "ca90fe675cacd9a7b442662783c4e7fa0e1fd638b28d64105a4e3fe0f618d20f",
                     "x-checker-data": {
                         "type": "anitya",
-                        "project-id": 8763,
+                        "project-id": 10437,
                         "stable-only": true,
-                        "url-template": "https://download.kde.org/stable/release-service/$version/src/minuet-$version.tar.xz"
+                        "url-template": "https://github.com/FluidSynth/fluidsynth/archive/refs/tags/v$version.tar.gz"
                     }
                 }
             ]
