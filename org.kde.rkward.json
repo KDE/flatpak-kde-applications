@@ -36,7 +36,11 @@
                 }
             ]
         },
-        "org.kde.kate.json",
+        {
+            "name": "kate",
+            "buildsystem": "cmake-ninja",
+            "sources": [ { "type": "git", "url": "https://invent.kde.org/utilities/kate.git" } ]
+        },
         {
             "buildsystem": "cmake",
             "name": "rkward",
