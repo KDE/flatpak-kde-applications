@@ -41,7 +41,13 @@
                 },
                 {
                     "name": "zxing",
-                    "config-opts": [ "-DBUILD_SHARED_LIBS=ON" ],
+                    "config-opts": [
+                        "-DBUILD_DEPENDENCIES=LOCAL",
+                        "-DBUILD_SHARED_LIBS=ON",
+                        "-DBUILD_UNIT_TESTS=OFF",
+                        "-DBUILD_BLACKBOX_TESTS=OFF",
+                        "-DBUILD_EXAMPLES=OFF"
+                    ],
                     "buildsystem": "cmake-ninja",
                     "builddir": true,
                     "sources": [ { "type": "git", "url": "https://github.com/nu-book/zxing-cpp" } ],
