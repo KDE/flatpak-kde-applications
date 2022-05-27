@@ -1,0 +1,25 @@
+{
+    "id": "org.kde.screenrecord",
+    "branch": "master",
+    "runtime": "org.kde.Platform",
+    "runtime-version": "5.15-21.08",
+    "sdk": "org.kde.Sdk",
+    "command": "screenrecord",
+    "tags": ["nightly"],
+    "desktop-file-name-suffix": " (Nightly)",
+    "finish-args": ["--share=ipc", "--socket=x11", "--socket=wayland" ],
+
+    "modules": [
+        {
+            "config-opts": [ "-DENABLE_TESTING=OFF" ],
+            "name": "kpipewire",
+            "buildsystem": "cmake-ninja",
+            "sources": [ { "type": "git", "url": "https://invent.kde.org/plasma/kpipewire.git" } ]
+        },
+        {
+            "name": "screenrecord",
+            "buildsystem": "cmake-ninja",
+            "sources": [ { "type": "git", "url": "https://invent.kde.org/apol/screenrecord.git" } ]
+        }
+    ]
+}
