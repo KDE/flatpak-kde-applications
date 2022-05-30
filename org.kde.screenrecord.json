@@ -11,6 +11,53 @@
 
     "modules": [
         {
+            "name": "ffmpeg",
+            "config-opts": [
+                "--disable-debug",
+                "--disable-doc",
+                "--disable-static",
+                "--enable-gpl",
+                "--enable-optimizations",
+                "--enable-libvpx",
+                "--enable-shared",
+                "--disable-ffplay",
+                "--disable-ffprobe",
+                "--enable-gnutls",
+                "--enable-libfontconfig",
+                "--enable-libfreetype",
+                "--enable-libopus",
+                "--enable-libpulse",
+                "--enable-libspeex",
+                "--enable-libtheora",
+                "--enable-libvorbis",
+                "--enable-libvpx",
+                "--enable-libwebp",
+                "--enable-openal",
+                "--enable-opengl",
+                "--enable-sdl2",
+                "--enable-decoder=pcm_s16be,pcm_s24be,pcm_mulaw,pcm_alaw",
+                "--enable-decoder=pcm_u8,pcm_s16le,pcm_s24le,pcm_f32le",
+                "--enable-decoder=theora,vorbis,vp8,vp9,mp3,flac,webp",
+                "--enable-decoder=rawvideo,png,gif",
+                "--enable-hwaccel=vp9_vaapi",
+                "--enable-parser=opus,vp3,vorbis,vp8,mpegaudio,flac",
+                "--enable-demuxer=ogg,matroska,wav,mp3,gif,flac",
+                "--enable-filter=crop,scale",
+                "--enable-protocol=file",
+                "--enable-decoder=aac,hevc,h264,h263,ac3,eac3,truehd,mlp,dca,mpeg4",
+                "--enable-hwaccel=h264_vaapi,h264_vdpau,hevc_vaapi,hevc_vdpau",
+                "--enable-parser=aac,hevc,h264,ac3,dca,mpeg4video",
+                "--enable-demuxer=avi,aac,h264,mov,ac3,m4v,m4a"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://ffmpeg.org/releases/ffmpeg-5.0.1.tar.xz",
+                    "sha256": "ef2efae259ce80a240de48ec85ecb062cecca26e4352ffb3fda562c21a93007b"
+                }
+            ]
+        },
+        {
             "config-opts": [ "-DENABLE_TESTING=OFF" ],
             "name": "kpipewire",
             "buildsystem": "cmake-ninja",
