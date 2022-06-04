@@ -13,6 +13,7 @@
         {
             "name": "filelight",
             "buildsystem": "cmake-ninja",
+            "config-opts": [ "-DBUILD_TESTING=OFF" ],
             "sources": [
                 { "type": "git", "url": "https://invent.kde.org/kde/filelight.git" }
             ]
