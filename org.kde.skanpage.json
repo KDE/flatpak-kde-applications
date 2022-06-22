@@ -7,7 +7,8 @@
     "command": "skanpage",
     "tags": ["nightly"],
     "desktop-file-name-suffix": " (Nightly)",
-    "finish-args": ["--share=ipc", "--socket=x11", "--socket=wayland", "--device=all" ],
+    "finish-args": ["--share=ipc", "--socket=x11", "--socket=wayland", "--device=all",
+                    "--share=network", "--system-talk-name=org.freedesktop.Avahi" ],
     "separate-locales": false,
 
     "modules": [
