@@ -76,9 +76,14 @@
             ]
         },
         {
+            "name": "libksanecore",
+            "buildsystem": "cmake-ninja",
+            "sources": [ { "type": "git", "url": "https://invent.kde.org/libraries/ksanecore" } ]
+        },
+        {
             "name": "libksane",
             "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "https://invent.kde.org/kde/libksane.git" } ]
+            "sources": [ { "type": "git", "url": "https://invent.kde.org/graphics/libksane" } ]
         }
     ]
 }
