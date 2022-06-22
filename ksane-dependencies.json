@@ -76,6 +76,18 @@
             ]
         },
         {
+            "name": "sane-airscan",
+            "buildsystem": "meson",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://github.com/alexpevzner/sane-airscan",
+                    "tag": "0.99.27",
+                    "commit": "053f5654cd4d16f077fe5cb40d32004aaa321462"
+                }
+            ]
+        },
+        {
             "name": "libksanecore",
             "buildsystem": "cmake-ninja",
             "sources": [ { "type": "git", "url": "https://invent.kde.org/libraries/ksanecore" } ]
