@@ -33,6 +33,7 @@
         },
         {
             "name": "libsecret",
+            "buildsystem": "meson",
             "sources": [
                 {
                     "type": "archive",
