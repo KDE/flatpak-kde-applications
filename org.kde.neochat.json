@@ -46,7 +46,7 @@
                     }
                 }
             ],
-            "config-opts": [ "--disable-static", "--disable-gtk-doc", "--disable-manpages" ]
+            "config-opts": [ "-Dvapi=false", "-Dintrospection=false", "-Dgcrypt=false", "-Dgtk_doc=false", "-Dmanpage=false" ]
         },
         {
             "name": "qtkeychain",
