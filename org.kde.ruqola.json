@@ -7,24 +7,27 @@
     "command": "ruqola",
     "tags": ["nightly"],
     "desktop-file-name-suffix": " (Nightly)",
+    "rename-icon": "ruqola",
     "finish-args": [
+        "--device=dri",
         "--share=ipc",
         "--socket=fallback-x11",
         "--socket=wayland",
-        "--filesystem=host",
+        "--socket=pulseaudio",
         "--share=network",
-	"--talk-name=org.kde.StatusNotifierWatcher"
+        "--talk-name=org.kde.StatusNotifierWatcher",
+        "--talk-name=org.kde.kwalletd5"
     ],
     "separate-locales": false,
-
     "modules": [
         {
             "name": "libsecret",
+            "buildsystem": "meson",
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://gitlab.gnome.org/GNOME/libsecret/-/archive/0.20.5/libsecret-0.20.5.tar.gz",
-                    "sha256": "b33b9542222ea8866f6ff2d31c0ad373877c2277db546ca00cc7fdda9cbab1c3",
+                    "url": "https://download.gnome.org/sources/libsecret/0.20/libsecret-0.20.5.tar.xz",
+                    "sha256": "3fb3ce340fcd7db54d87c893e69bfc2b1f6e4d4b279065ffe66dac9f0fd12b4d",
                     "x-checker-data": {
                         "type": "gnome",
                         "name": "libsecret",
@@ -32,7 +35,13 @@
                     }
                 }
             ],
-            "config-opts": [ "--disable-static", "--disable-gtk-doc", "--disable-manpages" ]
+            "config-opts": [
+                "-Dgcrypt=false",
+                "-Dgtk_doc=false",
+                "-Dintrospection=false",
+                "-Dmanpage=false",
+                "-Dvapi=false"
+            ]
         },
         {
             "name": "qtkeychain",
@@ -50,12 +59,28 @@
                     }
                 }
             ],
-            "config-opts": [ "-DCMAKE_INSTALL_LIBDIR=/app/lib", "-DLIB_INSTALL_DIR=/app/lib", "-DBUILD_TRANSLATIONS=NO" ]
+            "config-opts": [
+                "-DCMAKE_INSTALL_LIBDIR=/app/lib",
+                "-DLIB_INSTALL_DIR=/app/lib",
+                "-DBUILD_TRANSLATIONS=NO"
+            ]
         },
         {
             "name": "ruqola",
             "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "https://invent.kde.org/network/ruqola.git" } ]
+            "builddir": true,
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://invent.kde.org/network/ruqola.git"
+                }
+            ],
+            "config-opts": [
+                "-DBUILD_TESTING=OFF"
+            ],
+            "cleanup": [
+                "/share/qlogging-categories5"
+            ]
         }
     ]
 }
