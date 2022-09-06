@@ -21,8 +21,22 @@
 
     "modules": [
         {
+            "name": "libomemo-c",
+            "buildsystem": "cmake-ninja",
+            "config-opts": ["-DBUILD_SHARED_LIBS=ON"],
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://github.com/dino/libomemo-c",
+                    /*"branch": "omemo",*/
+                    "commit": "bcbdf027e567dbe0c64b6b1ccb9414ff96434800"
+                }
+            ]
+        },
+        {
             "name": "qxmpp",
             "buildsystem": "cmake-ninja",
+            "config-opts": ["-DBUILD_TESTS=OFF", "-DBUILD_EXAMPLES=OFF", "-DBUILD_OMEMO=ON"],
             "sources": [
                 {
                     "type": "git",
@@ -33,21 +47,22 @@
         },
         {
             "name": "zxing",
-            "config-opts": [ "-DBUILD_SHARED_LIBS=ON", "-DBUILD_BLACKBOX_TESTS=OFF", "-DBUILD_EXAMPLES=OFF" ],
+            "config-opts": [
+                "-DBUILD_DEPENDENCIES=LOCAL",
+                "-DBUILD_SHARED_LIBS=ON",
+                "-DBUILD_UNIT_TESTS=OFF",
+                "-DBUILD_BLACKBOX_TESTS=OFF",
+                "-DBUILD_EXAMPLES=OFF"
+            ],
             "buildsystem": "cmake-ninja",
             "builddir": true,
-            "sources": [
-                {
-                    "type": "git",
-                    "url": "https://github.com/nu-book/zxing-cpp"
-                }
-            ],
+            "sources": [ { "type": "git", "url": "https://github.com/nu-book/zxing-cpp", "tag": "v1.4.0" } ],
             "cleanup": [ "/include", "/lib/cmake", "/mkspecs", "/etc/xdg/*categories" ]
         },
         {
             "name": "kaidan",
             "buildsystem": "cmake-ninja",
-            "config-opts": ["-DI18N=1", "-DQUICK_COMPILER=0"],
+            "config-opts": ["-DQUICK_COMPILER=0"],
             "sources": [
                 {
                     "type": "git",
