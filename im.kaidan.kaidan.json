@@ -15,7 +15,8 @@
         "--device=dri",
         "--device=all",
         "--talk-name=org.freedesktop.Notifications",
-        "--env=QT_QUICK_CONTROLS_STYLE=org.kde.desktop"
+        "--env=QT_QUICK_CONTROLS_STYLE=org.kde.desktop",
+        "--env=LD_LIBRARY_PATH=/usr/lib/"
     ],
     "separate-locales": false,
 
