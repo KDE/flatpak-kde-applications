@@ -29,7 +29,6 @@
                 {
                     "type": "git",
                     "url": "https://github.com/dino/libomemo-c",
-                    /*"branch": "omemo",*/
                     "commit": "bcbdf027e567dbe0c64b6b1ccb9414ff96434800"
                 }
             ]
