@@ -1,3 +1,3 @@
 ID=org.kde.telly-skout
-JSON=org.kde.telly-skout.yml
+JSON=.flatpak-manifest.yml
 GITURL=https://invent.kde.org/plasma-mobile/telly-skout.git
