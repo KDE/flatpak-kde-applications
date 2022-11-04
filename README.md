@@ -26,9 +26,9 @@ Developers are now encouraged to move manifests into application source reposito
 3. Add the following to the list of includes in `.gitlab-ci.yml`:
 
     ```yml
-include:
-    ...
-    - https://invent.kde.org/sysadmin/ci-utilities/raw/master/gitlab-templates/flatpak.yml
+    include:
+        ...
+        - https://invent.kde.org/sysadmin/ci-utilities/raw/master/gitlab-templates/flatpak.yml
     ```
 
 After this, your repository should have Flatpak CI builds enabled and will run on every pipeline run. Flatpak CI builds will also generate artifacts.
