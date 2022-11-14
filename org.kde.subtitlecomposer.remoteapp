@@ -1,0 +1,4 @@
+ID=org.kde.subtitlecomposer
+JSON=pkg/flatpak/org.kde.subtitlecomposer-nightly.json
+GITURL=https://invent.kde.org/multimedia/subtitlecomposer.git
+
