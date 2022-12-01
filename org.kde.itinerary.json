@@ -43,6 +43,12 @@
             "cleanup": [ "/include", "/lib/cmake", "/mkspecs", "/etc/xdg/*categories", "/lib/libexec" ]
         },
         {
+            "name": "kirigamiaddons",
+            "config-opts": [ "-DBUILD_TESTING=OFF" ],
+            "buildsystem": "cmake-ninja",
+            "sources": [ { "type": "git", "url": "https://invent.kde.org/libraries/kirigami-addons.git", "branch": "master" } ]
+        },
+        {
             "name": "kpublictransport",
             "config-opts": [ "-DENABLE_TESTING=OFF" ],
             "buildsystem": "cmake-ninja",
