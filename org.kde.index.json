@@ -2,7 +2,7 @@
     "id": "org.kde.index",
     "rename-icon": "index",
     "runtime": "org.kde.Platform",
-    "runtime-version": ,
+    "runtime-version": "5.15-22.08",
     "sdk": "org.kde.Sdk",
     "command": "index",
     "tags": ["nightly"],

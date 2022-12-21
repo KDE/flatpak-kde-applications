@@ -2,7 +2,7 @@
     "id": "org.kde.kigo",
     "branch": "master",
     "runtime": "org.kde.Platform",
-    "runtime-version": ,
+    "runtime-version": "5.15-22.08",
     "sdk": "org.kde.Sdk",
     "command": "kigo",
     "tags": ["nightly"],

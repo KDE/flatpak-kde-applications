@@ -3,7 +3,7 @@
     "branch": "master",
     "rename-icon": "kirogi",
     "runtime": "org.kde.Platform",
-    "runtime-version": ,
+    "runtime-version": "5.15-22.08",
     "sdk": "org.kde.Sdk",
     "command": "kirogi",
     "tags": ["nightly"],

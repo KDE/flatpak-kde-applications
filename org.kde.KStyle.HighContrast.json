@@ -4,7 +4,7 @@
   "runtime": "org.kde.Platform",
   "build-extension": true,
   "sdk": "org.kde.Sdk",
-  "runtime-version": ,
+  "runtime-version": "5.15-22.08",
   "appstream-compose": false,
   "separate-locales": false,
   "modules": [

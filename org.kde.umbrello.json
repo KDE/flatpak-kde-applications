@@ -4,7 +4,7 @@
     "base": "io.qt.qtwebkit.BaseApp",
     "base-version": "5.15",
     "runtime": "org.kde.Platform",
-    "runtime-version": ,
+    "runtime-version": "5.15-22.08",
     "sdk": "org.kde.Sdk",
     "command": "umbrello5",
     "tags": ["nightly"],

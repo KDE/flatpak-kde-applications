@@ -3,9 +3,9 @@
     "command": "tellico",
     "branch": "master",
     "runtime": "org.kde.Platform",
-    "runtime-version": ,
+    "runtime-version": "5.15-22.08",
     "base": "io.qt.qtwebengine.BaseApp",
-    "base-version": ,
+    "base-version": "5.15-22.08",
     "sdk": "org.kde.Sdk",
     "rename-icon": "tellico",
     "tags": [
