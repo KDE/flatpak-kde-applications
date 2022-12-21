@@ -2,7 +2,7 @@
     "id": "org.kde.kapman",
     "branch": "master",
     "runtime": "org.kde.Platform",
-    "runtime-version": "5.15-21.08",
+    "runtime-version": ,
     "sdk": "org.kde.Sdk",
     "command": "kapman",
     "rename-icon": "kapman",
