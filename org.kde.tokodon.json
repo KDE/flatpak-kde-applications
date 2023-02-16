@@ -26,6 +26,8 @@
         },
         {
             "name": "libsecret",
+            "buildsystem": "meson",
+            "config-opts": ["-Dmanpage=false", "-Dvapi=false", "-Dgtk_doc=false"],
             "sources": [
                 {
                     "type": "archive",
@@ -37,8 +39,7 @@
                         "stable-only": true
                     }
                 }
-            ],
-            "config-opts": [ "--disable-static", "--disable-gtk-doc", "--disable-manpages" ]
+            ]
         },
         {
             "name": "qtkeychain",
@@ -57,6 +58,27 @@
                 }
             ],
             "config-opts": [ "-DCMAKE_INSTALL_LIBDIR=/app/lib", "-DLIB_INSTALL_DIR=/app/lib", "-DBUILD_TRANSLATIONS=NO" ]
+        },
+        {
+            "name": "kirigami-addons",
+            "config-opts": [
+                "-DBUILD_TESTING=OFF",
+                "-DCMAKE_BUILD_TYPE=Release"
+            ],
+            "buildsystem": "cmake-ninja",
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://download.kde.org/stable/kirigami-addons/kirigami-addons-0.7.0.tar.xz",
+                    "sha256": "0132a58b150229544a61e17e792c48cfc6daa03a8be9c7acd873a6c30d283df7",
+                    "x-checker-data": {
+                        "type": "anitya",
+                        "project-id": 242933,
+                        "stable-only": true,
+                        "url-template": "https://download.kde.org/stable/kirigami-addons/kirigami-addons-$version.tar.xz"
+                    }
+                }
+            ]
         },
         {
             "name": "tokodon",
