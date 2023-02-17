@@ -22,6 +22,16 @@
 
     "modules": [
         {
+            "name": "kquickimageeditor",
+            "buildsystem": "cmake-ninja",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://invent.kde.org/libraries/kquickimageeditor"
+                }
+            ]
+        },
+        {
             "name": "libomemo-c",
             "buildsystem": "cmake-ninja",
             "config-opts": ["-DBUILD_SHARED_LIBS=ON"],
