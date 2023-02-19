@@ -38,7 +38,8 @@
             "sources": [
                 {
                     "type": "git",
-                    "url": "https://github.com/dino/libomemo-c"
+                    "url": "https://github.com/dino/libomemo-c",
+                    "branch": "omemo"
                 }
             ]
         },
