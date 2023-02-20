@@ -27,7 +27,7 @@
             "sources": [
                 {
                     "type": "git",
-                    "url": "https://invent.kde.org/libraries/kquickimageeditor"
+                    "url": "https://invent.kde.org/libraries/kquickimageeditor.git"
                 }
             ]
         },
@@ -38,7 +38,7 @@
             "sources": [
                 {
                     "type": "git",
-                    "url": "https://github.com/dino/libomemo-c",
+                    "url": "https://github.com/dino/libomemo-c.git",
                     "branch": "omemo"
                 }
             ]
@@ -50,7 +50,7 @@
             "sources": [
                 {
                     "type": "git",
-                    "url": "https://github.com/qxmpp-project/qxmpp"
+                    "url": "https://github.com/qxmpp-project/qxmpp.git"
                 }
             ],
             "cleanup": [ "/include", "/lib/cmake", "/lib/pkgconfig" ]
@@ -66,7 +66,13 @@
             ],
             "buildsystem": "cmake-ninja",
             "builddir": true,
-            "sources": [ { "type": "git", "url": "https://github.com/nu-book/zxing-cpp", "tag": "v1.4.0" } ],
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://github.com/zxing-cpp/zxing-cpp.git",
+                    "tag": "v1.4.0"
+                }
+            ],
             "cleanup": [ "/include", "/lib/cmake", "/mkspecs", "/etc/xdg/*categories" ]
         },
         {
@@ -76,7 +82,7 @@
             "sources": [
                 {
                     "type": "git",
-                    "url": "https://invent.kde.org/kde/kaidan",
+                    "url": "https://invent.kde.org/network/kaidan.git",
                     "branch": "master"
                 }
             ]
