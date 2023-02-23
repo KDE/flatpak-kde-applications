@@ -2,7 +2,7 @@
     "id": "org.kde.trojita",
     "rename-icon": "trojita",
     "base": "io.qt.qtwebkit.BaseApp",
-    "base-version": "5.15",
+    "base-version": "5.15-22.08",
     "runtime": "org.kde.Platform",
     "runtime-version": "5.15-22.08",
     "sdk": "org.kde.Sdk",
