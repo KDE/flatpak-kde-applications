@@ -54,8 +54,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://exiv2.org/builds/exiv2-0.27.3-Source.tar.gz",
-                    "sha256": "a79f5613812aa21755d578a297874fb59a85101e793edc64ec2c6bd994e3e778",
+                    "url": "https://github.com/Exiv2/exiv2/releases/download/v0.27.6/exiv2-0.27.6-Source.tar.gz",
+                    "sha256": "4c192483a1125dc59a3d70b30d30d32edace9e14adf52802d2f853abf72db8a6",
                     "x-checker-data": {
                         "type": "anitya",
                         "project-id": 769,
@@ -166,6 +166,28 @@
                 {
                     "type": "git",
                     "url": "https://invent.kde.org/graphics/libkipi.git"
+                }
+            ]
+        },
+        {
+            "name": "kcolorpicker",
+            "buildsystem": "cmake-ninja",
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://github.com/ksnip/kColorPicker/archive/refs/tags/v0.2.0.tar.gz",
+                    "sha256": "20ffc5e935333a18c5cd813c3d306d3482ec9c826fe0d0c3d7b7635419703d55"
+                }
+            ]
+        },
+        {
+            "name": "kimageannotator",
+            "buildsystem": "cmake-ninja",
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://github.com/ksnip/kImageAnnotator/archive/refs/tags/v0.6.0.tar.gz",
+                    "sha256": "148ef703ed5535a0c23d11629b588d9cb163598798261aa760d5b351756646a7"
                 }
             ]
         },
