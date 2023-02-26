@@ -13,6 +13,105 @@
 
     "modules": [
         "ksane-dependencies.json",
+         {
+            "name": "leptonica",
+            "rm-configure": true,
+            "config-opts": [
+                "--disable-static"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://github.com/DanBloomberg/leptonica/releases/download/1.83.1/leptonica-1.83.1.tar.gz",
+                    "sha256": "8f18615e0743af7df7f50985c730dfcf0c93548073d1f56621e4156a8b54d3dd"
+                }
+            ]
+        },
+        {
+            "name": "tesseract",
+            "config-opts": [
+                "--disable-static"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://github.com/tesseract-ocr/tesseract/archive/refs/tags/5.3.0.tar.gz",
+                    "sha256": "7e70870f8341e5ea228af2836ce79a36eefa11b01b56177b4a8997f330c014b8"
+                },
+                {
+                    "type": "file",
+                    "url": "https://github.com/tesseract-ocr/tessdata_best/raw/4.1.0/eng.traineddata",
+                    "sha256": "8280aed0782fe27257a68ea10fe7ef324ca0f8d85bd2fd145d1c2b560bcb66ba",
+                    "dest": "traineddata"
+                },
+                {
+                    "type": "file",
+                    "url": "https://github.com/tesseract-ocr/tessdata_best/raw/4.1.0/jpn.traineddata",
+                    "sha256": "36bdf9ac823f5911e624c30d0553e890b8abc7c31a65b3ef14da943658c40b79",
+                    "dest": "traineddata"
+                },
+                {
+                    "type": "file",
+                    "url": "https://github.com/tesseract-ocr/tessdata_best/raw/4.1.0/rus.traineddata",
+                    "sha256": "b617eb6830ffabaaa795dd87ea7fd251adfe9cf0efe05eb9a2e8128b7728d6b6",
+                    "dest": "traineddata"
+                },
+                {
+                    "type": "file",
+                    "url": "https://github.com/tesseract-ocr/tessdata_best/raw/4.1.0/fra.traineddata",
+                    "sha256": "907743d98915c91a3906dfbf6e48b97598346698fe53aaa797e1a064ffcac913",
+                    "dest": "traineddata"
+                },
+                {
+                    "type": "file",
+                    "url": "https://github.com/tesseract-ocr/tessdata_best/raw/4.1.0/ara.traineddata",
+                    "sha256": "ab9d157d8e38ca00e7e39c7d5363a5239e053f5b0dbdb3167dde9d8124335896",
+                    "dest": "traineddata"
+                },
+                {
+                    "type": "file",
+                    "url": "https://github.com/tesseract-ocr/tessdata_best/raw/4.1.0/chi_sim.traineddata",
+                    "sha256": "4fef2d1306c8e87616d4d3e4c6c67faf5d44be3342290cf8f2f0f6e3aa7e735b",
+                    "dest": "traineddata"
+                },
+                {
+                    "type": "file",
+                    "url": "https://github.com/tesseract-ocr/tessdata_best/raw/4.1.0/spa.traineddata",
+                    "sha256": "e2c1ffdad8b30f26c45d4017a9183d3a7f9aa69e59918be4f88b126fac99ab2c",
+                    "dest": "traineddata"
+                },
+                {
+                    "type": "file",
+                    "url": "https://github.com/tesseract-ocr/tessdata_best/raw/4.1.0/tur.traineddata",
+                    "sha256": "e0c3338dc17503dc7d335a507c9ae01b2b46cfd07561171e1e1ac55d85e8e438",
+                    "dest": "traineddata"
+                },
+                {
+                    "type": "file",
+                    "url": "https://github.com/tesseract-ocr/tessdata_best/raw/4.1.0/nld.traineddata",
+                    "sha256": "92e7a1ad4bf8082e268de57c7823316ec024935702c6ed2a1e473b3a071aa733",
+                    "dest": "traineddata"
+                },
+                {
+                    "type": "file",
+                    "url": "https://github.com/tesseract-ocr/tessdata_best/raw/4.1.0/deu.traineddata",
+                    "sha256": "8407331d6aa0229dc927685c01a7938fc5a641d1a9524f74838cdac599f0d06e",
+                    "dest": "traineddata"
+                }
+            ],
+            "post-install": [
+                "install -p -D -m 0644 \"traineddata\"/deu.traineddata -t \"${FLATPAK_DEST}/share/tessdata/\";",
+                "install -p -D -m 0644 \"traineddata\"/nld.traineddata -t \"${FLATPAK_DEST}/share/tessdata/\";",
+                "install -p -D -m 0644 \"traineddata\"/tur.traineddata -t \"${FLATPAK_DEST}/share/tessdata/\";",
+                "install -p -D -m 0644 \"traineddata\"/eng.traineddata -t \"${FLATPAK_DEST}/share/tessdata/\";",
+                "install -p -D -m 0644 \"traineddata\"/jpn.traineddata -t \"${FLATPAK_DEST}/share/tessdata/\";",
+                "install -p -D -m 0644 \"traineddata\"/rus.traineddata -t \"${FLATPAK_DEST}/share/tessdata/\";",
+                "install -p -D -m 0644 \"traineddata\"/fra.traineddata -t \"${FLATPAK_DEST}/share/tessdata/\";",
+                "install -p -D -m 0644 \"traineddata\"/ara.traineddata -t \"${FLATPAK_DEST}/share/tessdata/\";",
+                "install -p -D -m 0644 \"traineddata\"/chi_sim.traineddata -t \"${FLATPAK_DEST}/share/tessdata/\";",
+                "install -p -D -m 0644 \"traineddata\"/spa.traineddata -t \"${FLATPAK_DEST}/share/tessdata/\";"
+            ]
+        },
         {
             "name": "skanpage",
             "buildsystem": "cmake-ninja",
