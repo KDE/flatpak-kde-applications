@@ -138,7 +138,7 @@
                 {
                     "type": "git",
                     "url": "https://github.com/WizardMac/ReadStat.git",
-                    "tag": "v1.1.6",
+                    "tag": "v1.1.9",
                     "x-checker-data": {
                         "type": "git",
                         "tag-pattern": "^v([\\d.]+)$"
