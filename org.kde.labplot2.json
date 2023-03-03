@@ -154,10 +154,7 @@
         {
             "name": "labplot",
             "buildsystem": "cmake-ninja",
-            "build-options": {
-              "build-args": ["--share=network"]
-            },
-            "config-opts": [ "-DQt5Mqtt_DIR=/app/qtmqtt/usr/lib/x86_64-linux-gnu/cmake/Qt5Mqtt" , "-DENABLE_VECTOR_BLF=ON" ],
+            "config-opts": [ "-DQt5Mqtt_DIR=/app/qtmqtt/usr/lib/x86_64-linux-gnu/cmake/Qt5Mqtt" , "-DENABLE_VECTOR_BLF=OFF" ],
             "sources": [ { "type": "git", "url": "https://invent.kde.org/kde/labplot.git", "branch": "master" } ]
         }
     ]
