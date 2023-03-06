@@ -1,0 +1,3 @@
+ID=im.kaidan.kaidan
+JSON=.flatpak-manifest.json
+GITURL=https://invent.kde.org/network/kaidan.git
