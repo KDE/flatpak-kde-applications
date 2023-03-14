@@ -8,6 +8,8 @@
     "tags": ["nightly"],
     "desktop-file-name-suffix": " (Nightly)",
     "finish-args": ["--share=ipc", "--socket=x11", "--socket=wayland", "--talk-name=org.freedesktop.Flatpak" ],
+    "rename-icon": "utilities-terminal",
+    "copy-icon": true,
 
     "modules": [
         {
