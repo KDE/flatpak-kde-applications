@@ -1,0 +1,3 @@
+ID=org.kde.klettres
+JSON=.flatpak-manifest.json
+GITURL=https://invent.kde.org/education/klettres.git

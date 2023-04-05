@@ -1,0 +1,3 @@
+ID=org.kde.kcolorchooser
+JSON=.flatpak-manifest.json
+GITURL=https://invent.kde.org/graphics/kcolorchooser.git

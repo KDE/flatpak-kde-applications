@@ -1,0 +1,3 @@
+ID=org.kde.index
+JSON=.flatpak-manifest.json
+GITURL=https://invent.kde.org/maui/index-fm.git

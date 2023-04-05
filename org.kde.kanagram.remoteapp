@@ -1,0 +1,3 @@
+ID=org.kde.kanagram
+JSON=.flatpak-manifest.json
+GITURL=https://invent.kde.org/education/kanagram.git

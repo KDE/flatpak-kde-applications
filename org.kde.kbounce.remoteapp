@@ -1,0 +1,3 @@
+ID=org.kde.kbounce
+JSON=.flatpak-manifest.json
+GITURL=https://invent.kde.org/games/kbounce.git

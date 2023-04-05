@@ -1,0 +1,3 @@
+ID=org.kde.kolf
+JSON=.flatpak-manifest.json
+GITURL=https://invent.kde.org/games/kolf.git

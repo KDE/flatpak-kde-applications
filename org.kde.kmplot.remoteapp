@@ -1,0 +1,3 @@
+ID=org.kde.kmplot
+JSON=.flatpak-manifest.json
+GITURL=https://invent.kde.org/education/kmplot.git

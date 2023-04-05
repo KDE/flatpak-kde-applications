@@ -1,0 +1,3 @@
+ID=org.kde.gwenview
+JSON=.flatpak-manifest.json
+GITURL=https://invent.kde.org/graphics/gwenview.git

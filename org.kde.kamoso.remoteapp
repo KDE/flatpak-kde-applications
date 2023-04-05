@@ -1,0 +1,3 @@
+ID=org.kde.kamoso
+JSON=.flatpak-manifest.json
+GITURL=https://invent.kde.org/multimedia/kamoso.git

@@ -1,0 +1,3 @@
+ID=org.kde.gcompris
+JSON=.flatpak-manifest.json
+GITURL=https://invent.kde.org/education/gcompris.git

@@ -1,0 +1,3 @@
+ID=org.kde.kleopatra
+JSON=.flatpak-manifest.json
+GITURL=https://invent.kde.org/pim/kleopatra.git

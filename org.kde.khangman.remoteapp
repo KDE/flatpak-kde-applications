@@ -1,0 +1,3 @@
+ID=org.kde.khangman
+JSON=.flatpak-manifest.json
+GITURL=https://invent.kde.org/education/khangman.git
