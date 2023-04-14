@@ -188,7 +188,7 @@
         {
             "name": "labplot",
             "buildsystem": "cmake-ninja",
-            "config-opts": [ "-DQt5Mqtt_DIR=/app/qtmqtt/usr/lib/x86_64-linux-gnu/cmake/Qt5Mqtt", "-DLOCAL_DBC_PARSER=OFF", "-DLOCAL_VECTOR_BLF=OFF"],
+            "config-opts": [ "-DQt5Mqtt_DIR=/app/qtmqtt/usr/lib/x86_64-linux-gnu/cmake/Qt5Mqtt" ],
             "sources": [ { "type": "git", "url": "https://invent.kde.org/kde/labplot.git", "branch": "master" } ]
         }
     ]
