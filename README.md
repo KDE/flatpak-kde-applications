@@ -17,7 +17,7 @@ benefit from checks during Merge Requests via KDE Invent's GitLab CI.
 
 ## How to add your application to the Nightly repo
 
-We strongly encourage developers to add their Flaptak manifests in their
+We strongly encourage developers to add their Flatpak manifests in their
 application source repository to enable per commit / merge request Flatpak CI
 builds on their repository.
 
