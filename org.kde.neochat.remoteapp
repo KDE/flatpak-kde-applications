@@ -1,0 +1,3 @@
+ID=org.kde.neochat
+JSON=.flatpak-manifest.json
+GITURL=https://invent.kde.org/network/neochat.git
