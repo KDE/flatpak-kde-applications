@@ -186,9 +186,25 @@
             "sources": [ { "type": "git", "url": "https://invent.kde.org/kde/cantor.git" } ]
         },
         {
+            "name": "Qt-Advanced-Docking-System",
+            "buildsystem": "cmake-ninja",
+            /* This version is two commits ahead the 4.0.3, with important changes needed to get it build! This must be removed once a new ADS version is released! */
+            "config-opts": [
+                "-DADS_VERSION=4.0.3",
+                "-DQT_VERSION_MAJOR=5"
+            ],
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://github.com/githubuser0xFFFF/Qt-Advanced-Docking-System.git",
+                    "commit": "a940fc29c6d1fbcb5ee1e2fecf86f20bb86a7fb6"
+                }
+            ]
+        },
+        {
             "name": "labplot",
             "buildsystem": "cmake-ninja",
-            "config-opts": [ "-DQt5Mqtt_DIR=/app/qtmqtt/usr/lib/x86_64-linux-gnu/cmake/Qt5Mqtt" ],
+            "config-opts": [ "-DQt5Mqtt_DIR=/app/qtmqtt/usr/lib/x86_64-linux-gnu/cmake/Qt5Mqtt", "-DLOCAL_QT_ADVANCED_DOCK_COPY=OFF"],
             "sources": [ { "type": "git", "url": "https://invent.kde.org/kde/labplot.git", "branch": "master" } ]
         }
     ]
