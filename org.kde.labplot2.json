@@ -188,7 +188,6 @@
         {
             "name": "Qt-Advanced-Docking-System",
             "buildsystem": "cmake-ninja",
-            /* This version is two commits ahead the 4.0.3, with important changes needed to get it build! This must be removed once a new ADS version is released! */
             "config-opts": [
                 "-DADS_VERSION=4.0.3",
                 "-DQT_VERSION_MAJOR=5"
