@@ -168,8 +168,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/steveire/grantlee/archive/v5.2.0.tar.gz",
-                    "sha256": "139acee5746b957bdf1327ec0d97c604d4c0b9be42aec5d584297cb5ed6a990a",
+                    "url": "https://github.com/steveire/grantlee/archive/v5.3.0.tar.gz",
+                    "sha256": "8c52cd4b0fa86f2bb0a3627d6bee8286f269cd7122a0115101cdec9441669ff2",
                     "x-checker-data": {
                         "type": "anitya",
                         "project-id": 21448,
@@ -319,7 +319,7 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": " https://oligarchy.co.uk/xapian/1.4.18/xapian-core-1.4.18.tar.xz",
+                    "url": "https://oligarchy.co.uk/xapian/1.4.18/xapian-core-1.4.18.tar.xz",
                     "sha256": "196ddbb4ad10450100f0991a599e4ed944cbad92e4a6fe813be6dce160244b77",
                     "x-checker-data": {
                         "type": "anitya",
