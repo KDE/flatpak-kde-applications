@@ -12,6 +12,11 @@
     "modules": [
         "eigen.json",
         {
+            "name": "gsl",
+            "buildsystem": "autotools",
+            "sources": [ { "type": "git", "url": "git://git.savannah.gnu.org/gsl.git" } ]
+        },
+        {
             "name": "kstars",
             "buildsystem": "cmake-ninja",
             "sources": [ { "type": "git", "url": "https://invent.kde.org/kde/kstars.git" } ]
