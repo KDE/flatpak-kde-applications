@@ -12,16 +12,34 @@
     "modules": [
         {
             "name": "libgpg-error",
-            "sources": [ { "type": "archive", "url": "http://mirrors.dotsrc.org/gnupg/libgpg-error/libgpg-error-1.37.tar.bz2", "sha256": "b32d6ff72a73cf79797f7f2d039e95e9c6f92f0c1450215410840ab62aea9763" } ],
-            "cleanup": [ "/lib/libgpg-error.la" ],
-            "modules": [
+            "sources": [
                 {
-                    "name": "gettext",
-                    "sources": [{
-                        "type": "archive",
-                        "url": "https://ftp.gnu.org/pub/gnu/gettext/gettext-0.19.8.tar.gz",
-                        "sha256": "3da4f6bd79685648ecf46dab51d66fcdddc156f41ed07e580a696a38ac61d48f"
-                    }]
+                    "type": "archive",
+                    "url": "http://mirrors.dotsrc.org/gnupg/libgpg-error/libgpg-error-1.47.tar.bz2",
+                    "sha256": "9e3c670966b96ecc746c28c2c419541e3bcb787d1a73930f5e5f5e1bcbbb9bdb",
+                    "x-checker-data": {
+                        "type": "anitya",
+                        "project-id": 1628,
+                        "stable-only": true,
+                        "url-template": "http://mirrors.dotsrc.org/gnupg/libgpg-error/libgpg-error-${version}.tar.bz2"
+                    }
+                }
+            ],
+            "cleanup": [ "/lib/libgpg-error.la" ]
+        },
+        {
+            "name": "fig2dev",
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://sourceforge.net/projects/mcj/files/xfig%2Bfig2dev-3.2.8b.tar.xz",
+                    "sha256": "5f44c680686d9f5a5ad8ab8decabff1633f5b932fe7a5598c650c034553c69ec",
+                    "x-checker-data": {
+                        "type": "anitya",
+                        "project-id": 11462,
+                        "stable-only": true,
+                        "url-template": "https://downloads.sourceforge.net/mcj/fig2dv-${version}.tar.xz"
+                    }
                 }
             ]
         },
@@ -29,21 +47,24 @@
             "name": "libgcrypt",
             "sources": [
                 {
-                    "type": "archive",
-                    "url": "https://www.gnupg.org/ftp/gcrypt/libgcrypt/libgcrypt-1.8.4.tar.bz2",
-                    "sha256": "f638143a0672628fde0cad745e9b14deb85dffb175709cacc1f4fe24b93f2227"
+                    "type": "git",
+                    "url": "https://dev.gnupg.org/source/libgcrypt.git",
+                    "tag": "libgcrypt-1.10.2",
+                    "commit": "1c5cbacf3d88dded5063e959ee68678ff7d0fa56",
+                    "x-checker-data": {
+                        "type": "anitya",
+                        "project-id": 1623,
+                        "stable-only": true,
+                        "tag-template": "libgcrypt-$version"
+                    }
                 }
             ]
         },
         {
-            "name": "LibVNCServer",
+            "name": "libvncserver",
             "buildsystem": "cmake-ninja",
             "sources": [
-                {
-                    "type": "archive",
-                    "url": "https://github.com/LibVNC/libvncserver/archive/LibVNCServer-0.9.13.tar.gz",
-                    "sha256": "0ae5bb9175dc0a602fe85c1cf591ac47ee5247b87f2bf164c16b05f87cbfa81a"
-                }
+                { "type": "git", "url": "https://github.com/LibVNC/libvncserver", "branch": "LibVNCServer-0.9.14" }
             ]
         },
         {

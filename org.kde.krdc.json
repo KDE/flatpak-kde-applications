@@ -22,7 +22,7 @@
             "name": "libvncserver",
             "buildsystem": "cmake-ninja",
             "sources": [
-                { "type": "git", "url": "https://github.com/LibVNC/libvncserver", "branch": "LibVNCServer-0.9.13" }
+                { "type": "git", "url": "https://github.com/LibVNC/libvncserver", "branch": "LibVNCServer-0.9.14" }
             ]
         },
         {
