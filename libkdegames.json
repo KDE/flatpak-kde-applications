@@ -12,12 +12,12 @@
                 {
                     "type": "git",
                     "url": "https://github.com/kcat/openal-soft.git",
-                    "tag": "1.21.1",
+                    "tag": "1.23.1",
                     "x-checker-data": {
                         "type": "git",
                         "tag-pattern": "^([\\d.]+)$"
                     },
-                    "commit": "ae4eacf147e2c2340cc4e02a790df04c793ed0a9"
+                    "commit": "d3875f333fb6abe2f39d82caca329414871ae53b"
                 }
             ]
         }
