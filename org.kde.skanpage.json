@@ -113,6 +113,23 @@
             ]
         },
         {
+            "name": "kquickimageeditor",
+            "buildsystem": "cmake-ninja",
+            "sources": [
+                {
+                    "type": "archive",
+                    "sha256": "3cfba775498e031f6963669ee0e4426d4fddd48a244b9583620de4d312ba92ca",
+                    "url": "https://download.kde.org/stable/kquickimageeditor/kquickimageeditor-0.2.0.tar.xz",
+                    "x-checker-data": {
+                        "type": "anitya",
+                        "project-id": 229033,
+                        "stable-only": true,
+                        "url-template": "https://download.kde.org/stable/kquickimageeditor/kquickimageeditor-$version.tar.xz"
+                    }
+                }
+            ]
+        },
+        {
             "name": "skanpage",
             "buildsystem": "cmake-ninja",
             "builddir": true,
