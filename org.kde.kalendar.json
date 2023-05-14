@@ -51,7 +51,6 @@
         "*.a",
         "*.la"
     ],
-    "rename-icon": "org.kde.kalendar",
     "copy-icon": true,
     "modules": [
         "boost.json",
