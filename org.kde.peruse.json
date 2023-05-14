@@ -22,27 +22,28 @@
                 {
                     "type": "git",
                     "url": "https://invent.kde.org/frameworks/kjs.git",
-                    "tag": "v5.92.0",
+                    "tag": "v5.106.0",
                     "x-checker-data": {
                         "type": "git",
                         "tag-pattern": "^v([\\d.]+)$"
                     },
-                    "commit": "ff72aaa777fd7cd2df19db699e02b045c07efecb"
+                    "commit": "a101dd71583cd86a0e10f1d60f6987cb250f399b"
                 }
             ]
         },
         "poppler.json",
+        "okular-dependencies.json",
         {
             "name": "okular",
             "buildsystem": "cmake-ninja",
             "builddir": true,
-            "sources": [ { "type": "git", "url": "https://invent.kde.org/kde/okular.git", "branch": "master" } ]
+            "sources": [ { "type": "git", "url": "https://invent.kde.org/graphics/okular.git", "branch": "master" } ]
         },
         {
             "name": "peruse",
             "buildsystem": "cmake-ninja",
             "builddir": true,
-            "sources": [ { "type": "git", "url": "https://invent.kde.org/kde/peruse.git", "branch": "master" } ]
+            "sources": [ { "type": "git", "url": "https://invent.kde.org/graphics/peruse.git", "branch": "master" } ]
         }
     ]
 }
