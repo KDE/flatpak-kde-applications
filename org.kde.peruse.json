@@ -32,7 +32,7 @@
             ]
         },
         "poppler.json",
-        "okular-dependencies.json",
+        "okular_dependencies.json",
         {
             "name": "okular",
             "buildsystem": "cmake-ninja",
