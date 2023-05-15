@@ -22,12 +22,12 @@
                 {
                     "type": "git",
                     "url": "https://invent.kde.org/frameworks/kjs.git",
-                    "tag": "v5.106.0",
+                    "tag": "v5.105.0",
                     "x-checker-data": {
                         "type": "git",
                         "tag-pattern": "^v([\\d.]+)$"
                     },
-                    "commit": "a101dd71583cd86a0e10f1d60f6987cb250f399b"
+                    "commit": "4294d16c27a96bc5438166a7d85bc9aa77de055a"
                 }
             ]
         },
