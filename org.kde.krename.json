@@ -15,14 +15,13 @@
             "buildsystem": "autotools",
             "sources": [
                 {
-                    "type": "git",
-                    "url": "https://github.com/libexif/libexif.git",
-                    "tag": "v0.6.24",
+                    "type": "archive",
+                    "url": "https://github.com/libexif/libexif/releases/download/v0.6.24/libexif-0.6.24.tar.bz2",
+                    "sha256": "d47564c433b733d83b6704c70477e0a4067811d184ec565258ac563d8223f6ae",
                     "x-checker-data": {
                         "type": "git",
                         "tag-pattern": "^v([\\d.]+)$"
-                    },
-                    "commit": "5bc74ae756f01bba42e73281fad67053bc7ac5f7"
+                    }
                 }
             ]
         },
