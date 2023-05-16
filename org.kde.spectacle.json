@@ -13,9 +13,9 @@
 
     "modules": [
         {
-            "name": "purpose",
+            "name": "kpipewire",
             "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "https://invent.kde.org/frameworks/purpose.git", "tag": "v5.85.0" } ]
+            "sources": [ { "type": "git", "url": "https://invent.kde.org/plasma/kpipewire.git", "tag": "v5.27.5" } ]
         },
         {
             "name": "spectacle",
