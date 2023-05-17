@@ -1,3 +1,3 @@
 ID=org.kde.phonebook
-JSON=org.kde.phonebook.json
-GITURL=https://invent.kde.org/kde/plasma-phonebook.git
+JSON=.flatpak-manifest.json
+GITURL=https://invent.kde.org/plasma-mobile/plasma-phonebook.git
