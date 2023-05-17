@@ -16,7 +16,7 @@
             "config-opts": [ "-DSKIP_INSTALL_ICONS=ON" ],
             "buildsystem": "cmake-ninja",
             "builddir": true,
-            "sources": [ { "type": "git", "url": "https://invent.kde.org/frameworks/breeze-icons.git", "tag": "v5.106.0" } ]
+            "sources": [ { "type": "git", "url": "https://invent.kde.org/frameworks/breeze-icons.git", "tag": "v5.105.0" } ]
         },
         {
             "name": "kdb",
