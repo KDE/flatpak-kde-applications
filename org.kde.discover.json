@@ -32,7 +32,7 @@
                 {
                     "type": "git",
                     "url": "https://github.com/ximion/appstream.git",
-                    "branch": "master"
+                    "tag": "v0.16.2"
                 }
             ],
             "modules": [
@@ -74,7 +74,39 @@
                 }
             ]
         },
-
+        {
+            "name": "libsoup-2.4",
+            "buildsystem": "meson",
+            "config-opts": [
+                "-Dtests=false"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://download.gnome.org/sources/libsoup/2.74/libsoup-2.74.3.tar.xz",
+                    "sha256": "e4b77c41cfc4c8c5a035fcdc320c7bc6cfb75ef7c5a034153df1413fa1d92f13"
+                }
+            ]
+        },
+        {
+            "name": "python-pyparsing",
+            "buildsystem": "simple",
+            "build-commands": [
+                "pip3 install --verbose --exists-action=i --no-index --find-links=file://${PWD} --prefix=${FLATPAK_DEST} pyparsing --no-build-isolation"
+            ],
+            "sources": [
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/6c/10/a7d0fa5baea8fe7b50f448ab742f26f52b80bfca85ac2be9d35cdd9a3246/pyparsing-3.0.9-py3-none-any.whl",
+                    "sha256": "5026bae9a10eeaefb61dab2f09052b9f4307d44aee4eda64b309723d8d206bbc",
+                    "x-checker-data": {
+                        "type": "pypi",
+                        "name": "pyparsing",
+                        "packagetype": "bdist_wheel"
+                    }
+                }
+            ]
+        },
         {
             "name": "flatpak",
             "config-opts": [
@@ -122,13 +154,20 @@
                     "modules": [
                         {
                             "name": "libfuse",
-                            "config-opts": ["--disable-util"],
+                            "buildsystem": "meson",
+                            "config-opts": [
+                              "-Dexamples=false",
+                              "-Duseroot=false",
+                              "-Dtests=false",
+                              "-Dudevrulesdir=/tmp/",
+                              "-Dinitscriptdir="
+                              ],
                             "cleanup": [ "/bin" ],
                             "sources": [
                                 {
                                     "type": "archive",
-                                    "url": "https://github.com/libfuse/libfuse/releases/download/fuse-3.10.5/fuse-3.10.5.tar.xz",
-                                    "sha256": "b2e283485d47404ac896dd0bb7f7ba81e1470838e677e45f659804c3a3b69666",
+                                    "url": "https://github.com/libfuse/libfuse/releases/download/fuse-3.14.1/fuse-3.14.1.tar.xz",
+                                    "sha256": "126919d72b46b3e0eb58a9c6933a2a50c36f2ea69f61fe9e78bdba9f463ffa20",
                                     "x-checker-data": {
                                         "type": "anitya",
                                         "project-id": 861,
@@ -148,13 +187,32 @@
             "disabled": true,
             "sources": [ { "type": "git", "url": "https://github.com/snapcore/snapd-glib.git", "branch": "master" } ]
         },
-
+        {
+        "name": "libxmlb",
+        "buildsystem": "meson",
+        "config-opts": [
+            "-Dintrospection=false",
+            "-Dgtkdoc=false",
+            "-Dtests=false",
+            "-Dstemmer=false",
+            "-Dcli=false",
+            "--sysconfdir=/app/etc",
+            "--localstatedir=/var/data"
+        ],
+        "sources": [
+            {
+            "type": "archive",
+            "url": "https://people.freedesktop.org/~hughsient/releases/libxmlb-0.3.10.tar.xz",
+            "sha256": "5e842233568b58e87071c396621479def17d48334b355d1ffb48373ad3717f6f"
+            }
+        ]
+        },
         {
             "name": "discover",
             "config-opts": [ "-DENABLE_TESTING=OFF", "-DBUILD_DummyBackend=ON" ],
             "buildsystem": "cmake-ninja",
             "builddir": true,
-            "sources": [ { "type": "git", "url": "https://invent.kde.org/plasma/discover.git" } ]
+            "sources": [ { "type": "git", "url": "https://invent.kde.org/plasma/discover.git", "branch": "Plasma/5.27" } ]
         }
     ]
 }
