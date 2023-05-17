@@ -15,27 +15,28 @@
             "name": "breeze-icons",
             "config-opts": [ "-DSKIP_INSTALL_ICONS=ON" ],
             "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "https://invent.kde.org/frameworks/breeze-icons.git", "tag": "v5.85.0" } ]
+            "builddir": true,
+            "sources": [ { "type": "git", "url": "https://invent.kde.org/frameworks/breeze-icons.git", "tag": "v5.106.0" } ]
         },
         {
             "name": "kdb",
             "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "https://invent.kde.org/kde/kdb.git", "branch": "3.2" } ]
+            "sources": [ { "type": "git", "url": "https://invent.kde.org/libraries/kdb.git", "branch": "3.2" } ]
         },
         {
             "name": "kproperty",
             "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "https://invent.kde.org/kde/kproperty.git", "branch": "3.2" } ]
+            "sources": [ { "type": "git", "url": "https://invent.kde.org/libraries/kproperty.git", "branch": "3.2" } ]
         },
         {
             "name": "kreport",
             "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "https://invent.kde.org/kde/kreport.git", "branch": "3.2" } ]
+            "sources": [ { "type": "git", "url": "https://invent.kde.org/libraries/kreport.git", "branch": "3.2" } ]
         },
         {
             "name": "kexi",
             "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "https://invent.kde.org/kde/kexi.git", "branch": "3.2" } ]
+            "sources": [ { "type": "git", "url": "https://invent.kde.org/office/kexi.git", "branch": "3.2" } ]
         }
     ]
 }
