@@ -6,21 +6,22 @@
     "sdk": "org.kde.Sdk",
     "command": "artikulate",
     "tags": ["nightly"],
+    "rename-icon": "artikulate",
     "desktop-file-name-suffix": " (Nightly)",
-    "finish-args": ["--share=network", "--share=ipc", "--socket=x11", "--socket=wayland" ],
-
+    "finish-args": [
+        "--share=network",
+        "--share=ipc",
+        "--socket=fallback-x11",
+        "--socket=wayland",
+        "--socket=pulseaudio",
+        "--device=dri"
+    ],
     "modules": [
-        "boost.json",
-        {
-            "name": "qt5-gstreamer",
-            "config-opts": ["-DENABLE_TESTING=OFF" , "-DQT_VERSION=5", "-DUSE_QT_PLUGIN_DIR=OFF", "-DUSE_GST_PLUGIN_DIR=OFF"],
-            "buildsystem": "cmake",
-            "sources": [ { "type": "git", "url": "git://anongit.freedesktop.org/gstreamer/qt-gstreamer" } ]
-        },
         {
             "name": "artikulate",
             "buildsystem": "cmake-ninja",
             "sources": [ { "type": "git", "url": "https://invent.kde.org/kde/artikulate.git" } ]
         }
+
     ]
 }
