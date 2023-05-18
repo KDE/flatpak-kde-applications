@@ -32,14 +32,6 @@
             "cleanup": [ "/include", "/lib/cmake", "/mkspecs", "/etc/xdg/*categories" ]
         },
         {
-            "name": "icon",
-            "buildsystem": "simple",
-            "build-commands": [
-                "mkdir -p /app/share/icons/hicolor/32x32/apps/",
-                "install -D /usr/share/icons/breeze/actions/32/go-home.svg /app/share/icons/hicolor/32x32/apps/"
-            ]
-        },
-        {
             "name": "kosmindoormap",
             "buildsystem": "cmake-ninja",
             "builddir": true,
