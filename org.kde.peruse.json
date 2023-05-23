@@ -31,7 +31,6 @@
                 }
             ]
         },
-        "poppler.json",
         "okular_dependencies.json",
         {
             "name": "okular",
