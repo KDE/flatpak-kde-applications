@@ -1,0 +1,3 @@
+ID=org.kde.vakzination
+JSON=.flatpak-manifest.json
+GITURL=https://invent.kde.org/pim/vakzination.git
