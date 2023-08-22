@@ -1,0 +1,3 @@
+ID=org.kde.atelier
+JSON=.flatpak-manifest.json
+GITURL=https://invent.kde.org/utilities/atelier.git

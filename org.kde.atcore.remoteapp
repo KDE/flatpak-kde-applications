@@ -1,0 +1,3 @@
+ID=org.kde.atcore
+JSON=.flatpak-manifest.json
+GITURL=https://invent.kde.org/libraries/atcore.git
