@@ -1,8 +1,8 @@
 {
     "id": "org.kde.dolphin",
-    "branch": "master",
+    "branch": "kf6",
     "runtime": "org.kde.Platform",
-    "runtime-version": "5.15-22.08",
+    "runtime-version": "6.5",
     "sdk": "org.kde.Sdk",
     "command": "dolphin",
     "tags": ["nightly"],
@@ -37,30 +37,44 @@
                 {
                     "type": "git",
                     "url": "https://invent.kde.org/frameworks/baloo.git",
-                    "tag": "v5.92.0",
+                    "tag": "master",
                     "x-checker-data": {
                         "type": "git",
                         "tag-pattern": "^v([\\d.]+)$"
-                    },
-                    "commit": "5aa4d1eb22b00802405b0c2e2a4446a223e50fd2"
+                    }
                 }
             ]
         },
         {
-            "config-opts": ["-DENABLE_TESTING=OFF" , "-DLMDB_DIR=/app"],
+            "config-opts": ["-DENABLE_TESTING=OFF", "-DBUILD_WITH_QT6=ON" , "-DLMDB_DIR=/app"],
             "name": "baloo-widgets",
             "buildsystem": "cmake-ninja",
 	    "builddir": true,
             "sources": [ { "type": "git", "url": "https://invent.kde.org/libraries/baloo-widgets.git" } ]
         },
         {
-	    "config-opts": ["-DFLATPAK=ON"],
+            "name": "kmoretools",
+            "config-opts": [
+                "-DBUILD_TESTING=OFF"
+            ],
+            "buildsystem": "cmake-ninja",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://invent.kde.org/libraries/kmoretools.git",
+                    "tag": "master"
+                }
+            ]
+        },
+        {
+	    "config-opts": ["-DFLATPAK=ON", "-DBUILD_WITH_QT6=ON"],
             "name": "dolphin",
             "buildsystem": "cmake-ninja",
 	    "builddir": true,
-            "sources": [ { "type": "git", "url": "https://invent.kde.org/system/dolphin.git" } ]
+            "sources": [ { "type": "git", "url": "https://invent.kde.org/system/dolphin.git", "tag": "kf6" } ]
         },
         {
+            "config-opts": ["-DBUILD_WITH_QT6=ON"],
             "name": "dolphin-plugins",
             "buildsystem": "cmake-ninja",
 	    "builddir": true,
