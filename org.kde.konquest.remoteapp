@@ -1,0 +1,3 @@
+ID=org.kde.konquest
+JSON=.flatpak-manifest.json
+GITURL=https://invent.kde.org/games/konquest.git
