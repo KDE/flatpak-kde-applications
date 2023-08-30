@@ -1,0 +1,3 @@
+ID=org.kde.ksirk
+JSON=.flatpak-manifest.json
+GITURL=https://invent.kde.org/games/ksirk.git
