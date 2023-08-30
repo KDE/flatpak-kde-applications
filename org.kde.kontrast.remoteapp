@@ -1,0 +1,3 @@
+ID=org.kde.kontrast
+JSON=.flatpak-manifest.json
+GITURL=https://invent.kde.org/accessibility/kontrast.git
