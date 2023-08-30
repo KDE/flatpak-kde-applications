@@ -1,0 +1,3 @@
+ID=org.kde.kruler
+JSON=.flatpak-manifest.json
+GITURL=https://invent.kde.org/graphics/kruler.git
