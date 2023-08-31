@@ -1,0 +1,3 @@
+ID=org.kde.konsole
+JSON=.flatpak-manifest.json
+GITURL=https://invent.kde.org/utilities/konsole.git
