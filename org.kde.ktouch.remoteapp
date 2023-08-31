@@ -1,0 +1,3 @@
+ID=org.kde.ktouch
+JSON=.flatpak-manifest.json
+GITURL=https://invent.kde.org/education/ktouch.git
