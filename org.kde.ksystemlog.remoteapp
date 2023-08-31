@@ -1,0 +1,3 @@
+ID=org.kde.ksystemlog
+JSON=.flatpak-manifest.json
+GITURL=https://invent.kde.org/system/ksystemlog.git
