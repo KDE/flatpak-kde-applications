@@ -1,0 +1,3 @@
+ID=org.kde.kirigami2.gallery
+JSON=.flatpak-manifest.json
+GITURL=https://invent.kde.org/sdk/kirigami-gallery.git
