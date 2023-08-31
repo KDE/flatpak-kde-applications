@@ -1,0 +1,3 @@
+ID=org.kde.peruse
+JSON=.flatpak-manifest.json
+GITURL=https://invent.kde.org/graphics/peruse.git
