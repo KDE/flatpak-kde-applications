@@ -1,0 +1,3 @@
+ID=org.kde.skanlite
+JSON=.flatpak-manifest.json
+GITURL=https://invent.kde.org/graphics/skanlite.git
