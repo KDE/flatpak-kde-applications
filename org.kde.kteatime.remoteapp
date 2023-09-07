@@ -1,0 +1,3 @@
+ID=org.kde.kteatime
+JSON=.flatpak-manifest.json
+GITURL=https://invent.kde.org/utilities/kteatime.git
