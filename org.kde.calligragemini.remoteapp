@@ -1,0 +1,3 @@
+ID=org.kde.calligragemini
+JSON=.flatpak-manifest.json
+GITURL=https://invent.kde.org/office/calligra.git
