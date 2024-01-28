@@ -1,3 +1,0 @@
-ID=org.kde.kid3
-JSON=packaging/flatpak/org.kde.kid3-nightly.json
-GITURL=https://invent.kde.org/multimedia/kid3.git
